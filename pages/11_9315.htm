@@ -1,0 +1,858 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/11_9315.htm
+
+  The following page was cached by Bing Bot (https://bing.com/) on 28-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - [Mod] Extended Ban v2 [xban2]</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - [Mod] Extended Ban v2 [xban2]" href="https://forum.minetest.net/feed.php?f=11&amp;t=9315" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=11">Mod Releases</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=9315">[Mod] Extended Ban v2 [xban2]</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			25 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p142165" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p142165">[Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Tue May 20, 2014 3:31 am </p>
+
+			<div class="content"><h2>Extended Ban Mod for Minetest</h2><br /><br />This mod attempts to be an improvement to Minetest's ban system.<br /><br /><ul><li>It supports normal bans and temporary bans (from 60 seconds up to the end of time, with 1 second granularity).</li><li>Records and joins all accounts using the same IP address and several IP addresses using the same name into a single record, and can ban/unban them as a single user.</li><li>Can ban offline players if you know their IP or username.</li><li>Holds a record of bans for each user, so moderators and administrators can consult it to know if a player is a repeat offender.</li><li>Does not modify the default ban database in any way (`ipban.txt').</li><li>Has an API to ban and check the ban database to allows other mods to manage users (for example, anticheat mods).</li></ul><br /><span style="font-weight: bold">Usage</span><br />Install the mod as always and rename to `xban2'.<br /><br />The mod provides the following chat commands:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/xban &lt;player_or_ip&gt; &lt;reason&gt;</code></dd></dl><br />Ban a player permanently.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/xtempban &lt;player_or_ip&gt; &lt;time&gt; &lt;reason&gt;</code></dd></dl><br />Ban a player temporarily. The syntax for `&lt;time&gt;' is:<br /><ul><li>1s - Ban for one second.</li><li>1m - Ban for one minute.</li><li>1h - Ban for one hour.</li><li>1D - Ban for one day (24 hours).</li><li>1W - Ban for one week (7 days).</li><li>1M - Ban for one month (30 days).</li><li>1Y - Ban for one year (360 days).</li></ul>Values can be combined. For example &quot;1D3h3m7s&quot; will ban for 1 day, 3 hours, 3 minutes, and 7 seconds.<br />Note that the units are just for convenience. You are not required to provide values within the bounds. It is possible to specify &quot;3600s&quot;, which is the same as &quot;60m&quot; or &quot;1h&quot;. Also note that the 's' is optional. Specifying just &quot;42&quot; is the same as &quot;42s&quot;.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/xunban &lt;player_or_ip&gt;</code></dd></dl><br />Unban a player.<br /><br /><span style="font-weight: bold">Advanced Use</span><br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/xban_record &lt;player_or_ip&gt;</code></dd></dl><br />See a player's ban record.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/xban_dbi &lt;importer&gt;</code></dd></dl><br />Import a database. Valid values for `&lt;importer&gt;' are:<br /><ul><li>&quot;minetest&quot; - Import ban list from `ipban.txt' (Minetest ban database).</li><li>&quot;v1&quot; - Import ban list from `players.iplist' (xban v1 database).</li></ul><br />All commands except for `/xban_dbi' require `ban' privilege to execute. The `/xban_dbi' command requires `server' privilege.<br /><br /><span style="font-weight: bold">License:</span> BSD 2 Clause License.<br /><span style="font-weight: bold">Dependencies:</span> None.<br /><br /><span style="font-weight: bold">Links</span><br /><a href="https://github.com/minetest-mods/xban2/archive/master.zip" class="postlink">Download .zip</a><br /><a href="https://github.com/minetest-mods/xban2/archive/master.tar.gz" class="postlink">Download .tar.gz</a><br /><a href="https://github.com/minetest-mods/xban2" class="postlink">Browse code on Github</a></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p142167" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p142167">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>LazyJ</strong> &raquo; Tue May 20, 2014 3:58 am </p>
+
+			<div class="content">Is this compatible with the previous version of &quot;xban's&quot; files, kaeza?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>LazyJ</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 574</dd><dd><strong>Joined:</strong> Wed Sep 12, 2012 12:29 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p142171" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p142171">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Tue May 20, 2014 4:09 am </p>
+
+			<div class="content"><blockquote><div><cite>LazyJ wrote:</cite>Is this compatible with the previous version of &quot;xban's&quot; files, kaeza?</div></blockquote><br />Not currently. I'm working on providing converters from MT's ipban.txt, old xban v1 `players.iplist', and newer `players.iplist.v2' formats, along with more utilities.<br /><br />BTW, for those who used my old xban mod, the advantages of this one are:<br /><ul><li>Has a saner DB format (using a minetest.(de)serialize-compatible format.</li><li>Fixes an old bug where some users were not actually getting banned under some circumstances.</li><li>As said above, ban record :)</li><li>It's title says v2! so it must be better than v1! the internet said it, so it must be true!</li></ul></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p142192" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p142192">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Krock</strong> &raquo; Tue May 20, 2014 10:26 am </p>
+
+			<div class="content">*shuts down server*<br />*installs*</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Krock</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 4232</dd><dd><strong>Joined:</strong> Thu Oct 03, 2013 7:48 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p142265" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p142265">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Wed May 21, 2014 10:13 am </p>
+
+			<div class="content">*BUMP*<br /><br />LazyJ: Added command to import old v1 DB and Minetest `ipban.txt'.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p142481" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p142481">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Fri May 23, 2014 8:48 am </p>
+
+			<div class="content"><span style="font-weight: bold">Update:</span><br /><ul><li>Added `/xban_record' command to list players' ban records.</li><li>The mod now saves the last position of the banned player (if they are online). The `/xban_record' command also shows the last known position of the player, if available.</li></ul></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p146261" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p146261">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>LazyJ</strong> &raquo; Thu Jun 26, 2014 5:16 am </p>
+
+			<div class="content">kaeza, is xban2 capable of importing players.iplist.v2 ?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>LazyJ</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 574</dd><dd><strong>Joined:</strong> Wed Sep 12, 2012 12:29 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p146265" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p146265">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Thu Jun 26, 2014 6:25 am </p>
+
+			<div class="content"><span style="font-weight: bold">Update:</span><br /><ul><li>Fixed an ugly bug that could cause unwanted bans on servers. It is recommended to delete the database and start anew, or run <a href="http://pastebin.com/KRqLEzWx" class="postlink">this script</a> in the standalone Lua interpreter (get it from your favorite package manager, or from <a href="http://lua.org/" class="postlink">here</a>) to purge duplicate entries. Thanks to Zeno` for testing :)</li><li>Added importer for old v2 database format. Thanks to LazyJ for helping with testing :)</li></ul></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p156327" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p156327">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>stormchaser3000</strong> &raquo; Wed Oct 01, 2014 3:59 am </p>
+
+			<div class="content">ok um here is a bug: when i xtempban someone they get permanetly banned until i execute xunban. and yes i did use xtempban</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>stormchaser3000</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 417</dd><dd><strong>Joined:</strong> Sun Oct 06, 2013 9:02 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p186190" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p186190">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Wed Aug 05, 2015 12:21 am </p>
+
+			<div class="content"><span style="font-weight: bold">Update:</span><br /><ul><li>Fixed temporary bans not working at all (the function responsible for removing expired bans was not being run).</li><li>The `/xban_record` command now lists the ban &quot;source&quot;. The &quot;source&quot; is the player or mod that performed the ban (the source was always stored in the database, but the report did not include it).</li></ul></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p234125" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p234125">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Lejo</strong> &raquo; Thu Sep 22, 2016 4:34 pm </p>
+
+			<div class="content">Is it possible to see the ips of the players?<br />Can I ban player per mac-Address?<br /><br />This mod is soooooo nice!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Lejo</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 496</dd><dd><strong>Joined:</strong> Mon Oct 19, 2015 4:32 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p248289" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p248289">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Thu Jan 26, 2017 10:14 am </p>
+
+			<div class="content">The players' IP(s) are recorded in the database, but are not currently visible anywhere (except when banning).<br /><br />Banning by MAC address is not possible as we don't have access to that info.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p253262" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p253262">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Lichtbringer</strong> &raquo; Fri Feb 24, 2017 10:23 pm </p>
+
+			<div class="content">But if trollip/trollname is banned and he tries to login as trollip/myname, wouldn't that ban me too?<br />(because myname gets linked to trollip's account)<br /><br />If someone lives in a living group or orphanage, banning one would ban all.<br />It is also a very certain ban on all shared ips like school-ips, internet-coffee-shops, …</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Lichtbringer</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Fri Feb 24, 2017 9:36 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p253289" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p253289">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Sat Feb 25, 2017 12:04 am </p>
+
+			<div class="content">That's a known issue, and I don't feel it's worth it to resolve it. Will accept suitable patches of course.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p263498" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p263498">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Thu Apr 13, 2017 1:36 am </p>
+
+			<div class="content">Is it safe to manually remove all (or all but one) IPs out of the xban.db file (from the &quot;names&quot; section with the usernames)?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 242</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p265473" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p265473">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kaeza</strong> &raquo; Mon Apr 24, 2017 2:40 am </p>
+
+			<div class="content">Yes it is. The database has no circular references or anything hidden, so simply removing a name or IP from an entry disassociates it from the &quot;user&quot;.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>kaeza</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2162</dd><dd><strong>Joined:</strong> Thu Oct 18, 2012 5:00 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p265480" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p265480">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Mon Apr 24, 2017 3:22 am </p>
+
+			<div class="content"><blockquote><div><cite>kaeza wrote:</cite>Yes it is. The database has no circular references or anything hidden, so simply removing a name or IP from an entry disassociates it from the &quot;user&quot;.</div></blockquote><br /><br />Right after posting that message two weeks ago, I decided to try anyway, and the server (Creative Gardens) has worked fine with no problems. Thank you!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 242</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p311873" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p311873">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Tue Feb 13, 2018 3:33 am </p>
+
+			<div class="content">Could you please add the ability to ban IP ranges? Currently the only way to do this is iptables which can cause massive server lag if the range is too large.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 242</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p312019" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p312019">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>scottwolff</strong> &raquo; Wed Feb 14, 2018 10:08 pm </p>
+
+			<div class="content">I banned a hacker for one year with this. My moderator asked why not forever, so I banned for 99 years.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>scottwolff</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 124</dd><dd><strong>Joined:</strong> Sat Apr 30, 2016 6:15 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p329025" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p329025">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Thu Aug 23, 2018 1:14 am </p>
+
+			<div class="content"><blockquote><div><cite>redblade7 wrote:</cite>Could you please add the ability to ban IP ranges? Currently the only way to do this is iptables which can cause massive server lag if the range is too large.</div></blockquote><br /><br />Actually the &quot;massive server lag&quot; was another issue I dealt with some time ago, see other posts. Still it would be nice to have IP range bans.<br /><br />Question: Is this compatible with IPv6? My ISP doesn't have IPv6 support, so I never enabled it on my servers as accessing it via IPv6 would only be possible through Microsoft's built-in gateway on my Win10 computer. IPv6 would be more effective at banning people, for those whose ISPs or mobile devices support it.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 242</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p329034" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p329034">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Lone_Wolf</strong> &raquo; Thu Aug 23, 2018 3:49 am </p>
+
+			<div class="content"><blockquote><div><cite>redblade7 wrote:</cite><blockquote><div><cite>redblade7 wrote:</cite>Could you please add the ability to ban IP ranges? Currently the only way to do this is iptables which can cause massive server lag if the range is too large.</div></blockquote><br /><br />Actually the &quot;massive server lag&quot; was another issue I dealt with some time ago, see other posts. Still it would be nice to have IP range bans.<br /><br />Question: Is this compatible with IPv6? My ISP doesn't have IPv6 support, so I never enabled it on my servers as accessing it via IPv6 would only be possible through Microsoft's built-in gateway on my Win10 computer. IPv6 would be more effective at banning people, for those whose ISPs or mobile devices support it.</div></blockquote><br />I'm pretty sure this does support IPv6</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Lone_Wolf</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2151</dd><dd><strong>Joined:</strong> Sun Apr 09, 2017 5:50 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p339237" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p339237">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Ruslan1</strong> &raquo; Sat Dec 29, 2018 12:37 am </p>
+
+			<div class="content">can you add /ban_list</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Ruslan1</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 9</dd><dd><strong>Joined:</strong> Wed Dec 21, 2016 4:13 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p339262" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p339262">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Lejo</strong> &raquo; Sat Dec 29, 2018 10:12 am </p>
+
+			<div class="content">There is already /xban_gui</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Lejo</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 496</dd><dd><strong>Joined:</strong> Mon Oct 19, 2015 4:32 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347428" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p347428">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Piezo_</strong> &raquo; Thu Mar 28, 2019 9:05 pm </p>
+
+			<div class="content">Hello! I'm not sure if this mod is still under active development, but something changed with how auth data can be accessed in minetest 5.x, and the mod no longer works properly. Issuing /xban_gui crashes the server. <br /><br />Please update the mod!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Piezo_</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 249</dd><dd><strong>Joined:</strong> Fri Jul 20, 2018 9:36 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347455" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_9315.htm#p347455">Re: [Mod] Extended Ban v2 [xban2]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Fri Mar 29, 2019 3:41 am </p>
+
+			<div class="content"><blockquote><div><cite>Piezo_ wrote:</cite>Hello! I'm not sure if this mod is still under active development, but something changed with how auth data can be accessed in minetest 5.x, and the mod no longer works properly. Issuing /xban_gui crashes the server. <br /><br />Please update the mod!</div></blockquote><br /><br />The version released on February 12 is compatible with the new auth system:<br /><br /><!-- m --><a class="postlink" href="https://github.com/minetest-mods/xban2/">https://github.com/minetest-mods/xban2/</a><!-- m --></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 242</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			25 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=11" class="left-box left" accesskey="r">Return to Mod Releases</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Bing Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

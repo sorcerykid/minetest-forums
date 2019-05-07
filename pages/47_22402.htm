@@ -1,0 +1,307 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/47_22402.htm
+
+  The following page was cached by Yandex Bot (https://yandex.com/) on 28-Mar-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - mapgen.</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - mapgen." href="https://forum.minetest.net/feed.php?f=47&amp;t=22402" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=47">Modding Discussion</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=22402">mapgen.</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			6 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p346946" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p346946">Adding Diamond Blocks to mapgen.</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DoyleChris</strong> &raquo; Sat Mar 23, 2019 18:55 </p>
+
+			<div class="content">I am trying to make a mod for my server to add Diamond Blocks to the mapgen like the MESE blocks.  But when i go to run it on singleplayer and go to a spot on the map that need to generate, they dont show up.  Here is the code any information would be helpful.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest directory\mods\diamond\init.lua</code></dd></dl><br /><br />enabled in the config.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>function minetest.register_ores()<br />&nbsp; &nbsp;minetest.register_ore({<br />&nbsp; &nbsp;&nbsp; &nbsp;ore_type&nbsp; &nbsp; &nbsp; &nbsp;= &quot;scatter&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;ore&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &quot;default:diamondblock&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;wherein&nbsp; &nbsp; &nbsp; &nbsp; = &quot;default:stone&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;clust_scarcity = 15 * 15 * 15,<br />&nbsp; &nbsp;&nbsp; &nbsp;clust_num_ores = 7,<br />&nbsp; &nbsp;&nbsp; &nbsp;clust_size&nbsp; &nbsp; &nbsp;= 5,<br />&nbsp; &nbsp;&nbsp; &nbsp;y_max&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = -5000,<br />&nbsp; &nbsp;&nbsp; &nbsp;y_min&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = -31000,<br />&nbsp; &nbsp;})<br />&nbsp; &nbsp;end</code></dd></dl></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>DoyleChris</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 222</dd><dd><strong>Joined:</strong> Sat Jul 25, 2015 19:54</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346974" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p346974">Re: Adding Diamond Blocks to mapgen.</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Nathan.S</strong> &raquo; Sun Mar 24, 2019 03:16 </p>
+
+			<div class="content">Is there some reason you put your 'minetest.register_ore' code within a function? As far as I know you don't need to do that. Just remove the first and last line in your example code and it will probably work.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Nathan.S</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 871</dd><dd><strong>Joined:</strong> Wed Sep 24, 2014 17:47</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346989" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p346989">Re: Adding Diamond Blocks to mapgen.</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Sun Mar 24, 2019 05:03 </p>
+
+			<div class="content">What Nathan.S said, as well as ores won't generate in a part of a map that has already been loaded before, if you are doing that.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>v-rob</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 613</dd><dd><strong>Joined:</strong> Thu Mar 24, 2016 03:19</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347003" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p347003">Re: Adding Diamond Blocks to mapgen.</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DoyleChris</strong> &raquo; Sun Mar 24, 2019 11:16 </p>
+
+			<div class="content">Ill try that Nathan.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>DoyleChris</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 222</dd><dd><strong>Joined:</strong> Sat Jul 25, 2015 19:54</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347007" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p347007">Re: Adding Diamond Blocks to mapgen.</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DoyleChris</strong> &raquo; Sun Mar 24, 2019 12:18 </p>
+
+			<div class="content">Well i got rid of the <br />function minetest.register_ores() and end<br />but teleporting to a new section of my world it still didnt show up.<br />I have no idea how to adjust the <br /><br />clust_scarcity = 15 * 15 * 15,<br />clust_num_ores = 7,<br />clust_size     = 5,<br /><br />I have tried making like the iron ore in stone settings but still dosent show up.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>DoyleChris</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 222</dd><dd><strong>Joined:</strong> Sat Jul 25, 2015 19:54</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347184" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p347184">Re: Adding Diamond Blocks to mapgen</nobr>.</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Mon Mar 25, 2019 22:47 </p>
+
+			<div class="content">Make sure your mod 'depends' on the MTG default mod, to run after it.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>paramat</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3350</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			6 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=47" class="left-box left" accesskey="r">Return to Modding Discussion</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Yandex Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

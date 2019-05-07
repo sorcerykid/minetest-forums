@@ -1,0 +1,481 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/11_4627_175.htm
+
+  The following page was cached by Bing Bot (https://bing.com/) on 13-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - [Modpack] Sea [0.4.2] [sea]</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - [Modpack] Sea [0.4.2] [sea]" href="https://forum.minetest.net/feed.php?f=11&amp;t=4627" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=11">Mod Releases</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=4627">[Modpack] Sea [0.4.2] [sea]</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			187 posts
+			 &bull; Page <strong>8</strong> of <strong>8</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p333775" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p333775">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>galundrux</strong> &raquo; Tue Oct 23, 2018 7:00 am </p>
+
+			<div class="content">I don't think they consider it a bug, the one who set out to &quot;fix&quot; this is aware of it and said it's this or nothing. The only light in the tunnel I can see is that sprites can be under water with no problems, the clams mob works fine. I did some experiments where I had coral spawn as mob sprite by editing the clams mod. This kinda works, but I haven't found a way to make sprites be stationary and not follow the camera, also the sprites parameter only creates one plane, and we'll need two. But people who can code the engine should be able to use that, they can make a &quot;plantlike sprite&quot; or something that behaves the way we need it to.<br /><br />Without being a coder and really knowing what I'm talking about, it seems to me that the entire liquid system is kinda broken, or badly implemented. If something can exist in air, then why is it not behaving the same way in water? Below the surface we don't need there to be actual water, just something that tells the game &quot;this is water&quot; so it can apply the blue overlay and slow the movement and so on. It's only really where air and water collide that requires special treatment. I'm guessing it has something to do with how voxels work that is making this difficult. But wouldn't it be cool if both air and water was considered liquids of different density and it was only where they collide that required any calculations? That way we could make all kinds of new game mechanics, like gas. Imagine if the ground blocks of the mushroom biome for example emitted a gas (liquid going the opposite direction), tint the screen green or something, make you lose life, requires a gas mask type helmet to be crafted and worn in order to move around there safely. Or the ability to make gas grenades, or heavy fog in the morning in some biomes that would slow movement and limit visibility. Would be so many things we could do...</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>galundrux</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2</dd><dd><strong>Joined:</strong> Thu Oct 18, 2018 5:03 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p333777" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p333777">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Shara</strong> &raquo; Tue Oct 23, 2018 9:15 am </p>
+
+			<div class="content"><blockquote class="uncited"><div>Not entirely happy with this as it makes it impossible to interact with the plants in any way</div></blockquote><br /><br />Have you checked what the new kelp plants are like in 5.0.0? I had the same frustration when first seeing that in game, so I added selection boxes for the kelp in MTG and made it so digging the kelp doesn't remove the node it's in. (What actually happens, since the kelp is the same node as the sand node it's in, is that the sand_with_kelp node gets replaced with a normal sand node when you dig it.)<br /><br />The only thing you will actually lose is the ability to remove each part of the plant piece by piece, but with some tinkering I could probably recreate that affect as well. I'm pretty sure I could also make them grow. (I'm just not sure if I'd want to, due to the complexity).<br /><br />I will eventually make a working version of the sea plants for 5.0.0 if no one beats me to it, but wasn't planning on doing it yet due to very limited time.<br /><br />If you need it right now, I suggest looking at the <a href="https://github.com/minetest/minetest_game/blob/cf0e49fb4aee91085011b0eb6cbb9e15c0d4614c/mods/default/nodes.lua#L1841" class="postlink">kelp code</a> to see how that works. It's a biggish chunk of code if you are a non-coder though.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Shara</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 179</dd><dd><strong>Joined:</strong> Sat Aug 20, 2016 3:18 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p343117" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p343117">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>SteveGer</strong> &raquo; Fri Feb 08, 2019 2:02 pm </p>
+
+			<div class="content">Hey.<br /><br />I like the Style of the Seastone and i want to use it. but:<br /><br /><blockquote class="uncited"><div>- stonebricks are made by combining 4 stone-blocks in a square</div></blockquote><br /><br />Really? i need FOUR Seastone for ONE Seastone Brick? In this case i use better another Bricks. All other recipes for Bricks works in the same way:<br /><br />{group:stone},{group:stone},<br />{group:stone},{group:stone},<br />,,<br /><br />gives <span style="font-weight: bold"><span style="color: #800000">FOUR</span></span> (Not ONE) of the {group:brick}<br /><br />All other is stealing players Resources. Think about it, not all Servers are creative.<br /><br />So Long<br />Steve</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>SteveGer</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 9</dd><dd><strong>Joined:</strong> Tue Oct 09, 2018 2:17 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346086" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p346086">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>scr267</strong> &raquo; Thu Mar 14, 2019 2:01 pm </p>
+
+			<div class="content">Is this mod still being maintained?  I'm having issues with performance that I've isolated to the seaplants lua script. <br /><br />Thank you</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>scr267</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 7</dd><dd><strong>Joined:</strong> Mon Jun 20, 2016 6:28 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347506" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p347506">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Fri Mar 29, 2019 8:21 pm </p>
+
+			<div class="content">Since the upgrade to v5 i have this occasional crash:<br /><br />2019-03-29 16:01:36: ERROR[Main]: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'seaglass' in callback node_on_punch(): (REMOVED)/bin/../games/minetest_game/mods/sea/seaglass/init.lua:332: attempt to call global 'nodeupdate' (a nil value)<br />2019-03-29 16:01:36: ERROR[Main]: stack traceback:<br />2019-03-29 16:01:36: ERROR[Main]:       (REMOVED)/bin/../games/minetest_game/mods/sea/seaglass/init.lua:332: in function 'callback'<br />2019-03-29 16:01:36: ERROR[Main]:       (REMOVED)/bin/../builtin/game/item.lua:511: in function &lt;(REMOVED)/bin/../builtin/game/item.lua:504&gt;</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 240</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347510" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p347510">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Fri Mar 29, 2019 9:25 pm </p>
+
+			<div class="content">The nodeupdate function needs to be replaced with the newer check_for_falling function.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>texmex</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1284</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347529" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p347529">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Sat Mar 30, 2019 1:17 am </p>
+
+			<div class="content"><blockquote><div><cite>texmex wrote:</cite>The nodeupdate function needs to be replaced with the newer check_for_falling function.</div></blockquote><br /><br />Is this as easy as replacing all instances of &quot;nodeupdate(pos)&quot; with &quot;check_for_falling(pos)&quot; in seaglass/init.lua?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 240</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347547" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p347547">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Sat Mar 30, 2019 6:39 am </p>
+
+			<div class="content">Pretty much, but consult the Lua API doc first.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>texmex</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1284</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347555" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p347555">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Sat Mar 30, 2019 9:33 am </p>
+
+			<div class="content"><blockquote><div><cite>texmex wrote:</cite>Pretty much, but consult the Lua API doc first.</div></blockquote><br /><br />I don't know Lua in detail, but after changing all the &quot;nodeupdate(pos)&quot; to &quot;check_for_falling(pos)&quot;, after punching the seaglass I get the same crash, but with:<br /><br />&quot;attempt to call global 'check_for_falling' (a nil value)&quot;</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 240</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347562" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p347562">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Sat Mar 30, 2019 11:09 am </p>
+
+			<div class="content">It’s minetest.check_for_falling.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>texmex</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1284</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347569" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p347569">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Topywo</strong> &raquo; Sat Mar 30, 2019 1:05 pm </p>
+
+			<div class="content">Recently this thread by Brian Gaucher drew my attention: <a href="https://forum.minetest.net/viewtopic.php?f=47&amp;t=22360#p346430" class="postlink">https://forum.minetest.net/viewtopic.php?f=47&amp;t=22360#p346430</a>  I didn't work on this mod for more than 2 years.<br /><br />It has never been a much used mod and there are people who don't like the solution I use for the airblocks (for one it seems to consume too much power/memory), my coding isn't the best (I never learned Lua and find the 'handles' difficult to grasp.).<br /><br />That said,  a few days ago I downloaded minetest. The sea-mod that was still in my dropbox. I also downloaded the latest unified dyes I had from there.<br /><br />I got the thing started and found out the airblocks weren't removed anymore in this mod. So I looked up the 'water' registration to see what changed. I found it (some extra text before .png is needed). Almost one bug les, but 'stairs' have also been changed, because those still had a part of the air.<br /><br />From then on I have been experimenting to mirror the way airblocks works (from the star everything no air, except the water surface), but that didnt work the way I wanted.<br /><br />After that I started browsing through the mods in the seapack.<br /><br /><span style="font-weight: bold">Only to the point part of this post :-p</span><br />I got the 'nodeupdate' error when hitting a glassblock. Also saw this function was depreciated and replaced by the 'checkforfalling', wich didn't seem logical for my mod. So first thing I tried was just deleting 'nodeupdate'<br />everywhere. To my surprise that worked. (Making me wonder why I needed that piece of code in the first place...)<br /><br />After some more browsing I found out the unifieddyes mod had changed, so the coral didn't give me dye's anymore. I did find the latest working unifieddyes for the seamod in Vanessa's Gitlab. I also suspect Sokomine's bootspray mod doest work right now with the sea-modpack.<br /><br />The (for me) new biomes and decorations look promising for the modpack, but I need to experiment with them. I'm not very happy with the shipwrecks-mod I made right now (Typing this I just realise I sometimes found two ships too close together and never found a submarine so far). On the other hand maybe schematics improved. I may also rework the whiteshell stuff. On hindsight the crafing and stuff look like a bit too much.<br /><br />I like my glass, but those are only 5 colors iirc. I prefer more. (maybe I can integrate the lightblocks I once made for the Cash's World Server. I also saw there was some new coding for glass I have to learn to understand. And the coding (at least how I did it) is quite some work. I also need to integrate the new outer/inner stairs blocks. (also a lot of work).<br /><br /><span style="font-weight: bold">Conclusion</span><br />I bet I will also find out about more broken stuff in the modpack and new coding/license/lay-out stuff. But one has to start somewhere and I started a few days ago. One thing I really would like to see in the Oceans are animals/fish, but I'm probably not capable programming those, nor designing them.<br /><br />So expect at least a repaired and maybe an improved version of this mod, but not too soon.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Topywo</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1724</dd><dd><strong>Joined:</strong> Fri May 18, 2012 8:27 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347600" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_4627_175.htm#p347600">Re: [Modpack] Sea [0.4.2] [sea]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Sat Mar 30, 2019 8:30 pm </p>
+
+			<div class="content"><blockquote><div><cite>Topywo wrote:</cite>I got the 'nodeupdate' error when hitting a glassblock. Also saw this function was depreciated and replaced by the 'checkforfalling', wich didn't seem logical for my mod. So first thing I tried was just deleting 'nodeupdate'<br />everywhere. To my surprise that worked. (Making me wonder why I needed that piece of code in the first place...)</div></blockquote><br /><br />That did it, thank you!<br /><br />Looking forward to your new version!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>redblade7</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 240</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 7:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			187 posts
+			 &bull; Page <strong>8</strong> of <strong>8</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=11" class="left-box left" accesskey="r">Return to Mod Releases</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Bing Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

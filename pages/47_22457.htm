@@ -1,0 +1,278 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/47_22457.htm
+
+  The following page was cached by Google Bot (https://google.com/) on 31-Mar-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - How to determine, how often an item needs to be updated ?</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - How to determine, how often an item needs to be updated ?" href="https://forum.minetest.net/feed.php?f=47&amp;t=22457" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=47">Modding Discussion</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=22457">How to determine, how often an item needs to be updated ?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			5 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p347636" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22457.htm#p347636">How to determine, how often an item needs to be updated ?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 31, 2019 11:36 am </p>
+
+			<div class="content">I sit on a problem basic ...<br /><br />As Client your sitting front of an Monitor, that refreshes 60 or if faster used 75 times a second, as this is a rate, that movements are shown smooth ..., and we (our Eyes) don't get a problem with the flicker repeat and tired. So 60 times a screen is printed new, maybe on the data new in GPU.<br /><br />So next we have the more important frame rate fps, where we use (also) 60 fps if we have fast GPU most.<br />I just test, if I set fps in Client to 75, still have 60 fps - so we take this a a base further.<br /><br />So as the screen and the update rate from the Monitor and GPU will show us changes of a moving item, player just <br />60 times per minute = we get every (1/60) 0.0166 s or every 16.666 ms is a refresh seen for our eyes.<br /><br />So we cant see any movement in the time between 2 frames (FPS) as there are no more updates between and they might be useless to calculate for GPU and sometime also CPU as just simple they are never shown, only the last data got in and calculated will be seen. Every between is useless ...<br /><br />So far right ?<br /><br />Ok, what other parameter might pass in here:<br />* client far distance has ms 300 / 0.3 s (see RTT 0.300)<br />--&gt; client get data late, data from him arrive late at server, but data can only be processed when available.<br /><br />* client has a local server connected, let it be 20 ms / 0.020 s (RTT 0.020)<br />--&gt; remember, fps 60 is all 0.0166 ms new picture, so here it is nearby get new data and can use it for refresh calculation, and it will be used without a lot of useless work, not seen <br /><br />* I am sitting nearby, I have RTT 0.001 s or 1 ms<br />--&gt; later<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>#&nbsp; &nbsp; Length of a server tick and the interval at which objects are generally updated over network.<br />dedicated_server_step = 0.09<br /><br /></code></dd></dl>--&gt; sent over network every 0.09 s - mean an update of data got send - 0.9 / 0.0166 = so near 54 frames are created depending on old data - or what the client is able to imagine himself ? or server calculated data between to sending times a lot for nothing worth the client ? as not send so often ...<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>#&nbsp; &nbsp; Length of time between NodeTimer execution cycles<br />nodetimer_interval = 0.4</code></dd></dl> --&gt; where are nodetimer used for ? 0.4 / 0.016 (ms a new screen is shown) = 24 fps happen before a new nodetimer repeat ?<br /><br /><br />Is there any other setting I missed, might work with in this part between server CPU calculates something - send to client - client calculates screen with GPU and show it ?<br /><br />conclusion so far:<br />* as a client monitor/screen cant show faster then mainly 60 fps, mean every 0.01666 s / 16.66 ms a new data would be needed for a also new shown frame on screen.<br />If faster it would not be seen on a screen, as overrun from new data get in before the last calculated screen could have been shown. <br />Imagine you get every 0.008 s / 8 ms a new update, but every second send data cant be shown as screen updates just in 16,66 ms, mean 50% of all work calculating new positions etc. are without any use ...<br /><br /><br />and so we go next step<br /><a href="https://dev.minetest.net/LuaEntitySAO" class="postlink">dtime</a><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&nbsp;on_step(self, dtime) — Callback method called every server tick.<br />&nbsp; &nbsp; dtime — time since last call (usually 0.05 seconds) </code></dd></dl><br />so here I am not sure yet, as I also put in second parameter in .conf<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>#&nbsp; &nbsp; Length of a server tick and the interval at which objects are generally updated over network.<br />dedicated_server_step = 0.09 <br />server_step = 0.05</code></dd></dl> but this dedicated_server_step seams to used for dtime ? (tested change it)<br /><br /><span style="font-weight: bold">forgotten</span> added later:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>#&nbsp; &nbsp; Time in between active block management cycles<br />active_block_mgmt_interval = 2.0<br /><br /></code></dd></dl> how does this fix into all ? every <br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>#&nbsp; &nbsp; Length of time between ABM execution cycles<br />abm_interval = 1.0</code></dd></dl> and this ?<br /><br /><br />however, when I put an output to a globalstep<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.register_globalstep(function(dtime)<br />&nbsp; &nbsp;handle_active_blocks_timer = handle_active_blocks_timer + dtime<br />&nbsp; &nbsp;if dtime &lt; 0.2 or handle_active_blocks_timer &gt;= (dtime * 3) then<br />&nbsp; &nbsp;&nbsp; &nbsp;print(string.format(&quot;elapsed time: %.2fms&quot;, (os.clock() - t1) * 1000)..&quot; get &quot;..dtime)<br />&nbsp; &nbsp;&nbsp; &nbsp;handle_active_blocks_timer = 0.1<br />&nbsp; &nbsp;&nbsp; &nbsp;move_entities_globalstep_part1(dtime)<br />&nbsp; &nbsp;&nbsp; &nbsp;move_entities_globalstep_part2(dtime)<br />&nbsp; &nbsp;end<br />end)<br /></code></dd></dl> so I get<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>elapsed time: 123.61ms get 0.090000003576279<br />elapsed time: 123.85ms get 0.090000003576279<br />elapsed time: 124.16ms get 0.090000003576279<br />elapsed time: 124.36ms get 0.090000003576279<br />elapsed time: 124.62ms get 0.090000003576279<br />elapsed time: 124.89ms get 0.090000003576279<br />elapsed time: 125.18ms get 0.090000003576279<br />elapsed time: 125.50ms get 0.090000003576279<br />elapsed time: 125.75ms get 0.090000003576279<br />elapsed time: 126.02ms get 0.090000003576279<br />elapsed time: 126.28ms get 0.090000003576279<br />elapsed time: 126.62ms get 0.090000003576279<br />elapsed time: 126.97ms get 0.090000003576279<br />elapsed time: 127.27ms get 0.090000003576279<br />elapsed time: 127.56ms get 0.090000003576279<br />elapsed time: 127.85ms get 0.090000003576279<br />elapsed time: 128.17ms get 0.090000003576279<br />elapsed time: 128.49ms get 0.090000003576279<br />elapsed time: 128.78ms get 0.090000003576279<br />elapsed time: 129.05ms get 0.090000003576279<br />elapsed time: 129.36ms get 0.090000003576279<br />elapsed time: 129.61ms get 0.090000003576279<br /></code></dd></dl> looking this result with default 0.09 gives me 0.090000003576279 with an average of 3 time check EVERY 1 ms. Do I change dedicated_server_step to 0.05 I get 0.050000000745058 also check it 3 time a ms.<br /><br />I wanna remember,<br />* a client can show every 0.01666 s / 16.66 ms a new frame to the human user, <br /><br />* but globalstep updates 3 time each ms to force new data created if possible.<br />This mean for me that globalstep &quot;starts actions&quot; 16.666 ms / (1/3) 0.333 ms  = 50 times between one new data packet would be needed from Client but is send only every 90 ms.<br />So take this it mean 90 ms / 0.333 ms = 180 times globalstep forces something to work for nothing as data not send to clients<br />or<br />* &quot;dedicated_server_step = 0.09&quot; just send data every 90 ms ? <br />Should this be then better nearby the possible fps rate needed update of data, mean 0.016 ??<br />This might mean, just before a new frame should be shown to player, it will also be generated with new data<br /><br /><br /><span style="font-weight: bold">For nothing ? what are this updates of positions and items, nodes done by the server CPU worth when cant be used ?</span><br />* neither from server as send all 90 ms, better would be 0.016<br />* neither from the client as it just can show every 0.0166 ms given update as of fps ?<br /><br /><br />(The code up is my most using CPU time on server, provider gives it 40% - 40% where maybe 1% would be enough - 40% / 50 times useless updated = just 1% left)<br /><br />so how to slow down globalstep ? - <br />how to change to minetest.after ?<br />* I suggest it might depend on the &quot;dedicated_server_step&quot; also, mean it is still fast enough when repeat every<br />--&gt; 1 ms, mean save already 66% of CPU time, but still 90 times inside one send-data-repeat, or 16 mines in one screen-refresh !<br />--&gt; between all possible will still be fast enough I think, and save a lot of CPU time on server<br />--&gt; 16 ms, that would mean near synchrony of possible update new data at client, including similar set of dedicated_server_step to 0.016 = new date is send more often, just often enough to deliver every new screen new data<br /><br />or also the other was, optimize also &quot;dedicated_server_step&quot; to get better fixed to possible fps rate ?<br />* I suggest 0.016 instead of 0.9 if server can handle it, or then in steps multi of it: 0.033, 0.05, 0.066, 0.084, ...to optimize send data to needed to refresh screen. <br />(I work with set to 0,001 and it works - just poor slow/low connected clients ? as I flood them with data ...)<br /><br /><br />All will depend on servers CPU and network possibilities, also client can get in and work out with CPU GPU.<br /><br /><br />And then how often is the client sending new date?<br />Is it the same given set from the server, or can the client decide ?<br />* Then also here would be better if nearby screen update, mean 0.016 if network can hold it.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 841</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347648" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22457.htm#p347648">Re: How to determine, how often an item needs to be updated </a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 31, 2019 2:29 pm </p>
+
+			<div class="content">one last thing from other direction:<br />the code left to this<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local t1 = os.clock()<br />local done = 0<br /><br />minetest.register_globalstep(function(dtime)<br />&nbsp; &nbsp;&nbsp; &nbsp;t2 = os.clock()<br />&nbsp; &nbsp;&nbsp; &nbsp;move_entities_globalstep_part1(dtime)<br />&nbsp; &nbsp;&nbsp; &nbsp;move_entities_globalstep_part2(dtime)<br />&nbsp; &nbsp;&nbsp; &nbsp;done = done + 1<br />&nbsp; &nbsp;&nbsp; &nbsp;print(string.format(&quot;elapsed t1: %.3f ms&quot;, (os.clock()-t1)*1000)..&quot; : &quot;..string.format(&quot;elapsed t2: %.3f ms&quot;, (os.clock()-t2)*1000)..&quot; repeats: &quot;..done..&quot; / dtime: &quot;..string.format(&quot;%.3f&quot;,dtime))<br />end)</code></dd></dl> mean not check about parameter, let it run every time it want.<br /><br />Guessing what?<br />* set dedicated_server_step = 0.09 (default)<br />getting 113 repeat of running code per 10 sec -mean- every 0.0885 s / 88.5 ms <br />= (90/88.5) = 10.16 time more often then data is send to client = useless<br />= 88/16.6 = only every 5.3th update on screen depends on new data = 10*5.3 useless work done at server<br /><br />* set dedicated_server_step = 0.05 (see wiki)<br />getting 207 repeat through this code between per 10 sec -mean- every 0.0482 s / 48.2 ms<br />= (50/48.2) = 1.03 time faster then data send via network = perfect ! just in time<br />= 48.2/16.6 = only every 2.89th update of a screen still get new data for a change<br /><br />* set dedicated_server_step = 0.016 (near fps)<br />getting 337 repeat in 10 sec -mean- every 0.296 s / 29.6 ms<br />= (16/29.6) = 0.5 faster, or 2 slower, mean only every 2nd data packet contains new data<br />= (29.6/16.6) = every 1.78th update is base on new data at screen<br /><br />still to slow ? to see a real moving, mean get new data to every update of screen<br /><br />* set dedicated_server_step = 0.001 (test)<br />getting 338 repeats ... nothing more to get out of CPU or globalstep ...<br />same with set 0.0001 ... 339 repeats<br /><br />where is the optimum then at cant get every 16 ms ? but not send to often same old data to client ?<br />we stuck here about near under 30 ms<br /><br />* 0.033 still 314 repeats in 10 sec = every 32.8 ms<br />but look here every 33 ms data should be send, and there are new data every 32.8 sec ...<br />WOW<br />CPU here (i7-4770 3.4 GHz) cant do much faster or wont as I see not a 1% of change in usage,<br />(that mean there is some other thing limiting it ?)<br />so then we set the sending to client just near this, so most sending mean also new data ?<br />and so every 2nd frame at 60 fps is a new one.<br /><br />All wrong ?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 841</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347649" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22457.htm#p347649">Re: How to determine, how often an item needs to be updated</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 31, 2019 2:47 pm </p>
+
+			<div class="content">and after this we have to check<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>active_block_mgmt_interval = 4.0<br />abm_interval = 2.0<br />nodetimer_interval = 0.4</code></dd></dl>some to read <a href="https://rubenwardy.com/minetest_modding_book/en/map/timers.html" class="postlink">here</a><br /><br />when we also sending all 33 ms new data to client (this depend on pipeworks globalstep check / others will follow), what not optimizing the other runs also ?<br />but for this I need to understand these here first<br /><br />one part in this is the setting of a warning, when ABM took longer at <a href="https://github.com/minetest/minetest/blob/master/src/serverenvironment.cpp#L1374" class="postlink">serverenvironment.cpp#L1374</a><br />I still don't know if ABM run are cut after that one after the needed time, or al ABM was running through just telling that ...<br /><br />However, I set to 300 and have silence, but when all ABM run sure in a time-frame of 300ms, or 200ms most time<br />then normally to wait for the next run of all ABM much longer then 500 ms does not make much sense, as the time waiting - so i think - the list of next abm need to &quot;do&quot; is getting longer,<br />and the earlier is restart them, the less of them have to be worked out.<br />BUT when every 33 ms data is send to client, it takes 200/33 every 6th packet contains then this updated abm data and only every 5th time the screen is renewed, that might be to see.<br /><br /><br />so which of them do what ?<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>active_block_mgmt_interval = 4.0<br />Length of time between active block management cycles</code></dd></dl> something is managing the active blocks, building list or what ?<br /><br />and<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>abm_interval = 2.0<br />Length of time between Active Block Modifier (ABM) execution cycles</code></dd></dl> the distance where ABM get started (and cause took longer haha), but does it mean every 2 second or 2 second after last finished ?<br />even when first is meant, every 2000 ms, the environment allows only 200 ms to do it ?<br /><br />Here I need to guesses until now, but set this to 0.5 would run them every 500 ms, and they need never longer then 300 at me, and if ... what will happen ?<br /><br />But if the list is updated just all 4000 ms, for what working them every 2s when this list is new just every 2nd time...<br /><br /><span style="font-weight: bold">No, here I an in full darkness !</span><br /> <br />So please some clear hint.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 841</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347653" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22457.htm#p347653">Re: How to determine, how often an item needs to be updated</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Sun Mar 31, 2019 3:29 pm </p>
+
+			<div class="content">The server step should <span style="font-weight: bold">not</span> match the render step. This is completely unnecessary, and will actually result in worse performance. The client already interpolates stuff so things appear smooth. For animating things, make sure you're using move_to rather than set_pos.<br /><br />Don't go below 0.05 on a server.  If you have more than 30 users online, you should probably even increase it to something like 0.2!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>rubenwardy</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 5706</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 6:11 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347659" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22457.htm#p347659">Re: How to determine, how often an item needs to be updated</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 31, 2019 4:34 pm </p>
+
+			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>The server step should <span style="font-weight: bold">not</span> match the render step. This is completely unnecessary, and will actually result in worse performance. The client already interpolates stuff so things appear smooth. For animating things, make sure you're using move_to rather than set_pos.<br /><br />Don't go below 0.05 on a server.  If you have more than 30 users online, you should probably even increase it to something like 0.2!</div></blockquote> ????<br /><br />I didn't post render up there ...<br />I didn't ask about programming mod with set_pos or ...<br />oh, just about server_step ... but is is named &quot;dedicated_server_step&quot; as also a &quot;server_step&quot; is there<br />and I set on main server to &quot;dedicated_server_step = 0.033&quot; and two hours still all run<br />(before I had 0.0001 for near two months ... and lag under 0.2 also)<br /><br />add: learn about render, why might this be important:<br />found <a href="https://dev.minetest.net/Core_Architecture" class="postlink">dev wiki</a><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>The main loop: Invokes the client, the server, the environment and the rendering. <br />...<br />Render step<br />Create a list of MapBlocks in rendering range foreach(MapBlocks in rendering range): <br />If it is not in front of the player, skip it Draw the faces of the MapBlock<br />...<br />The mesh generator is managed by the Client.<br />In Minetest 0.3.1, occlusion culling was added to the render step<br />In Minetest 0.4.3, the list of MapBlocks to be rendered is cached, and sorted by texture <br />... </code></dd></dl> but the loop is the best<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Loop<br />* Read input (who, both server and client ?)<br />* Run client (also steps the environment)<br />* Run server<br />* Update camera (who, we are just after run server)<br />* Calculate what block is the crosshair pointing to<br />* If the player left/right clicked, send a remove/add node command to server (and here we are at client, but that should have run more up 2nd entry)<br />* Render scene (who, client now or again server ?)<br /></code></dd></dl><br />fast: <br />* kick al people with RTT higher than 20-50? - as they stop the server running, as server has to wait for there data<br /><br />where is the render_step set ? If this is the real name of it ...<br />&quot;Create a list of MapBlocks&quot; and what setting belongs to this ?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 841</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			5 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=47" class="left-box left" accesskey="r">Return to Modding Discussion</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Google Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

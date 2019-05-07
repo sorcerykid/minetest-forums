@@ -1,0 +1,162 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/47_22541.htm
+
+  The following page was cached by Yandex Bot (https://yandex.com/) on 23-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - Restrict where a node can be placed</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - Restrict where a node can be placed" href="https://forum.minetest.net/feed.php?f=47&amp;t=22541" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=47">Modding Discussion</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=22541">Restrict where a node can be placed</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			1 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p348947" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22541.htm#p348947">Restrict where a node can be placed</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>jarel</strong> &raquo; Mon Apr 15, 2019 19:59 </p>
+
+			<div class="content">Hi, I have two questions. <br /><br />1. How to restrict a node to be placed only below another nodes, in general.<br />And in the other hand...<br /><br />2. How to restrict a node to be placed only below a kind of node in particular.<br /><br />I'm trying to attach a lamp only to hanger nodes (the hanger node changes to hanger_with_chains to connect the two nodes visually). Hangers can be placed on the floor, on the ceiling or wherever, but I only want the lamps be able to be placed below those on the ceiling.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.register_node(&quot;qnn:lamp&quot;, {<br />&nbsp; &nbsp;description = &quot;Lamp&quot;,<br />&nbsp; &nbsp;drawtype = &quot;nodebox&quot;,<br />&nbsp; &nbsp;tiles = {&quot;qnn_lamp.png&quot;},<br />&nbsp; &nbsp;paramtype = &quot;light&quot;,<br />&nbsp; &nbsp;--paramtype2 = &quot;wallmounted&quot;,<br />&nbsp; &nbsp;on_rotate = screwdriver.disallow,<br />&nbsp; &nbsp;sunlight_propagates = true,<br />&nbsp; &nbsp;walkable = false,<br />&nbsp; &nbsp;--liquids_pointable = false,&nbsp; &nbsp;<br />&nbsp; &nbsp;groups = {choppy=1},<br />&nbsp; &nbsp;node_box = {<br />&nbsp; &nbsp;&nbsp; &nbsp;type = &quot;fixed&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;fixed = {<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{-0.25, -0.5, -0.25, 0.25,0.5, 0.25},&nbsp; &nbsp;&nbsp; &nbsp;<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;},<br />&nbsp; &nbsp;},&nbsp; &nbsp;<br />&nbsp; &nbsp;on_place = function(itemstack, user, pointed_thing)<br />&nbsp; &nbsp;&nbsp; &nbsp;local user_name = user:get_player_name()<br />&nbsp; &nbsp;&nbsp; &nbsp;local pos = pointed_thing.under<br />&nbsp; &nbsp;&nbsp; &nbsp;local name =minetest.get_node(pos).name<br />&nbsp; &nbsp;&nbsp; &nbsp;local i=0<br />&nbsp; &nbsp;&nbsp; &nbsp;if name==&quot;qnn:hanger&quot; then&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_node(pos, {name=&quot;qnn:hanger_with_chain&quot;, param2=minetest.get_node(pos).param2 }) --&nbsp; &lt;--swap_node doesnt keep the rotation of the node here<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;pos.y=pos.y-1<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_node</nobr>(pos, {name=&quot;qnn:lamp&quot;}) <br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;itemstack:take_item(1) --remove 1 lamp from inv.<br />&nbsp; &nbsp;&nbsp; &nbsp;end<br />&nbsp; &nbsp;&nbsp; &nbsp;return itemstack <br />&nbsp; &nbsp;end,&nbsp; &nbsp;<br />})<br /></code></dd></dl><br />I used on_place, and it works... save for the fact that it got glitchy when placing from certain angles and I got fake duplicates of the node around the original. Those duplicates, when I check them with node inspector are &quot;air&quot; although the image and the selection box are from the lamp node.<br />If I close the game and enter again, those nodes are gone, are air again.<br /><br />Thanks in advance</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>jarel</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Sat Apr 13, 2019 08:14</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			1 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=47" class="left-box left" accesskey="r">Return to Modding Discussion</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Yandex Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

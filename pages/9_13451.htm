@@ -1,0 +1,762 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/9_13451.htm
+
+  The following page was cached by Bing Bot (https://bing.com/) on 12-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - rnd_trees</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - rnd_trees" href="https://forum.minetest.net/feed.php?f=9&amp;t=13451" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=9">WIP Mods</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=13451">rnd_trees</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			20 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p195535" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195535">rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rnd</strong> &raquo; Tue Oct 20, 2015 12:40 pm </p>
+
+			<div class="content">Growing trees using natural growth process. Growth proces only occurs through air/leaves, the trunk shell can grow into other things too<br /><br /><span style="font-weight: bold">GITHUB</span>: <a href="https://github.com/ac-minetest/rnd_trees/wiki" class="postlink">https://github.com/ac-minetest/rnd_trees/wiki</a><br /><br />LICENSE: LGPL<br /><br /><img src="https://raw.githubusercontent.com/ac-minetest/media/master/rnd_trees/tree4.jpg" alt="Image" /><br /><br /><img src="https://raw.githubusercontent.com/ac-minetest/media/master/rnd_trees/tree5.jpg" alt="Image" /><br /><br /><img src="https://raw.githubusercontent.com/ac-minetest/media/master/rnd_trees/tree3.jpg" alt="Image" /><br /><br /><span style="font-weight: bold">Usage:</span> place rnd_trees:tree on ground.<br /><br /><span style="font-weight: bold">Algorithm sketch:</span><br /><br />Start with one piece of living wood. Assign it life energy and let it grow. With each growth energy decreases. Depending on energy it can randomly branch in random direction with length of branch depending on energy; living wood remembers the branching stage. Randomly add leaves above trunk height with random sizes depending on if we are in end growth stage or not.<br /><br />If not in branch thicken the living wood a bit to make thicker main tree trunk. The growth stops when living wood is out of life energy.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>rnd</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 218</dd><dd><strong>Joined:</strong> Sun Dec 28, 2014 12:24 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p195537" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195537">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Don</strong> &raquo; Tue Oct 20, 2015 1:52 pm </p>
+
+			<div class="content">Cool!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Don</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1642</dd><dd><strong>Joined:</strong> Sat May 17, 2014 6:40 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p195543" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195543">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MineYoshi</strong> &raquo; Tue Oct 20, 2015 2:54 pm </p>
+
+			<div class="content">Looks good!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>MineYoshi</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 5371</dd><dd><strong>Joined:</strong> Wed Jul 08, 2015 1:20 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p195544" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195544">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rnd</strong> &raquo; Tue Oct 20, 2015 2:57 pm </p>
+
+			<div class="content">here is what happens if no growth limit or bad settings<br /><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=3963" alt="Image" /><br /><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=3960" alt="Image" /></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>rnd</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 218</dd><dd><strong>Joined:</strong> Sun Dec 28, 2014 12:24 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p195548" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195548">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MineYoshi</strong> &raquo; Tue Oct 20, 2015 3:21 pm </p>
+
+			<div class="content">going to happend this!<br /><br /><img src="http://www.vitalibros.cl/site/wp-content/uploads/2013/05/Habichuelas-m%C3%A1gicas.jpg" alt="Image" /></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>MineYoshi</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 5371</dd><dd><strong>Joined:</strong> Wed Jul 08, 2015 1:20 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p195661" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195661">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rnd</strong> &raquo; Wed Oct 21, 2015 9:55 am </p>
+
+			<div class="content">more complex branching process for better looking trees (open image in new tab)<br /><br /><img src="https://raw.githubusercontent.com/ac-minetest/media/master/rnd_trees/tree0.jpg" alt="Image" /></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>rnd</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 218</dd><dd><strong>Joined:</strong> Sun Dec 28, 2014 12:24 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p195683" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195683">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Minetestforfun</strong> &raquo; Wed Oct 21, 2015 3:00 pm </p>
+
+			<div class="content">This is beautiful and soo real, really great work, i like it so much !<br /><br />Can't wait to see this for all trees in a mapgenV7 :)</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Minetestforfun</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 936</dd><dd><strong>Joined:</strong> Tue Aug 05, 2014 2:09 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p195931" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195931">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rnd</strong> &raquo; Fri Oct 23, 2015 8:59 am </p>
+
+			<div class="content">large trees <br /><br /><style>
+.spoiler {
+	border: solid 1px #eee !important;
+	border-radius: 0.2em;
+	background: #fff;
+	padding: 0.5em 0.75em;
+	margin: 0.75em 1em
+}
+.spoiler_header {
+	color: #cb4b16;
+	cursor: pointer;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none
+}
+.spoiler_content {
+	margin-top: 0.7em !important;
+	padding-top: 0.7em !important;
+	padding: .35em 0;
+	color: #333;
+	border-top: dashed 1px #eee !important
+}
+</style>
+<script>
+function spoiler_toggle(event) {
+	var node = event.target;
+	if (node.nodeName != "DIV") {
+		node = node.parentNode;
+	}
+	var contentNode = node.nextSibling;
+	if (contentNode && contentNode.className == "spoiler_content") {
+		if(contentNode.style.display == "none") {
+			contentNode.style.display = "block";
+			node.firstChild.firstChild.nodeValue = "-";
+		} else {
+			contentNode.style.display = "none";
+			node.firstChild.firstChild.nodeValue = "+";
+		}
+		return false;
+	}
+	return true;
+}
+</script>
+<div class="spoiler">
+	<div class="spoiler_header" onClick="spoiler_toggle(event);"><b>+</b>
+		settings used
+	</div><div class="spoiler_content" style="display: none;">
+		local TREE_SIZE = 30;<br />local TRUNK_SIZE = 10;<br />local BRANCH_LENGTH = 30.;
+	</div>
+</div><br /><img src="https://forum.minetest.net/download/file.php?id=3978" alt="Image" /><br /><br />what remains to be done: <br />-rewrite code so that it uses <!-- m --><a class="postlink" href="http://dev.minetest.net/VoxelManip">http://dev.minetest.net/VoxelManip</a><!-- m -->,<br />-save &quot;DNA&quot; into each tree seedling so that we can have different types of trees<br />-few fine tweaks</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>rnd</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 218</dd><dd><strong>Joined:</strong> Sun Dec 28, 2014 12:24 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p195938" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p195938">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Prot</strong> &raquo; Fri Oct 23, 2015 12:05 pm </p>
+
+			<div class="content">Wow! This is amazing idea! And looks very impressive!<br />You can do some new biomes with this trees.. Like getting settings from mapgen, and plant somewhere big trees, or somewhere little..<br />I like it!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Prot</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 36</dd><dd><strong>Joined:</strong> Thu Apr 02, 2015 1:20 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p206656" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p206656">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sat Feb 06, 2016 1:43 pm </p>
+
+			<div class="content">Took a quick look at the screenshots and code. I like both the idea, and how simplistically it seems to be implemented! I might use this for the trees of a Minetest game I'll be making, but need to test it a bit first.<br /><br />Can you please specify what license the script is under? May I include it as LGPL like most mods are?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>MirceaKitsune</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 851</dd><dd><strong>Joined:</strong> Sat May 21, 2011 10:31 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p206759" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p206759">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Hybrid Dog</strong> &raquo; Sun Feb 07, 2016 8:12 pm </p>
+
+			<div class="content">You want to make it use vmanip, do you want a whole tree to appear immediately (faster) or the current way (being able to see it growing, vmanip may decrease speed because of low nodes count)?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Hybrid Dog</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2724</dd><dd><strong>Joined:</strong> Thu Nov 01, 2012 12:46 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p206766" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p206766">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rnd</strong> &raquo; Sun Feb 07, 2016 10:06 pm </p>
+
+			<div class="content"><blockquote><div><cite>MirceaKitsune wrote:</cite>Took a quick look at the screenshots and code. I like both the idea, and how simplistically it seems to be implemented! I might use this for the trees of a Minetest game I'll be making, but need to test it a bit first.<br /><br />Can you please specify what license the script is under? May I include it as LGPL like most mods are?</div></blockquote><br /><br />ok, LGPL</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>rnd</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 218</dd><dd><strong>Joined:</strong> Sun Dec 28, 2014 12:24 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p206772" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p206772">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sun Feb 07, 2016 10:51 pm </p>
+
+			<div class="content"><blockquote><div><cite>rnd wrote:</cite>ok, LGPL</div></blockquote><br /><br />Thanks. I actually wrote my own tree growth function from scratch, since this mod wasn't working well for me. But it was inspired by its idea, and uses the same life-based mechanism. I'm not sure if I'll publish it as an individual mod, but it will be featured in my game.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>MirceaKitsune</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 851</dd><dd><strong>Joined:</strong> Sat May 21, 2011 10:31 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p285657" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p285657">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ManElevation</strong> &raquo; Wed Jul 26, 2017 10:57 pm </p>
+
+			<div class="content">This gives a complete different look to minetest trees, this is awesome!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>ManElevation</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 896</dd><dd><strong>Joined:</strong> Tue Aug 02, 2016 10:04 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346319" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p346319">Improvements</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>BertrandtheHealer</strong> &raquo; Sun Mar 17, 2019 4:39 am </p>
+
+			<div class="content">I submitted a pull request to add a few improvements:<br /><br /><span style="font-weight: bold">Chat Commands:</span><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/treespec &lt;tree size&gt; &lt;trunk size&gt; &lt;branch length&gt;<br />/trunkmat -- sets trunk material from currently wielded item<br />/leafmat -- sets leaf material from currently wielded item<br /></code></dd></dl><br /><br />Using a negative generation parameter randomizes that parameter for each tree created. For example:<br /><ul><li>/treespec -20 -6 -10 would make trees with random TREE_SIZE between 10 and 20, random TRUNK_SIZE between 3 and 6, and random BRANCH_LENGTH between 5 and 10.</li><li>/treespec -30 -5 8 would make trees with random TREE_SIZE between 15 and 30, random TRUNK_SIZE between 3 and 5, and BRANCH_LENGTH 10.</li></ul><br /><span style="font-weight: bold">&quot;DNA&quot;:</span><br />Growth nodes 'remember' the settings the tree was created with, so when the parameters or materials are changed they do not affect trees that are currently growing.<br /><br /><span style="font-weight: bold">Persistent settings:</span><br />Each player has their own separate tree generation settings which persist when logging out.<br /><br /><span style="font-weight: bold">Thicker trunks:</span><br />Taller trees with spreading canopies have bigger trunks.<br />Trees with tree size + branch length greater than 40 have a 1.5 radius trunk section; greater than 60 have a 2 radius circular section.<br /><br /><!-- m --><a class="postlink" href="https://github.com/BertrandTheHealer/rnd_trees/">https://github.com/BertrandTheHealer/rnd_trees/</a><!-- m --><br /><br /><img src="https://i.imgur.com/Wrs7QXJ.jpg" alt="Image" /><br />I made all these trees in a few minutes, including the Dr. Seuss monstrosity in the background<br /><img src="https://i.imgur.com/swTmmVQ.jpg" alt="Image" /></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>BertrandtheHealer</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3</dd><dd><strong>Joined:</strong> Sun Mar 17, 2019 4:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346356" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p346356">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Astrobe</strong> &raquo; Sun Mar 17, 2019 10:54 am </p>
+
+			<div class="content">Actually... Metal or stone blocks could be interesting (petrified trees?). With some changes to the algorithm, connecting blocks (SDwalls, columnia, fences,...) could yield interesting structures too.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Astrobe</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 212</dd><dd><strong>Joined:</strong> Sun Apr 01, 2018 10:46 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346358" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p346358">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Astrobe</strong> &raquo; Sun Mar 17, 2019 11:19 am </p>
+
+			<div class="content">Curiously this mod is posterior to the introduction of L-systems, which hasn't been much used AFAICT. In 4.17 docs there was a note that it had lighting bugs, but it is gone in 5.0 so I guess that it has been fixed. Perhaps petrified trees could be a good fit to the rather empty and dark new permafrost biome.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Astrobe</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 212</dd><dd><strong>Joined:</strong> Sun Apr 01, 2018 10:46 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346386" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p346386">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>BertrandtheHealer</strong> &raquo; Sun Mar 17, 2019 6:02 pm </p>
+
+			<div class="content"><blockquote><div><cite>Astrobe wrote:</cite>Actually... Metal or stone blocks could be interesting (petrified trees?)</div></blockquote><br /><br />I agree, however I haven't found a good way of determining which blocks will work. For example the game crashes if you try to make the trunk out of minecarts or clay bricks. Excluding such blocks indivudually isn't feasible. If you know of a way short  I'll be happy to implement it. <br /><br />To disable the material restrictions you can comment out lines 55, 58-60, 80, and 83-85 in init.lua</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>BertrandtheHealer</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3</dd><dd><strong>Joined:</strong> Sun Mar 17, 2019 4:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346401" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p346401">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Astrobe</strong> &raquo; Sun Mar 17, 2019 7:38 pm </p>
+
+			<div class="content">Oh, that's because minecarts are entities and bricks are craft items. You can check that the thing is the node by trying to index the registered nodes table with the name: minetest.registered_nodes[name] ~= nil or something like that.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Astrobe</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 212</dd><dd><strong>Joined:</strong> Sun Apr 01, 2018 10:46 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346402" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_13451.htm#p346402">Re: rnd_trees</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>BertrandtheHealer</strong> &raquo; Sun Mar 17, 2019 7:55 pm </p>
+
+			<div class="content"><blockquote><div><cite>Astrobe wrote:</cite>You can check that the thing is the node by trying to index the registered nodes table with the name: minetest.registered_nodes[name] ~= nil or something like that.</div></blockquote><br /><br />Thanks. I'm new to this.<br /><br />I fixed it<br /><a href="https://github.com/BertrandTheHealer/rnd_trees/" class="postlink">https://github.com/BertrandTheHealer/rnd_trees/</a><br /><img src="https://i.imgur.com/aflJeSQ.jpg" alt="Image" /></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>BertrandtheHealer</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3</dd><dd><strong>Joined:</strong> Sun Mar 17, 2019 4:14 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			20 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=9" class="left-box left" accesskey="r">Return to WIP Mods</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Bing Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

@@ -1,0 +1,307 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/11_20058.htm
+
+  The following page was cached by Yandex Bot (https://yandex.com/) on 26-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - hopper]</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - hopper]" href="https://forum.minetest.net/feed.php?f=11&amp;t=20058" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=11">Mod Releases</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=20058">hopper]</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			6 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p317837" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20058.htm#p317837">[Mod] Hoppers, chutes and sorters [hopper]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>FaceDeer</strong> &raquo; Sat May 05, 2018 04:32 </p>
+
+			<div class="content"><img src="https://raw.githubusercontent.com/minetest-mods/hopper/master/screenshot.png" alt="Image" /><br /><br />Based on jordan4ibanez's original hoppers mod, optimized by TenPlus1 and FaceDeer, with chutes and sorters by FaceDeer<br /><br />Hoppers are nodes that can transfer items to and from the inventories of adjacent nodes. The wide end of a hopper is its &quot;input&quot; end, if there's a chest or other compatible container it will take one item per second into its own internal inventory. It will also draw in items that have been dropped here. The narrow end of the hopper is its &quot;output&quot; end. It will attempt to inject items into a compatible container located at its output end. If there's no compatible container and the hopper's &quot;eject&quot; mode has been enabled it will instead dump the items out into the world.<br /><br />The location of a hopper relative to a furnace determines which inventory slots the hopper will affect. A hopper directly above a furnace will inject items into the furnace's input slot. A hopper to the furnace's side will inject items into the furnace's fuel slot. A hopper below the furnace will pull items out of the furnace's output slot. Hoppers cannot inject items into inappropriate slots; non-fuel items will not be placed into the furnace's fuel slot and non-cookable items will not be placed into the input slot.<br /><br />Also included in this mod are a &quot;chute&quot; node and a &quot;sorter&quot; node. These allow for items to be routed over short distances and distributed in sophisticated ways.<br /><br />A chute simply moves items into adjacent nodes. You'll need to use a hopper or sorter to inject items into it to move along. A screwdriver is a useful tool for getting chutes aimed correctly.<br /><br />A sorter has two different outputs. Its inventory has a &quot;filter&quot; grid; place items in this grid to set the sorter's filter. Items that match the filter will be sent out the output with the large arrow and other items will be sent out the output with the smaller arrow. A &quot;filter all&quot; option will cause the sorter to attempt to send <span style="font-style: italic">all</span> items in the direction of the large arrow and then if that fails send them in the direction of the smaller arrow. This allows you to have an &quot;overflow&quot; storage should the sorter's primary target fill up, or when used in combination with a selective container (like the furnace's fuel slot, for example) it allows the target inventory to do the filtering for you.<br /><br />Hoppers have the same permissions as the player that placed them. Hoppers placed by you are allowed to take items from or put items into locked chests that you own, but hoppers placed by other players will be unable to do so. A hopper's own inventory is not not owner-locked, though, so you can use this as a way to allow other players to deposit items into your locked chests.<br /><br /><span style="font-weight: bold">Advanced settings</span><br /><br />This mod has several configurable settings found in the advanced settings menu.<br /><br /><ul><li> Hopper texture size: can be set to 16 pixels (matching most standard Minetest node textures) or 32 pixels</li><li> Single craftable item: When enabled (the default) hoppers are crafted as a single item and then select whether the output has a 90-degree turn to the side based on how you place it. When disabled you can craft straight and bent hoppers as separate items.</li><li> Eject items button: this can be used to remove the &quot;eject items&quot; button from hoppers, if it is not desired.</li></ul><br />If other mods wish to make containers compatible with hoppers, there is a <a href="https://raw.githubusercontent.com/minetest-mods/hopper/master/api.txt" class="postlink">public API documented here</a>.<br /><br /><span style="font-weight: bold">Change log</span><br /><br />- 0.1 - Initial release from jordan4ibanez<br />- 0.2 - Fixed tool glitch (wear restored by accident)<br />- 0.3 - transfer function added<br />- 0.4 - Supports locked chest and protected chest<br />- 0.5 - Works with 0.4.13's new shift+click for newly placed Hoppers<br />- 0.6 - Remove formspec from hopper nodes to improve speed for servers<br />- 0.7 - Halved hopper capacity, can be dug by wooden pick<br />- 0.8 - Added Napiophelios' new textures and tweaked code<br />- 0.9 - Added support for Wine mod's wine barrels<br />- 1.0 - New furances do not work properly with hoppers so old reverted to abm furnaces<br />- 1.1 - Hoppers now work with new node timer Furnaces.  Reduced Abm's and tidied code.<br />- 1.2 - Added simple API so that hoppers can work with other containers.<br />- 1.3 - Hoppers now call on_metadata_inventory_put and on_metadata_inventory_take, triggering furnace timers via their standard callbacks. Updated side hopper rotation handling to allow it to function in any orientation. Added settings options to use 16-pixel or 32-pixel textures. Added settings option to allow explicit crafting of standard/side hoppers or to allow crafting of a single item that selects which type to use on place. Added in-game documentation via optional &quot;doc&quot; mod dependency<br />- 1.4 - Added intllib support<br />- 1.5 - Added chutes<br />- 1.6 - Added &quot;eject items&quot; button to formspecs, &quot;group&quot; support to the API<br />- 1.7 - Added sorter block to allow for more sophisticated item transfer arrangements<br /><br /><span style="font-weight: bold">Links</span><br /><br /><ul><li><a href="https://github.com/minetest-mods/hopper/" class="postlink">GitHub repository</a></li><li><a href="https://github.com/minetest-mods/hopper/archive/master.zip" class="postlink">Download</a></li></ul><br />Hopper has in-game documentation available via the <a href="https://forum.minetest.net/viewtopic.php?f=11&amp;t=15912" class="postlink">doc mod</a>.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>FaceDeer</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 298</dd><dd><strong>Joined:</strong> Sat Aug 29, 2015 19:01</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p317847" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20058.htm#p317847">Re: [Mod] Hoppers, chutes and sorters [hopper]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Sat May 05, 2018 10:11 </p>
+
+			<div class="content">Excellent mod with great API features.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>texmex</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1293</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 21:08</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p317881" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20058.htm#p317881">Re: [Mod] Hoppers, chutes and sorters [hopper]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Sat May 05, 2018 17:53 </p>
+
+			<div class="content">So you finally posted it on the forums.  Great!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>v-rob</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 623</dd><dd><strong>Joined:</strong> Thu Mar 24, 2016 03:19</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p317892" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20058.htm#p317892">Re: [Mod] Hoppers, chutes and sorters [hopper]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>RSLRedstonier</strong> &raquo; Sat May 05, 2018 19:54 </p>
+
+			<div class="content">the api is probably the easiest way to add item transport to a custom block</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>RSLRedstonier</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 450</dd><dd><strong>Joined:</strong> Wed May 10, 2017 21:00</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349210" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20058.htm#p349210">Re: [Mod] Hoppers, chutes and sorters [hopper]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>GamingAssociation39</strong> &raquo; Fri Apr 19, 2019 12:36 </p>
+
+			<div class="content">On one of the factions servers, the hoppers keep on getting jammed up due to a glitch/bug in the code.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>GamingAssociation39</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 809</dd><dd><strong>Joined:</strong> Mon Apr 25, 2016 16:09</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349217" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20058.htm#p349217">Re: [Mod] Hoppers, chutes and sorters [hopper</nobr>]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>FaceDeer</strong> &raquo; Fri Apr 19, 2019 18:55 </p>
+
+			<div class="content"><blockquote><div><cite>GamingAssociation39 wrote:</cite>On one of the factions servers, the hoppers keep on getting jammed up due to a glitch/bug in the code.</div></blockquote><br /><br />Could you file an issue over on <a href="https://github.com/minetest-mods/hopper/issues" class="postlink">GitHub</a> with some details about how the bug is happening? There's not much I can do to hunt down what's specifically wrong with just &quot;hoppers keep getting jammed&quot;, I need some specifics about what circumstances are causing them to be jammed.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>FaceDeer</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 298</dd><dd><strong>Joined:</strong> Sat Aug 29, 2015 19:01</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			6 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=11" class="left-box left" accesskey="r">Return to Mod Releases</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Yandex Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

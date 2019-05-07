@@ -1,0 +1,162 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/5_22549.htm
+
+  The following page was cached by Yandex Bot (https://yandex.com/) on 20-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - Need some help or documentation with player models</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - Need some help or documentation with player models" href="https://forum.minetest.net/feed.php?f=5&amp;t=22549" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=5">Feature Discussion</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=22549">Need some help or documentation with player models</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			1 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p348979" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/5_22549.htm#p348979">Need some help or documentation with player models</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Worldblender</nobr></strong> &raquo; Tue Apr 16, 2019 06:29 </p>
+
+			<div class="content">Last month, I mentioned about that I want to create a mod that will allow for easier changing of player models (tentatively to be named <span style="font-style: italic">chchar</span>, giving homage to Unix command names). I found out that the files <a href="https://github.com/minetest/minetest_game/blob/master/mods/player_api/api.lua" class="postlink">https://github.com/minetest/minetest_game/blob/master/mods/player_api/api.lua</a> and <a href="https://github.com/minetest/minetest_game/blob/master/mods/player_api/init.lua" class="postlink">https://github.com/minetest/minetest_game/blob/master/mods/player_api/init.lua</a> are the best helpers to help me realize my mod. However, I'm getting stuck at the two functions:<br /><ul><li> How to register new models - what parameters am I supposed to pass (from init.lua) (it has to search in a directory for models and register all of them)<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>-- Default player appearance<br />player_api.register_model(&quot;character.b3d&quot;, {<br />&nbsp; &nbsp;animation_speed = 30,<br />&nbsp; &nbsp;textures = {&quot;character.png&quot;, },<br />&nbsp; &nbsp;animations = {<br />&nbsp; &nbsp;&nbsp; &nbsp;-- Standard animations.<br />&nbsp; &nbsp;&nbsp; &nbsp;stand&nbsp; &nbsp; &nbsp;= {x = 0,&nbsp; &nbsp;y = 79},<br />&nbsp; &nbsp;&nbsp; &nbsp;lay&nbsp; &nbsp; &nbsp; &nbsp;= {x = 162, y = 166},<br />&nbsp; &nbsp;&nbsp; &nbsp;walk&nbsp; &nbsp; &nbsp; = {x = 168, y = 187},<br />&nbsp; &nbsp;&nbsp; &nbsp;mine&nbsp; &nbsp; &nbsp; = {x = 189, y = 198},<br />&nbsp; &nbsp;&nbsp; &nbsp;walk_mine = {x = 200, y = 219},<br />&nbsp; &nbsp;&nbsp; &nbsp;sit&nbsp; &nbsp; &nbsp; &nbsp;= {x = 81,&nbsp; y = 160},<br />&nbsp; &nbsp;},<br />&nbsp; &nbsp;collisionbox = {-0.3, 0.0, -0.3, 0.3, 1.7, 0.3},<br />&nbsp; &nbsp;stepheight = 0.6,<br />&nbsp; &nbsp;eye_height = 1.47,<br />})</code></dd></dl></li><li> Where to apply actions based on events - I can override the existing function if needed (from api.lua) (I want characters to be more dynamic if they have animations, otherwise fallback on other code if they don't exist)<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>-- Check each player and apply animations<br />minetest.register_globalstep(function(dtime)<br />&nbsp; &nbsp;for _, player in pairs(minetest.get_connected_players()) do<br />&nbsp; &nbsp;&nbsp; &nbsp;local name = player:get_player_name()<br />&nbsp; &nbsp;&nbsp; &nbsp;local model_name = player_model&#91;name&#93;<br />&nbsp; &nbsp;&nbsp; &nbsp;local model = model_name and models&#91;model_name&#93;<br />&nbsp; &nbsp;&nbsp; &nbsp;if model and not player_attached&#91;name&#93; then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;local controls = player:get_player_control()<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;local walking = false<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;local animation_speed_mod = model.animation_speed or 30<br /><br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;-- Determine if the player is walking<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if controls.up or controls.down or controls.left or controls.right then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;walking = true<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;end<br /><br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;-- Determine if the player is sneaking, and reduce animation speed if so<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if controls.sneak then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;animation_speed_mod = animation_speed_mod / 2<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;end<br /><br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;-- Apply animations based on what the player is doing<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if player:get_hp() == 0 then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;player_set_animation(player, &quot;lay&quot;)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;elseif walking then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if player_sneak&#91;name&#93; ~= controls.sneak then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;player_anim&#91;name&#93; = nil<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;player_sneak&#91;name&#93; = controls.sneak<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;end<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if controls.LMB then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;player_set_animation(player, &quot;walk_mine&quot;, animation_speed_mod)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;else<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;player_set_animation(player, &quot;walk&quot;, animation_speed_mod)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;end<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;elseif controls.LMB then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;player_set_animation(player, &quot;mine&quot;)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;else<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;player_set_animation(player, &quot;stand&quot;, animation_speed_mod)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;end<br /></code></dd></dl></li></ul>Other things, I think I can figure it out on my own, given enough time. If I run into any further trouble, I'll ask again later.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Worldblender</nobr></strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 51</dd><dd><strong>Joined:</strong> Tue Jun 30, 2015 22:12</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			1 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=5" class="left-box left" accesskey="r">Return to Feature Discussion</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Yandex Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

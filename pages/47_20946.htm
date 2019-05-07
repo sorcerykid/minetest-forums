@@ -1,0 +1,452 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/47_20946.htm
+
+  The following page was cached by Yandex Bot (https://yandex.com/) on 18-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - odd behviour?</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - odd behviour?" href="https://forum.minetest.net/feed.php?f=47&amp;t=20946" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=47">Modding Discussion</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=20946">odd behviour?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			11 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p333005" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p333005">[Solved] Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sirrobzeroone</strong> &raquo; Thu Oct 11, 2018 23:30 </p>
+
+			<div class="content">I did some scouring of the forum but came up empty and I'm not sure if the behavior I'm seeing in regards to the settingtypes.txt file is expected/known or if its some form of minor issue.<br /><br />Issue:<br />Create a new settingtypes.txt file and place 1 bool config setting in there<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>#&nbsp; &nbsp; If enabled do the enabled thing<br />thing_boolen (Do that thing) bool true<br /></code></dd></dl><br /><br />my expectation at this point is that once that setting is placed into the settingtypes file that if the mod is enabled for my game that if I retrieved the setting it should be true.<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>enabled_thing = tostring(minetest.settings:get_bool(&quot;thing_boolen&quot;))<br /></code></dd></dl><br /><br />If I check enabled_thing on load for example at this point the result is that enabled_thing == &quot;nil&quot;. If I then close my game then go to settings&gt;&gt;advanced settings and just cycle my &quot;Do that thing&quot; setting to disabled then enabled and then reload my game enabled_thing == &quot;true&quot;<br /><br />Is this expected/known behaviour with the settingtypes.txt file? is it just occurring as I'm implementing my settingtypes file after I've already got the mod running inside a game? Just curious really as it was a fairly frustrating hour while I couldn't work out why my setting wasn't being set or am I way off the mark :)<br /><br />Thanks for the help or thoughts.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>sirrobzeroone</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 37</dd><dd><strong>Joined:</strong> Mon Jul 16, 2018 07:56</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p333006" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p333006">Re: Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Thu Oct 11, 2018 23:41 </p>
+
+			<div class="content">I came upon this too.  I don't think this is intended, and I can't find a way to fix it.  It's very annoying.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>v-rob</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 619</dd><dd><strong>Joined:</strong> Thu Mar 24, 2016 03:19</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p333009" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p333009">Re: Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>TumeniNodes</strong> &raquo; Fri Oct 12, 2018 00:58 </p>
+
+			<div class="content">edited to remove, as I misunderstood what you were asking</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>TumeniNodes</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2633</dd><dd><strong>Joined:</strong> Fri Feb 26, 2016 19:49</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p333012" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p333012">Re: Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Fri Oct 12, 2018 01:24 </p>
+
+			<div class="content">This is expected behaviour, the file is only used in the advanced settings window and not for default settings. There's an open feature request for this</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>rubenwardy</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 5725</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 18:11</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p333039" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p333039">Re: [Solved] Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sirrobzeroone</strong> &raquo; Fri Oct 12, 2018 09:15 </p>
+
+			<div class="content">Thanks all appreciate the info :)</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>sirrobzeroone</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 37</dd><dd><strong>Joined:</strong> Mon Jul 16, 2018 07:56</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346464" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p346464">Re: [Solved] Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Downad</strong> &raquo; Mon Mar 18, 2019 12:41 </p>
+
+			<div class="content">can i uste seetingtypes.txt in my mod or not?<br /><br />&gt;this is expected behaviour, the file is only used in the advanced settings window and not for default settings. There's an open feature request for this<br /><br />if it is only used in advanced settings, how van i use it?<br />must i realy write my mod-settings in minetest.conf?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Downad</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 15</dd><dd><strong>Joined:</strong> Tue Oct 03, 2017 08:54</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346466" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p346466">Re: [Solved] Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Linuxdirk</strong> &raquo; Mon Mar 18, 2019 13:15 </p>
+
+			<div class="content"><blockquote><div><cite>Downad wrote:</cite>if it is only used in advanced settings, how van i use it?<br />must i realy write my mod-settings in minetest.conf?</div></blockquote><br />It's weird first, because <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.settings:*</span> functions do not know anything about <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">settingtypes.txt</span>.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local my_setting = minetest.settings:get('mymod_my_setting') or 'my default'</code></dd></dl><br />This sets <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">my_setting</span> to whatever <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">mymod_my_setting</span> is set to, or if it is not set the string <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">my default</span> is used.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>mymod_my_setting (Set my setting) string my default</code></dd></dl><br />This in <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">settingtypes.txt</span> offers the setting via the advanced settings dialog to the user showing the description and the default value <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">my default</span>. When set there the setting is written to the <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.conf</span> file and the first code then loads the setting value from there instead of using the given default.<br /><br /><span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.settings:get_bool</span> takes a second parameter being returned as default if the setting was not set in <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.conf</span> (<span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">local mybool = minetest.settings:get_bool&#40;&#39;mymod_mybool&#39;, true&#41;</span>). Unfortunately the other functions do not have default values.<br /><br /><!-- m --><a class="postlink" href="https://github.com/minetest/minetest/blob/c0fb5dd3179a0cf70457f5948c0aaca69cbf4c0c/doc/lua_api.txt#L5530-L5558">https://github.com/minetest/minetest/bl ... 5530-L5558</a><!-- m --></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Linuxdirk</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1911</dd><dd><strong>Joined:</strong> Wed Sep 17, 2014 11:21</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346554" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p346554">Re: [Solved] Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Downad</strong> &raquo; Tue Mar 19, 2019 10:27 </p>
+
+			<div class="content">i think i am stupid - my settingtyps.txt dont work.<br />my settingtypes.txt<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&nbsp;Some settings<br /># Do the mobs damage the player the Areas?<br /># default: true - in areas the mobs damage the player<br />mobsdamage_areas (Mobs in the area damage the Player) bool false<br /><br /># Do the mobs damage the player the PvP-Areas?<br /># default: true - in PvP-Areas the mobs damage the player<br />mobdamage_pvpareas (Mobs in the PvP-Areas damage the Player) bool false</code></dd></dl><br />my init.lua<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>-- mobs in the areas damage the player<br />-- default: true<br />local mobs_in_areas_do_damage = minetest.settings:get(&quot;mobsdamage_areas&quot;)<br />-- mobs in PvP-areas damage the player<br />-- default: true<br />local mobs_in_pvp_areas_do_damage = minetest.settings:get(&quot;mobsdamage_pvpareas&quot;)<br /></code></dd></dl><br />my output in minetest<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-19 11:20:51: ACTION&#91;Main&#93;: &#91;settingtypes_test&#93; mobs_in_areas_do_damage: nil<br />2019-03-19 11:20:51: ACTION&#91;Main&#93;: &#91;settingtypes_test&#93; mobs_in_pvp_areas_do_damage: nil<br /></code></dd></dl><br />where do i make an Error?<br />i also testet minetest.settings:ge_bool(&quot;mobsdamage_pvpareas&quot;) with the same result. <span style="color: #FF0040">nil</span></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Downad</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 15</dd><dd><strong>Joined:</strong> Tue Oct 03, 2017 08:54</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346578" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p346578">Re: [Solved] Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Tue Mar 19, 2019 17:37 </p>
+
+			<div class="content">Downad,<br /><br />You have the correct setup.<br /><br />What you now need to do is to go into the Minetest settings menu for your mod, and save the setting there.  This will then transfer the setting from settings.txt to minetest.conf.<br /><br />Rubenwardy,<br /><br />Would it not make sense to use game.conf, and mod.conf, to enable settings that are preserved, and can be independently configured per game, per mod, or globally?  This could probably be folded into the engine logic that also handles minetest.conf.  I suggest this, because using the global minetest.conf file to store this info makes it more difficult to independently configure games and mods, without having to go to the settings tab for each instance of game play.<br /><br />Shad</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>ShadMOrdre</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 285</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 08:07</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346580" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p346580">Re: [Solved] Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Tue Mar 19, 2019 17:58 </p>
+
+			<div class="content">mod.conf and game.conf are for meta data about a mod or game, for example its name or description. Settings shouldn't be placed there</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>rubenwardy</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 5725</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 18:11</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346626" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20946.htm#p346626">Re: [Solved] Settingtypes.txt odd behviour?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Linuxdirk</strong> &raquo; Wed Mar 20, 2019 07:26 </p>
+
+			<div class="content"><blockquote><div><cite>Downad wrote:</cite>i think i am stupid - my settingtyps.txt dont work.</div></blockquote><br />settingtypes' sole purpose is offering advanced settings to the users. It does not and likely will never be a place to define default settings in.<br /><br /><blockquote><div><cite>Downad wrote:</cite>my settingtypes.txt</nobr></div></blockquote><br />... is fine. (except your offered default value is <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">false</span> but it's stated in the description that the default value is <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">true</span>).<br /><br /><blockquote><div><cite>Downad wrote:</cite>my init.lua</div></blockquote><br />... misses setting default values in case the offered advanced setting was not set by the user.<br /><br />Try this:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>-- mobs in the areas damage the player<br />-- default: true<br />local mobs_in_areas_do_damage = minetest.settings:get_bool(&quot;mobsdamage_areas&quot;, true)<br />-- mobs in PvP-areas damage the player<br />-- default: true<br />local mobs_in_pvp_areas_do_damage = minetest.settings:get_bool(&quot;mobsdamage_pvpareas&quot;, true)<br /></code></dd></dl><br /><blockquote><div><cite>Downad wrote:</cite>i also testet minetest.settings:ge_bool(&quot;mobsdamage_pvpareas&quot;) with the same result. <span style="color: #FF0040">nil</span></div></blockquote><br />As long as you do not provide a default value when getting settings it will always be nil. (Please note, only get_bool supports setting a default value for some reason, with other functions you need to provide a default using <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">or</span> for example.)</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Linuxdirk</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1911</dd><dd><strong>Joined:</strong> Wed Sep 17, 2014 11:21</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			11 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=47" class="left-box left" accesskey="r">Return to Modding Discussion</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Yandex Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

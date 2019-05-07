@@ -1,0 +1,539 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/11_20651_25.htm
+
+  The following page was cached by Yandex Bot (https://yandex.com/) on 26-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - marquee [git][led_marquee]</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - marquee [git][led_marquee]" href="https://forum.minetest.net/feed.php?f=11&amp;t=20651" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=11">Mod Releases</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=20651">marquee [git][led_marquee]</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			39 posts
+			 &bull; Page <strong>2</strong> of <strong>2</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p342483" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p342483">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>VanessaE</strong> &raquo; Sat Feb 02, 2019 18:03 </p>
+
+			<div class="content">Don't assign channels to the other panels -- just to the leftmost one.  You can dig and re-place the others to erase their channels.  Send your whole message just once to the leftmost panel's channel, and the code will spread the message across all the panels.  That panel becomes the &quot;master&quot;, the others to its right are slaved to it.<br /><br />Send the <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">scroll</span> commands just once, to that same channel.  The code will automatically scroll all of the panels repeatedly, at the speed set by the <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">scroll_speed</span> command.<br /><br />Try this:<br /><br />Place a panel, give it channel name &quot;foo&quot;.  Place a bunch more to the right of it, in a line.  Make sure they all face the same way, and do not give them channels.<br /><br />Send these commands to that leftmost panel:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>digiline_send(&quot;foo&quot;, &quot;clear&quot;)<br />digiline_send(&quot;foo&quot;, &quot;this is a test string&quot;)<br />digiline_send(&quot;foo&quot;, &quot;start_scroll&quot;)<br />digiline_send(&quot;foo&quot;, &quot;scroll_speed 0.5&quot;)<br /></code></dd></dl><br /><br />There's a more detailed example under &quot;More screenshots&quot; in the opening post.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>VanessaE</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 4393</dd><dd><strong>Joined:</strong> Sun Apr 01, 2012 12:38</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p342485" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p342485">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minetest-user</strong> &raquo; Sat Feb 02, 2019 18:14 </p>
+
+			<div class="content"><blockquote><div><cite>VanessaE wrote:</cite>Don't assign channels to the other panels -- just to the leftmost one.  You can dig and re-place the others to erase their channels.  Send your whole message just once to the leftmost panel's channel, and the code will spread the message across all the panels.  That panel becomes the &quot;master&quot;, the others to its right are slaved to it.<br /><br />Send the <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">scroll</span> commands just once, to that same channel.  The code will automatically scroll all of the panels repeatedly, at the speed set by the <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">scroll_speed</span> command.<br /><br />Try this:<br /><br />Place a panel, give it channel name &quot;foo&quot;.  Place a bunch more to the right of it, in a line.  Make sure they all face the same way, and do not give them channels.<br /><br />Send these commands to that leftmost panel:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>digiline_send(&quot;foo&quot;, &quot;clear&quot;)<br />digiline_send(&quot;foo&quot;, &quot;this is a test string&quot;)<br />digiline_send(&quot;foo&quot;, &quot;start_scroll&quot;)<br />digiline_send(&quot;foo&quot;, &quot;scroll_speed 0.5&quot;)<br /></code></dd></dl><br /><br />There's a more detailed example under &quot;More screenshots&quot; in the opening post.</div></blockquote><br /><br />Thanks for help!</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>minetest-user</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3</dd><dd><strong>Joined:</strong> Sat Feb 02, 2019 17:24</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p343048" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p343048">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Phoenixflo44</strong> &raquo; Thu Feb 07, 2019 19:23 </p>
+
+			<div class="content">Is there also a guide here for stupid ones like me?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Phoenixflo44</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 630</dd><dd><strong>Joined:</strong> Fri Jul 28, 2017 15:01</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p343049" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p343049">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>VanessaE</strong> &raquo; Thu Feb 07, 2019 19:34 </p>
+
+			<div class="content">The first post has all the details.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>VanessaE</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 4393</dd><dd><strong>Joined:</strong> Sun Apr 01, 2012 12:38</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p343051" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p343051">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Phoenixflo44</strong> &raquo; Thu Feb 07, 2019 19:50 </p>
+
+			<div class="content">And I don't understand those details. Never knew me with mesecon's commands.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Phoenixflo44</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 630</dd><dd><strong>Joined:</strong> Fri Jul 28, 2017 15:01</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p343054" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p343054">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>VanessaE</strong> &raquo; Thu Feb 07, 2019 20:16 </p>
+
+			<div class="content">Well, like my Nixie Tube mod, this is only intended to be used with Digilines, so you'll need to learn a bit of Lua and how to use Lua Controllers to send Digilines commands.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>VanessaE</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 4393</dd><dd><strong>Joined:</strong> Sun Apr 01, 2012 12:38</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p343216" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p343216">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Phoenixflo44</strong> &raquo; Sat Feb 09, 2019 18:46 </p>
+
+			<div class="content">Thank you for this help. I had already faulted the helpfulness of this community. And for me to learn something, you have to explain it more often. But I didn't return to listen to such a garbage.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Phoenixflo44</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 630</dd><dd><strong>Joined:</strong> Fri Jul 28, 2017 15:01</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p343235" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p343235">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Sat Feb 09, 2019 22:24 </p>
+
+			<div class="content"><blockquote><div><cite>Phoenixflo44 wrote:</cite>Thank you for this help. I had already faulted the helpfulness of this community. And for me to learn something, you have to explain it more often.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>v-rob</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 623</dd><dd><strong>Joined:</strong> Thu Mar 24, 2016 03:19</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p343236" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p343236">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>VanessaE</strong> &raquo; Sat Feb 09, 2019 22:32 </p>
+
+			<div class="content">Thanks for posting that tutorial.  Nice work, I couldn't have done it better myself. :-)</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>VanessaE</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 4393</dd><dd><strong>Joined:</strong> Sun Apr 01, 2012 12:38</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349373" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p349373">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>NOWMONWON</strong> &raquo; Mon Apr 22, 2019 07:07 </p>
+
+			<div class="content">I love this mod but have yet to get it to fully function. <br /><br />I've read everything I can find on it and have yet to figure out what I am missing. <br /><br />So far I can get the first LED panel to work. <br />I can get strings to work and I can get color changes. <br />I am unable to get the second and following panels to work at all though. <br /><br />My arrangement is Luacontroller &gt; Digiline &gt; LED Marquee panel &gt; another panel &gt; another panel and so on. <br /><br />I have tried spinning them 90 degrees and no matter how I arrange them, panel 1 lights up and number 2 and any after that don't light up. <br /><br />This is the last code I tried using but so far no luck.  <br /><br />digiline_send(&quot;DVB&quot;, &quot;clear&quot;)<br />digiline_send(&quot;DVB&quot;, &quot;/8 This is a test string&quot;)<br />digiline_send(&quot;DVB&quot;, &quot;start_scroll&quot;)<br />digiline_send(&quot;DVB&quot;, &quot;scroll_speed 0.5&quot;)<br /><br />Thanks<br />DAve</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>NOWMONWON</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3</dd><dd><strong>Joined:</strong> Mon Apr 22, 2019 06:58</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349375" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p349375">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>VanessaE</strong> &raquo; Mon Apr 22, 2019 08:02 </p>
+
+			<div class="content">You're not giving the other panels channel names are you?  That's about the only reason they'd not react.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>VanessaE</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 4393</dd><dd><strong>Joined:</strong> Sun Apr 01, 2012 12:38</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349451" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p349451">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>NOWMONWON</strong> &raquo; Tue Apr 23, 2019 01:25 </p>
+
+			<div class="content">No I made sure not to let them have names in the channel box. <br /><br />I got one to work on my building and another I have yet to get working. <br />I&quot;m not quite sure what could be different between the two. <br /><br />Does it matter what A B C D you are connected to? I tried to duplicate the two. <br />Perhaps it matters what kind of block is under it?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>NOWMONWON</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3</dd><dd><strong>Joined:</strong> Mon Apr 22, 2019 06:58</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349454" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p349454">Re: [Mod] Digilines LED marquee [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>VanessaE</strong> &raquo; Tue Apr 23, 2019 01:54 </p>
+
+			<div class="content">The output pin doesn't matter, nor does it care what blocks are nearby.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>VanessaE</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 4393</dd><dd><strong>Joined:</strong> Sun Apr 01, 2012 12:38</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349602" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/11_20651_25.htm#p349602">Re: [Mod] Digilines LED marquee</nobr> [git][led_marquee]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>NOWMONWON</strong> &raquo; Tue Apr 23, 2019 22:23 </p>
+
+			<div class="content">OK thanks. I'll keep workin on it. : )</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>NOWMONWON</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3</dd><dd><strong>Joined:</strong> Mon Apr 22, 2019 06:58</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			39 posts
+			 &bull; Page <strong>2</strong> of <strong>2</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=11" class="left-box left" accesskey="r">Return to Mod Releases</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Yandex Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

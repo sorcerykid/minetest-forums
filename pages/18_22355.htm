@@ -1,0 +1,191 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/18_22355.htm
+
+  The following page was cached by Bing Bot (https://bing.com/) on 25-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - [5.0.0] Important warning about 'num_emerge_threads' setting</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - [5.0.0] Important warning about 'num_emerge_threads' setting" href="https://forum.minetest.net/feed.php?f=18&amp;t=22355" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=18">News</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=22355">[5.0.0] Important warning about 'num_emerge_threads' setting</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			2 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p346336" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/18_22355.htm#p346336">[5.0.0] Important warning about 'num_emerge_threads' setting</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Sun Mar 17, 2019 7:16 am </p>
+
+			<div class="content">Immediately after releasing 5.0.0 we discovered 2 bugs that can cause crashes if more than 1 emerge thread is used.<br />One crash is caused when using the 'vein' ore type (luckily this is rarely used in mods). The other bug is an occasional crash when exiting a world.<br />Details in <a href="https://github.com/minetest/minetest/issues/8300" class="postlink">https://github.com/minetest/minetest/issues/8300</a><br /><br />The fixes for these bugs are likely to be complex and take a long time, so for now we have decided to add a warning to the setting and change the default value of the setting to '1'. The warning in documentation is:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>WARNING: Currently there are multiple bugs that may cause crashes when<br />'num_emerge_threads' is larger than 1. Until this warning is removed it is<br />strongly recommended this value is set to the default '1'.</code></dd></dl><br />These changes will be present in Minetest 5.0.1, a bugfix re-release of 5.0.0 that will be released soon.<br />///////////////////////////////////<br /><br />There was also a bug in the code that processed the setting. Until now the documentation has read:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Empty or 0 value:<br />-&nbsp; &nbsp; Automatic selection. The number of emerge threads will be<br />- 'number of processors - 2', with a lower limit of 1.</code></dd></dl><br />However due to this bug, automatic selection never happened, empty or 0 value actually resulted in the number of emerge threads being '1'.<br />///////////////////////////////////<br /><br />Therefore for those using 5.0.0:<br />If you don't set 'num_emerge_threads' in minetest.conf, or set it to '0', you will avoid the crashes.<br />If you set it to a value larger than '1' you can consider changing the value to '1'.<br />///////////////////////////////////<br /><br />A few months ago we discovered that using 1 emerge thread is likely to be the optimum for many users. The old documentation was overly-promising about the benefits of using multiple emerge threads, and had probably encouraged users to use multiple threads even though 1 thread may be better for them.<br />So being forced to use 1 emerge thread for a while is not as big a problem as it may first seem.<br />The new documentation reads:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>WARNING: Increasing the number of emerge threads increases engine mapgen<br />speed, but this may harm game performance by interfering with other<br />processes, especially in singleplayer and/or when running Lua code in<br />'on_generated'. For many users the optimum setting may be '1'.</code></dd></dl></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>paramat</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 3371</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 12:05 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346340" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/18_22355.htm#p346340">Re: [5.0.0] Important warning about 'num_emerge_threads' set</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 17, 2019 8:02 am </p>
+
+			<div class="content"><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>num_emerge_threads = 6</code></dd></dl><br />since  using MTS, never happend some bad. Good luck too others</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 962</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			2 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=18" class="left-box left" accesskey="r">Return to News</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Bing Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

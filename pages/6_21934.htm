@@ -1,0 +1,858 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/6_21934.htm
+
+  The following page was cached by Bing Bot (https://bing.com/) on 21-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - LuaJit OOM - how to detect Mods using it - and rid off !</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - LuaJit OOM - how to detect Mods using it - and rid off !" href="https://forum.minetest.net/feed.php?f=6&amp;t=21934" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=6">Problems</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=21934">LuaJit OOM - how to detect Mods using it - and rid off !</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			25 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p340997" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p340997">LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Jan 16, 2019 11:57 am </p>
+
+			<div class="content">So, I put 32 GB of RAM into the MTS Server (hardware),  but usedless as this lua memory we stuck here, is an own area limited to 2GB at Lua and 1 GB at  LuaJIT - whatever we have build in. - So to the topic:<br /><br /><span style="font-weight: bold">How to detect LUAJIT using MODS causing OOM ?</span><br />OOM happen, when the amount of luamem is finished = mean bad luck when seen guilty to be the one make the crash<br />* detect mod using memory --&gt; <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934&amp;p=341061#p341411" class="postlink">see LuaJIT here</a> or <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934&amp;p=340997#p341217" class="postlink">LUA here</a><br />* detect mod with a lot of consumption and get better code or ban mod<br /><br />or how to reduce LUAJIT amount ?<br />* mod [stop_lj_oom] tested, but adds lag about 0.8 at my server<br />and need to be adjusted to an amount to carbagecollect before OOM limit<br /><br />or try to change availiable lua memory<br />* there are some ideas, to get LuaJet 2 GB or even 4 GB<br />but that does not free the programmer from making good slim code, using less memory !<br /><br /><span style="font-weight: bold">result until 23.03.2019<br /> --&gt; best option to get used lua memory by change a code in</span><br /><a href="https://github.com/minetest-mods/unified_inventory/blob/master/api.lua#L45" class="postlink">line 45 ... unified_inventory/api.lua</a> - as this is last action could detect yet<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>print(&quot;Unified Inventory. inventory size: &quot;..unified_inventory.items_list_size</code></dd></dl><br />new code, show used mem, make garbagecollect, and show used mem again<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&nbsp; &nbsp;print(&quot;Unified Inventory. inventory size: &quot;..unified_inventory.items_list_size..&quot; / luamem: &quot;..math.floor(collectgarbage(&quot;count&quot;))..&quot; KB&quot;)<br />&nbsp; &nbsp;&nbsp; &nbsp;collectgarbage(&quot;step&quot;,3)<br />&nbsp; &nbsp;&nbsp; &nbsp;print(math.floor(collectgarbage(&quot;count&quot;))..&quot; KB after collectgarbage&quot;)</code></dd></dl><br /><span style="font-weight: bold">So give it a try, and please report your server: name, Lua or LuaJIT and used lua memory - maybe you and we all then understand OOM much better and can avoid it !</span><br /><br />To check out weather I need them or not - to get less OOM and longer runs of the MTS.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p341061" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p341061">OOM - older links, this is not new, but not solved also !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Jan 17, 2019 1:06 am </p>
+
+			<div class="content">The OOM is not a fresh case, but I want to get rid of !<br /><br />Links from further Posts about OOM:<br />* <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=13826&amp;hilit=OOM" class="postlink">Lua OOM crashes</a> <br />* <a href="https://forum.minetest.net/viewtopic.php?f=3&amp;t=17441&amp;hilit=OOM" class="postlink">Minetest memory error(Lua OOM error not enough memory)</a><br />* <a href="https://forum.minetest.net/viewtopic.php?f=3&amp;t=18263&amp;hilit=OOM" class="postlink">Minetest with LuaJit GC64 mode (&gt;2gb mem)</a><br />* <a href="https://forum.minetest.net/viewtopic.php?f=47&amp;t=18820&amp;hilit=OOM" class="postlink">Lua OOM errors</a><br />* <a href="https://forum.minetest.net/viewtopic.php?f=3&amp;t=20638&amp;hilit=OOM" class="postlink">Remove LuaJIT support?</a><br /><br />* <a href="https://forum.minetest.net/viewtopic.php?f=9&amp;t=13972&amp;hilit=OOM" class="postlink">[mod] Stop LUAJIT OOM crashes [stop_lj_oom]</a><br /><br />edit: detected now, mods which mods coused crash, (when garbage collector is running)<br />* mod 'mcl_dungeons'<br />* mod <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934&amp;p=341411#p341411" class="postlink">worldview</a><br />* mod <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21976" class="postlink">technic_worldgen</a><br />** here a possible solution - I just edited my mod <a href="https://github.com/minetest-mods/technic/issues/463" class="postlink">&quot;memory optimisation fix is simple&quot;</a><br />* mod pipeworks<br />* mod 'biome_lib'<br />* mod fire<br />* mod 'televator'</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p341217" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p341217">biggest [Mod]s LUA memory users yet</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Jan 18, 2019 11:16 pm </p>
+
+			<div class="content"><span style="font-weight: bold">so biggest [Mod]s LUA memory users yet:</span><br />(from my server &quot;Thailand Minetest.one&quot; under Lua, Map +22 GB)<br /><br />*11xxx - moreblocks ...<br />* 9600 - moretrees<br />* 8200 - technic / technic<br />* 6350 - technic / chests<br />* 3350 - pipeworks<br />* 2500 - technic / extranodes<br />* 1750 - farming<br />* 1580 - travelnet</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p341411" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p341411">biggest [Mod]s LuaJIT memory users yet - empty world</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Mon Jan 21, 2019 4:10 am </p>
+
+			<div class="content"><span style="font-weight: bold">so biggest <a href="https://forum.minetest.net/viewforum.php?f=46" class="postlink">[Mod]s</a> LuaJIT memory users yet:</span><br />(from 2nd server empty world with LuaJIT active, also 8 Thread CPU / 32 GM Ram)<br /><br />*+ 22000 KB - <span style="color: #FF0000">unified_inventory</span> AFTER loading all items (when print &quot;inventory size&quot; on my server for example)<br />*~ 10500 KB - <span style="font-weight: bold">moreblocks</span> (<a href="https://github.com/minetest-mods/moreblocks" class="postlink">d96f110 23.03.2019</a>) (TH=direct deactivated)<br /><br />*~  5300 KB - <span style="font-weight: bold">technic</span> (<a href="https://github.com/minetest-mods/technic" class="postlink">700faca 09.03.2019</a>) all, but need also basic_materials, pipeworks <br />*~  5250 KB - technic_aluminium (<a href="https://github.com/mrunderhill89/minetest_technic_aluminum" class="postlink">1bddcc7 25.06.2016</a>) all, but need also basic_materials, technic+, pipeworks <br />*~  3600 KB - <span style="font-weight: bold">mesecons</span> (<a href="https://github.com/minetest-mods/mesecons" class="postlink">073c92d 16.03.2019</a>) all, just NOT commandblock<br />*~  3350 KB - homedecor (<a href="https://gitlab.com/VanessaE/homedecor_modpack" class="postlink">ac71c0f1 12.2018</a>), all, need unifieddeys (TH=not)<br />*~  2900 KB - <span style="font-weight: bold">xdecor</span> (<a href="https://github.com/minetest-mods/xdecor" class="postlink">ee7a281 10.03.2019</a>) (<span style="font-weight: bold">TH=12.400 KB</span>)<br />*~  2800 KB - unifieddeys (<a href="https://gitlab.com/VanessaE/unifieddyes" class="postlink">f59c8aff 23.02.2019</a>) (TH=not)<br />*~  2550 KB - <span style="font-weight: bold">etherreal</span> (<a href="https://notabug.org/TenPlus1/ethereal" class="postlink">7a1a8728b0 23.03.2019</a>) (TH=deactivated)<br />*~  2500 KB - <span style="font-weight: bold">Mobs_redo 1.40</span> (<a href="https://notabug.org/TenPlus1/mobs_redo" class="postlink">a1d4e9bbfc 23.03.2019</a>) +_monster +_animals +resources/materials +cooking (TH=+960)<br />*~  2100 KB - Mobs_animals (<a href="https://notabug.org/TenPlus1/mobs_animal" class="postlink">43a813d4f1 22.03.2019</a>), with bat, bird, butterfly, fish, turtle, +Mobs_Redo, +~ 500 KB (TH=+370)<br />*~  2000 KB - Unified_Inventory (<a href="https://github.com/minetest-mods/unified_inventory" class="postlink">850ee9c 17.02.2019</a>), but loosing a lot until next loaded mod, like only 1.350 KB used (*!)<br />*~  1950 KB - inventorybags (<a href="https://github.com/cx384/inventorybags" class="postlink">818231c 01.01.2018</a>) (TH=370)<br />*~  1900 KB - <span style="font-weight: bold">3d_armor</span> (<a href="https://github.com/stujones11/minetest-3d_armor" class="postlink">1d22612 06.03.2019</a>) full, wieldview, shields, stand, sfinv together, as _armor, hazmat_suit, ui and ip loaded but unused  <br />*~  1820 KB - <span style="font-weight: bold">Mobs_monster</span> (<a href="https://notabug.org/TenPlus1/mobs_monster" class="postlink">6cf5b95fc9 22.02.2019</a>), as need also Mobs_Redo, so itself a plus of 170 KB (TH=+180)<br />*~  1800 KB - <span style="font-weight: bold">plantlife</span> (<a href="https://gitlab.com/VanessaE/plantlife_modpack" class="postlink">4e32feaa 17.03.2019</a>), all, and deed biome_lib<br />*~  1750 KB - 3d_armor (only)<br />*~  1650 KB - Flowerpot (<a href="https://github.com/minetest-mods/flowerpot" class="postlink">6bce72a 03.10.2017</a>)<br />*~  1650 KB - Mobs Redo 1.49 (07.03.2019), only<br />*~  1520 KB - moreores (<a href="https://github.com/minetest-mods/moreores" class="postlink">5010a14 23.03.2019</a>) (TH~80)<br />*~  1510 KB - BakedClay (<a href="https://notabug.org/TenPlus1/bakedclay" class="postlink">67d0f2a8d6 07.2018</a>) (TH~300)<br />*~  1430 KB - <span style="font-weight: bold">moremesecons</span> (<a href="https://github.com/minetest-mods/MoreMesecons" class="postlink">2b2faec 20.08.2018</a>) all, NOT commandblock (incl. need of 4 mesecon mod)<br />*~  1390 KB - <span style="font-weight: bold">nether</span> (<a href="https://github.com/minetest-mods/nether" class="postlink">2d94d74 21.12.2017</a>) (TH~960)<br />*~  1320 KB - hud/hunger (<a href="https://notabug.org/TenPlus1/hud_hunger" class="postlink">071cba5852 07.2018</a>), depends on hud +52 = 1372 KB<br />*~  1100 KB - crafting (TH~680)<br />*~  1000 KB - <span style="font-weight: bold">moretrees</span> (<a href="https://gitlab.com/VanessaE/moretrees" class="postlink">d521e347 12.2018</a>), as depend on biome_lib +400 = 1400 (TH~1050)<br /><br />*~   990 KB - treecapitator<br />*~   910 KB - <span style="font-weight: bold">mp-xtraores</span> (<a href="https://github.com/AntumMT/mp-xtraores" class="postlink">815fec1 23.06.2017</a>) (TH~90)<br />*~   820 KB - <span style="font-weight: bold">digilines</span> (<a href="https://github.com/minetest-mods/digilines" class="postlink">434010b 20.10.2017</a>) (TH~260)<br />*~   800 KB - mesecons 1st only<br />*~   800 KB - Protector (<a href="https://notabug.org/TenPlus1/protector" class="postlink">a2e803d522 10.2018</a>) (TH~200)<br />*~   750 KB - signs_lib (<a href="https://gitlab.com/VanessaE/signs_lib" class="postlink">c199a33b 12.2018</a>) (TH~200)<br />*~   710 KB - more_chests (<a href="https://github.com/minetest-mods/more_chests" class="postlink">c597779 27.02.2017</a>)<br />*~   710 KB - bitchange (<a href="https://github.com/SmallJoker/bitchange" class="postlink">98a2dc8 03.01.2019</a>) (TH~115)<br />*~   700 KB - <span style="font-weight: bold">Basic_Materials</span> (<a href="https://gitlab.com/VanessaE/basic_materials" class="postlink">a5fdb721 12.2018</a>) (TH~90)<br />*~   700 KB - mining_plus (<a href="https://github.com/SmallJoker/mining_plus" class="postlink">c2d63df 27.08.2016</a>) (TH~100)<br />*~   680 KB - smartshop (TH~50)<br />*~   680 KB - exchange (TH=off)<br />*~   680 KB - mail<br />*~   655 KB - servercleaner<br />*~   650 KB - localisation (TH=off)<br />*~   650 KB - arrow_signs<br />*~   650 KB - trash_can (TH=off)<br />*~   650 KB - locks<br />*~   650 KB - Ballon<br />*~   640 KB - jail (13.12.2013)<br />*~   630 KB - <span style="font-weight: bold">digtron</span> (<a href="https://github.com/minetest-mods/digtron" class="postlink">d41190a 16.03.2019</a>) old version 1310 KB - (TH~800)<br />*~   640 KB - Enchanting (TH=off)<br />*~   640 KB - alphabeth<br />*~   630 KB - border<br />*~   610 KB - soccer (TH=off)<br />*~   550 KB - torches<br />*~   400 KB - <span style="font-weight: bold">nixie-tubes</span> (<a href="https://gitlab.com/VanessaE/nixie_tubes" class="postlink">6bd1ad70 12.2018</a>), but depend on digilines +820 = 1220 KB (TH~340)<br />*~   398 KB - <span style="font-weight: bold">biome_lib</span> (<a href="https://gitlab.com/VanessaE/biome_lib" class="postlink">29899f2d 01.2019</a>) (TH~70)<br />*~   220 KB - wiki  (TH~220)<br />*~   175 KB - bows (<a href="https://notabug.org/TenPlus1/bows" class="postlink">465b065eb7 12.2018</a>)<br />*~   150 KB - <span style="font-weight: bold">areas</span> (TH~500)<br />*~   130 KB - WorldEdit (f242f2f 09.12.2018) + commands not more mem (TH=~330)<br />*~   125 KB - craftguide (<a href="https://github.com/minetest-mods/craftguide" class="postlink">0271f61 21.03.2019</a>)<br />*~   125 KB - <span style="font-weight: bold">adv_spawning</span> v0.0.13 (28.12.2015) 0.4.x<br />*~   125 KB - economy<br />*~   120 KB - travelnet (TH~1000)<br />*~   110 KB - euban<br />*~   100 KB - farming 1.40 (<a href="https://notabug.org/TenPlus1/farming" class="postlink">ee993f9d61 22.03.2019</a>) (TH~1200)<br /><br />*     80 KB - markers, as depends on areas +150 = 230 KB<br />*     70 KB - U_Skins, depends on Unified_Inventory +1350 = 1.420 KB<br />*     52 KB - hud<br />*     50 KB - Pipeworks (<a href="https://gitlab.com/VanessaE/pipeworks" class="postlink">27eb2ca9 01.2019</a>), as depends on basic_material +700 = 750 KB (TH=~2.150)<br />*     40 KB - minetest_remover<br />*     40 KB - digiline_remote, but depend on digilines +820 = sum 860 KB<br />*     35 KB - lamps<br />*     34 KB - filter<br />*     24 KB - basic_robot (TH~540)<br />*     21 KB - player_notes<br />*     20 KB - nonew<br />*     15 KB - sightview<br />*     14 KB - no-guests<br />*     14 KB - lagcheck<br /><br />*      9 KB - adblock<br />*      3 KB - time<br /><br />* careful:<br />** <span style="font-weight: bold">unified_inventory</span> is loading all Items after server ready loading mods, at my one near 18.000-22.000 KB memory using plus ! - this can be seen in code change for /unified_inventory/api.lua ... 1st post<br />at my server another +18.000 KB used then, on the empty world testing, nothing more - as it is only lonely mod<br /><br />so not false the unified_inventory [Mod] will solve the problem if needed, need to find out what other [Mod] make it load so much !!!<br /><br />(TH~) mean, the usage on my running server with big world, <span style="font-weight: bold">BUT</span> not trust numbers, as loaded between and never sure how it counts, my LuaJit memory sum is about 49.894 KB  after unified_inventory + collectgarbage loaded items. <br />So short list main memory users on my running TH (Thailand Minetest.one) Server with memory sum ~46.000 KB after deactivated (false) some not important or used [Mod]s<br /><br />* 22000 KB - <span style="color: #FF0000">unified_inventory</span> AFTER loading all items (print after did &quot;inventory size&quot; )<br />* 12400 KB - <span style="font-weight: bold">xdecor</span> (<a href="https://github.com/minetest-mods/xdecor" class="postlink">ee7a281 10.03.2019</a>)<br />*~  2150 KB - Pipeworks (<a href="https://gitlab.com/VanessaE/pipeworks" class="postlink">27eb2ca9 01.2019</a>), as depends on basic_material +700 ...<br />*~  1200 KB - farming 1.40 (<a href="https://notabug.org/TenPlus1/farming" class="postlink">ee993f9d61 22.03.2019</a>)<br />*~  1050 KB - <span style="font-weight: bold">moretrees</span> (<a href="https://gitlab.com/VanessaE/moretrees" class="postlink">d521e347 12.2018</a>), as depend on biome_lib +400 = ...<br />* ~ 960 KB - <span style="font-weight: bold">nether</span> (<a href="https://github.com/minetest-mods/nether" class="postlink">2d94d74 21.12.2017</a>)<br />* ~  800 KB - <span style="font-weight: bold">digtron</span> (<a href="https://github.com/minetest-mods/digtron" class="postlink">d41190a 16.03.2019</a>)<br />* ~ 500 KB - <span style="font-weight: bold">areas</span> <br />listed mean already 90% of all lua memory, so the only way to make sure what mod false will reduce memory usage is to print memory usage after unified size and then test with mods = false in .mt<br /><br />as <a href="https://forum.minetest.net/viewforum.php?f=46" class="postlink">[Mod]s</a> sure have some kind of combining effects, mean each of them single much memory usage, but together they seam to share or combine some data, = together less memory usage than both single memory usages added<br /><br />and final about OOM:<br />* under Lua my crashed between 1133 until 1340 MB<br />* under LuaJit my crashed between 536 - 846 MB<br />as some server OOM with just 14 MB would already be gone, my one now starts with 47 MB - so there is a lot of time until 536 MB, better than before when my server started with near 80 MB lua memory<br /><br />and not forget, why OOM:<br />so as know now how much lua mem is used at beginning, DURING the game running and used several [Mod]s wanna and take more memory, so this [Mod] then traitor itself with the OOM message,<br />and so far most of this messages at me was technic !!!<br />Even technic start smart, seams to do crazy much and often grab more memory <br /><br />- ... and here I am not able to analyze yet - we need some tool able to show memory usage by [Mod] during gameplay on demand or every hour saved, for testing ...</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p341782" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p341782">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Jan 27, 2019 4:50 am </p>
+
+			<div class="content">here the changed I did at technic/technic_worldgen/<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>-- Sulfur<br />--local sulfur_buf = {}&nbsp; -- this is old<br />local data = {}&nbsp; --&nbsp; this is new plus<br />local sulfur_noise = nil<br /><br />minetest.register_on_generated(function(minp, maxp, seed)<br />&nbsp; &nbsp;local vm, emin, emax = minetest.get_mapgen_object(&quot;voxelmanip&quot;)<br />&nbsp; &nbsp;local a = VoxelArea:new{<br />&nbsp; &nbsp;&nbsp; &nbsp;MinEdge = {x = emin.x, y = emin.y, z = emin.z},<br />&nbsp; &nbsp;&nbsp; &nbsp;MaxEdge = {x = emax.x, y = emax.y, z = emax.z},<br />&nbsp; &nbsp;}<br />&nbsp; &nbsp;--local data = vm:get_data(sulfur_buf) -- this isold<br />&nbsp; &nbsp;vm:get_data(data) -- this is new<br />&nbsp; &nbsp;local pr = PseudoRandom(17 * minp.x + 42 * minp.y + 101 * minp.z)<br />&nbsp; &nbsp;sulfur_noise = sulfur_noise or minetest.get_perlin(9876, 3, 0.5, 100)</code></dd></dl><br /><br />one more,<br />i am on to learn how to detect the code in the mod and solute it ...<br /><br /><blockquote class="uncited"><div>2019-01-27 11:30:47: ERROR[Main]: ServerError: AsyncErr: environment_Step: OOM error from mod 'biome_lib' in callback environment_Step(): not enough memory<br />2019-01-27 11:30:47: ERROR[Main]: Current Lua memory usage: 1057 MB<br />2019-01-27 11:30:47: ERROR[Main]: stack traceback:</div></blockquote></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p342012" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p342012">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Tue Jan 29, 2019 11:21 pm </p>
+
+			<div class="content"><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-01-30 01:53:27: ERROR&#91;Main&#93;: ServerError: AsyncErr: environment_Step: OOM error from mod '&#91;b&#93;fire&#91;/b&#93;' in callback environment_Step(): not enough memory<br />2019-01-30 01:53:27: ERROR&#91;Main&#93;: Current Lua memory usage: 1274 MB<br />2019-01-30 01:53:27: ERROR&#91;Main&#93;: stack traceback:</code></dd></dl></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p342860" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p342860">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Tue Feb 05, 2019 10:30 pm </p>
+
+			<div class="content"><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-02-04 17:20:59: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: OOM error from mod 'pipeworks' in callback LuaABM::trigger(): not enough memory<br />2019-02-04 17:20:59: ERROR&#91;Main&#93;: Current Lua memory usage: 1341 MB</code></dd></dl></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p342861" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p342861">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Tue Feb 05, 2019 10:30 pm </p>
+
+			<div class="content"><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-02-05 14:26:38: ERROR&#91;Main&#93;: ServerError: AsyncErr: environment_Step: OOM error from mod 'televator' in callback environment_Step(): not enough memory<br />2019-02-05 14:26:38: ERROR&#91;Main&#93;: Current Lua memory usage: 1133 MB<br />2019-02-05 14:26:38: ERROR&#91;Main&#93;: stack traceback:<br /></code></dd></dl></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p345195" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p345195">LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 06, 2019 11:13 am </p>
+
+			<div class="content">Maybe I found something,<br /><br /><a href="https://github.com/pmusa/luamemprofiler" class="postlink">lua mem profiler</a><br /><br />I will check it out next server starts.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p345211" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p345211">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Wed Mar 06, 2019 3:59 pm </p>
+
+			<div class="content">Hi,<br /><br />I'm very interested to know if it's always because of use of vm get_data (I'm working on performances on big map updates and it may solve some OOM problems).<br /><br />Do you get some cases when PerlinNoiseMap:get3dMap  is implied ?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Pyrollo</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 259</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 3:14 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p345255" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p345255">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Mar 07, 2019 1:08 am </p>
+
+			<div class="content"><blockquote><div><cite>Pyrollo wrote:</cite>I'm very interested to know if it's always because of use of vm get_data (I'm working on performances on big map updates and it may solve some OOM problems).<br /><br />Do you get some cases when PerlinNoiseMap:get3dMap  is implied ?</div></blockquote><br /><br />OOM<br />I was checking the git from my seen most OOM causing Mods (technic, pipeworks and mesecons) but cant really see if those are fixed with that code, I asked today morning, but downloaded and test when time<br /><br />lua mem profiler, (was not running yet)<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-07 09:01:50: ERROR&#91;Main&#93;: ModError: Failed to load and run script from /home/thomas/.minetest/mods/luaprofiler/init.lua:<br />2019-03-07 09:01:50: ERROR&#91;Main&#93;: /home/thomas/.minetest/mods/luaprofiler/init.lua:458: '&lt;eof&gt;' expected near 'end'<br /></code></dd></dl><br />that is added as mod and loaded without problem, but now I am missing a possibilities to start it<br />I need to build in some <br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.register_chatcommand(&quot;luamemcheck&quot;, {</code></dd></dl><br />what calls then the function<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>ProFi:start( 'once' )</code></dd></dl><br />will see how to do<br /><br />PerlinNoiseMap:get3dMap<br />what is this, where, ... never seen/read this<br />edit: sorry - this optimization tip is so old, that I couldnt believe or remember it: <a href="https://dev.minetest.net/Mapgen_memory_optimisations" class="postlink">got it</a></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p345310" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p345310">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Thu Mar 07, 2019 12:19 pm </p>
+
+			<div class="content"><blockquote><div><cite>Festus1965 wrote:</cite>PerlinNoiseMap:get3dMap<br />what is this, where, ... never seen/read this</div></blockquote><br /><br />I refer to this because I suspect large table transfer from C to LUA to be slow. And it seems also related to OOM you mentioned. One of the solution is to stop creating big table in LUA and use another way to access large collection data from C.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Pyrollo</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 259</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 3:14 pm</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p345315" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p345315">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Mar 07, 2019 1:09 pm </p>
+
+			<div class="content">yeah, I got it: <a href="https://dev.minetest.net/Mapgen_memory_optimisations" class="postlink">Mapgen_memory_optimisations - Perlin noise objects</a> So far I got it now is this problem moire new than old, or it is not the reason ...<br /><br />sure, but that fore i supposed to try some software that tells us, what mod is using most of the memory until it OOM-crashes - and then go to this 2 or 4 mods and optimize like you supposed ...<br />otherwise we have to upgrade all of them, guessing that is a problem<br /><br />So analysing first, than act ... ?</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p345865" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p345865">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Tue Mar 12, 2019 7:08 am </p>
+
+			<div class="content"><blockquote><div><cite>Pyrollo wrote:</cite>I refer to this because I suspect large table transfer from C to LUA to be slow. And it seems also related to OOM you mentioned. One of the solution is to stop creating big table in LUA and use another way to access large collection data from C.</div></blockquote><br /><br />I am so sorry Pyrollo,<br />but both posts are from<br />* Sun May 17, 2015 16:16 - <a href="https://forum.minetest.net/viewtopic.php?f=47&amp;t=12178&amp;hilit=PerlinNoiseMap" class="postlink">Lua PerlinNoiseMap memory efficiency improvements</a><br />* Wed May 11, 2016 20:26 - <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=14589&amp;hilit=PerlinNoiseMap" class="postlink">Perlin noise exceeds -1/1 range</a><br /><br />so that I was quite sure that should have been solved ... <br /><br />and so I am more locking in this direction <a href="https://github.com/minetest-mods/technic/issues/463" class="postlink">Important oregen memory use optimization</a> from Dec 2018 to understand ... I read a lot last 5 days, and will try out if have fun to do ...<br /><br />as after that 5 days there was another 11 crashes, 7 of them by technic OOM hehe<br /><br />I am looking for some tricks told<br />* <a href="https://stackoverflow.com/questions/27015150/how-to-get-past-1gb-memory-limit-of-64-bit-luajit-on-linux" class="postlink">https://stackoverflow.com/questions/27015150/how-to-get-past-1gb-memory-limit-of-64-bit-luajit-on-linux</a><br />* <a href="https://kvitajakub.github.io/2016/03/08/luajit-memory-limitations/" class="postlink">https://kvitajakub.github.io/2016/03/08/luajit-memory-limitations/</a><br />* <a href="https://github.com/cloudflare/luajit-mm" class="postlink">https://github.com/cloudflare/luajit-mm</a><br />but still need to get back another (is in Celine's PC but she play Roblox - so I cant ...)</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346219" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346219">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 16, 2019 1:43 am </p>
+
+			<div class="content">I had at last now only one solution,<br />I don't use LuaJit anymore as the speed plus is not seen on my server.<br /><br />Instead of 8-10 hours with LuaJit, it is running now more than 14 hours,<br />and there are more important issues I have to work on = my daughter, and as she didn't play anymore minetest ... I am done here. The automatic restart is so fast, and refresh also server ... I accept crashes now as even see how fast boomed gamer join in after.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346433" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346433">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Mon Mar 18, 2019 3:21 am </p>
+
+			<div class="content"><a href="https://forum.minetest.net/viewtopic.php?f=10&amp;t=22041&amp;p=346419#p346419" class="postlink">maybe got closer</a>, <br />as I added the command printgarbagecolect(count) after each loading [Mod] I got the sum after most of the prepared mod now, and the difference from before count and after got a list:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>so biggest user yet sure:<br />* 9600 - moretrees<br />* 8200 - technic / technic<br />* 6350 - technic / chests<br />* 3350 - pipeworks<br />* 2500 - technic / extranodes<br />* 1750 - farming<br />* 1580 - travelnet</code></dd></dl> still missing some 5 have to define more often, as still 2-5 [Mod] share a amount as not print sum between</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346562" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346562">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Tue Mar 19, 2019 1:21 pm </p>
+
+			<div class="content">So first,<br />* LuaJit is limited to some count of ram, 1 GB ... (64bit, linux or so like and lua has 2 GB)<br />* next it seams to depend on other issues like release also, as I have seen OOM at 64 MB, my one before was 1350 MB, and now I am back to crash at 850 MB (rode that it depends on the starting position of this ram using for get near 1 GB)<br /><br />and now I may have found out the ram consumption of Mod  running at me, so we come closer<br /><br />it works with adding this code at and of every [Mod], ...<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>luamemnew = collectgarbage(&quot;count&quot;)<br />print(&quot;&#91;Mod&#93; time *(version/date) - loaded - with &quot;..math.floor(luamemnew - luamemold)..&quot; more Lua Mem used&quot;)<br />luamemold = luamemnew</code></dd></dl><br />so first check the code that sure what I was measure there ...<br /><br />and that is what i get print out at server start (screen): <a href="https://forum.minetest.net/viewtopic.php?f=10&amp;t=22041&amp;p=346560#p346560" class="postlink">is here</a><br />sure still some not even edited ... <br />but so far a (part deleted as mod load before first count-printout)<br /><br />* deleted as misleading *<br /><br />but VanessaE wrote ... <br />* <a href="https://github.com/minetest-mods/moretrees/issues/47#issuecomment-473903008" class="postlink">moretrees</a>: <blockquote class="uncited"><div>Wrong repository, and Moretrees doesn't allocate any memory of consequence.</div></blockquote><br />* <a href="https://github.com/minetest-mods/pipeworks/issues/226#issuecomment-473903105" class="postlink">pipeworks</a>: <blockquote class="uncited"><div>Wrong repository, and Pipeworks doesn't allocate any memory of consequence.</div></blockquote><br />mhh, what is OOM telling, and garbagecollect writing, I am getting confused ,<br />but at<br />* technic, she didn't answer that or any ... so some hope.<br /><br />But: I remember no any program can run without using mem, mhhh<br /><br />So another task tomorrow might be to ask those server-admins also with OOM errors, what of this maybe heavy loading mods they had also installed, mean also much more closed to OOM than other servers without this. Top-[Mod]s ... As not all had this issue, and so maybe found a reason<br /><br />next change<br />* wanna see sum at the last loading, to get % of one mods usage to sum,<br />* wanna try one garbagecollect at end of last loaded mod, with again show used sum<br />at me in hazmat_suit loaded last i can see<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>-- and as lastloaded sum and some clean<br />print(collectgarbage(&quot;count&quot;))<br />collectgarbage(step,3)<br />print(collectgarbage(&quot;count&quot;))<br /></code></dd></dl></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346618" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346618">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 4:40 am </p>
+
+			<div class="content">basic new first: last loading [Mod] gives more out now as print.count, garbagecollect, print.count =<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>72930.500976562<br />.. garbagecollecting ...<br />62376.912109375</code></dd></dl><br />so just use <a href="http://luatut.com/collectgarbage.html" class="postlink">garbagecollect()</a> at last on last loading [Mod] saves me here 72930 - 62376 = 10.554 Kbytes or 10 MB<br />Result: just to save mem, make sure the last lua is garbagecollect() in the last [Mod] loading as here saving 14% memory. <br /><br />And also: when count all results single together I get a sum of 73237 KB, so<br />as at start 599 KB used<br />+ plus 73237 KB sure in reporting [Mod]s (missing yet the build in minetest_game)<br />mean then should be 73836<br />but as last reported 72930,<br />mean also some 906 KB released itself during the start.<br /><br />and check as I edited more [Mod]s with the calculation code, will take with &gt;=1000 KB<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 11960 - 16.3% - moreblocks (9363068 09.03.2019) - (+24)<br />* 9592 - 13.1% - Moretrees (d521e347 01.2019) - (+1)<br />* 8215 - 11.2% - technic / technic (700faca 10.04.2019) <br />* 6928 - 9.5% - Ethereal (9bbd90e0b4 01.03.2019) <br />* 6189 - 8.5% - BakedClay (67d0f2a8d6 02.07.2018) <br />* 3363 - 5.6% - Pipeworks (27eb2ca9 01.2019) (+1)<br />* 3287 - 4.5% - farming redo 1.40 (13.02.2019) <br />* 2546 - 3.5% - technic / _extranodes (700faca 10.04.2019) <br />* 1362 - technic / _worldgen (700faca 10.04.2019) <br />* 1318 - travelnet (+3)<br />* 1151 - xdecor (ee7a281 10.03.2019) - (-23)<br />* 1043 - biome_lib - (+21)<br />* 1021 - digtron (14.01.2019)<br />* 948 - crafting<br />* 975 - animalmaterials / animalmaterials<br />* 914 - basic_robot<br /></code></dd></dl><br /><br />add:<br />* the also loaded [Mod]s out of game are also edited with the report code next start.<br />* issues about lua memory usage are done into the 3 top named</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346713" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346713">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Mar 21, 2019 12:54 am </p>
+
+			<div class="content">as a result of yesterday, even change every mod init.lua again, so that the totalmem is measured to beginn, and at the end of the loading time of a mod, and show difference, seams to be a problem, as sometime less using, mean result -30 KB.<br /><br />so seam to be better to just false a [Mod] in minetest.mt, restart server and check mem, then this confusing even - x KB might be gone<br /><br />remember LuaMem is limited by Lua itself so 2 GB on x64 linux mashines, and as of &quot;bad&quot; configuration, not starting at bottom, and reach limit of the 2 GB window sometime much faster, mean OOM from 14 MB up to me at 1300 MB!<br />and for LuaJit the max is 1GB,so speed against space ...<br /><br /><span style="font-weight: bold">this is my running system, with a lot together loaded mods and there usage by calculating minus from normal memory usage.</span><br />etherreal on, 19.418 LuaMem used, to base 17.383 KB with etherreal off<br />moreblocks on,  37.290 LuaMem used, ...<br />xdecor off, only 17.383 KB LuaMem used, mean 23.259 - 17383 = real 5.876 KB used from xdecor ...<br /><br />so more safe results under LuaJit ? - <br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 9.531 KB - moreblocks<br />* 5.876 KB - xdecor<br />* 2.035 KB - etherreal<br /></code></dd></dl><br /><br /><span style="font-weight: bold">loading now only ONE mod plus same time, then off, next mod on, so this list is single mod loading, just also minetest_game is with base used memory shown 373</span><br />add: 21.03. - just preparing a copy of server, and then world.mt just on/off mods and see the memory usage (still LuaJIT On) -  <br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>*&nbsp; 879 KB - xdecor (startmem here 2324 KB, even only alone)<br />*&nbsp; &nbsp;55 KB - travelnet, startmem 430 KB<br />*&nbsp; &nbsp;12 KB - towercrane, but startmem before here 1008-1033<br />*&nbsp; &nbsp; 3 KB - time<br /></code></dd></dl><br />so, here again, total NOT logic - I thought the used starting memory should be same when only one mod starts, but it isn't ... so one smal mod load before and then different 2md one ... check with time , as tested more often, 373 KB at start, using 3 KB<br />so the starting mem 373 and using time keeps stable with 373 + 3 KB, and<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 2330 - xdecor (10 time starting, one out of that at 1750 KB )<br />* 2210 - etherreal (10 starts very closed result)<br />* 1076 - biome_lib (10 starts but allocating mem before first print luamam count, see code down) <br />*&nbsp; &nbsp; 3 - time (will be in all time then)<br /></code></dd></dl><br /><br />examples: biome_lib<br />biome_lib:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Mem time Start with: 373<br />&#91;Mod&#93; time *(version/date) - loaded - with 3 KB<br />Mem time End with: 377<br />Mem biome_lib Start with: 1066<br />&#91;Mod&#93; biome_lib (11.05.2018) - loaded - with 6 KB<br />Mem biome_lib End with: 1073</code></dd></dl><br /><br />and once again, cant trust even this start end of mod take count and compare, as it loads already before it counts, so at the end, just can take end count show, and have to take the diff to start/end time - myself ... oh oh<br /><br />like this at last line of the init.lua<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>print(&quot;&#91;Mod&#93; name (date) ver - loaded - end with &quot;..math.floor(collectgarbage(&quot;count&quot;))..&quot; KB&quot;)</code></dd></dl><br />works, and gives a good point</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346738" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346738">LuaJit OOM - mem using of mods in Lua and LuaJit ranking</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Mar 21, 2019 10:34 am </p>
+
+			<div class="content"><blockquote class="uncited"><div> ShadowNinja commented on Mar 13, 2016<br />@twoelk: There's nothing to do but minimize memory usage, which mods should be doing already anyway.</div></blockquote><br />and there is still a coder (have even been posting in that theme), believe that build in RAM (like at me 32 GB) will solve the problem, not understand that the lua uses own prepared 2 GB, LuaJIT 1GB inside this RAM, what is a fixed coded problem, not a hardware issue.<br /><br />But anywhere if LUA 2 GB, or LuaJIT 1 GB ... ban too much luamem using mods, so they will act ...<br /><br />so this seams to work, similar to my first counting with Lua up, just show end luamem, and diff by hand<br /><span style="font-weight: bold">Lua</span>: on my running system<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>*11936 - moreblocks (deactivated)<br />* 9600 - moretrees<br />* 8200 - technic / technic<br />* 6350 - technic / chests<br />* 3350 - pipeworks<br />* 2500 - technic / extranodes<br />* 1750 - farming<br />* 1580 - travelnet</code></dd></dl> as compare mem usage under Lua only<br /><br />used <dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>print(&quot;&#91;Mod&#93; &#91;modpack /&#93; name (date) version - loaded - end with &quot;..math.floor(collectgarbage(&quot;count&quot;))..&quot; KB&quot;)</code></dd></dl> at the end of mod.init.lua<br />just show count end mem sum, with just fixed one mod time starting before, ending up at 377 KB<br /><span style="font-weight: bold">LuaJIT</span> loaded on an empty world ...<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>*~10500 KB - moreblocks (direct deactivated on my server)<br />*~ 3600 KB - mesecons all, just NOT commandblock<br />*~ 2900 KB - xdecor<br />*~ 2550 KB - etherreal (new, but also deactivated on my server)<br />*~ 2000 KB - Unified_Inventory, but loosing a lot until next loaded mod, like only 1.350 KB used<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ! loading all Items after server ready, at my one near 18.000 KB plus !<br />*~ 1950 KB - inventorybags<br />*~ 1750 KB - 3d_armor<br />*~ 1650 KB - Flowerpot<br />*~ 1520 KB - moreores<br />*~ 1510 KB - BakedClay<br />*~ 1390 KB - nether<br />*~ 1320 KB - hud/hunger, depends on hud +52 = 1372 KB<br />*~ 1310 KB - digtron<br />*~ 1100 KB - crafting<br />*~ 1000 KB - moretrees, as depend on biome_lib +400 = 1400<br />*~&nbsp; 990 KB - treecapitator<br />*~&nbsp; 910 KB - xtraores<br />*~&nbsp; 850 KB - signs_lib<br />*~&nbsp; 820 KB - digilines<br />*~&nbsp; 800 KB - mesecons 1st only<br />*~&nbsp; 800 KB - Protector<br />*~&nbsp; 710 KB - more_chests<br />*~&nbsp; 710 KB - bitchange<br />*&nbsp; &nbsp;700 KB - Basic_Materials<br />*&nbsp; &nbsp;700 KB - mining_plus<br />*~&nbsp; 680 KB - smartshop<br />*~&nbsp; 680 KB - exchange<br />*~&nbsp; 680 KB - mail<br />*~&nbsp; 655 KB - servercleaner<br />*~&nbsp; 650 KB - localisation<br />*~&nbsp; 650 KB - arrow_signs<br />*~&nbsp; 650 KB - trash_can<br />*~&nbsp; 650 KB - locks<br />*~&nbsp; 650 KB - Ballon<br />*~&nbsp; 640 KB - Enchanting<br />*~&nbsp; 640 KB - alphabeth<br />*~&nbsp; 630 KB - border<br />*~&nbsp; 610 KB - soccer<br />*&nbsp; &nbsp;550 KB - torches<br />*&nbsp; &nbsp;400 KB - nixie-tubes, but depend on digilines +820 = 1220 KB<br />*&nbsp; &nbsp;398 KB - biome_lib<br />*~&nbsp; 175 KB - bows<br />*&nbsp; &nbsp;150 KB - areas<br />*&nbsp; &nbsp;125 KB - craftguide<br />*&nbsp; &nbsp;125 KB - economy<br />*~&nbsp; 120 KB - travelnet<br />*~&nbsp; 110 KB - euban<br />*&nbsp; &nbsp; 80 KB - markers, as depends on areas +150 = 230 KB<br />*&nbsp; &nbsp; 70 KB - U_Skins, depends on Unified_Inventory +1350 = 1.420 KB<br />*&nbsp; &nbsp; 52 KB - hud<br />*&nbsp; &nbsp; 50 KB - Pipeworks, as depends on basic_material +700 = 750 KB<br />*&nbsp; &nbsp; 40 KB - minetest_remover<br />*&nbsp; &nbsp; 35 KB - lamps<br />*&nbsp; &nbsp; 34 KB - filter<br />*&nbsp; &nbsp; 21 KB - player_notes<br />*&nbsp; &nbsp; 20 KB - nonew<br />*&nbsp; &nbsp; 15 KB - sightview<br />*&nbsp; &nbsp; 14 KB - no-guests<br />*&nbsp; &nbsp; 14 KB - lagcheck<br />*&nbsp; &nbsp; &nbsp;9 KB - adblock<br />*&nbsp; &nbsp; &nbsp;3 KB - time <br /></code></dd></dl>as have seen at Unified_Inventory, it seams to depend on also the other installed [Mod] how much memory one [Mod] itself will use, see Unified_Inventory<br /><br />mesecons each as start: all ~ 3.600 KB without commandblock<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Mem time Start with: 370<br />&#91;Mod&#93; time *(version/date) - loaded - sum: 374 KB<br />&#91;Mod&#93; mesecons / mesecons (30.12.2018) 0.4.x - loaded - end with 1152 KB<br />&#91;Mod&#93; mesecons / wires (30.12.2018) 0.4.x - loaded - end with 2073 KB<br />&#91;Mod&#93; mesecons / torch (30.12.2018) 0.4.x - loaded - end with 2089 KB<br />&#91;Mod&#93; mesecons / switch (30.12.2018) 0.4.x - loaded - end with 2098 KB<br />&#91;Mod&#93; mesecons / receiver (30.12.2018) 0.4.x - loaded - end with 2161 KB<br />&#91;Mod&#93; mesecons / wallever (30.12.2018) 0.4.x - loaded - end with 2175 KB<br />&#91;Mod&#93; mesecons / button (30.12.2018) 0.4.x - loaded - end with 2190 KB<br />&#91;Mod&#93; mesecons / random (30.12.2018) 0.4.x - loaded - end with 2203 KB<br />&#91;Mod&#93; mesecons / pressureplates (30.12.2018) 0.4.x - loaded - end with 2269 KB<br />&#91;Mod&#93; mesecons / powerplant (30.12.2018) 0.4.x - loaded - end with 2275 KB<br />&#91;Mod&#93; mesecons / noteblock (30.12.2018) 0.4.x - loaded - end with 2286 KB<br />&#91;Mod&#93; mesecons / mvps (30.12.2018) 0.4.x - loaded - end with 2306 KB<br />&#91;Mod&#93; mesecons / stickyblocks (30.12.2018) 0.4.x - loaded - end with 2310 KB<br />&#91;Mod&#93; mesecons / pistons (30.12.2018) 0.4.x - loaded - end with 2368 KB<br />&#91;Mod&#93; mesecons / microcontroller (30.12.2018) 0.4.x - loaded - end with 2482 KB<br />&#91;Mod&#93; mesecons / materials (30.12.2018) 0.4.x - loaded - end with 2487 KB<br />&#91;Mod&#93; mesecons / solarpanel (30.12.2018) 0.4.x - loaded - end with 2504 KB<br />&#91;Mod&#93; mesecons / movestones (30.12.2018) 0.4.x - loaded - end with 2528 KB<br />&#91;Mod&#93; mesecons / detector (30.12.2018) 0.4.x - loaded - end with 2545 KB<br />&#91;Mod&#93; mesecons / luacontroller (30.12.2018) 0.4.x - loaded - end with 2039 KB<br />&#91;Mod&#93; mesecons / lamp (30.12.2018) 0.4.x - loaded - end with 2052 KB<br />&#91;Mod&#93; mesecons / insulated (30.12.2018) 0.4.x - loaded - end with 2067 KB<br />&#91;Mod&#93; mesecons / hydroturbine (30.12.2018) 0.4.x - loaded - end with 2084 KB<br />&#91;Mod&#93; mesecons / fpga (30.12.2018) 0.4.x - loaded - end with 2211 KB<br />&#91;Mod&#93; mesecons / extrawires (30.12.2018) 0.4.x - loaded - end with 2304 KB<br />&#91;Mod&#93; mesecons / delayer (30.12.2018) 0.4.x - loaded - end with 2346 KB<br />&#91;Mod&#93; mesecons / gates (30.12.2018) 0.4.x - loaded - end with 2419 KB<br />&#91;Mod&#93; mesecons / blinkyplant (30.12.2018) 0.4.x - loaded - end with 2432 KB<br />&#91;Mod&#93; mesecons / alias (30.12.2018) 0.4.x - loaded - end with 2443 KB<br />&#91;Mod&#93; mesecons / doors (30.12.2018) 0.4.x - loaded - end with 3642 KB<br />&#91;Mod&#93; mesecons / lightstone (30.12.2018) 0.4.x - loaded - end with 3901 KB (until 3962, tested 10 times)<br />2019-03-21 18:25:37: ACTION&#91;Server&#93;:</code></dd></dl><br /><br />and with moremesecons, incl. needed 4 part out of mesecons to start<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&#91;Mod&#93; time *(version/date) - loaded - sum: 374 KB<br />&#91;Mod&#93; MoreMesecons / utils (2b2faec on 20.08.2018) 0.4.x - loaded - with 381 KB<br />&#91;Mod&#93; mesecons / mesecons (30.12.2018) 0.4.x - loaded - end with 1150 KB<br />&#91;Mod&#93; MoreMesecons / wireless (2b2faec on 20.08.2018) 0.4.x - loaded - with 1220 KB<br />&#91;Mod&#93; MoreMesecons / timegate (2b2faec on 20.08.2018) 0.4.x - loaded - with 1243 KB<br />&#91;Mod&#93; MoreMesecons / teleporter (2b2faec on 20.08.2018) 0.4.x - loaded - with 1257 KB<br />&#91;Mod&#93; MoreMesecons / teleporter (2b2faec on 20.08.2018) 0.4.x - loaded - with 1273 KB<br />&#91;Mod&#93; MoreMesecons / signalchanger (2b2faec on 20.08.2018) 0.4.x - loaded - with 1289 KB<br />&#91;Mod&#93; MoreMesecons / mesechest (2b2faec on 20.08.2018) 0.4.x - loaded - with 1331 KB<br />&#91;Mod&#93; MoreMesecons / luacontroller (2b2faec on 20.08.2018) 0.4.x - loaded - with 1354 KB<br />&#91;Mod&#93; MoreMesecons / luablock (2b2faec on 20.08.2018) 0.4.x - loaded - with 1401 KB<br />&#91;Mod&#93; MoreMesecons / jammer (2b2faec on 20.08.2018) 0.4.x - loaded - with 1419 KB<br />&#91;Mod&#93; MoreMesecons / injectorcontroller (2b2faec on 20.08.2018) 0.4.x - loaded - with 1436 KB<br />&#91;Mod&#93; MoreMesecons / detector (2b2faec on 20.08.2018) 0.4.x - loaded - with 1454 KB<br />&#91;Mod&#93; MoreMesecons / dualdelayer (2b2faec on 20.08.2018) 0.4.x - loaded - with 1472 KB<br />&#91;Mod&#93; MoreMesecons / conductor_signalchanger (2b2faec on 20.08.2018) 0.4.x - loaded - with 1488 KB<br />&#91;Mod&#93; MoreMesecons / commandblock (2b2faec on 20.08.2018) 0.4.x - loaded - with 1510 KB<br />&#91;Mod&#93; MoreMesecons / adjustable_player_detector (2b2faec on 20.08.2018) 0.4.x - loaded - with 1528 KB<br />&#91;Mod&#93; MoreMesecons / adjustable_blinkyplant (2b2faec on 20.08.2018) 0.4.x - loaded - with 1543 KB<br />&#91;Mod&#93; mesecons / torch (30.12.2018) 0.4.x - loaded - end with 1559 KB<br />&#91;Mod&#93; MoreMesecons / transmitter (2b2faec on 20.08.2018) 0.4.x - loaded - with 1578 KB<br />&#91;Mod&#93; mesecons / noteblock (30.12.2018) 0.4.x - loaded - end with 1588 KB<br />2019-03-23 12:45:34: WARNING&#91;Main&#93;: &#91;moremesecons_sayer&#93; use_speech_dispatcher = true, but the speech dispatcher can only be used in singleplayer<br />&#91;Mod&#93; MoreMesecons / _sayer (2b2faec on 20.08.2018) 0.4.x - loaded - with 1618 KB<br />&#91;Mod&#93; mesecons / materials (30.12.2018) 0.4.x - loaded - end with 1624 KB<br />&#91;Mod&#93; MoreMesecons / playerkiller (2b2faec on 20.08.2018) 0.4.x - loaded - with 1634 KB<br />&#91;Mod&#93; MoreMesecons / ignitter (2b2faec on 20.08.2018) 0.4.x - loaded - with 1803 KB</code></dd></dl><br /><br />60 [Mod]s done yet, another 120+ waiting, arghhh</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346905" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346905">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 4:39 am </p>
+
+			<div class="content"><span style="font-weight: bold">result until 23.03.2019<br /> --&gt; best option to get used lua memory by change a code in</span><br />line 45 ... unified_inventory/api.lua - as this is last action could detect yet<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>print(&quot;Unified Inventory. inventory size: &quot;..unified_inventory.items_list_size</code></dd></dl><br />new code, show used mem, make garbagecollect, and show used mem again<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&nbsp; &nbsp;print(&quot;Unified Inventory. inventory size: &quot;..unified_inventory.items_list_size..&quot; / luamem: &quot;..math.floor(collectgarbage(&quot;count&quot;))..&quot; KB&quot;)<br />&nbsp; &nbsp;&nbsp; &nbsp;collectgarbage(&quot;step&quot;,3)<br />&nbsp; &nbsp;&nbsp; &nbsp;print(math.floor(collectgarbage(&quot;count&quot;))..&quot; KB after collectgarbage&quot;)</code></dd></dl><br /><span style="font-weight: bold">So give it a try, and please report your server: name, Lua or LuaJITand used lue memory</span><br />To check out weather I need them or not - to get less failure and longer runs of the MTS.<br /><br />I will see when I can continue the mod memory consumption on the 2nd machine,<br />or if you really want to know about one I didn't test, post it with the link to source</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346916" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346916">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 9:27 am </p>
+
+			<div class="content">So far I am ready with check all [Mod]s i use for lua memory size, or think about to use<br />A long list with the [Mod]s and there <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934&amp;p=341411#p341411" class="postlink">lonely lua memory usage under LuaJIT is here</a><br /><br />I will then add some measurements from my running server, as it is for unified_inventory, which is a big difference on empty world or at me.<br /><br />So if you mean to need another mod, especial when you had OOM before, post the Mod, best we measure on the newest version getting on git..., and we put in <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934&amp;p=341411#p341411" class="postlink">here</a> also<br /><br />but as I have seen, an empty load is not real to compare with the load on running server,<br />so when you got OOM, might be the best to <br />* add print at and of all init.lua code show men status,<br />* change also unified_inventory to get most last sum of lua memory used<br />and then test on DB copy, or sure without any login !!!, to false some thought big one, and see the final memory usage. If there is a big difference to before, you got a number saving memory for false this mod.<br /><br /><span style="font-weight: bold">Might me much work, <br />but be sure my server is much faster now, as less heavy mods, and less using memory, might keep OOM far away.</span></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p346990" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p346990">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 24, 2019 6:01 am </p>
+
+			<div class="content">as I saw today some [Mod]s have newer change dates I download and test them on 2nd system again, without any other [Mod] and an empty same world about lua memory consumption:<br />* unified_inventory - no change<br />* moreores - no change<br />* hud_hunger - no change<br />* bitchange - no change<br />* digtron - 630 instead of 1330 KB<br /><br />would be nice for me to understand how to change for less using and also faster working.<br /><br />often I see at start declarations without local ...<br />moreores/init.lua<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>moreores = {}<br /><br />local modpath = minetest.get_modpath(&quot;moreores&quot;)<br /><br />local S, NS = dofile(modpath .. &quot;/intllib.lua&quot;)<br />moreores.S = S<br />moreores.NS = NS<br />...</code></dd></dl> and sometime I jsut try one on the 2nd server, but like here, as more .lua files are included it is more difficult ...<br /><br />unified_inventory ... with a lot could be local ?<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>-- Unified Inventory for Minetest &gt;= 0.4.16<br /><br />local modpath = minetest.get_modpath(minetest.get_current_modname())<br />local worldpath = minetest.get_worldpath()<br /><br />-- Intllib<br />local S, NS = dofile(modpath .. &quot;/intllib.lua&quot;)<br /><br />-- Data tables definitions<br />unified_inventory = {<br />&nbsp; &nbsp;activefilter = {},<br />&nbsp; &nbsp;active_search_direction = {},<br />&nbsp; &nbsp;alternate = {},<br />&nbsp; &nbsp;current_page = {},<br />&nbsp; &nbsp;current_searchbox = {},<br />&nbsp; &nbsp;current_index = {},<br />&nbsp; &nbsp;current_item = {},<br />&nbsp; &nbsp;current_craft_direction = {},<br />&nbsp; &nbsp;registered_craft_types = {},<br />&nbsp; &nbsp;crafts_for = {usage = {}, recipe = {} },<br />&nbsp; &nbsp;players = {},<br />&nbsp; &nbsp;items_list_size = 0,<br />&nbsp; &nbsp;items_list = {},<br />&nbsp; &nbsp;filtered_items_list_size = {},<br />&nbsp; &nbsp;filtered_items_list = {},<br />&nbsp; &nbsp;pages = {},<br />&nbsp; &nbsp;buttons = {},<br /><br />&nbsp; &nbsp;-- Homepos stuff<br />&nbsp; &nbsp;home_pos = {},<br />&nbsp; &nbsp;home_filename =&nbsp; &nbsp;worldpath..&quot;/unified_inventory_home.home&quot;,<br /><br />&nbsp; &nbsp;-- Default inventory page<br />&nbsp; &nbsp;default = &quot;craft&quot;,<br /><br />&nbsp; &nbsp;-- intllib<br />&nbsp; &nbsp;gettext = S,<br /><br />&nbsp; &nbsp;-- &quot;Lite&quot; mode<br />&nbsp; &nbsp;lite_mode = minetest.settings:get_bool(&quot;unified_inventory_lite&quot;),<br /><br />&nbsp; &nbsp;-- Trash enabled<br />&nbsp; &nbsp;trash_enabled = (minetest.settings:get_bool(&quot;unified_inventory_trash&quot;) ~= false),<br /><br />&nbsp; &nbsp;pagecols = 8,<br />&nbsp; &nbsp;pagerows = 10,<br />&nbsp; &nbsp;page_y = 0,<br />&nbsp; &nbsp;formspec_y = 1,<br />&nbsp; &nbsp;main_button_x = 0,<br />&nbsp; &nbsp;main_button_y = 9,<br />&nbsp; &nbsp;craft_result_x = 0.3,<br />&nbsp; &nbsp;craft_result_y = 0.5,<br />&nbsp; &nbsp;form_header_y = 0<br />}<br />...</code></dd></dl><br /><br />read a bit:<br /><blockquote class="uncited"><div>    b = nil<br />After that, it is as if the variable had never been used. In other words, a global variable is existent if (and only if) it has a non-nil value. </div></blockquote> good ! - problem, when I know that this global or local var is not used anymore and can set it nil ? (end of lua script)<br /><br />also from here: <a href="https://rubenwardy.com/minetest_modding_book/en/basics/lua.html" class="postlink">https://rubenwardy.com/minetest_modding_book/en/basics/lua.html</a><br /><blockquote class="uncited"><div>“local” variables declared outside of any functions in a script file will be local to that script. A script can return a value, which is useful for sharing private locals:</div></blockquote><br />so often I see [Mod]s with several spitted scripts, but as long those are called from lua.init, a local var defined there is available at the others also. hmm thinking ...<br /><br />seams not to be, <br />but so far atom with language_lua package, also luajit and dbg_lua is installed and running<br />playing also around with git. ...<br /><br />tested out of xdecor<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>xdecor = {}<br />local modpath = minetest.get_modpath(&quot;xdecor&quot;)<br /><br />dofile(modpath..&quot;/handlers/animations.lua&quot;)</code></dd></dl> to change &quot;local xdecor = {}&quot; ... getting <br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-24 17:16:20: ERROR&#91;Main&#93;: ModError: Failed to load and run script from /home/thomas/.minetest/mods/xdecor/init.lua:<br />2019-03-24 17:16:20: ERROR&#91;Main&#93;: /home/thomas/.minetest/mods/xdecor/handlers/animations.lua:6: attempt to index global 'xdecor' (a nil value)<br /></code></dd></dl> what mean this change to local is not going with in the dofile call ...<br /><br />but at [Mod] border i found something interesting, cleaing up after set a var to nil<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local function update_visa_cache(name)<br />&nbsp; &nbsp;--if name exists in cache remove it<br />&nbsp; &nbsp;if visa&#91;name&#93; then<br />&nbsp; &nbsp;&nbsp; &nbsp;visa&#91;name&#93; = nil<br />&nbsp; &nbsp;&nbsp; &nbsp;collectgarbage()<br />&nbsp; &nbsp;else<br />&nbsp; &nbsp;&nbsp; &nbsp;-- cache visa<br />&nbsp; &nbsp;&nbsp; &nbsp;visa&#91;name&#93; = os.time() + duration <br />&nbsp; &nbsp;end<br />&nbsp; &nbsp;mod_data:set_string(&quot;visa&quot;, minetest.serialize(visa))<br />end</code></dd></dl><br /><br />so this combination<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>somevar = nil<br />collectgarbage()</code></dd></dl> I like, and when search all [Mod]s I have here a &quot;= nil&quot; is found 1248 times in 263 files, what might be some start to do similar, mainly at the big memory using [Mod]s</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347375" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p347375">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Mar 28, 2019 7:14 am </p>
+
+			<div class="content">check and clean up Lua(JIT) memory size during server is active, without change [Mod]s,<br />* if <span style="font-weight: bold">WorldEdit</span> true<br />to check size<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>//lua print(math.floor(collectgarbage(&quot;count&quot;)))</code></dd></dl> or then to clean<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>//lua collectgarbage()</code></dd></dl> with privs server<br />* if <span style="font-weight: bold">luacmd</span> true<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/lua print(math.floor(collectgarbage(&quot;count&quot;)))</code></dd></dl> or then to clean<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/lua collectgarbage()</code></dd></dl> with privs lua<br />/lua tested on my 2nd server, with just minimal settings<br />//lua works fine on main server (showed 72 MB, cleaned to 69 MB)</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p347426" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_21934.htm#p347426">Re: LuaJit OOM - how to detect Mods using it - and rid off !</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Mar 28, 2019 9:00 pm </p>
+
+			<div class="content">news:<br />* new version of moreblocks have funny <a href="https://github.com/minetest-mods/moreblocks/issues/140#issuecomment-477745904" class="postlink">issues</a>, during loading show less mem usage, but after all loaded same more, and after final collectgarbage() still 1500 KB more used then before<br /><br />* I wrote an own <a href="https://github.com/Minetest-One/free_lj_mem/blob/master/lua.ini" class="postlink">[Mod] free_lj_mem</a> what is in testing but free to try<br />** collectgarbage() every set x (3600, mean 1 hour) with<br />** yes or no, to report in log / terminal / to player<br />** set maxluamem (thought about 10% under known OOM mem) with<br />** yes or no to each report or terminal or send message to player (to set name) as warn of possible OOM !<br />** also detecting if lua or luajit and version is running (for further ideas)<br /><br />* during testing on 2nd system realize that<br />** every player join in, rise the luamem also (need to be confirmed)<br /><br />Version 1.1 is running on my server and show, I think, <a href="https://forum.minetest.net/viewtopic.php?f=10&amp;t=22041&amp;p=347429#p347429" class="postlink">good behavior</a>.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Festus1965</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 948</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			25 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=6" class="left-box left" accesskey="r">Return to Problems</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Bing Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>

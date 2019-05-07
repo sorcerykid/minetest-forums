@@ -1,0 +1,249 @@
+
+<!--
+  Mintest Forum Recovery Project (by sorcerykid)
+
+  https://sorcerykid.github.io/minetest-forums/pages/53_18079_100.htm
+
+  The following page was cached by Yandex Bot (https://yandex.com/) on 29-Apr-2019.
+  All archived content is subject to copyright. No warranty or guaranty is implied.
+-->
+<base href="https://forum.minetest.net/" />
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Minetest Forums &bull; View topic - oredetect</nobr></title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - oredetect</nobr>" href="https://forum.minetest.net/feed.php?f=53&amp;t=18079" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=5&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./index.php" title="Board index" id="logo"><img src="./styles/prosilver/imageset/site_logo.gif" width="149" height="52" alt="" title="" /></a>
+				<h1>Minetest Forums</h1>
+				<p>The official Minetest discussion board</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php" accesskey="h">Board index</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=53">Client-side modding</a></li>
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="./viewtopic.php?f=46&amp;t=18079">oredetect</nobr></a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+		<div class="pagination">
+			104 posts
+			 &bull; Page <strong>5</strong> of <strong>5</strong>
+		</div>
+</div>
+<div class="clear"></div>
+
+	<div id="p349619" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/53_18079_100.htm#p349619">Re: [discussion]Technical notes on how to defeat(*) oredetec</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>neoh4x0r</strong> &raquo; Wed Apr 24, 2019 04:00 </p>
+
+			<div class="content"><blockquote><div><cite>neoh4x0r wrote:</cite>EDITED TO ADD: This problem is solvable but only without having the pre-conditions &quot;being a non-destructive and non-restrictive solution&quot;.</div></blockquote><br /><br />EDIT: csm_restriction_flags seems to include the ability to disable calls from the client to get_item_def and get_node_def (the call is disabled on the server, not the client, to enforce the restriction).<br /><br />So, a possible compromise could be to add extra flags to csm_restriction_flags to rate_limit the number of calls to those functions (like with get_node / csm_restriction_noderange).<br />----------<br /><br />For instance, moving the ability to read the ore-data from the client to the server would allow the following scenario:<br /><br />1) Client requests nodes (including the associated ore data) from the server<br />2) The server sends the data for (a server-side configurable number of) nodes surrounding the player (or around a specified location)<br />3) The client requests the same data again (either the same location or a different location)<br />4) The server rejects the request (and it won't send the data to the client until (a server-side configurable) amount of time has passed. Ie a cool-down period.<br /><br />This doesn't defeat ore-detect, per se, or CSMs, but it does prevent the client from having an unfair advantage (ie seeing all nodes with ore-data everywhere).<br /><br />This is a completely viable solution, but it would require an updated client and for ore-detect (and other CSM mods) to be modified to make a call to the server to get the ore-data.<br /><br />Like I was saying before, there isn't any good way to do this (&quot;to defeat ore-detect&quot;) without &quot;cracking a few eggs.&quot; (and breaking those &quot;pre-conditions&quot;)</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>neoh4x0r</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 23</dd><dd><strong>Joined:</strong> Wed Aug 29, 2018 20:16</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349622" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/53_18079_100.htm#p349622">Re: [discussion]Technical notes on how to defeat(*) oredetec</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>neoh4x0r</strong> &raquo; Wed Apr 24, 2019 04:29 </p>
+
+			<div class="content"><blockquote><div><cite>Lone_Wolf wrote:</cite>We have this now. So I think we're back to trying to stop hackers?<br /><br /><img src="https://cdn.discordapp.com/attachments/453772264542961666/570443727013675008/unknown.png" alt="Image" /></div></blockquote><br /><br />Long story short, csm_restriction_flags isn't meant to stop hackers (or cheaters) -- ie preventing client mods from being loaded by the client.<br /><br />Just considreing the first restriction (&quot;load_client_mods&quot;) -- I would assume that CSM mods are loaded on the client's side and not loaded on the server (ie they essentially act like bots that mimic the player).<br /><br />As for the other restrictions I assume that when a CSM (or client) makes a call to the server, the server is choosing to  reject, accept, or rate-limit the requests depending on the value of csm_restriction_flags and that isn't the client choosing whether to do this or not.<br /><br /><blockquote class="uncited"><div>EDITED TO INCLUDE:<br /><!-- m --><a class="postlink" href="https://wiki.minetest.net/Mods#Client-Side_Mods">https://wiki.minetest.net/Mods#Client-Side_Mods</a><!-- m --><br /><br />A Client-Side Mod (short: “CSM”) is a mod used to customize your Minetest client. Client-Side Mods can be used when connected to a Minetest server because <span style="font-weight: bold">they are loaded locally</span>.</div></blockquote><br /><br />So this confirms it...CSMs are loaded by the client -- how can the server actually enforce the policy (if the server has no control over them being loaded) ? [rhetorical]</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>neoh4x0r</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 23</dd><dd><strong>Joined:</strong> Wed Aug 29, 2018 20:16</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349623" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/53_18079_100.htm#p349623">Re: [discussion]Technical notes on how to defeat(*) oredetec</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Lone_Wolf</strong> &raquo; Wed Apr 24, 2019 04:44 </p>
+
+			<div class="content"><blockquote><div><cite>neoh4x0r wrote:</cite>Long story short, csm_restriction_flags isn't meant to stop hackers (or cheaters) -- ie preventing client mods from being loaded by the client.<br /><br />Just considreing the first restriction (&quot;load_client_mods&quot;) -- I would assume that CSM mods are loaded on the client's side and not loaded on the server (ie they essentially act like bots that mimic the player).<br /><br />As for the other restrictions I assume that when a CSM (or client) makes a call to the server, the server is choosing to  reject, accept, or rate-limit the requests depending on the value of csm_restriction_flags and that isn't the client choosing whether to do this or not.<br /><br /><blockquote class="uncited"><div>EDITED TO INCLUDE:<br /><!-- m --><a class="postlink" href="https://wiki.minetest.net/Mods#Client-Side_Mods">https://wiki.minetest.net/Mods#Client-Side_Mods</a><!-- m --><br /><br />A Client-Side Mod (short: “CSM”) is a mod used to customize your Minetest client. Client-Side Mods can be used when connected to a Minetest server because <span style="font-weight: bold">they are loaded locally</span>.</div></blockquote><br /><br />So this confirms it...CSMs are loaded by the client -- how can the server actually enforce the policy (if the server has no control over them being loaded) ? [rhetorical]</div></blockquote><br />You can't get around the server preventing you from using CSM without modifying your client. At that point even if we removed CSM completely the people who could bypass the server restrictions could just as easily add it back to their client<br /><br />btw I think we've been a little offtopic. Unless I read this wrong, it is a little late for me...<br /><img src="https://cdn.discordapp.com/attachments/453772264542961666/570469842394677258/unknown.png" alt="Image" /></div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>Lone_Wolf</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 2152</dd><dd><strong>Joined:</strong> Sun Apr 09, 2017 05:50</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+	<div id="p349625" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/53_18079_100.htm#p349625">Re: [discussion]Technical notes on how to defeat(*) oredetec</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>neoh4x0r</strong> &raquo; Wed Apr 24, 2019 05:32 </p>
+
+			<div class="content"><blockquote><div><cite>Lone_Wolf wrote:</cite>btw I think we've been a little offtopic. Unless I read this wrong, it is a little late for me...<br /><img src="https://cdn.discordapp.com/attachments/453772264542961666/570469842394677258/unknown.png" alt="Image" /></div></blockquote><br /><br />That was my point...<br /><br />Enforcing restrictions on the client side is only practical if the server is the one doing the enforcing.<br /><br />Furthermore, since a client can be modified by users (and any csm loaded) -- trying to &quot;prevent&quot; them from doing or using something renders this whole thing moot.<br /><br />PS: As I was saying the only way to do what was asked, would be to violate those pre-conditions (there isn't any other way to do it without it being a very bad kludgey hack that is unreliable).<br /><br />The fundamental question was: &quot;how to make ore-detect unnecessary&quot; -- in short it means making the reward of finding all of the ores not necessary.....or somehow making it not work.<br /><br />To not break the pre-conditions: making ore-detect not useful or necessary,  would be to give the player the ores or embed the function on the server-side (making ore-detect a server mod).<br /><br />Like I said, it just is not fundamentally possible for everyone to have their cake and eat it too -- some sort of compromise would have to be made.<br />--------------------<br />To follow-up with at least a somewhat workable solution. However, it is not without a caveat in that it would make mining/digging less important (which is one of the minetest's core gameplay features).<br /><br />For instance, to place less importance on mining/digging for ores (even from common to more scarce ones) would be to setup various tasks, jobs, etc and a player is rewarded for the time spent with various levels of ores, the more time spent performing the task would give more rare/scarce ores.<br /><br />Like I said, in my opinion, while it is a viable solution -- it makes one of minetest's core gameplay features less important and, to me, making a core gameplay feature less important is technically destructive (it takes away from the game).<br /><br />Furthermore, it doesn't solve the problem completely, because it requires that players actually want to earn ores by taking on jobs -- the players that chose to cheat using ore-detect (that is the ones causing the issue) are unlikely to want to work for them and, in that case, it doesn't fundamentally solve the issue.<br /><br />Which is why I said that a compromise would have to made somewhere.</div>
+		</div>
+
+			<dl class="postprofile">
+			<dt>
+				<strong>neoh4x0r</strong>
+			</dt>
+			<dd></dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 23</dd><dd><strong>Joined:</strong> Wed Aug 29, 2018 20:16</dd>
+		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
+			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+		</dl>
+	
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<hr class="divider" />
+
+	<hr />
+
+<div class="topic-actions">
+		<div class="pagination">
+			104 posts
+			 &bull; Page <strong>5</strong> of <strong>5</strong>
+		</div>
+</div>
+
+	<p></p><p><a href="./viewforum.php?f=53" class="left-box left" accesskey="r">Return to Client-side modding</a></p>
+
+	<br /><br />
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Yandex Bot [Bot]</span> and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php">Board index</a></li>
+				
+			<li class="rightside">All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+</body>
+</html></div>
