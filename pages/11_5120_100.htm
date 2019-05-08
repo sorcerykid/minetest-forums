@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -87,7 +86,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_5120_100.htm#p346385">Re: [Mod] cottages [cottages] (medieval, farming, country li</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_5120_100.htm#p346385">Re: [Mod] cottages [cottages] (medieval, farming, country li</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>h-v-smacker</strong> &raquo; Sun Mar 17, 2019 5:15 pm </p>
 
 			<div class="content">Hey Sokomine, I found a pitchfork duplication situation with cottages: try sticking a pitchfork in the ground through, say, a grass node (the regular grass, which spreads). The result would be that you'll have the pitchfork replacing the grass, and yet the pitchfork in your hand will remain. I found that it is because the pointed_thing points to different nodes (1 node height difference) in those cases, and therefore the &quot;find placed pitchfork at pos&quot; test fails with grass (it looks where there is air in that case). So far I resolved the issue with simply looking for a pitchfork in ±1 node area (above and below the initial target, that is):<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&nbsp; &nbsp;&nbsp; &nbsp;minetest.rotate_and_place(ItemStack(&quot;cottages:pitchfork_placed&quot;), placer, pointed_thing)<br />&nbsp; &nbsp;&nbsp; &nbsp;-- did the placing succeed?<br />&nbsp; &nbsp;&nbsp; &nbsp;if not minetest.find_nodes_in_area({x=pos.x, y=pos.y-1, z=pos.z}, <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{x=pos.x, y=pos.y+1, z=pos.z}, <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{&quot;cottages:pitchfork_placed&quot;})&#91;1&#93; then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return nil<br />&nbsp; &nbsp;&nbsp; &nbsp;end<br /></code></dd></dl></div>
@@ -160,3 +159,4 @@
 
 </body>
 </html></div>
+

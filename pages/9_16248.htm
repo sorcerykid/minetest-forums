@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_16248.htm#p244063">Re: [Mod]No Escape ![For PvP][0.1]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_16248.htm#p244063">Re: [Mod]No Escape ![For PvP][0.1]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>taikedz</strong> &raquo; Mon Dec 26, 2016 2:43 pm </p>
 
 			<div class="content"><blockquote><div><cite>Naj wrote:</cite>Does it work for mobs also ?</div></blockquote><br /><br />What, so that if you are hit by a mob you can't escape? That would be plain mean :D<br /><br />That being said, a mob that removes your home and spawn privs when you attack it could be interesting ;-)</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_16248.htm#p244682">Re: [Mod]No Escape ![For PvP][0.2]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_16248.htm#p244682">Re: [Mod]No Escape ![For PvP][0.2]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Sirvoid</strong> &raquo; Fri Dec 30, 2016 10:14 pm </p>
 
 			<div class="content"><blockquote><div><cite>Naj wrote:</cite>Does it work for mobs also ?</div></blockquote><br /><br />That is not a bad idea. Maybe I could make something optional for that  ^^<br /><br /><blockquote><div><cite>ManElevation wrote:</cite>this is pretty nice, I might put this my server is up</div></blockquote><br /><br />Sure ! I would not say no to see the mod running on a server with some players.</div>
@@ -261,7 +260,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_16248.htm#p307967">Re: [Mod]No Escape ![For PvP][0.2]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_16248.htm#p307967">Re: [Mod]No Escape ![For PvP][0.2]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>RWЯ</strong> &raquo; Thu Jan 11, 2018 6:01 am </p>
 
 			<div class="content">What if player start to log off?</div>
@@ -319,7 +318,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_16248.htm#p349225">Re: [Mod]No Escape ![For PvP][0.2]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_16248.htm#p349225">Re: [Mod]No Escape ![For PvP][0.2]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Fixer</strong> &raquo; Fri Apr 19, 2019 9:45 pm </p>
 
 			<div class="content">Original repo no longer available, full mod code (create a folder for it and paste into new init.lua file):<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>-----------------------------------------------------------<br />-- This mod remove the home and spawn privileges during a fight.<br />-- Thanks to Taikedz for cleaning the code--<br />-------------configuration---------------------------------<br /><br />-- Other player cannot escape<br />-- false if the player being hit can't teleport when someone hits them.<br />local OPCE = false<br /><br />-- How long in seconds until a battle ends (times since last hit)<br />local battletimeout = 15<br /><br />-- Fight start message<br />local FightMessage = &quot;You entered a Fight !&quot;<br /><br />-- Fight end message<br />local EndFightMessage = &quot;The Fight is Over !&quot;<br /><br />---------------------------------------------<br /><br />-- Get default privs at server level<br />local default_privs = minetest.setting_get(&quot;default_privs&quot;) or &quot;&quot;<br />default_privs = default_privs:split(&quot;,&quot;)<br /><br />local dprivs = {}<br />for _,v in pairs(default_privs) do<br />&nbsp; &nbsp;dprivs&#91;v&#93; = true<br />end<br /><br />local playerinpvp = {}<br /><br />local function limit_privs(playername)<br />&nbsp; &nbsp;local privs = minetest.get_player_privs(playername)<br />&nbsp; &nbsp;privs.home = nil<br />&nbsp; &nbsp;privs.spawn = nil<br />&nbsp; &nbsp;minetest.set_player_privs(playername, privs)<br />end<br /><br />local function setplayerpvp(playername, isvictim)<br />&nbsp; &nbsp;if isvictim and OPCE == true then return end<br /><br />&nbsp; &nbsp;if not playerinpvp&#91;playername&#93; then<br />&nbsp; &nbsp;&nbsp; &nbsp;playerinpvp&#91;playername&#93; = 0<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.chat_send_player(playername, FightMessage)<br />&nbsp; &nbsp;&nbsp; &nbsp;limit_privs(playername)<br />&nbsp; &nbsp;end<br />end<br /><br />local function resettime(playername)<br />&nbsp; &nbsp;if playerinpvp&#91;playername&#93; ~= nil then<br />&nbsp; &nbsp;&nbsp; &nbsp;playerinpvp&#91;playername&#93; = 0<br />&nbsp; &nbsp;end<br />end<br /><br />local function restoreprivs(fighter)<br />&nbsp; &nbsp;local privs = minetest.get_player_privs(fighter)<br />&nbsp; &nbsp;privs.home = dprivs.home<br />&nbsp; &nbsp;privs.spawn = dprivs.spawn<br /><br />&nbsp; &nbsp;minetest.set_player_privs(fighter, privs)<br /><br />&nbsp; &nbsp;playerinpvp&#91;fighter&#93; = nil<br />end<br /><br />minetest.register_on_punchplayer(function(player, hitter)<br />&nbsp; &nbsp;if not (player:is_player() and hitter:is_player() ) then<br />&nbsp; &nbsp;&nbsp; &nbsp;return<br />&nbsp; &nbsp;end<br />&nbsp; &nbsp;<br />&nbsp; &nbsp;local hittername = hitter:get_player_name()<br />&nbsp; &nbsp;local victimname = player:get_player_name()<br /><br />&nbsp; &nbsp;setplayerpvp(hittername)<br />&nbsp; &nbsp;setplayerpvp(victimname, true) -- moved OPCE check<br /><br />&nbsp; &nbsp;resettime(hittername)<br />&nbsp; &nbsp;resettime(victimname) -- won't affect non-registered victims<br />end)<br /><br />minetest.register_globalstep(function(dtime)<br />&nbsp; &nbsp;for fighter,oldtime in pairs(playerinpvp) do<br />&nbsp; &nbsp;&nbsp; &nbsp;local newtime = oldtime + dtime<br />&nbsp; &nbsp;&nbsp; &nbsp;playerinpvp&#91;fighter&#93; = newtime<br />&nbsp; &nbsp;<br />&nbsp; &nbsp;&nbsp; &nbsp;if newtime &gt;= battletimeout then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;restoreprivs(fighter)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;minetest.chat_send_player(fighter, EndFightMessage)<br />&nbsp; &nbsp;&nbsp; &nbsp;end<br />&nbsp; &nbsp;end<br />end)<br /><br />minetest.register_on_joinplayer(function(player)<br />&nbsp; &nbsp;restoreprivs( player:get_player_name() )<br />end) </code></dd></dl></div>
@@ -392,3 +391,4 @@
 
 </body>
 </html></div>
+

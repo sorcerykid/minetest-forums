@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343736">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343736">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sat Feb 16, 2019 11:51 am </p>
 
 			<div class="content">I should clarify that I'm already using the vmanip to spawn structures with on_generate. I understand this function should now only attempt to spawn a piece of schematic that intersects the chunk in cause. So this shouldn't be a case of chunk overflow normally, since I use the vm provided by the generator which should know what to do.<br /><br />That is an interesting test, I didn't know about this parameter. I will keep in mind.</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343739">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343739">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sat Feb 16, 2019 12:14 pm </p>
 
 			<div class="content"><blockquote><div><cite>DrFrankenstone wrote:</cite>FWIW, I didn't mean that drawing beyond the bounds of the chunk might cause it, I meant that being limited to within the bounds of the on_generate chunk may cause it if you don't also successfully spawn the structure in every other chunk that the structure touches.<br /><br />Are the missing parts aligned with chunk boundaries?</div></blockquote><br /><br />Oh: I am calling minetest.place_schematic_on_vmanip for the same structure multiple times, in case it intersects multiple chunks. Each minetest.on_generated call should be addressing every remaining piece of a schematic.<br /><br />It doesn't seem like they're aligned. The large cubic chunks ripped out of buildings appear to be random and their size seems to vary. I still suspect it has something to do with chunks but we need to dig deeper.</div>
@@ -261,7 +260,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343814">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343814">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sun Feb 17, 2019 1:26 pm </p>
 
 			<div class="content">Very interesting. Thank you for testing and mentioning those details, it may help in finding a solution.</div>
@@ -319,7 +318,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344305">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344305">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sun Feb 24, 2019 1:47 pm </p>
 
 			<div class="content">I suspect a concurrency bug.<br /><br />I've been using large schematics to <a href="https://forum.minetest.net/viewtopic.php?p=344304#p344304" class="postlink">create giant trees</a>. The replacement table passed to <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">place_schematic&#40;&#41;</span> is different for each type of tree, and I've noticed that if two trees are near each other (like in the cherry blossom screenshot), the first replacement table ends up being applied to both schematics, even though a very different table was passed to the second place_schematic() call.<br /><br /><span style="text-decoration: line-through;">My thinkings is that the replacement table might not be the only thing inadvertently being shared by invocations of place_schematic&#40;&#41; &#40;which might be running in parallel&#41;.</span></div>
@@ -377,7 +376,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344308">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344308">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sun Feb 24, 2019 2:25 pm </p>
 
 			<div class="content">damn, I saw that in the lua_api.txt (thank you) and forgot. Working around this is going to be interesting.</div>
@@ -435,7 +434,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344774">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344774">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Sat Mar 02, 2019 1:31 am </p>
 
 			<div class="content">What value are you using for 'num_emerge_threads'? The default is automatic behaviour which is 'number of processors' - 2. Also note that a sqlite world database is not 'thread safe' so 'num_emerge_threads' should be set to '1'.<br />Try '1' to see if this improves anything.</div>
@@ -493,7 +492,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344802">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344802">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Sat Mar 02, 2019 12:54 pm </p>
 
 			<div class="content">I had this bug in CTF, and found that you need to emerge the area first using <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.emerge_area</span></div>
@@ -551,7 +550,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344849">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344849">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sat Mar 02, 2019 11:32 pm </p>
 
 			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>I had this bug in CTF, and found that you need to emerge the area first using <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.emerge_area</span></div></blockquote><br /><br />My lua code's in the on_generate, so partly is the emerge code, but it does improve if I move the <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">place_schematic&#40;&#41;</span> call inside a <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.after&#40;0.1, ...&#41;</span> call to help it happen after the emerge.</div>
@@ -653,3 +652,4 @@
 
 </body>
 </html></div>
+

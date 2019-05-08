@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -88,7 +87,7 @@
 
 		<div class="postbody">
 			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p348974">Sneak eye offset</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Tue Apr 16, 2019 05:41 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Tue Apr 16, 2019 5:41 am </p>
 
 			<div class="content">I created this small bit of code to lower the player's eyesight when they sneak<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>sneak_table = {}<br />minetest.register_on_joinplayer(function(player)<br />&nbsp; sneak_table&#91;player:get_player_name()&#93; = false<br />end)<br /><br />minetest.register_globalstep(function(dtime)<br />&nbsp;for _,player in ipairs(minetest.get_connected_players()) do<br />&nbsp; &nbsp;--get if player is sneaking<br />&nbsp; &nbsp;local sneaking = player:get_player_control().sneak<br /><br />&nbsp; &nbsp;--affect camera if sneaking changed<br />&nbsp; &nbsp;if sneaking ~=&nbsp; sneak_table&#91;player:get_player_name()&#93; then<br />&nbsp; &nbsp; &nbsp;if sneaking == true then<br />&nbsp; &nbsp; &nbsp; &nbsp;player:set_eye_offset({x=0,y=-2,z=0},{x=0,y=-2,z=0})<br />&nbsp; &nbsp; &nbsp;else<br />&nbsp; &nbsp; &nbsp; &nbsp;player:set_eye_offset({x=0,y=0,z=0},{x=0,y=0,z=0})<br />&nbsp; &nbsp; &nbsp;end<br />&nbsp; &nbsp;end<br /><br />&nbsp; &nbsp;--store sneak bool for next loop<br />&nbsp; &nbsp;sneak_table&#91;player:get_player_name()&#93; = sneaking<br />&nbsp;end<br />end)<br /><br /></code></dd></dl></div>
 		</div>
@@ -101,7 +100,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 38</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 13:12</dd>
+		<dd><strong>Posts:</strong> 38</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 1:12 pm</dd>
 			<dd><strong>GitHub:</strong> oilboi</dd>
 			<dd><strong>In-game:</strong> oil_boi</dd>
 		</dl>
@@ -117,7 +116,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p348980">Re: Sneak eye offset</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Tue Apr 16, 2019 06:38 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Tue Apr 16, 2019 6:38 am </p>
 
 			<div class="content">Here is an example: <!-- m --><a class="postlink" href="https://youtu.be/_BJdX1RYUqQ">https://youtu.be/_BJdX1RYUqQ</a><!-- m --></div>
 		</div>
@@ -130,7 +129,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 38</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 13:12</dd>
+		<dd><strong>Posts:</strong> 38</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 1:12 pm</dd>
 			<dd><strong>GitHub:</strong> oilboi</dd>
 			<dd><strong>In-game:</strong> oil_boi</dd>
 		</dl>
@@ -145,8 +144,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p348999">Re: Sneak eye offset</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Tue Apr 16, 2019 13:58 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p348999">Re: Sneak eye offset</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Tue Apr 16, 2019 1:58 pm </p>
 
 			<div class="content">Good one. Should be put to use in all MT games imo.</div>
 		</div>
@@ -159,7 +158,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 1292</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 21:08</dd>
+		<dd><strong>Posts:</strong> 1292</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
 			<dd><strong>GitHub:</strong> tacotexmex</dd>
 			<dd><strong>In-game:</strong> texmex</dd>
 		</dl>
@@ -175,7 +174,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p349027">Re: Sneak eye offset</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Wed Apr 17, 2019 00:55 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Wed Apr 17, 2019 12:55 am </p>
 
 			<div class="content">It would be nice if it was smoother, and if the player's model would be in a crawling position when it happened.  Oh, and make the player's model one node taller.  Then we'll have full-fledged crawling!  One node tall tunnels become possible!<br /><br />:-)</div>
 		</div>
@@ -188,7 +187,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 620</dd><dd><strong>Joined:</strong> Thu Mar 24, 2016 03:19</dd>
+		<dd><strong>Posts:</strong> 620</dd><dd><strong>Joined:</strong> Thu Mar 24, 2016 3:19 am</dd>
 			<dd><strong>GitHub:</strong> v-rob</dd>
 			
 		</dl>
@@ -203,8 +202,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p349043">Re: Sneak eye offset</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Linuxdirk</strong> &raquo; Wed Apr 17, 2019 09:50 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p349043">Re: Sneak eye offset</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Linuxdirk</strong> &raquo; Wed Apr 17, 2019 9:50 am </p>
 
 			<div class="content">It’s this kind of small details that make Minecraft feel more polished than Minetest.<br /><br />Thanks for this great idea!<br /><br /><blockquote><div><cite>v-rob wrote:</cite>Oh, and make the player's model one node [smaller].  Then we'll have full-fledged crawling!  One node tall tunnels become possible!</div></blockquote><br />Afaik it already is possible. All we need is to have proper crouching animation.</div>
 		</div>
@@ -217,7 +216,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 1925</dd><dd><strong>Joined:</strong> Wed Sep 17, 2014 11:21</dd>
+		<dd><strong>Posts:</strong> 1925</dd><dd><strong>Joined:</strong> Wed Sep 17, 2014 11:21 am</dd>
 			
 			<dd><strong>In-game:</strong> Linuxdirk</dd>
 		</dl>
@@ -233,7 +232,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p349273">Re: Sneak eye offset</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Sat Apr 20, 2019 22:29 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Sat Apr 20, 2019 10:29 pm </p>
 
 			<div class="content">The code has a problem:<br />It is setting eye offset for every player every global step (10 times per second) whether or not eye offset needs changing. A table should store the sneak state of each player and eye offset only changed when it needs to be.</div>
 		</div>
@@ -246,7 +245,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 3371</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
+		<dd><strong>Posts:</strong> 3371</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 12:05 am</dd>
 			<dd><strong>GitHub:</strong> paramat</dd>
 			
 		</dl>
@@ -261,8 +260,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p349366">Re: Sneak eye offset</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Mon Apr 22, 2019 03:59 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22547.htm#p349366">Re: Sneak eye offset</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Mon Apr 22, 2019 3:59 am </p>
 
 			<div class="content"><blockquote><div><cite>paramat wrote:</cite>The code has a problem:<br />It is setting eye offset for every player every global step (10 times per second) whether or not eye offset needs changing. A table should store the sneak state of each player and eye offset only changed when it needs to be.</div></blockquote><br /><br />I updated the code in the main post to only change camera if sneak doesn't equal sneak from last tick:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>sneak_table = {}<br />minetest.register_on_joinplayer(function(player)<br />&nbsp; sneak_table&#91;player:get_player_name()&#93; = false<br />end)<br /><br />minetest.register_globalstep(function(dtime)<br />&nbsp;for _,player in ipairs(minetest.get_connected_players()) do<br />&nbsp; &nbsp;--get if player is sneaking</nobr><br />&nbsp; &nbsp;local sneaking = player:get_player_control().sneak<br /><br />&nbsp; &nbsp;--affect camera if sneaking changed<br />&nbsp; &nbsp;if sneaking ~=&nbsp; sneak_table&#91;player:get_player_name()&#93; then<br />&nbsp; &nbsp; &nbsp;if sneaking == true then<br />&nbsp; &nbsp; &nbsp; &nbsp;player:set_eye_offset({x=0,y=-2,z=0},{x=0,y=-2,z=0})<br />&nbsp; &nbsp; &nbsp;else<br />&nbsp; &nbsp; &nbsp; &nbsp;player:set_eye_offset({x=0,y=0,z=0},{x=0,y=0,z=0})<br />&nbsp; &nbsp; &nbsp;end<br />&nbsp; &nbsp;end<br /><br />&nbsp; &nbsp;--store sneak bool for next loop<br />&nbsp; &nbsp;sneak_table&#91;player:get_player_name()&#93; = sneaking<br />&nbsp;end<br />end)<br /></code></dd></dl><br /><br />Thanks for the tip!</div>
 		</div>
@@ -275,7 +274,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 38</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 13:12</dd>
+		<dd><strong>Posts:</strong> 38</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 1:12 pm</dd>
 			<dd><strong>GitHub:</strong> oilboi</dd>
 			<dd><strong>In-game:</strong> oil_boi</dd>
 		</dl>
@@ -334,3 +333,4 @@
 
 </body>
 </html></div>
+

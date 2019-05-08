@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -87,7 +86,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p319086">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p319086">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Lejo</strong> &raquo; Sat May 19, 2018 8:05 pm </p>
 
 			<div class="content">How can I delete the dev-0.5.0 release?<br />I need a server release of 0.4.17, I  think this was a client release.<br />Edit: It is both?</div>
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p319116">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p319116">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Lejo</strong> &raquo; Sun May 20, 2018 6:06 am </p>
 
 			<div class="content">Thanks! It works perfect.</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p322363">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p322363">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>izzyb</strong> &raquo; Thu Jun 21, 2018 7:05 pm </p>
 
 			<div class="content"><blockquote><div><cite>Lejo wrote:</cite>How can I delete the dev-0.5.0 release?<br />I need a server release of 0.4.17, I  think this was a client release.<br />Edit: It is both?</div></blockquote><br /><br />To build a 4.17 release from the source, you need to checkout the 4.17 release after your git clone of the source.<br />UPDATE:  Thanks Lejo - use checkout stable-0.4 instead of checkout 0.4.17 as I originally indicated.  That way you'll get the latest stable automatically if there is a new release. <br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>git clone https://github.com/minetest/minetest.git<br />cd minetest<br />git checkout stable-0.4<br />cd games<br />git clone https://github.com/minetest/minetest_game.git<br />git checkout stable-0.4<br /></code></dd></dl><br /><br />Then do your cmake and make. <br /><br /> I recently figured this out, so please correct me if I have anything wrong here.  I'm not sure how to get a list of branches, but found on my system tab completion produces a list if you type git checkout &lt;tab&gt;&lt;tab&gt;.  I'm sure there's a command to do the same, just not sure what it is.</div>
@@ -261,7 +260,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p329659">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p329659">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>poikilos</strong> &raquo; Thu Aug 30, 2018 5:09 pm </p>
 
 			<div class="content">There is an issue in the original 1-line script that also was causing trouble in my version. I didn't notice this until recently. This is only an issue for silent install (such as in my case). If you are trying to make a silent install or remote install, the part where you run minetest should be removed:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest;</code></dd></dl><br />Otherwise your cron job or whatever you are doing will get stuck.</div>
@@ -319,7 +318,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p345064">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/42_3837_150.htm#p345064">Re: [Debian / Ubuntu] 1-line script: install Minetest Git</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>grey</strong> &raquo; Tue Mar 05, 2019 12:05 pm </p>
 
 			<div class="content">Just in case anyone cares, I tested this on a current Xbuntu machine and it works.</div>
@@ -421,3 +420,4 @@
 
 </body>
 </html></div>
+

@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/3_18263.htm#p292209">Re: Minetest with LuaJit GC64 mode (&gt;2gb mem)</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/3_18263.htm#p292209">Re: Minetest with LuaJit GC64 mode (&gt;2gb mem)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>elettrico</strong> &raquo; Wed Sep 06, 2017 2:15 am </p>
 
 			<div class="content">Today I've built LuaJIT 2.1.0-beta3 and built minetestserver using it.<br />When I've tried to do a //sphere 250 air with worldedit (in a emerged area) it crashed with OOM.<br />When I've tried to do the same but with a 200 blocks radius it crashed with this error:<br /><br />2017-09-05 23:04:08: ERROR[Main]: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'worldedit_commands' in callback on_chat_message(): std::bad_alloc                                                       <br />2017-09-05 23:04:08: ERROR[Main]: stack traceback:<br />2017-09-05 23:04:08: ERROR[Main]:       [C]: in function 'write_to_map'<br />2017-09-05 23:04:08: ERROR[Main]:       ...r/.minetest/mods/Minetest-WorldEdit/worldedit/common.lua:111: in function 'finish'<br />2017-09-05 23:04:08: ERROR[Main]:       ...inetest/mods/Minetest-WorldEdit/worldedit/primitives.lua:41: in function 'sphere'<br />2017-09-05 23:04:08: ERROR[Main]:       ...test/mods/Minetest-WorldEdit/worldedit_commands/init.lua:492: in function 'callback'<br />2017-09-05 23:04:08: ERROR[Main]:       ...test/mods/Minetest-WorldEdit/worldedit_commands/safe.lua:48: in function 'func'<br />2017-09-05 23:04:08: ERROR[Main]:       ...est-install/share/minetest/builtin/game/chatcommands.lua:30: in function &lt;...est-install/share/minetest/builtin/game/chatcommands.lua:9&gt;<br />2017-09-05 23:04:08: ERROR[Main]:       ...inetest-install/share/minetest/builtin/game/register.lua:412: in function &lt;...inetest-install/share/minetest/builtin/game/register.lua:392&gt;<br /><br />leaving map barely untouched (instead of a large sphere there's a 64x64x64 hole)</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/3_18263.htm#p346659">Re: Minetest with LuaJit GC64 mode (&gt;2gb mem)</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/3_18263.htm#p346659">Re: Minetest with LuaJit GC64 mode (&gt;2gb mem)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 2:50 pm </p>
 
 			<div class="content">Where to load it ... as also rubenwardy <a href="https://forum.minetest.net/viewtopic.php?f=47&amp;t=22374&amp;view=unread#p346655" class="postlink">suggested it</a><br /><br />this <dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>#XCFLAGS+= -DLUAJIT_ENABLE_GC64</code></dd></dl> I searched in my config (linux/ubuntu - yes:2.1.0-beta3- ... compile) I didn't find in the make file off that folder luajit-210-beta3<br /><br />but I used it for compiling, and server is anyway running in LuaLit again, after moreblocks and etherreal off / false.</div>
@@ -276,3 +275,4 @@
 
 </body>
 </html></div>
+

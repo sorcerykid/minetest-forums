@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -88,7 +87,7 @@
 
 		<div class="postbody">
 			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22500.htm#p348267">Mining Particles (Sections of a texture particles)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Sun Apr 07, 2019 15:43 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Sun Apr 07, 2019 3:43 pm </p>
 
 			<div class="content">So I recreated the sections of particles that the game engine uses, but in lua. Basically this example creates a poof of particles when you mine a node.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>--make crazy particles<br />&nbsp;minetest.register_on_dignode(function(pos, oldnode, digger)<br />&nbsp; &nbsp;--find node texture information<br />&nbsp; &nbsp;local node = oldnode.name<br />&nbsp; &nbsp;local tile = minetest.registered_nodes&#91;node&#93;.tiles<br /><br />&nbsp; &nbsp;particle_explosion(tile,pos,25,90,140,1,2)<br />end)<br /><br />--tile is the tile table,pos,amount minimum, math.random(amount_max,amount_max2)<br />function particle_explosion(tile,pos,amount_min,amount_max,amount_max2,time_min,time_max)<br />&nbsp; for i = amount_min,math.random(amount_max,amount_max2) do<br />&nbsp; &nbsp; --select random part of the texture<br />&nbsp; &nbsp; local texsizer = math.random(1,3)<br />&nbsp; &nbsp; local size = texsizer/3 --the texture size affects the particle size for consistancy<br />&nbsp; &nbsp; local texsize = {x=texsizer,y=texsizer}<br />&nbsp; &nbsp; local texpos = {x=math.random(-16,-1-texsizer),y=math.random(-16,-1-texsizer)}<br />&nbsp; &nbsp; --filename1<br />&nbsp; &nbsp; local texture = &quot;&#91;combine:&quot;..texsize.x..&quot;x&quot;..texsize.y..&quot;:&quot;..texpos.x..&quot;,&quot;..texpos.y..&quot;=&quot;..tile&#91;math.random(1,table.getn(tile))&#93;<br />&nbsp; &nbsp; minetest.add_particle({<br />&nbsp; &nbsp; &nbsp; pos = {x=pos.x+(math.random()*math.random(-1,1)/2),y=pos.y+(math.random()*math.random(-1,1)/2),z=pos.z+(math.random()*math.random(-1,1)/2)},<br />&nbsp; &nbsp; &nbsp; velocity = {<br />&nbsp; &nbsp; &nbsp; x=math.random()*math.random(-3,3),<br />&nbsp; &nbsp; &nbsp; y=math.random(2,4),<br />&nbsp; &nbsp; &nbsp; z=math.random()*math.random(-3,3)},<br />&nbsp; &nbsp; &nbsp; acceleration = {x=0, y=-10, z=0},<br />&nbsp; &nbsp; &nbsp; expirationtime = math.random(time_min,time_max)/2,<br />&nbsp; &nbsp; &nbsp; size = size,<br />&nbsp; &nbsp; &nbsp; collisiondetection = true,<br />&nbsp; &nbsp; &nbsp; collision_removal = false,<br />&nbsp; &nbsp; &nbsp; object_collision = true,<br />&nbsp; &nbsp; &nbsp; vertical = false,<br />&nbsp; &nbsp; &nbsp; texture = texture,<br />&nbsp; &nbsp; })<br />&nbsp; end<br />end<br /></code></dd></dl><br /><br />I think it's rather neat!</div>
 		</div>
@@ -101,7 +100,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 31</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 13:12</dd>
+		<dd><strong>Posts:</strong> 31</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 1:12 pm</dd>
 			
 			<dd><strong>In-game:</strong> Oil_boi</dd>
 		</dl>
@@ -117,7 +116,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22500.htm#p348348">Re: Mining Particles (Sections of a texture particles)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Mon Apr 08, 2019 08:25 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Mon Apr 08, 2019 8:25 am </p>
 
 			<div class="content">Oh, nice! I’ve been looking for exactly this.</div>
 		</div>
@@ -130,7 +129,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 1284</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 21:08</dd>
+		<dd><strong>Posts:</strong> 1284</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
 			<dd><strong>GitHub:</strong> tacotexmex</dd>
 			<dd><strong>In-game:</strong> texmex</dd>
 		</dl>
@@ -189,3 +188,4 @@
 
 </body>
 </html></div>
+

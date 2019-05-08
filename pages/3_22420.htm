@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -194,7 +193,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347119">Re: Protect existing blocks, but allow building.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347119">Re: Protect existing blocks, but allow building.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Sokomine</strong> &raquo; Mon Mar 25, 2019 3:34 pm </p>
 
 			<div class="content">There was the permafy mod on linuxgaming.us which stored protection status in metadata. It worked to a degree but had limitations, in particular with nodes that change their status (doors etc.). Empty air was also protected. In general, protection mods need to protect all in the given area in order to be save from griefers. Griefers don't always steal. They sometimes drop unwanted water and lava sources or other rubbish before you can ban the griefer.<br /><br />For this particular case here, a mod like permafy (just using more modern methods) might really help. Just store in metadata of blocks that are not air that they're owned_by (ought to be something diffrent from the owned entry so that you can remove the protection without trouble) - and check in minetest.is_protected if that meta value is set. Won't be terribly efficient for servers, and it does not cover all the edge cases - but that hardly matters in your particular situation. Maybe you'd want to exclude nodes that drop dirt, sand, gravel and the like as well - after all some gardening may fall under the decoration aspect :-)</div>
@@ -252,7 +251,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347127">Re: Protect existing blocks, but allow building.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347127">Re: Protect existing blocks, but allow building.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>wziard</strong> &raquo; Mon Mar 25, 2019 4:30 pm </p>
 
 			<div class="content"><blockquote><div><cite>Sokomine wrote:</cite>TWon't be terribly efficient for servers, and it does not cover all the edge cases - but that hardly matters in your particular situation. Maybe you'd want to exclude nodes that drop dirt, sand, gravel and the like as well - after all some gardening may fall under the decoration aspect :-)</div></blockquote><br />That's what I mean. I wonder what the hit on my server would be. Maybe I should first check an area and only if it's inside an area do the extra metadata checks.<br /><br />Could be a nice idea to exclude dirt and gravel etc from protection as well..<br /><br />I'll do some experiments (time allowing...)</div>
@@ -310,7 +309,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347171">Re: Protect existing blocks, but allow building.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347171">Re: Protect existing blocks, but allow building.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>wziard</strong> &raquo; Mon Mar 25, 2019 9:21 pm </p>
 
 			<div class="content">Thanks fixer. That first one is nearly what I need. I can use that as a starting point.</div>
@@ -368,7 +367,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347196">Re: Protect existing blocks, but allow building.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347196">Re: Protect existing blocks, but allow building.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Tue Mar 26, 2019 1:00 am </p>
 
 			<div class="content">I used two areas, the bigger one (1 node) to keep walls, windows, doors work, and an inner area for the inside of a room shared to kids, problem here sometime to add new as can nut stick to wall ...</div>
@@ -426,7 +425,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347711">Re: Protect existing blocks, but allow building.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p347711">Re: Protect existing blocks, but allow building.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sorcerykid</strong> &raquo; Mon Apr 01, 2019 5:29 am </p>
 
 			<div class="content">I actually developed a mod last year that does. exactly what you want. It's a half  working prototype, forked from protector redo, but entirely rewritten with tons of additional features. For what you need, the mod employs a bitmap mask for efficiently validating dig positions in a 3d area to determine if they are protected. I'll take a look and see if I can prepare it for release as a standalone mod. I believe all that remains is o add customizable permissions for shared chests and doors. And of course testing for 5.0 compatibility.</div>
@@ -484,7 +483,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p348153">Re: Protect existing blocks, but allow building.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/3_22420.htm#p348153">Re: Protect existing blocks, but allow building.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sorcerykid</strong> &raquo; Fri Apr 05, 2019 9:02 pm </p>
 
 			<div class="content">Yes, I'll go ahead and send you a link to the source and assets later tonight. I can strip out the portions that are untested. But it should still work for your needs. Here's a quick rundown of the two types of protectors:<br /><br /><ul><img src="https://i.imgur.com/HRJinKn.png" alt="Image" /><br /><span style="font-weight: bold">Shared Protector</span><br />Restricts building and mining within an 11m cubic area except by the owner or designated members. Digging and mining by members can be further restricted according to the bitmap mask of the area (see below). Shared Protectors can be useful for creating apartments and shared tree farms.<br /><br /><span style="font-weight: bold"><img src="https://i.imgur.com/krt9K58.png" alt="Image" /><br />Public Protector</span><br />Restricts building and mining within an 11m cubic area according to the bitmap mask of the area (see below). Public Protectors can be useful for creating public tree farms and sandbox playgrounds.</ul>The bitmap mask of shared protectors can be manually engaged or disengaged by right-clicking the protector and clicking &quot;Lock Area&quot; or &quot;Unlock Area&quot; respectively. Locking the area stores a  &quot;snapshot&quot; of all non-air and non-liquid nodes as a bitmap into the metadata of the protector (compressed for space efficiency) . For public protectors, the bitmap mask is automatically engaged at all times.<br /><br /><img src="https://i.imgur.com/TPyyg3O.png" alt="Image" /><br /><br />I also resolved the long-range dig exploit, whereby hackers could dig nodes adjacent to unloaded mapblocks to evade protection. The server operator, of course, can bypass this restriction.<br /><br />Tip: If there are overlapping protected areas owned by the same player, then the most restrictive bitmap mask is used to determine whether any given node is protected from mining or building.<br /><br />Tip: When engaging a bitmap mask, only air and liquid nodes are unmasked and all other nodes are masked. To protect an open area (like a hallway), it should be filled temporarily beforehand.</div>
@@ -557,3 +556,4 @@ function spoiler_toggle(event) {
 
 </body>
 </html></div>
+

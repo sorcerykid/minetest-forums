@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -88,7 +87,7 @@
 
 		<div class="postbody">
 			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349060">[Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>EvidenceBKidscode</strong> &raquo; Wed Apr 17, 2019 14:41 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>EvidenceBKidscode</strong> &raquo; Wed Apr 17, 2019 2:41 pm </p>
 
 			<div class="content">FFIopt optimizes access to large amounts of data via the Lua API and reduces Lua memory footprint. <br /><br /><span style="font-weight: bold">License</span>: LGPL v3<br /><br /><span style="font-weight: bold">Dependancies</span>: None of mods but needs engine to be patched<br /><br /><span style="font-weight: bold">Source</span>: <a href="https://github.com/EvidenceBKidscode/ffiopt" class="postlink">https://github.com/EvidenceBKidscode/ffiopt</a><br /><br /><span style="font-size: 150%; line-height: 116%;"><span style="font-weight: bold">Description</span></span><br /><br />Lua API methods that transmit large amount of data (<span style="font-style: italic">VoxelManip:get_data</span>, <span style="font-style: italic">PerlinNoiseMap:get3dMap_flat</span>) copies data from C++ structures to Lua tables. This copy is quite slow and consumes a lot of Lua memory.<br /><br /><span style="font-weight: bold">FFIopt</span> replaces this copy by a direct access from Lua to C++ data using FFI library. The engine has to be patched to expose some C++ pointers to Lua API.<br /><br />If engine correctly patched, FFIopt hacks VoxelManip and PerlinNoiseMap to use FFI rather than Lua tables.<br /><br />Result is :<br /><ul><li>Faster data retreiving and storing ;</li><li>Slower table access (essencially due to use of metatable avoiding mods code change) ;</li><li>Lower Lua memory footprint (avoiding many OOM errors) ;</li></ul><span style="font-size: 150%; line-height: 116%;"><span style="font-weight: bold">How to use it</span></span><br /><br /><ul><li>Use LuaJIT.</li><li>Patch the engine to add <span style="font-style: italic">VoxelManip:get_data_ptr</span>, <span style="font-style: italic">PerlinNoiseMap:get_result_size</span> and <span style="font-style: italic">PerlinNoiseMap:get_result_ptr</span> methods to the API.</li><li>Install and enable <span style="font-weight: bold">ffiopt</span> mod.</li><li>On starting Minetest, ffiopt will tell if it is able to optimise voxel manips and perlin noise.</li><li><span style="text-decoration: underline">Nothing to change in mods code</span>.</li></ul><br /><span style="font-size: 150%; line-height: 116%;"><span style="font-weight: bold">Experiments</span></span><br /><br /><span style="font-weight: bold">FFIopt</span> can be tested through <span style="font-weight: bold">ffiopt_demo</span> mod. Here is what we obtained.<br /><br /><span style="font-size: 120%; line-height: 116%;"><span style="font-weight: bold">Voxel Manip</span></span><br /><br />Without <span style="font-weight: bold">FFIopt</span>, in the demo, 30 % of the time is spend in <span style="font-style: italic">get_data</span> and another 30 % is spent in <span style="font-style: italic">set_data</span>. Lua processing takes 20 % and read/write the remaining 20 %.<br /><br />So most of the time is spent in converting C++ data to Lua table.<br /><br />With <span style="font-weight: bold">FFIopt</span>, Lua takes 68 % of the time and read/write 32 % (<span style="font-style: italic">get_data</span> and <span style="font-style: italic">set_data</span> don’t do anything).<br />Lua processing time is increased by 75 %, but <span style="text-decoration: underline">total time is reduced by 50 %</span>.<br /><br />Furthermore, without <span style="font-weight: bold">FFIopt</span>, launching demo 9 times leaded to 3 OOM crash. With <span style="font-weight: bold">FFIopt</span>, we have been able to launch more than 20 times the demo with no crash.<br /><br /><span style="font-size: 120%; line-height: 116%;"><span style="font-weight: bold">Perlin noise</span></span><br /><br />With <span style="font-weight: bold">FFIopt</span>, Lua processing increased by 50 % but total time reduced by 15 %.<br /><br />Lua time is increased mostly because of the use of a metatable. This can be avoided but the mod code has to be changed (C++ indexes starts from 0, not 1) and secured to avoid out of range indexes.</div>
 		</div>
@@ -101,7 +100,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 5</dd><dd><strong>Joined:</strong> Tue Feb 05, 2019 13:33</dd>
+		<dd><strong>Posts:</strong> 5</dd><dd><strong>Joined:</strong> Tue Feb 05, 2019 1:33 pm</dd>
 			
 			
 		</dl>
@@ -117,7 +116,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349068">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>runs</strong> &raquo; Wed Apr 17, 2019 16:07 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>runs</strong> &raquo; Wed Apr 17, 2019 4:07 pm </p>
 
 			<div class="content">Why is not this in the official engine yet?<br /><br />Are you a <!-- m --><a class="postlink" href="https://kidscode.com">https://kidscode.com</a><!-- m --> developer?</div>
 		</div>
@@ -130,7 +129,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 377</dd><dd><strong>Joined:</strong> Sat Oct 27, 2018 08:32</dd>
+		<dd><strong>Posts:</strong> 377</dd><dd><strong>Joined:</strong> Sat Oct 27, 2018 8:32 am</dd>
 			<dd><strong>GitHub:</strong> runsy</dd>
 			
 		</dl>
@@ -145,8 +144,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349120">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Thu Apr 18, 2019 06:32 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349120">Re: [Mod]FFIopt [ffiopt]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Thu Apr 18, 2019 6:32 am </p>
 
 			<div class="content"><blockquote><div><cite>runs wrote:</cite>Are you a <!-- m --><a class="postlink" href="https://kidscode.com">https://kidscode.com</a><!-- m --> developer?</div></blockquote><br /><br />Obviously.<br /><br />Have a look here: <!-- l --><a class="postlink-local" href="https://forum.minetest.net/viewtopic.php?f=3&amp;t=22090">viewtopic.php?f=3&amp;t=22090</a><!-- l --></div>
 		</div>
@@ -159,7 +158,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 261</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 15:14</dd>
+		<dd><strong>Posts:</strong> 261</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 3:14 pm</dd>
 			<dd><strong>GitHub:</strong> pyrollo</dd>
 			<dd><strong>In-game:</strong> Naj</dd>
 		</dl>
@@ -175,7 +174,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349125">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 09:37 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 9:37 am </p>
 
 			<div class="content">I am <a href="https://forum.minetest.net/viewtopic.php?f=10&amp;t=22041&amp;p=349124#p349124" class="postlink">using it actual</a>, got the patch done, mod active<br />thanks, I was reading that about the FFI, but no good enough to make something ...</div>
 		</div>
@@ -188,7 +187,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 966</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
+		<dd><strong>Posts:</strong> 966</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
 			<dd><strong>GitHub:</strong> Minetest-One</dd>
 			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
@@ -203,8 +202,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349127">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>runs</strong> &raquo; Thu Apr 18, 2019 10:02 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349127">Re: [Mod]FFIopt [ffiopt]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>runs</strong> &raquo; Thu Apr 18, 2019 10:02 am </p>
 
 			<div class="content"><blockquote><div><cite>Festus1965 wrote:</cite>I am <a href="https://forum.minetest.net/viewtopic.php?f=10&amp;t=22041&amp;p=349124#p349124" class="postlink">using it actual</a>, got the patch done, mod active<br />thanks, I was reading that about the FFI, but no good enough to make something ...</div></blockquote><br /><br />You said that consumes much more memory...</div>
 		</div>
@@ -217,7 +216,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 377</dd><dd><strong>Joined:</strong> Sat Oct 27, 2018 08:32</dd>
+		<dd><strong>Posts:</strong> 377</dd><dd><strong>Joined:</strong> Sat Oct 27, 2018 8:32 am</dd>
 			<dd><strong>GitHub:</strong> runsy</dd>
 			
 		</dl>
@@ -233,7 +232,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349131">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 10:21 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 10:21 am </p>
 
 			<div class="content"><blockquote><div><cite>runs wrote:</cite>You said that consumes much more memory...</div></blockquote> Nope,<br />I <span style="font-weight: bold">wrote</span> that compare to just before used configuration for 6 days, the minimum was 66 MB, <br />then the one just for a view hours used 51 MB at start (no [Mod] time, updated [Mod] EUban), <br />and this new one used once (mean not confirmed, as also [Mod] time is back) was using more, as 78 MB<br />but I updated the collect-garbage result after one hour and there are 52 MB used now.<br /><br />So as there are only 2 changes left: update [mod] EUban and new [Mod] ffiopt - what is the reason ?<br />I think that might be more about better EUban, but how often I have to start both versions (with/-out ffiopt) to be sure ?</div>
 		</div>
@@ -246,7 +245,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 966</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
+		<dd><strong>Posts:</strong> 966</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
 			<dd><strong>GitHub:</strong> Minetest-One</dd>
 			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
@@ -261,8 +260,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349192">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Apr 19, 2019 01:23 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349192">Re: [Mod]FFIopt [ffiopt]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Apr 19, 2019 1:23 am </p>
 
 			<div class="content">but I found another problem<br />description here: server <a href="https://forum.minetest.net/viewtopic.php?f=10&amp;t=22041&amp;p=349191#p349191" class="postlink">ffiopt and worldedit</a> seam have a problem with other<br /><br />WorldEdit didn't work when ffiopt true</div>
 		</div>
@@ -275,7 +274,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 966</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
+		<dd><strong>Posts:</strong> 966</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
 			<dd><strong>GitHub:</strong> Minetest-One</dd>
 			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
@@ -291,7 +290,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349199">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Fri Apr 19, 2019 06:40 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Fri Apr 19, 2019 6:40 am </p>
 
 			<div class="content">Mmmhh.. <br /><br />Worldedit uses voxelmanip in a non usual way and does not use VoxelManip:get_data. Some change required to make it compatible.</div>
 		</div>
@@ -304,7 +303,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 261</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 15:14</dd>
+		<dd><strong>Posts:</strong> 261</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 3:14 pm</dd>
 			<dd><strong>GitHub:</strong> pyrollo</dd>
 			<dd><strong>In-game:</strong> Naj</dd>
 		</dl>
@@ -319,8 +318,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349201">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Fri Apr 19, 2019 06:53 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349201">Re: [Mod]FFIopt [ffiopt]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Fri Apr 19, 2019 6:53 am </p>
 
 			<div class="content">New issue opened: <!-- m --><a class="postlink" href="https://github.com/EvidenceBKidscode/ffiopt/issues/1">https://github.com/EvidenceBKidscode/ffiopt/issues/1</a><!-- m --><br /><br />If you have any issue, please don't hesitate to report them in Github.</div>
 		</div>
@@ -333,7 +332,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 261</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 15:14</dd>
+		<dd><strong>Posts:</strong> 261</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 3:14 pm</dd>
 			<dd><strong>GitHub:</strong> pyrollo</dd>
 			<dd><strong>In-game:</strong> Naj</dd>
 		</dl>
@@ -349,7 +348,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349317">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>pgimeno</strong> &raquo; Sun Apr 21, 2019 17:37 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>pgimeno</strong> &raquo; Sun Apr 21, 2019 5:37 pm </p>
 
 			<div class="content">Sorry, I'm no longer registered in Microsoft GitHub and I'm not planing to return, so I can't submit issues there.<br /><br />I see several issues with this mod.<br /><br />First and foremost, security. I see two issues in this respect:<br /><br />- It's exposing the FFI interface publicly, which basically defeats the purpose of having mod security. Any mod can, through the exposed FFI interface, call any C library function including, but not limited to, fopen and fwrite.<br />- Besides that, the pointer to the data is available in the table itself. This makes it possible (through use of large or negative indexes) to access any arbitrary memory position, which could potentially expose passwords or other stuff to untrusted mods.<br /><br />Next is the use of a long int, and subsequently a Lua number (double precision float), to hold a pointer. This is not portable, and it may cause issues in some platform. It may turn out, by pure luck, to work fine in all platforms that Minetest supports, though.<br /><br />Then, the benchmarks do not use the buffer version of the functions, which are designed to prevent object creation and internal reallocation, therefore it's not really a very fair comparison for well-written mods.<br /><br />Lastly, it does not patch the functions with the new spellings: get_2d_map_flat et al.<br /><br />I wrote a PR for Minetest that exposed C functions that could be called through FFI, to let modders handle this manually, but it was not taken with a lot of enthusiasm by the core developers. See <!-- m --><a class="postlink" href="https://github.com/minetest/minetest/pull/6863">https://github.com/minetest/minetest/pull/6863</a><!-- m --> (all appearances of 'ghost' I can see as of this date are my posts).</div>
 		</div>
@@ -362,7 +361,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 2</dd><dd><strong>Joined:</strong> Sun Apr 21, 2019 16:18</dd>
+		<dd><strong>Posts:</strong> 2</dd><dd><strong>Joined:</strong> Sun Apr 21, 2019 4:18 pm</dd>
 			
 			<dd><strong>In-game:</strong> pgmine</dd>
 		</dl>
@@ -377,8 +376,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349318">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Sun Apr 21, 2019 18:05 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349318">Re: [Mod]FFIopt [ffiopt]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Sun Apr 21, 2019 6:05 pm </p>
 
 			<div class="content"><blockquote><div><cite>pgimeno wrote:</cite>I wrote a PR for Minetest that exposed C functions that could be called through FFI, to let modders handle this manually, but it was not taken with a lot of enthusiasm by the core developers. See <!-- m --><a class="postlink" href="https://github.com/minetest/minetest/pull/6863">https://github.com/minetest/minetest/pull/6863</a><!-- m --> (all appearances of 'ghost' I can see as of this date are my posts).</div></blockquote><br /><br />I really like this feature and it had the potential reduce OOMs and improve performance - but you yourself said that the performance improvement was negligible</div>
 		</div>
@@ -391,7 +390,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 5737</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 18:11</dd>
+		<dd><strong>Posts:</strong> 5737</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 6:11 pm</dd>
 			<dd><strong>GitHub:</strong> rubenwardy</dd>
 			<dd><strong>In-game:</strong> rubenwardy</dd>
 		</dl>
@@ -407,7 +406,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349320">Re: [Mod]FFIopt [ffiopt]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>pgimeno</strong> &raquo; Sun Apr 21, 2019 18:16 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>pgimeno</strong> &raquo; Sun Apr 21, 2019 6:16 pm </p>
 
 			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>I really like this feature and it had the potential reduce OOMs and improve performance - but you yourself said that the performance improvement was negligible<br /></div></blockquote><br />Not negligible, but small in comparison with the processing time required in most use cases (Lua mapgens that process noise for landscaping).<br /><br />That was actually paramat's point: <!-- m --><a class="postlink" href="https://github.com/minetest/minetest/pull/6863#issuecomment-354859130">https://github.com/minetest/minetest/pu ... -354859130</a><!-- m --> and I agreed (edit: <!-- m --><a class="postlink" href="https://github.com/minetest/minetest/pull/6863#issuecomment-355646707">https://github.com/minetest/minetest/pu ... -355646707</a><!-- m -->), but even then I see value in this, because of moving the allocation outside of Lua memory.</div>
 		</div>
@@ -420,7 +419,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 2</dd><dd><strong>Joined:</strong> Sun Apr 21, 2019 16:18</dd>
+		<dd><strong>Posts:</strong> 2</dd><dd><strong>Joined:</strong> Sun Apr 21, 2019 4:18 pm</dd>
 			
 			<dd><strong>In-game:</strong> pgmine</dd>
 		</dl>
@@ -435,8 +434,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349332">Re: [Mod]FFIopt [ffiopt</nobr>]</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Sun Apr 21, 2019 20:43 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22555.htm#p349332">Re: [Mod]FFIopt [ffiopt</nobr>]</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Pyrollo</strong> &raquo; Sun Apr 21, 2019 8:43 pm </p>
 
 			<div class="content">Hi pgimeno, thanks a lot for your feedback, many interesting things :)<br /><br />We'll study that closely, trying make mod evolve.<br /><br /><blockquote><div><cite>pgimeno wrote:</cite>Then, the benchmarks do not use the buffer version of the functions, which are designed to prevent object creation and internal reallocation, therefore it's not really a very fair comparison for well-written mods.</div></blockquote><br /><br />I did not take care of this aspect in the benchmark because in various studied options, it turned out that every time passing values through Lua stack was used to retrieve map data, things were slow (tryed to implemet something like get(index) on the C++ side but the get argument value/returning map value took almost the same time than populating the table).<br /><br />For our purpose (changing many nodes at once) using FFI had a noticeable change on performances (but at first we disabled the light calculation on save, way to slow and not necessary for us).<br /><br />On a memory point of view I totally agree with you. Data should not be duplicated to Lua memory.</div>
 		</div>
@@ -449,7 +448,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 261</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 15:14</dd>
+		<dd><strong>Posts:</strong> 261</dd><dd><strong>Joined:</strong> Mon Jan 08, 2018 3:14 pm</dd>
 			<dd><strong>GitHub:</strong> pyrollo</dd>
 			<dd><strong>In-game:</strong> Naj</dd>
 		</dl>
@@ -508,3 +507,4 @@
 
 </body>
 </html></div>
+

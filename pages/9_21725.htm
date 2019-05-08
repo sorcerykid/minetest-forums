@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -194,7 +193,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340035">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340035">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Gundul</strong> &raquo; Sat Jan 05, 2019 3:42 pm </p>
 
 			<div class="content"><blockquote><div><cite>sofar wrote:</cite>This code looks super iffy.</div></blockquote> <br />just for the record:<br /><ul>-I do not post something &quot;iffy&quot; in mods section, this works for months without iussues on my two public servers<br />-We are here in wip mods section.Wip means: work in progress.<br />  Do not expect something here what would not needed to be worked on.</ul><br /><blockquote><div><cite>sofar wrote:</cite>A fun read to find input validation issues so people can send arbitrary stuff they don't have to players on other servers. Are you sure you're checking all the input correctly? Did you protect against races and properly lock the transfer files?</div></blockquote><br />Exaggerated a bit ? <br />But I am always happy other people have fun with my developments. Any proove, example maybe ?<br />I am repeating myself, this mod is running for months on my servers without trouble.</div>
@@ -252,7 +251,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340047">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340047">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Krock</strong> &raquo; Sat Jan 05, 2019 6:42 pm </p>
 
 			<div class="content">I wondered how &quot;iffy&quot; the code actually is and only figured out some minor issues:<br /><br />1) Unreliable file writing. I'd rather use `minetest.safe_write_file` to ensure everything is written correctly in case the server is not shut down correctly.<br />2) Writing to the file at the same time: If server 1 writes to the file whereas server 2 deletes an entry from the file, there may be a file corruption. Not sure though, how this could be solved.<br />3) If you ever allow metadata: New lines and commas would break the system. There's no escape handling in your custom string.split implementation and new lines would destroy the format. Luckily you treat items with metadata like tools (disallowed), even though they could be stackable.<br /><br />It was however interesting to see this mix of tabs and spaces. I think you're using four spaces, but the editor does not convert existing tabs when you indent the code.</div>
@@ -310,7 +309,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340159">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340159">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Gundul</strong> &raquo; Sun Jan 06, 2019 11:48 am </p>
 
 			<div class="content"><blockquote><div><cite>Krock wrote:</cite>I wondered how &quot;iffy&quot; the code actually is and only figured out some minor issues:<br /><br />1) Unreliable file writing. I'd rather use `minetest.safe_write_file` to ensure everything is written correctly in case the server is not shut down correctly.<br /></div></blockquote><br />Thank you, I did not know that exists in the minetest api.<br /><br /><blockquote><div><cite>Krock wrote:</cite>2) Writing to the file at the same time: If server 1 writes to the file whereas server 2 deletes an entry from the file, there may be a file corruption. Not sure though, how this could be solved.<br /></div></blockquote><br />I had this in my mind. But I must confess I have no solution for this, too. I was thinking that the software which synchs the folders would take care of this maybe.<br /><br /><blockquote><div><cite>Krock wrote:</cite>3) If you ever allow metadata: New lines and commas would break the system. There's no escape handling in your custom string.split implementation and new lines would destroy the format. Luckily you treat items with metadata like tools (disallowed), even though they could be stackable.<br /></div></blockquote><br />I do not plan to allow metadata. This is not wanted now and in the near future.<br />Maybe all this can be done with a gui in the future, but only if this really runs reliable.<br /><br />Items with metadata could be stackable, yes. But in that case the metadata would be lost if sent to an other server.<br /><br /><blockquote><div><cite>Krock wrote:</cite>It was however interesting to see this mix of tabs and spaces. I think you're using four spaces, but the editor does not convert existing tabs when you indent the code.</div></blockquote><br />Sorry, which tabs and spaces you mean ?</div>
@@ -368,7 +367,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340209">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340209">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Sun Jan 06, 2019 7:54 pm </p>
 
 			<div class="content">My initial thoughts on this mod are to secure the wire protocol and not use files as they are obviously prone to locking issues (as lua does none) and 2 servers could write the same file at the same time. A better implementation would be to use sockets to do all the communication, where each server has a &quot;receive&quot; socket, and the sender transmits by sending some json encoded structural content.<br /><br />The chatcommands and parsing of input are difficult things to get right (does it handle utf8 properly?) so I would think about replacing the chatcommands with a properly secured formspec where players need to put the actual items in a send slot, which also takes the trouble of knowing the item names away for players. You could use the sockets to send player lists to each server so that players know who is online or not and have the form display this, or maintain a friend list or something like that.</div>
@@ -426,7 +425,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340252">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340252">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Mon Jan 07, 2019 2:35 am </p>
 
 			<div class="content"><blockquote><div><cite>Lone_Wolf wrote:</cite>I'm not sure of how everything works in your system but you might be able to create a 'status file' for each server in the folder and set it up so that before a server writes anything it checks the other server's status files. <br />If none of the other servers is writing have it set the contents of its status file to something that says it's writing to a file.<br />Make it write to the file it was originally going to write to, and when it finishes you can make it rewrite it's status file to something saying it's not writing<br /><br />I hope that's readable...</div></blockquote><br /><br />Now you just created a second locking problem with the state file. :)</div>
@@ -484,7 +483,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340279">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p340279">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Gundul</strong> &raquo; Mon Jan 07, 2019 11:36 am </p>
 
 			<div class="content"><blockquote><div><cite>sofar wrote:</cite>My initial thoughts on this mod are to secure the wire protocol and not use files as they are obviously prone to locking issues (as lua does none) and 2 servers could write the same file at the same time. A better implementation would be to use sockets to do all the communication, where each server has a &quot;receive&quot; socket, and the sender transmits by sending some json encoded structural content.<br /><br />The chatcommands and parsing of input are difficult things to get right (does it handle utf8 properly?) so I would think about replacing the chatcommands with a properly secured formspec where players need to put the actual items in a send slot, which also takes the trouble of knowing the item names away for players. You could use the sockets to send player lists to each server so that players know who is online or not and have the form display this, or maintain a friend list or something like that.</div></blockquote><br />You are right with the formspecs. I chose the chatcommands because experience from my servers says<br />players are lazy in writing. That way I could test my mod online on my servers more relaxed in the beginning.<br /><br />I must confess I have very little knowledge about sockets, but that can change. Always happy to learn something.<br />A quick search returned a &quot;lua socket api&quot; for lua 5.1. No idea if that could help. If someone knows any good source<br />or book please feel free to post/tell me.<br /><br />The next steps for interkom will be:<br /><ul>- use minetest.safe_write_file if possible<br />- restrict use of chatcommands to players with interkom(server ?) priv<br />- add formspecs to handle items and send them to connected servers<br />- find a way to use sockets </ul><br />These steps do not have to be static. I am happy for any serious idea someone could have.</div>
@@ -542,7 +541,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p344202">GUI and save_write_file</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p344202">GUI and save_write_file</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Gundul</strong> &raquo; Sat Feb 23, 2019 7:45 am </p>
 
 			<div class="content">Finished the gui. No more writing needed. Just type /stuff. On the left see the connected servers and on the right<br />you can see the players on that sever. To the four slots in the middle you can move the stuff you want to send.<br />Press send and watch chat messages if everything went well.<br /><br /><br />Now we have pictures :) <br /><img src="https://i.imgur.com/Qb1Oki7.png" alt="Image" /><br /><br />I will add support for unified_inventory shortly, so you can use directly from your inv.</div>
@@ -600,7 +599,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p344652">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p344652">Re: [Mod] Exchange stuff between servers [Interkom]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Gundul</strong> &raquo; Thu Feb 28, 2019 7:48 pm </p>
 
 			<div class="content"><blockquote><div><cite>Otter wrote:</cite>I just want to support that this is quite tested and seems to work without hitch. I am quite particular about things disappearing  in mods. The exchange using this software ends up being quite robust and when there were issues, the items did not get sent.<br />I have sent quite a bit of stuff between the servers. The stacks can be large on these servers so a lot can be sent at once. Between the servers there is a strong advantage to exchanges. Some things common enough on one are quite rare on the other. This worked out well.<br /></div></blockquote><br />I can confirm, no issues so far since half a year running this on my servers. No lost stuff at all.<br />Now even everything can be sent, not only default:xxx and<br />with the new gui pretty easy for everyone to handle.<br /><br /><blockquote><div><cite>Otter wrote:</cite>It was an entirely different mod and not one made by Gundul that showed a bug and deleted weeks of productivity. In retrospect, sending your most valuable resources from multiple servers to a single server is probably foolish. Loosing large stacks of diamond, and mese blocks that you spent weeks accumulating can be pretty discouraging. Especially when you need them to continue researching how to use the mod that destroyed the stuff. :)</div></blockquote><br />Maybe interesting to know which mod that was ? I did not know that there was a mod like mine before.</div>
@@ -658,7 +657,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p346166">New button to unfied_inventory</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_21725.htm#p346166">New button to unfied_inventory</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Gundul</strong> &raquo; Fri Mar 15, 2019 11:04 am </p>
 
 			<div class="content">added button to unified_inventory for easy access :<br /><br /><img src="https://i.imgur.com/XXZiYf8.png" alt="Image" /></div>
@@ -731,3 +730,4 @@ function spoiler_toggle(event) {
 
 </body>
 </html></div>
+

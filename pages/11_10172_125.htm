@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -87,7 +86,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_10172_125.htm#p336295">Re: [Mod] Boost cart [boost_cart]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_10172_125.htm#p336295">Re: [Mod] Boost cart [boost_cart]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Krock</strong> &raquo; Fri Nov 23, 2018 8:55 pm </p>
 
 			<div class="content"><blockquote><div><cite>goldcrest42 wrote:</cite>Is there a list on the wiki anywhere which clarifies what keys the control bits refer to?</div></blockquote><br /><!-- m --><a class="postlink" href="https://github.com/minetest/minetest/blob/master/builtin/settingtypes.txt#L157-L393">https://github.com/minetest/minetest/bl ... #L157-L393</a><!-- m --><br />Specifically: <!-- m --><a class="postlink" href="https://github.com/minetest/minetest/blob/master/builtin/settingtypes.txt#L181">https://github.com/minetest/minetest/bl ... s.txt#L181</a><!-- m --><br /><br />Open the advanced setting dialogue in the main menu and change &quot;keymap_sneak&quot; to &quot;KEY_SHIFT&quot;. Or wait for version 5.0 where the fix will most likely be included.</div>
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_10172_125.htm#p338693">Re: [Mod] Boost cart [boost_cart]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_10172_125.htm#p338693">Re: [Mod] Boost cart [boost_cart]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Sun Dec 23, 2018 5:41 am </p>
 
 			<div class="content">So, since the pull request for get_rotation and set_rotation was merged, will you use this to change the cart's pitch when 5.0 comes out?  As it is, only the cart models made for boost cart work properly.  Any other model won't rotate when moving up hills.<br /><br />//////////////////////////////////////////////////<br /><br />Anyway, about hitching carts (yes, I know I'm persistent :-P):  You were talking about a video hidden on Youtube for hitching carts.  I found two possible candidates of what you might be talking about.<br /><br />The first one is of the last rendition of the trains mod by jordan4ibanez, which, although glitchy, did include basic cart hitching.  Here are three links:<br />The video itself: <!-- m --><a class="postlink" href="https://www.youtube.com/watch?v=rBvKqzTkUZA&amp;feature=youtu.be">https://www.youtube.com/watch?v=rBvKqzT ... e=youtu.be</a><!-- m --><br />The forum topic: <!-- l --><a class="postlink-local" href="https://forum.minetest.net/viewtopic.php?f=9&amp;t=11027&amp;hilit=my+train+mod">viewtopic.php?f=9&amp;t=11027&amp;hilit=my+train+mod</a><!-- l --><br />The source code: <!-- m --><a class="postlink" href="https://github.com/jordan4ibanez/trains">https://github.com/jordan4ibanez/trains</a><!-- m --><br /><br />This mod seems to hitch things by defining a leader cart and making all carts in the lineup follow that leading cart by setting their velocity to it.<br /><br />The other video is here: <!-- m --><a class="postlink" href="https://vimeo.com/156622682">https://vimeo.com/156622682</a><!-- m -->.  I found this one in the railnet mod topic by the author.  This has no accompanying code, so I can only guess as to how it worked.  The hitcher seems to move the cart forward until it hits another cart, whereupon it hitches.<br /><br />So, from these, I think that the best way to proceed (and this is just an idea) is to make some sort of cart hitcher craftitem/tool that hitches two carts together if the carts are right next to each other.  These would be stored in an attachment table that would probably look something like this:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>attachments = {<br />&nbsp; &nbsp; front = cart_id_here or &quot;&quot;,<br />&nbsp; &nbsp; back = another_cart_id or &quot;&quot;,<br />&nbsp; &nbsp; leader = true/false<br />}</code></dd></dl><br />The cart id's would be an id given to each boost cart randomly, such as a large number, or something extremely hacky, like <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">tostring&#40;self&#41;</span> (That would be one of the most hacky solutions ever ;-))  The leader would be the cart in the front of the train and would only change if a cart is hitched in front of the leader.<br /><br />From here, all changes to the leader would make changes to the rest of the train.  Only the leader would be affected by punches, speed changes, start/stop/brake/mese rails.<br /><br />If a rail is broken or a cart was removed from the center of the train, breaking the chain, one of three things could happen (I'm not sure which is best):  The carts one the side without the leader should either automatically be assigned a new leader, keep their attachments but not get a new leader and a new leader would have to be assigned by hitching another cart, or lose all their attachments and become a bunch of normal, unattached carts.  The carts on the side of the broken chain with the leader should keep moving like normal.<br /><br />//////////////////////////////////////////////////<br /><br />Anyway, this is just a concept, and may be nothing like your ideas, if you have any at all.  If you ever feel like making actual hitching, I'd be willing to help in whatever way I could since I know how hard it is to program a large thing like this alone.  (I do hope you decide to do it soon, because it's unbelievably fun to ride a line of carts around, even if it is a laggy, buggy mod from 2015).</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_10172_125.htm#p345966">Re: [Mod] Boost cart [boost_cart]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_10172_125.htm#p345966">Re: [Mod] Boost cart [boost_cart]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Wed Mar 13, 2019 9:26 am </p>
 
 			<div class="content">Just a note that under v5, you can't remove carts (or other MTG mods) from the directory when installing boost_cart or you will have random crashes. Both carts and boost_cart must be in the directory.<br /><br />See: <!-- l --><a class="postlink-local" href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=22340&amp;p=345960">viewtopic.php?f=6&amp;t=22340&amp;p=345960</a><!-- l --></div>
@@ -305,3 +304,4 @@
 
 </body>
 </html></div>
+

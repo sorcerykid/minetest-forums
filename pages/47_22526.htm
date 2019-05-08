@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -88,7 +87,7 @@
 
 		<div class="postbody">
 			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348683">How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>gigomaf</strong> &raquo; Fri Apr 12, 2019 18:00 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>gigomaf</strong> &raquo; Fri Apr 12, 2019 6:00 pm </p>
 
 			<div class="content">I try to make a mod with few decoration blocks, but I dont know how to add sounds and stop them.<br />Can someone help me with code below?<br /><br />This is simple decorative 'fireplace' block. I tried to add sound into 'right click' function. It's working but only when I trigger funcion by right click. If I restart the game, the sound isn't playing anymore.<br />I tried to study original 'fire' mod from Minitest game but it's a bit complicated.<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code><br />minetest.register_node(&quot;my_mod:fireplace&quot;, {<br />&nbsp; &nbsp;description = &quot;Fireplace&quot;,<br />&nbsp; &nbsp;tiles = {&quot;fireplace_top.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_side.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_front.png&quot;},<br />&nbsp; &nbsp;groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},<br /><br />&nbsp; &nbsp;on_rightclick = function(pos,node, player, itemstack, pointed_thing)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.swap_node(pos, {name=&quot;my_mod:fireplace_active&quot;})<br />&nbsp; &nbsp;end<br />})<br /><br />minetest.register_node(&quot;my_mod:fireplace_active&quot;, {<br />&nbsp; &nbsp;description = &quot;Fireplace&quot;,<br />&nbsp; &nbsp;tiles = {<br />&nbsp; &nbsp;&quot;fireplace_top.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_side.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_top.png&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;{<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;image = &quot;fireplace_active.png&quot;,<br />--&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;backface_culling = false,<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;animation = {<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;type = &quot;vertical_frames&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;aspect_w = 16,<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;aspect_h = 16,<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;length = 1.5<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;},<br />&nbsp; &nbsp;&nbsp; &nbsp;}<br />&nbsp; &nbsp;},<br />&nbsp; &nbsp;groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},<br />&nbsp; &nbsp;light_source = 8,<br />&nbsp; &nbsp;minetest.sound_play(&quot;fire&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;{pos = pos, max_hear_distance = 16, gain = 1, loop = true}),<br />&nbsp; &nbsp;on_rightclick = function(pos,node, player, itemstack, pointed_thing)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.swap_node(pos, {name=&quot;my_mod:fireplace&quot;})<br />&nbsp; &nbsp;end<br />})<br /><br />minetest.register_craft({<br />&nbsp; &nbsp;output = 'my_mod:fireplace',<br />&nbsp; &nbsp;recipe = {<br />&nbsp; &nbsp;&nbsp; &nbsp;{'default:wood', 'default:wood', 'default:wood'},<br />&nbsp; &nbsp;&nbsp; &nbsp;{'default:stone', 'default:coalblock', 'default:stone'},<br />&nbsp; &nbsp;&nbsp; &nbsp;{'default:stone', 'default:stone', 'default:stone'},<br />&nbsp; &nbsp;}<br />})<br /></code></dd></dl><br /><img src="https://i.ibb.co/WzM2tJ3/fire.jpg" alt="Image" /></div>
 		</div>
@@ -101,7 +100,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 25</dd><dd><strong>Joined:</strong> Sat Mar 02, 2019 14:57</dd>
+		<dd><strong>Posts:</strong> 25</dd><dd><strong>Joined:</strong> Sat Mar 02, 2019 2:57 pm</dd>
 			
 			
 		</dl>
@@ -117,7 +116,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348684">Re: How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Fri Apr 12, 2019 18:15 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Fri Apr 12, 2019 6:15 pm </p>
 
 			<div class="content">Yeah, I too am interested in a best practice to solve this. Probably a node times needs to be involved.</div>
 		</div>
@@ -130,7 +129,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 1290</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 21:08</dd>
+		<dd><strong>Posts:</strong> 1290</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
 			<dd><strong>GitHub:</strong> tacotexmex</dd>
 			<dd><strong>In-game:</strong> texmex</dd>
 		</dl>
@@ -145,8 +144,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348685">Re: How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>gigomaf</strong> &raquo; Fri Apr 12, 2019 18:23 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348685">Re: How to add sound to node?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>gigomaf</strong> &raquo; Fri Apr 12, 2019 6:23 pm </p>
 
 			<div class="content">Btw. This is my first steps at modding. This example contains two nodes for different states (active and inactive). I assume this should be done by register only one node, like original chest or furnance, but I don't know how to do it so far ;)</div>
 		</div>
@@ -159,7 +158,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 25</dd><dd><strong>Joined:</strong> Sat Mar 02, 2019 14:57</dd>
+		<dd><strong>Posts:</strong> 25</dd><dd><strong>Joined:</strong> Sat Mar 02, 2019 2:57 pm</dd>
 			
 			
 		</dl>
@@ -175,7 +174,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348686">Re: How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Fri Apr 12, 2019 18:51 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Fri Apr 12, 2019 6:51 pm </p>
 
 			<div class="content">Nope, default furnace registers two nodes as well. :)</div>
 		</div>
@@ -188,7 +187,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 1290</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 21:08</dd>
+		<dd><strong>Posts:</strong> 1290</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
 			<dd><strong>GitHub:</strong> tacotexmex</dd>
 			<dd><strong>In-game:</strong> texmex</dd>
 		</dl>
@@ -203,8 +202,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348747">Re: How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Astrobe</strong> &raquo; Sat Apr 13, 2019 07:12 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348747">Re: How to add sound to node?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Astrobe</strong> &raquo; Sat Apr 13, 2019 7:12 am </p>
 
 			<div class="content">In the &quot;fire mod&quot;, what you're interested in is what is in the &quot;if flame_sound then ...&quot; clause. Extract it, replace the node names with your node name, and it should do the trick.</div>
 		</div>
@@ -217,7 +216,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 221</dd><dd><strong>Joined:</strong> Sun Apr 01, 2018 10:46</dd>
+		<dd><strong>Posts:</strong> 221</dd><dd><strong>Joined:</strong> Sun Apr 01, 2018 10:46 am</dd>
 			
 			
 		</dl>
@@ -233,7 +232,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348754">Re: How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>gigomaf</strong> &raquo; Sat Apr 13, 2019 09:54 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>gigomaf</strong> &raquo; Sat Apr 13, 2019 9:54 am </p>
 
 			<div class="content">Thanks for the tips :)<br />In meantime I have another problem. I set paramtype 2 = &quot;facedir&quot; on first node, but I don't know how to set the same param on second node. After right click, the front faces of my fireplace are setted in wrong direction.</div>
 		</div>
@@ -246,7 +245,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 25</dd><dd><strong>Joined:</strong> Sat Mar 02, 2019 14:57</dd>
+		<dd><strong>Posts:</strong> 25</dd><dd><strong>Joined:</strong> Sat Mar 02, 2019 2:57 pm</dd>
 			
 			
 		</dl>
@@ -261,8 +260,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348755">Re: How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Sat Apr 13, 2019 10:24 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348755">Re: How to add sound to node?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Sat Apr 13, 2019 10:24 am </p>
 
 			<div class="content"><blockquote><div><cite>Astrobe wrote:</cite>In the &quot;fire mod&quot;, what you're interested in is what is in the &quot;if flame_sound then ...&quot; clause. Extract it, replace the node names with your node name, and it should do the trick.</div></blockquote><br />I’m not sure the same solution applies here. The fire mod sound playing function is oriented around the player, not around the fire node(s) themselves. This is in order to not play 200 fire sound sources when fire spreads. This fireplace node doesn’t face the same complexity it seems, so solution should be much simpler.</div>
 		</div>
@@ -275,7 +274,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 1290</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 21:08</dd>
+		<dd><strong>Posts:</strong> 1290</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
 			<dd><strong>GitHub:</strong> tacotexmex</dd>
 			<dd><strong>In-game:</strong> texmex</dd>
 		</dl>
@@ -291,7 +290,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348842">Re: How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>gigomaf</strong> &raquo; Sun Apr 14, 2019 10:21 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>gigomaf</strong> &raquo; Sun Apr 14, 2019 10:21 am </p>
 
 			<div class="content">Update:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.register_node(&quot;my_mod:fireplace&quot;, {<br />&nbsp; &nbsp;description = &quot;Fireplace&quot;,<br />&nbsp; &nbsp;tiles = {&quot;fireplace_top.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_side.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_front.png&quot;},<br />&nbsp; &nbsp;groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},<br />&nbsp; &nbsp;paramtype2 = &quot;facedir&quot;,<br />&nbsp; &nbsp;on_rightclick = function(pos, node, clicker, itemstack)<br />&nbsp; &nbsp;&nbsp; &nbsp;node.name = &quot;my_mod:fireplace_active&quot;<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_node(pos, node)<br />--&nbsp; &nbsp;&nbsp; &nbsp;return itemstack<br />&nbsp; &nbsp;&nbsp; &nbsp;handle = minetest.sound_play(&quot;fire3&quot;, {<br />&nbsp; &nbsp;&nbsp; &nbsp;pos = pos,<br />&nbsp; &nbsp;&nbsp; &nbsp;max_hear_distance = 10,<br />&nbsp; &nbsp;&nbsp; &nbsp;gain = 1,<br />&nbsp; &nbsp;&nbsp; &nbsp;loop = true,<br />&nbsp; &nbsp;})<br />&nbsp; &nbsp;end<br />})<br /><br />minetest.register_node(&quot;my_mod:fireplace_active&quot;, {<br />&nbsp; &nbsp;--description = &quot;Fireplace&quot;,<br />&nbsp; &nbsp;tiles = {<br />&nbsp; &nbsp;&quot;fireplace_top.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_side.png&quot;, &quot;fireplace_top.png&quot;, &quot;fireplace_top.png&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;{<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;image = &quot;fireplace_active2.png&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;animation = {<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;type = &quot;vertical_frames&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;aspect_w = 16,<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;aspect_h = 16,<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;length = 1.5<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;},<br />&nbsp; &nbsp;&nbsp; &nbsp;}<br />&nbsp; &nbsp;},<br />&nbsp; &nbsp;groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},<br />&nbsp; &nbsp;paramtype2 = &quot;facedir&quot;,<br />&nbsp; &nbsp;light_source = 8,<br />&nbsp; &nbsp;on_rightclick = function(pos, node, clicker, itemstack)<br />&nbsp; &nbsp;&nbsp; &nbsp;node.name = &quot;my_mod:fireplace&quot;<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_node(pos, node)<br />--&nbsp; &nbsp;&nbsp; &nbsp;return itemstack<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.sound_stop(handle)<br />&nbsp; &nbsp;end<br />})</code></dd></dl><br /><br /><br />Sound is playing but there are two problems:<br /><br />1) <span style="font-weight: bold">minetest.sound_stop(handle)</span> will crash the game if <span style="font-weight: bold">sound_play</span> has not been triggered.<br />I don't know how to check if sound is playing or not.<br /><br />2) problems with <span style="font-weight: bold">minetest.sound_stop(handle)</span> if more than one nodes</nobr> is placed.</div>
 		</div>
@@ -304,7 +303,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 25</dd><dd><strong>Joined:</strong> Sat Mar 02, 2019 14:57</dd>
+		<dd><strong>Posts:</strong> 25</dd><dd><strong>Joined:</strong> Sat Mar 02, 2019 2:57 pm</dd>
 			
 			
 		</dl>
@@ -319,8 +318,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348926">Re: How to add sound to node?</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Astrobe</strong> &raquo; Mon Apr 15, 2019 13:29 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22526.htm#p348926">Re: How to add sound to node?</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Astrobe</strong> &raquo; Mon Apr 15, 2019 1:29 pm </p>
 
 			<div class="content">I think this can be solved by maintaining an activation count. For instance:<br /><br />Create a counter as a local variable (probably like you did for &quot;handle&quot;) at the beginning of the file.<br /><br />Add one to it each time you start to play a sound. <br /><br />When you are about to stop a sound from playing, check first that the counter is not zero. If this is the case, stop the sound and subtract one to the counter.<br /><br />Otherwise, do nothing. Normally, it shouldn't happen if the rest of your mod is correct. Perhaps you ran into the issue because you were able to pick an active fireplace? In this case make it drop an inactive one with <span style="font-style: italic">drop=&quot;my_mod:fireplace&quot;</span>. The check is worth having anyway that there are probably other corner cases.</div>
 		</div>
@@ -333,7 +332,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 221</dd><dd><strong>Joined:</strong> Sun Apr 01, 2018 10:46</dd>
+		<dd><strong>Posts:</strong> 221</dd><dd><strong>Joined:</strong> Sun Apr 01, 2018 10:46 am</dd>
 			
 			
 		</dl>
@@ -392,3 +391,4 @@
 
 </body>
 </html></div>
+

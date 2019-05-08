@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -194,7 +193,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_21916.htm#p340866">Re: [Mod] Waterfalls</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_21916.htm#p340866">Re: [Mod] Waterfalls</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Termos</strong> &raquo; Mon Jan 14, 2019 2:26 pm </p>
 
 			<div class="content">Depends on what exactly you have in mind, this particular set of algorithms perhaps not, but the general approach could be appropriate.<br /><br />The algorithms are basicly cellular automata, they don't care about the grand scale of things, the only thing they care about is what a particular node and its immediate neighbors are.<br /><br />Actually this question made me think how to implement gradual draining of water from a reservoir through a crack in a dam. Tricky stuff to do with regular water, but with special nonregenerable water maybe it could be done.</div>
@@ -252,7 +251,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_21916.htm#p340878">Re: [Mod] Waterfalls</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_21916.htm#p340878">Re: [Mod] Waterfalls</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Termos</strong> &raquo; Mon Jan 14, 2019 6:34 pm </p>
 
 			<div class="content">That's a fun problem, I have a model of 'roaming sources' algorithm on my mind which should work with liquid_renewable set to false, that would work on a small scale - that's because stuff happens only within active block range which is quite limited.<br /><br />It probably could be done on a large scale with voxelmanip, but there comes the problem of determining which chunks to load, and there's more and more of them and they need to be updated quite frequently, so things go downhill fast from there.<br /><br />____________________________________________________________________________________________<br /><br />Back to waterfalls, my #1 favourite so far.<br />Source placement is the key.<br /><br /><img src="https://i.ibb.co/845YHX8/waterfall12.png" alt="Image" /><br /><img src="https://i.ibb.co/yQfhM0t/waterfall13.png" alt="Image" /></div>
@@ -310,7 +309,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_21916.htm#p340929">Re: [Mod] Waterfalls</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_21916.htm#p340929">Re: [Mod] Waterfalls</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Termos</strong> &raquo; Tue Jan 15, 2019 5:05 pm </p>
 
 			<div class="content"><blockquote><div><cite>voxelproof wrote:</cite>I mean that the water composing waterfalls quickly vanishes, sinking into the ground below. </div></blockquote><br />True, happens sometimes, that's because liquid_range is hard capped at 8 nodes. This is one of the reasons why source placement is so important.<br />Best way is to look at the slope and try to visualize how real water would flow, if there's a plateau along the way, water will probably stop there, if there's a convex slope like on the pictures above, probably all of it will be stripped of soil.<br /><br />If the spot is right, it should be ok, or sometimes a couple of nodes need to be removed to get it flowing again.<br />Getting it right just takes some practice.</div>
@@ -368,7 +367,7 @@ function spoiler_toggle(event) {
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_21916.htm#p341138">Re: [Mod] Waterfalls</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_21916.htm#p341138">Re: [Mod] Waterfalls</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>voxelproof</strong> &raquo; Thu Jan 17, 2019 10:04 pm </p>
 
 			<div class="content"><blockquote><div><cite>Termos wrote:</cite>Version 02<br /></div></blockquote><br /><br />Seems much better, water flows persistently now. Anyhow, now I <span style="text-decoration: underline">must</span> build a huge dam 8D<br /><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=17989&amp;sid=40a103d4ebfb47e3ffca5558ce205e31" alt="Image" /><br /><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=17990&amp;sid=40a103d4ebfb47e3ffca5558ce205e31" alt="Image" /><br /><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=17991&amp;sid=40a103d4ebfb47e3ffca5558ce205e31" alt="Image" /></div>
@@ -470,3 +469,4 @@ function spoiler_toggle(event) {
 
 </body>
 </html></div>
+

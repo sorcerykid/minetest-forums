@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -87,7 +86,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p295765">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p295765">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Diamond00744</strong> &raquo; Sun Oct 01, 2017 10:40 am </p>
 
 			<div class="content">Successfully tested latest script on Windows.<br />Just installed Python 3, moved Minecraft's world in script directory and executed:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>python mcimport.py world out</code></dd></dl><br />Thank you so much for this!<br />Noted problems with Iron bar:<br /><img src="https://i.imgur.com/qoLXTvb.jpg" alt="Image" /><br />Wood fence work normally. Will try install mods.<br />Upd: installed Nether mod, got glowstones. Can I rebuild lightmap from glowstones which was there before?<br />Comparsion:<br /><img src="https://i.imgur.com/RtCiCLF.png" alt="Image" /><br /><img src="https://i.imgur.com/OEc1UaO.png" alt="Image" /></div>
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p300800">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p300800">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MysticTempest</strong> &raquo; Mon Nov 20, 2017 7:08 am </p>
 
 			<div class="content">Hey,<br /><br />First off, big thanks to all of you who worked on this really fantastic tool! <br />I've been using it to play around in some converted worlds, and it's pretty nice!<br /><br />Secondly, I recently found a bit of a hacky workaround for the iron bars/glass panes issues.<br />Modifying them to the following in mcimport will allow the xpanes mod to take over, &amp; auto-connect/rotate them for the most part:<br /><br /><a href="https://github.com/minetest-tools/mcimport/blob/9de6d0bd3aa105ab1c1d1f5661d60628ce971d1d/map_content.txt#L498" class="postlink">https://github.com/minetest-tools/mcimport/blob/9de6d0bd3aa105ab1c1d1f5661d60628ce971d1d/map_content.txt#L498</a><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>101&nbsp; &nbsp;xpanes:bar<br />102&nbsp; &nbsp;xpanes:pane<br /></code></dd></dl><br /><br /><br />However, there's a small issue with gaps in certain spots. I know it's fixable by adding some groups to this part of the xpanes code. (Crumbly as an example below, but more can be added to fill the gaps.)<br /><br /><a href="https://github.com/minetest/minetest_game/blob/a2d7678ffd532dd82dcaa108eac3dace61ac94a2/mods/xpanes/init.lua#L139" class="postlink">https://github.com/minetest/minetest_game/blob/a2d7678ffd532dd82dcaa108eac3dace61ac94a2/mods/xpanes/init.lua#L139</a><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>connects_to = {&quot;group:pane&quot;, &quot;group:stone&quot;, &quot;group:glass&quot;, &quot;group:wood&quot;, &quot;group:tree&quot;, &quot;group:crumbly&quot; },<br /></code></dd></dl><br /><br /><br />I'm not much of a coder though, and I was curious if there was a way to get mcimport to make this modification for the user?<br />As opposed to doing it manually; or forking xpanes with modifications &amp; making it one of the worldmods needed.<br /><br /><br />Here's 2 previews. The first shows the workaround by itself. And the second, has the workaround + &quot;group:crumbly&quot; added to the 'connects_to' line in the xpanes mod. Just to show how it looks.<br /><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=12992&amp;sid=46a4dd5e955d15917186916c7ad6149f" alt="Image" /></div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p301016">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p301016">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MysticTempest</strong> &raquo; Wed Nov 22, 2017 2:45 pm </p>
 
 			<div class="content"><blockquote><div><cite>AccidentallyRhine wrote:</cite>Can this tool handle conversion of <span style="font-style: italic">matchless MC blocks</span> to <span style="font-style: italic">MT unknown nodes</span>? Or better yet, to air nodes? I do not plan to use some of the listed mods from my conversion and would prefer to replace by hand the nodes which do not have a MT mod equivalent.<br /><br />Or maybe I'll take a look through your script and see if it would be trivial to replace home-decor/moreblocks with xdecor.<br /><br />Edit: Hmmm there should be some structures... maybe I'll try a non-flat map?<br /></div></blockquote><br />Yea, it won't bother converting unknown nodes. Check out the 'map_content.txt' file for the nodes it uses to convert. You can customize it beforehand to your liking; especially if you're going to hand-select the mods you want to use. That way you can make conversion a bit easier for yourself.<br /><br />In terms of spawning where there's nothing; yea, I've been there. You need to grab the coordinates from Minecraft, as you don't spawn in Minetest where you saved in Minecraft. You'll need to teleport to the coordinates, except;  invert the 'Z' axis coordinate. With unlimited view distance, and the right coordinates, you should be able to find the area you're looking for with a little bit of flying around.</div>
@@ -261,7 +260,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p301069">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p301069">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Wed Nov 22, 2017 11:27 pm </p>
 
 			<div class="content"><blockquote><div><cite>AccidentallyRhine wrote:</cite>Thanks for the tips. All seems to be working well, good work Sofar. I use to run some MC servers a while back and there are things I am trying to preserve long term. I equate it to converting old .doc to .odt. Things can still use a bit of tweaking (doors -&gt; doors which are in the base game) so I will go play around with that map_content.txt.</div></blockquote><br /><br />This is most likely due to your MC save being from an older or too new MC version. The doors from v1.8 are supported and convert properly, other versions are just not tested as I'm working on other projects.</div>
@@ -319,7 +318,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p301231">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p301231">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>AccidentallyRhine</strong> &raquo; Fri Nov 24, 2017 5:45 am </p>
 
 			<div class="content">I did check out MineClone 2. Very well done, however only maintained by a single individual which introduces risk of it falling out of support.<br /><br />My goal with this tool was only to use it to translate MC to <span style="font-style: italic">Vanilla</span> MT as much as possible. By that I mean: rely on 3rd party mods (which are relatively volatile) <span style="font-style: italic">as little as possible</span>.<br /><br />And so I edited map_content.txt as follows:<br /><br />- Quartz --&gt; Silversand Stone<br />- Nether brick --&gt; Desert Cobble<br />- Lapis Lazuli --&gt; Blue Wool<br />- Sponge --&gt; Coral<br />- Vines --&gt; Ivy (Ivy is already in xdecor, I don't know why sofar used a specialized vines mod)<br />- Various woods --&gt; default:&lt;minetest woods&gt; (Again, I don't know why this required moretrees)<br />- Emerald --&gt; Tin<br />- Potted plants --&gt; xdecor:&lt;plants&gt; (Once again, already in xdecor)<br />... some various others I cannot recall.<br /><br />^^^ all reducing the need for fleeting 3rd party mods down to just: Mesecons, xdecor and crops - all of which are very well maintained and have been around for a while. I think some are even in the Minetest-mods github. I honestly cannot wait for some very basic functionality to get pulled into Minetest Game, why oh why do we still need playeranim?<br /><br />Here is my copy of map_content.txt for anyone else who wants as-vanilla-as-possible map conversions:</div>
@@ -377,7 +376,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p301491">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p301491">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>AccidentallyRhine</strong> &raquo; Sun Nov 26, 2017 1:22 am </p>
 
 			<div class="content">Our approaches to replacing nodes simply have different goals in mind. Many of the worlds I have been converting are from old Minecraft servers (Beta 1.5-release1.3~) so they don't even have vines or quartz. It has truly been a joy revisiting these old worlds thanks to your work.<br /><br /><img src="https://imgoat.com/uploads/f39f8317fb/60373.png" alt="Image" /></div>
@@ -435,7 +434,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p311114">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p311114">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Mon Feb 05, 2018 9:44 pm </p>
 
 			<div class="content"><blockquote><div><cite>larajtekno wrote:</cite>Hello,I try in vain for a few days, to convert a map to be able to use it in Minetest. My O.S. is windows 10, I tried mcedit without success.<br />Is there somewhere, a tutorial of the convert style for Dummies ??<br />Thank you</div></blockquote><br /><br />The best advice I can give you is to install a virtual machine with e.g. ubuntu and try it on that. Getting this program to work on Windows is (1) untested and (2) very difficult, I don't guarantee it will work either.<br /><br />If the MC map is downloadable, maybe you can tell us which map it is, and maybe someone can convert it for you?</div>
@@ -493,7 +492,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p313392">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p313392">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>miner2000</strong> &raquo; Sun Mar 04, 2018 10:27 am </p>
 
 			<div class="content">Hello, I have converted my MC map and the process has completed without errors. When I play the map in MT it runs ok but the map looks to just be generating freshly as I explore it. I have tried teleporting to places but I can't see a trace of anything that was in the MC map.<br /><br />Is there anything I need to do to stop the map from generating??</div>
@@ -551,7 +550,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p346120">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p346120">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>-sniper-</strong> &raquo; Thu Mar 14, 2019 7:58 pm </p>
 
 			<div class="content">Thank you for this very good program. Images of minetest world that I converted from minecraft world:<br /><br /><a href="https://ibb.co/hRX4pcx" class="postlink"><img src="https://i.ibb.co/WWDMS0N/Zaslonska-slika-2019-03-14-20-18-19.png" alt="Image" /></a><br /><a href="https://ibb.co/r4R7QSW" class="postlink"><img src="https://i.ibb.co/t8TmHtd/Zaslonska-slika-2019-03-14-20-50-29.png" alt="Image" /></a><br /><br />Original minecraft map: <a href="http://www.minecraftmaps.com/city-maps/world-of-worlds" class="postlink">http://www.minecraftmaps.com/city-maps/world-of-worlds</a><br /><br />I had to download some mods (mesecons, nether, quartz etc.).</div>
@@ -609,7 +608,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p347662">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p347662">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Sun Mar 31, 2019 4:56 pm </p>
 
 			<div class="content"><blockquote><div><cite>niwla23 wrote:</cite>I get this:<br /><div class="inline-attachment"><!-- ia0 -->Bildschirmfoto vom 2019-03-31 10-03-07.png<!-- ia0 --></div></div></blockquote><br /><br />you need the `zlib` python module. Maybe `sudo pip3 install zlib` will work for you.</div>
@@ -667,7 +666,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p348122">Re: Convert Minecraft maps to Minetest worlds</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/12_13709_75.htm#p348122">Re: Convert Minecraft maps to Minetest worlds</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Fri Apr 05, 2019 6:15 am </p>
 
 			<div class="content"><blockquote><div><cite>niwla23 wrote:</cite><div class="inline-attachment"><!-- ia0 -->Bildschirmfoto vom 2019-04-04 21-29-15.png<!-- ia0 --></div><br />That are the available packages from pip search. Which one?</div></blockquote><br /><br />Honestly I have no idea, you even are missing setuptools, which is part of python? I really have no clue.</div>
@@ -769,3 +768,4 @@
 
 </body>
 </html></div>
+

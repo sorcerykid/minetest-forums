@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -87,7 +86,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p312588">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p312588">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>turducken</strong> &raquo; Wed Feb 21, 2018 11:55 pm </p>
 
 			<div class="content"><blockquote><div><cite>texmex wrote:</cite>Good spotting, turducken. This relates to the the walkable check, correct. It was mainly implemented with water in mind, so that you can't sprint run in or on the water surface which you can do with the other sprint mods available. I suppose I could check for walkable <span style="font-style: italic">or</span> air nodes instead of just walkables.<br /><br /><blockquote class="uncited"><div>decrease the stamina by dtime in global step, but is dtime variable, as that would throw a wrench into reducing hunger in predictable ways</div></blockquote><br />I agree, stamina should be independent of dtime, with its own timer. I'll se if I can get around to it.</div></blockquote><br /><br />That was actually another thought of mine reading the code about swimming. While I don't think it should be a Jesus mod of walking on water, I think some kind of &quot;boost&quot; while in water would be acceptable. For example, in my worlds I'm frequently attacked by sharks. One should be able to go from a leisurely swim to SHTF mode to get to shore. <br /><br />I'm obviously not sure how that would be checked as I'm new to the minetest mod api. I assume the other mods check the ground you're on, and somehow you &quot;jump&quot; up a node so that you're not &quot;on&quot; water anymore. Perhaps checking two nodes down? Perhaps a &quot;was in water now in air&quot; check?<br /><br />Another thought I had, somewhat related, is jumping using up stamina and hunger. I know that hbhunger already takes into account placing and removing nodes, but as far as I can tell from the code it doesn't account for walking or other movement (I suppose this is best brought up in that forum.) Perhaps hbsprint should set a &quot;stamina&quot; or &quot;hunger&quot; factor as a multiplier in monoids. Regular walking, jumping uses normal hunger, while hurried running and jumping uses up more. A slow-down effect while eating my also help.<br /><br />Again, how these interrelate with hbhunger I'm not sure, but they obviously need to interact (possibly though that monoids api.)</div>
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p312657">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p312657">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Byakuren</strong> &raquo; Thu Feb 22, 2018 10:03 pm </p>
 
 			<div class="content">I think the values of such a monoid should add together rather than multiply, because different activities should exhaust you independently. It could still be a multiplier, but maybe the values would be the portion above 1. For example, 0.2 would mean 1.2 times hunger rate, and if you had another mod add a 0.4 multiplier, you would get a 1 + 0.2 + 0.4 = 1.6 multiplier.</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p312667">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p312667">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Byakuren</strong> &raquo; Fri Feb 23, 2018 3:53 am </p>
 
 			<div class="content"><blockquote><div><cite>turducken wrote:</cite><blockquote><div><cite>Byakuren wrote:</cite>I think the values of such a monoid should add together rather than multiply, because different activities should exhaust you independently. It could still be a multiplier, but maybe the values would be the portion above 1. For example, 0.2 would mean 1.2 times hunger rate, and if you had another mod add a 0.4 multiplier, you would get a 1 + 0.2 + 0.4 = 1.6 multiplier.</div></blockquote><br /><br />Perhaps. I was thinking in terms of &quot;this potion makes you 20% faster&quot;, eg 1.2. Then you have armor that makes you 2% faster, or 1.02. 1.2*1.02=1.224.<br /><br />I'm not sure the correct version. I suppose it depends on if you want to change the base rate only (additive) or whatever the current value is (multiplicative.) Perhaps there should be a setting?!</div></blockquote><br /><br />Sorry, I thought that you meant a monoid for how quickly saturation drains. For speed, I think player_monoids comes with a multiplicative speed monoid. In general though it's possible to combine approaches: instead of having a monoid directly change something, make it add a value to another monoid. For example, an additive speed monoid that uses its total multiplier to apply a value in the multiplicative speed monoid, which in turn actually applies the speed to a player.</div>
@@ -261,7 +260,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321009">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321009">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>LMD</strong> &raquo; Thu Jun 07, 2018 5:25 pm </p>
 
 			<div class="content">Created an issue : <!-- m --><a class="postlink" href="https://github.com/minetest-mods/hbsprint/issues/12">https://github.com/minetest-mods/hbsprint/issues/12</a><!-- m --><br />(more of an PR)</div>
@@ -319,7 +318,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321031">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321031">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>LMD</strong> &raquo; Thu Jun 07, 2018 8:20 pm </p>
 
 			<div class="content">Yeah, but then you should say so explicitly. Else people wonder why their jump potion stopped working ;D<br />Plus, thru my solution u are independent of that mod.</div>
@@ -377,7 +376,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321120">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321120">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>LMD</strong> &raquo; Fri Jun 08, 2018 1:47 pm </p>
 
 			<div class="content">Making something pretty similar ATM :)</div>
@@ -435,7 +434,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321153">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321153">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>LMD</strong> &raquo; Fri Jun 08, 2018 5:40 pm </p>
 
 			<div class="content">Umm, well, mine adds statbars 4 how long the player still posesses it. Also I have my custom API, so I can easily register a - physics effect potion (antigravity, jump etc) - normal potion (effect, delete effect function) using a color. It is for our new magic CTF. Potions have tiers (yellow stripes on image) which show potion strength, and levels (grey stripes) = duration. It will be nice, I hope :)</div>
@@ -493,7 +492,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321277">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321277">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Byakuren</strong> &raquo; Sun Jun 10, 2018 3:39 am </p>
 
 			<div class="content"><blockquote><div><cite>LMD wrote:</cite>Umm, well, mine adds statbars 4 how long the player still posesses it. Also I have my custom API, so I can easily register a - physics effect potion (antigravity, jump etc) - normal potion (effect, delete effect function) using a color. It is for our new magic CTF. Potions have tiers (yellow stripes on image) which show potion strength, and levels (grey stripes) = duration. It will be nice, I hope :)</div></blockquote><br />You could keep your custom effect code, but use monoids to actually apply the final physics effects to players. Then you can have your more complex system and still have compatibility with player_monoids-compatible mods.</div>
@@ -551,7 +550,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321499">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321499">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Byakuren</strong> &raquo; Tue Jun 12, 2018 4:10 pm </p>
 
 			<div class="content"><blockquote><div><cite>LMD wrote:</cite>player_monoids may be useful, but it REALLY isn't THAT HARD to just modify player physics yourself. I prefer to change 10 lines of code without needing another dependency.</div></blockquote><br />First, note that you can just have a soft dependency and fall back to your current way if player_monoids is not installed. It would be easy to swap between the two implementations if you make function definitions for &quot;apply effect&quot; and &quot;cancel effect&quot; that are dependent on whether player_monoids is around.<br /><br />If you are talking about multiplying by a modifier and then dividing by it, that doesn't work when you want to use a multiplier of 0 to stop player movement / jumping (I responded to this in the github issue that was linked earlier).<br /><br />It also doesn't work if you want to mix multiplication and addition. For example:<br />- Player starts at 1 speed<br />- Mod A applies an effect that adds 0.2 speed. The player now has 1.2 speed.<br />- Mod B applies an effect that doubles speed. The player now has 2.4 speed.<br />- Mod A's effect wears off. The player now has 2.2 speed (because mod A &quot;undid&quot; the effect by subtracting 0.2)<br />- Mod B's effect wears off. The player now has 1.1 speed (because mod B &quot;undid&quot; the effect by dividing by 2)<br /><br />The player ends up having a non-1 neutral speed.<br /><br />Lastly, rounding errors in floating point arithmetic will cause the player physics override to drift slowly. This is not likely to be a problem in practice but does feel unclean.<br /><br />player_monoids handles the first issue by explicitly keeping track of the list of active player physics modifiers, so that information isn't lost when using a multiplier of 0. It also avoids drift from floating point rounding because it does not use the player physics override like an accumulator value.<br /><br />It handles the second issue by making it possible for mods to combine effects in their own way before applying them through player_monoids. So for example, a mod that wants to subtract / add speed modifiers could set up its own monoid (or some other way of combining effects), and then use that final value as input to the player_monoids-provided speed monoid.<br /><br />Just doing / undoing with multiplication and division is fine and coherent if you don't want to stop movement, use addition / subtraction, or be compatible with any mods that want to do those two things, but it is not a universal solution.</div>
@@ -609,7 +608,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321882">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p321882">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Byakuren</strong> &raquo; Sun Jun 17, 2018 6:05 pm </p>
 
 			<div class="content"><blockquote><div><cite>LMD wrote:</cite>You are right.<br />However, as I'm doing it for a subgame, it isnt really required to work with other mods.</div></blockquote><br />Fair enough.</div>
@@ -667,7 +666,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p348070">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p348070">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>runs</strong> &raquo; Thu Apr 04, 2019 11:48 am </p>
 
 			<div class="content"><blockquote><div><cite>Wuzzy wrote:</cite>FYI:<br />This mod needs updating for [hudbars] 2.0.0 and Minetest 5.0.0.</div></blockquote><br />I use it and no problem.</div>
@@ -725,7 +724,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p348804">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_18069_25.htm#p348804">Re: [Mod] Sprint w. hudbars, hunger, monoids support [hbspri</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Sat Apr 13, 2019 7:13 pm </p>
 
 			<div class="content">I didn't have to update the mod regarding hudbars support (screw translations for now!) but I did discover a bug, solved it and pushed it.</div>
@@ -798,3 +797,4 @@
 
 </body>
 </html></div>
+

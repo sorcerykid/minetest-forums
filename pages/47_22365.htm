@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -88,7 +87,7 @@
 
 		<div class="postbody">
 			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22365.htm#p346529">3D animation export help</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>JTE</strong> &raquo; Tue Mar 19, 2019 01:40 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>JTE</strong> &raquo; Tue Mar 19, 2019 1:40 am </p>
 
 			<div class="content">I'm working on a Game which involves a reasonably high detail player model (around 2,500 tris) which requires skeletal animation because I want to attach things to several bones which exist solely as attachment points (eg. a temporary hat attaches to the &quot;hat bone&quot;, which is attached to the head bone where the head mesh is attached)<br /><br />The attachments are simple .obj files for maximum compatibility and work correctly. The player model does not, however.<br /><br />To begin with I had reasonable luck with exports to DirectX format (Default coordinate system: Left-handed), except that the model is rotated to face backwards in-game (towards the camera instead of away). But then when I went to attach things, I found that the attached models are treating the skeleton as though it were completely upside-down. So my hat is bobbing down and up about two blocks below the floor, while the player's head bobs up and down an equal distance above it. The file size comes out to around 6 MB, which is pretty steep, but I haven't had much luck reducing it.<br /><br />Did a lot of optimizations trying to see if I could fix the model, rotating the armature itself around, etc. but nothing really worked. Changed the coordinate system to &quot;Right-handed&quot;, suddenly everything appears to work correctly... <span style="font-style: italic">except</span> the entire model is now horizontally flipped, animations and all. @@; Trying to un-flip it with negative scale resulted in all the normals getting flipped as well and the attachment bones going backwards in-game, so that won't work... ugh.<br /><br />I tried other model formats too. The B3D exporter at <!-- m --><a class="postlink" href="https://github.com/minetest/B3DExport/">https://github.com/<a class="postlink" href="https://github.com/minetest/B3DExport/">minetest/B3DExport/</a><!-- m --> produces a 20 MB large file somehow, which can't even load because the engine crashes if a server attempts to send any file larger than around 16 MB. I tried old Blender version 7.3 (the current version from when the B3DExport plug-in was made) but saw no functional difference.<br /><br />I looked up Irrlicht's documentation (since Minetest's own documentation says &quot;for supported file formats, go see Irrlicht&quot;) and found out there is a third skeletal animation format supported nowadays, from MilkShape3D. Unfortunately Minetest currently doesn't recognise .ms3d files as valid resources, so it doesn't send them to clients. (regardless of whether or not clients would have a recent enough Irrlicht version to render them) If Minetest</nobr> did support ms3d models though, this one would only be 684 KB large apparently. That can't be right, can it..?<br /><br />I seem to have exhausted everything I could try. :( Got any tips?<br /><br /><span style="font-weight: bold">Edit:</span> nevermind... it figures just after I finally give up and decide to post where I'm at, I'd manage to correctly optimize the b3d file down to 7 MB and it works now. Still larger than an .x file, but at least it's consistent with the rest of the engine now.<br /><br />I'm guessing that the &quot;Left-handed&quot; DirectX model was correct, considering the B3D model has to be rotated the same way, so the attachment point being flipped below the floor must be a bug? Throw that on top of the bug with attachments being invisible if attached while in third-person mode (already fixed in a pull request) and attachments to the player sometimes (randomly) deciding to attach to the server's representation of your player model rather than the client-side prediction of the player model... Messy business.</div>
 		</div>
@@ -101,7 +100,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 14</dd><dd><strong>Joined:</strong> Sun Sep 07, 2014 14:59</dd>
+		<dd><strong>Posts:</strong> 14</dd><dd><strong>Joined:</strong> Sun Sep 07, 2014 2:59 pm</dd>
 			
 			
 		</dl>
@@ -160,3 +159,4 @@
 
 </body>
 </html></div>
+

@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346647">Re: low lua memory issue and a missunderstanding ?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346647">Re: low lua memory issue and a missunderstanding ?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 1:20 pm </p>
 
 			<div class="content"><blockquote><div><cite>Linuxdirk wrote:</cite>The problem with this is, that it does not work like this. It is easily possible to get OOM on all types of machines. I can get OOM on my 4 GB private hosted mini server, on my 8 GB office laptop, or on my 16 GB regular PC. Available system memory is simply irrelevant when using LuaJIT.</div></blockquote><br /><br />I know that, using a 32 GB server, also 32 GB work PC, but one coder of mod doesn't know that ...<br />Lua mem is limited, sure - depending on 32 or 64 and so ..., so I have a border with 2 GB and less, depending on other problems I read.<br /><br />But anyway, as there IS a fixed border IN lua until now, coding mods MUST take care about this, and save as much as possible.<br /><br />I just banned<br />* moreblocks (used 11936 KB) ans<br />* etherreal (used 6928 KB) of my server<br />and instead of used 72930 KB before, now just 41091 KB are used, so much more time to OOM crash at also 2 mods gone that might consume more during work.<br />* even think about to ban moretrees (using 9592 KB), it there is no soon rebuild of the code or we get 4 GB lua mem.<br /><br />As technic with all parts together also is Top ranked (using near ~12000 KB) also nice to get low down it, as used to much on server now, just to cut it out.</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346655">Re: low lua memory issue and a missunderstanding ?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346655">Re: low lua memory issue and a missunderstanding ?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Wed Mar 20, 2019 2:02 pm </p>
 
 			<div class="content">To fix LuaJIT ooms:<br /><br /><ul><li>Use a GC64 build of LuaJIT</li><li>Use puc Lua</li><li>Find and fix/remove mods which use a lot of memory</li></ul><br /><blockquote><div><cite>Linuxdirk wrote:</cite>Moretrees feels quite heavy, yes. The technic trinity (Mesecons, Pipeworks, Technic) likely is the heaviest combination of mods possible.</div></blockquote><br /><br />Exactly this - every time I see OOM I think biomelibs or moretrees.</div>
@@ -276,3 +275,4 @@
 
 </body>
 </html></div>
+

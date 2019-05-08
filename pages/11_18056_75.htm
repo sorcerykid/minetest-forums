@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -87,7 +86,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p313723">Re: [MOD] Tool ranks [toolranks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p313723">Re: [MOD] Tool ranks [toolranks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Mineminer</strong> &raquo; Wed Mar 07, 2018 11:40 pm </p>
 
 			<div class="content"><blockquote><div><cite>maikerumine wrote:</cite><blockquote><div><cite>Drgnrdr wrote:</cite>Love your mod, but last night ran into this error(game crash): <dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2018-01-25 04:37:54: ACTION&#91;Server&#93;: singleplayer uses nyancats_plus:rainbow_hoe, pointing at &#91;node under=-4,16,6 above=-4,17,6&#93;<br />2018-01-25 04:37:54: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod '' in callback item_OnUse(): C:\GAMES\MINETEST\bin\..\mods\toolranks\init.lua:13: bad argument #1 to 'find' (string expected, got nil)<br />2018-01-25 04:37:54: ERROR&#91;Main&#93;: stack traceback:<br />2018-01-25 04:37:54: ERROR&#91;Main&#93;: &nbsp; &nbsp;&#91;C&#93;: in function 'find'<br />2018-01-25 04:37:54: ERROR&#91;Main&#93;: &nbsp; &nbsp;C:\GAMES\MINETEST\bin\..\mods\toolranks\init.lua:13: in function 'get_tool_type'<br />2018-01-25 04:37:54: ERROR&#91;Main&#93;: &nbsp; &nbsp;C:\GAMES\MINETEST\bin\..\mods\toolranks\init.lua:28: in function 'create_description'<br />2018-01-25 04:37:54: ERROR&#91;Main&#93;: &nbsp; &nbsp;C:\GAMES\MINETEST\bin\..\mods\toolranks\init.lua:100: in function 'new_afteruse'<br />2018-01-25 04:37:54: ERROR&#91;Main&#93;: &nbsp; &nbsp;C:\GAMES\MINETEST\bin\..\mods\farming/hoes.lua:116: in function &lt;C:\GAMES\MINETEST\bin\..\mods\farming/hoes.lua:64&gt;<br />2018-01-25 04:37:54: ERROR&#91;Main&#93;: &nbsp; &nbsp;(tail call): ?</code></dd></dl><br />This happened when using any hoe other than default hoes. The error stopped only when mod was disabled or removed.</div></blockquote><br />You wull need to add support for it manually, like I did here:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>if minetest.get_modpath(&quot;toolranks&quot;) then<br />--aikerum&nbsp; &nbsp;<br />&nbsp; minetest.override_item(&quot;es:pick_aikerum&quot;, {<br />&nbsp; &nbsp; original_description = &quot;Extreme Survival Aikerum Pickaxe&quot;,<br />&nbsp; &nbsp; description = toolranks.create_description(&quot;Extreme Survival Aikerum Pickaxe&quot;, 0, 1),<br />&nbsp; &nbsp; after_use = toolranks.new_afteruse})<br /><br />&nbsp; minetest.override_item(&quot;es:axe_aikerum&quot;, {<br />&nbsp; &nbsp; original_description = &quot;Extreme Survival Aikerum Axe&quot;,<br />&nbsp; &nbsp; description = toolranks.create_description(&quot;Extreme Survival Aikerum Axe&quot;, 0, 1),<br />&nbsp; &nbsp; after_use = toolranks.new_afteruse})<br /><br />&nbsp; minetest.override_item(&quot;es:shovel_aikerum&quot;, {<br />&nbsp; &nbsp; original_description = &quot;Extreme Survival Aikerum Shovel&quot;,<br />&nbsp; &nbsp; description = toolranks.create_description(&quot;Extreme Survival Aikerum Shovel&quot;, 0, 1),<br />&nbsp; &nbsp; after_use = toolranks.new_afteruse})<br />end<br /></code></dd></dl><br /><br />Add code like this in a new mod and do it for all the tools you want to add.</div></blockquote> <br /><br />So you means for the more ores tools ( <!-- l --><a class="postlink-local" href="https://forum.minetest.net/viewtopic.php?id=549">viewtopic.php?id=549</a><!-- l --> ) a new mod would has to be created just to prevent them from cashing the server?</div>
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p314441">Re: [MOD] Tool ranks [toolranks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p314441">Re: [MOD] Tool ranks [toolranks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>EdShouldBeInBed</strong> &raquo; Thu Mar 15, 2018 6:54 pm </p>
 
 			<div class="content">So, partly as practice in coding and partly just to expand support, I made a little mod.<br /><a href="https://github.com/EdShouldBeInBed/toolranks_extender" class="postlink">It's here.</a> It extends the coverage of toolranks to:<br /><a href="https://forum.minetest.net/viewtopic.php?t=8965" class="postlink">bacon</a><br /><a href="https://forum.minetest.net/viewtopic.php?p=62192" class="postlink">glooptest</a><br /><a href="https://forum.minetest.net/viewtopic.php?p=123083" class="postlink">magma and ice mp</a><br /><a href="https://forum.minetest.net/viewtopic.php?t=14833&amp;p=220005#p220005" class="postlink">technic aluminum</a><br /><br />Seems to work on my local game, but if you have any of these mods installed do try it.</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p316027">Re: [MOD] Tool ranks [toolranks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p316027">Re: [MOD] Tool ranks [toolranks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>lisacvuk</strong> &raquo; Thu Apr 05, 2018 8:41 pm </p>
 
 			<div class="content"><blockquote><div><cite>Hamlet wrote:</cite>I'm using your mod since a long time and I find it very useful, thanks for your work.<br />Earlier I was repairing a sword and I thought if it could be possible to apply the same principle to weapons, it would be nice to have them record the number of killed mobs!<br />Another feature I would like to see is localized messages, is there any chance that you add Intllib support?</div></blockquote><br />Thanks for trying it out :)<br />There are a few mobs mods out there, with pretty much different APIs, so it would be hard to support all of them. Might just support mobs_redo once.<br />IIRC there is another way to do translations in .5, I'm waiting for that one.</div>
@@ -261,7 +260,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p325730">Re: [MOD] Tool ranks [toolranks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p325730">Re: [MOD] Tool ranks [toolranks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>bosapara</strong> &raquo; Tue Jul 17, 2018 12:11 pm </p>
 
 			<div class="content">How about to add sword and hoe to mod of tool rank?<br /><br />Will be too much useful with anvil mod<br /><br /><img src="https://wiki.minetest.net/images/0/04/Diamond_Hoe.png" alt="Image" /><img src="https://wiki.minetest.net/images/a/a0/Diamond_Sword.png" alt="Image" /></div>
@@ -319,7 +318,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p325844">Re: [MOD] Tool ranks [toolranks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p325844">Re: [MOD] Tool ranks [toolranks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>TenPlus1</strong> &raquo; Wed Jul 18, 2018 8:39 am </p>
 
 			<div class="content">bosapara: swords were just added a few weeks ago and if you use farming redo then hoe's use toolranks also.</div>
@@ -377,7 +376,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p325957">Re: [MOD] Tool ranks [toolranks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p325957">Re: [MOD] Tool ranks [toolranks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>TenPlus1</strong> &raquo; Thu Jul 19, 2018 6:51 am </p>
 
 			<div class="content">Toolrank swords will still count it's uses when hitting mobs redo mobs :) not just digging leaves etc.</div>
@@ -435,7 +434,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p347741">Re: [MOD] Tool ranks [toolranks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_18056_75.htm#p347741">Re: [MOD] Tool ranks [toolranks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Tikilou</strong> &raquo; Mon Apr 01, 2019 1:35 pm </p>
 
 			<div class="content">Thanks for this mod, unfortunatly, it's not working anymore with 5.0 server update from 4.17.1 (server can't load others mods when toolranks is activated)</div>
@@ -508,3 +507,4 @@
 
 </body>
 </html></div>
+

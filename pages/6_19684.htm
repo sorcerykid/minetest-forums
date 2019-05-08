@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p312551">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p312551">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Wed Feb 21, 2018 5:26 pm </p>
 
 			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>you could create a mod to check the IP against the range on_joinplayer</div></blockquote><br /><br />I don't know how to create mods, and I don't know what on_joinplayer is. Does anything exist, even something that has nothing to do with Minetest? (Preferably something that has nothing to do with Minetest.)</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p312621">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p312621">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Thu Feb 22, 2018 9:16 am </p>
 
 			<div class="content"><blockquote><div><cite>Vapalus wrote:</cite>Since you are talking about iptables and supposedly have linux:<br /><span style="font-weight: bold">ip route add blackhole 192.168.178.5/29</span> is the way to go there...<br />192.168.178.5 is the IP, /29 is the bitmask to use for the range.<br /><!-- m --><a class="postlink" href="https://www.aelius.com/njh/subnet_sheet.html">https://www.aelius.com/njh/subnet_sheet.html</a><!-- m --></div></blockquote><br /><br />Will that avoid the lag issues I just described when doing it via iptables?</div>
@@ -261,7 +260,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p313044">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p313044">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Wed Feb 28, 2018 12:36 am </p>
 
 			<div class="content">&quot;ip route add blackhole&quot; on large ranges seems to introduce a bit of lag and slowness (probably about 2-10 at most) but not to the extent of being unplayable (the 20-40 I was getting with iptables). Thank you!</div>
@@ -319,7 +318,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p313049">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p313049">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Wed Feb 28, 2018 1:40 am </p>
 
 			<div class="content"><blockquote><div><cite>sofar wrote:</cite>The most efficient way on Linux is to use `ipset` as it can be used to define network ranges, and then block them using `iptables` if they match the `ipset`.<br /><br />There are many guides that cover the topic, here's one that I think does a good job: <!-- m --><a class="postlink" href="https://wiki.archlinux.org/index.php/Ipset">https://wiki.archlinux.org/index.php/Ipset</a><!-- m --></div></blockquote><br /><br />How is that different from adding the ranges to an iptables config file manually (which was making the game unplayable)?</div>
@@ -377,7 +376,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p313054">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p313054">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Wed Feb 28, 2018 4:22 am </p>
 
 			<div class="content"><blockquote><div><cite>zing269 wrote:</cite><blockquote><div><cite>redblade7 wrote:</cite>How is that different from adding the ranges to an iptables config file manually (which was making the game unplayable)?</div></blockquote><br /><br />It seems that there can be a significant improvement in the performance of iptables when the ipset utility is used. <br /><a href="https://developers.redhat.com/blog/2017/04/11/benchmarking-nftables/" class="postlink">https://developers.redhat.com/blog/2017/04/11/benchmarking-nftables/</a></div></blockquote><br /><br />Iptables is a highly complex system. Each rule has significant execution time, although I doubt that on any decent hardware you'd even notice a few rules (do you run on a really low end machine?). However, ipset is a really specific addition that avoids most of the iptables performance issues and offers enough functionality to replace things like blocklists for IP ranges easily. You only then need *one* iptables rule, so the performance hit is a lot smaller than with everything in lots of iptables rules.</div>
@@ -435,7 +434,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p313781">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p313781">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Thu Mar 08, 2018 4:48 pm </p>
 
 			<div class="content"><blockquote><div><cite>Vapalus wrote:</cite>The fact that he has a feelable speed decrease on blackhole must mean he's running it on a RasPi, or something like that.</div></blockquote><br /><br />I'm running it on a VPS, provider is Linode. I have hundreds of thousands of IPs blackholed though.</div>
@@ -493,7 +492,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p314943">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p314943">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Vapalus</strong> &raquo; Thu Mar 22, 2018 2:47 pm </p>
 
 			<div class="content"><blockquote><div><cite>redblade7 wrote:</cite>I'm running it on a VPS, provider is Linode. I have hundreds of thousands of IPs blackholed though.</div></blockquote><br /><br />I've been running stuff on a VPS, too, and never had any issues with using either iptables or blackhole.<br />The speed in which the OS does the paket handling is so extremely fast (50 nanoseconds!) that I have to doubt if your system is clean.<br /><br />If the light flies for 50 ns, it goes as far as 15 meters. A normal human should not be able to see, smell, hear or measure a difference of that timespan. What you are talking about, 5 ms, is like 100 times more than that.<br /><br />How do you measure the lag difference?</div>
@@ -551,7 +550,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p317811">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p317811">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Fri May 04, 2018 9:05 pm </p>
 
 			<div class="content"><blockquote><div><cite>redblade7 wrote:</cite>Turns out that in addition to the blackholing I was just long overdue for a /clearobjects on that server (last time I did was over 6 months ago). It had gotten so bad that I was getting weird packet errors when trying to connect today. I hate doing a /clearobjects because everyone loses all their tamed animals and loose carts that way, but more mobs = more lag. After doing that, everything works fine with blackhole. Thank you!</div></blockquote><br /><br />That and I've been getting endless about of ABMs caused by the instability of the bees mod, which is on two of my servers. After updating the mod to a beta (though also abandoned) version I was having crashes on a daily basis, but I found several problems in the code and after adding missing variables and commenting out extra features that I didn't want to be bothered figuring out, it seems to work fine. Thank you!</div>
@@ -609,7 +608,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p317821">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p317821">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Fri May 04, 2018 10:34 pm </p>
 
 			<div class="content"><blockquote><div><cite>Hamlet wrote:</cite>Perhaps you've already done this, but I would suggest to reduce the Items' Entity Time To Live (item_entity_ttl); by default it is set to 900 (15mins)... I think that 300 (5mins) is more than enough for a player to recover what might have been dropped because of death or whatever the reason.</div></blockquote><br /><br />Yes, always had 300</div>
@@ -667,7 +666,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p347517">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_19684.htm#p347517">Re: Is there any easy lag-free way to block IP ranges?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sorcerykid</strong> &raquo; Fri Mar 29, 2019 10:20 pm </p>
 
 			<div class="content">I know I'm chiming in a bit late, but I just  wanted to mention that it's possible to block IP address ranges using Auth Redux. Authentication rulesets can be edited and reloaded even while the server is running to block login attempts from malicious clients.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code># block all IPs from 192.168 with third and fourth octets full range<br />when $addr is /192.168.?.?/a fail<br /><br /># block all IPs from 128.0.0 with fourth octet range 0 to10 inclusive<br />when $addr is /128.0.0.10&lt;/a fail<br /></code></dd></dl><br /><br />If you have a large number of individual IP addresses, then they can also be checked in a flat text file.</div>
@@ -740,3 +739,4 @@
 
 </body>
 </html></div>
+

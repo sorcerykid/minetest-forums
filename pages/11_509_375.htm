@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -87,7 +86,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p343264">Re: [Mod] More Blocks [moreblocks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p343264">Re: [Mod] More Blocks [moreblocks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Onyx</strong> &raquo; Sun Feb 10, 2019 12:24 pm </p>
 
 			<div class="content">Hi,<br /><br />I agree with your previous message.<br />I also noticed that cuts were missing in the circular saw interface and I realized that this was related to the fact that the remaining section is that of a panel.<br />Over time, I learned that it was necessary to make more open angles to obtain an acceptable shape.<br /><br />Have a good day and good build,<br /><br />Onyx</div>
@@ -145,7 +144,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p344377">Re: [Mod] More Blocks [moreblocks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p344377">Re: [Mod] More Blocks [moreblocks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>jas</strong> &raquo; Mon Feb 25, 2019 6:22 am </p>
 
 			<div class="content">Two hundred fourty-four thousand, five hundred fifty-nine views later:<br /><br /><blockquote class="uncited"><div>It is a pity that the developer does not take a look inside this Thread or leaves something for us...</div></blockquote><br /><br />I think it is - or will be - moved to minetest-mods repository on GitHub, where it can be maintained by a larger group.</div>
@@ -203,7 +202,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p345669">Re: [Mod] More Blocks [moreblocks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p345669">Re: [Mod] More Blocks [moreblocks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>BirgitLachner</strong> &raquo; Sun Mar 10, 2019 4:59 pm </p>
 
 			<div class="content">Hey ... <br />I'd like to use moreblocks on a Marssurvive-Server. I use SciFi-Nodes, too, and will add other material from an own Mod.<br /><br />How can I add more types of Blocks to be useable in the circular-saw? And what are the needed steps?<br /><br />Thanks ... Birgit</div>
@@ -261,7 +260,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p346364">Re: [Mod] More Blocks [moreblocks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p346364">Re: [Mod] More Blocks [moreblocks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>BirgitLachner</strong> &raquo; Sun Mar 17, 2019 12:20 pm </p>
 
 			<div class="content">Thanks for the (first) hints. The block I wanted to use in the circular saw was not from SciFi-Nodes. <br /><br />But now ... I tried to understand the example-code in SciFi-Nodes and tried to register a block in an own mod to use it in the circular saw of &quot;moreblocks&quot;.<br /><br />In the mod the block is defined as ...<br /><br /><blockquote class="uncited"><div>minetest.register_node(&quot;startest_decorative:floor_blue&quot;, {<br />    description = &quot;Floor blue&quot;,<br />    tiles = {&quot;spaceship_floor_blue.png&quot;,&quot;spaceship_wall_basic.png&quot;,&quot;spaceship_wall_basic.png&quot;,&quot;spaceship_wall_basic.png&quot;,&quot;spaceship_wall_basic.png&quot;,&quot;spaceship_wall_basic.png&quot;},<br />    groups = {cracky = 1, wood = 1},<br />    paramtype2 = &quot;facedir&quot;,<br />})</div></blockquote><br /><br />Follwing the instruction in the API documentation for Stairs+ I have this code in init.lua.<br /><br /><blockquote class="uncited"><div>if minetest.global_exists(&quot;stairplus&quot;) then <br />    stairplus:register_all(&quot;startest_decorative&quot;, &quot;floor_blue&quot;, &quot;startest_decorative:floor_blue&quot;, {<br />    description = &quot;Floor blue&quot;,<br />    tiles = {&quot;spaceship_floor_blue.png&quot;,&quot;spaceship_wall_basic.png&quot;,&quot;spaceship_wall_basic.png&quot;,&quot;spaceship_wall_basic.png&quot;,&quot;spaceship_wall_basic.png&quot;,&quot;spaceship_wall_basic.png&quot;},<br />    paramtype = &quot;light&quot;,<br />    groups = {cracky = 1, wood = 1},<br />    light_source = 0,<br />    paramtype2 = &quot;facedir&quot;,<br />})<br />end</div></blockquote><br /><br />There is no error and the games starts, but the block is not accepted.<br /><br />What needs to be changed.<br />Birgit</div>
@@ -319,7 +318,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p346371">Re: [Mod] More Blocks [moreblocks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p346371">Re: [Mod] More Blocks [moreblocks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>BirgitLachner</strong> &raquo; Sun Mar 17, 2019 2:33 pm </p>
 
 			<div class="content">Hi ...<br />I tried that, in Minetest 5 and Minetest 0.4.17. Both same thing.<br />Birgit</div>
@@ -377,7 +376,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p346465">Re: [Mod] More Blocks [moreblocks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p346465">Re: [Mod] More Blocks [moreblocks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>BirgitLachner</strong> &raquo; Mon Mar 18, 2019 12:48 pm </p>
 
 			<div class="content">There is no error. The line with the tiles is not shown completly.</div>
@@ -435,7 +434,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p346513">Re: [Mod] More Blocks [moreblocks]</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/11_509_375.htm#p346513">Re: [Mod] More Blocks [moreblocks]</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>BirgitLachner</strong> &raquo; Mon Mar 18, 2019 8:16 pm </p>
 
 			<div class="content">Not yet ... II do not have so much experience to publish the program to Github or Gitlab. It will take some time. But I can do it.</div>
@@ -537,3 +536,4 @@
 
 </body>
 </html></div>
+

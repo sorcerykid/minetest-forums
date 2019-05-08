@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -88,7 +87,7 @@
 
 		<div class="postbody">
 			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22478.htm#p347969">Weird .mts schematic transcoder</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Wed Apr 03, 2019 14:17 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Oil_boi</strong> &raquo; Wed Apr 03, 2019 2:17 pm </p>
 
 			<div class="content">So I was messing around and I couldn't figure out how to load schematics in with different nodes and the utilities available were kind of perplexing so I made this stupid little transcoder so you can edit the mod names/nodes with atom-ide or whatever. It saves it in the world's mod storage file, you're gonna have to replace the \n\t\t stuff with blanks and do a lot of editing. If anyone has a better way to do this plz tell me.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>--&#91;&#91;stupid transcoder thing<br />local test = minetest.register_schematic(minetest.get_modpath(&quot;schematics&quot;) .. &quot;/schematics/classic.mts&quot;)<br /><br />local transcoded = minetest.serialize_schematic(test, &quot;lua&quot;, &quot;&quot;)<br /><br />local mod_storage = minetest.get_mod_storage()<br /><br />mod_storage:set_string(&quot;schem&quot;, transcoded)<br />&#93;&#93;--</code></dd></dl></div>
 		</div>
@@ -101,7 +100,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 31</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 13:12</dd>
+		<dd><strong>Posts:</strong> 31</dd><dd><strong>Joined:</strong> Mon Jan 28, 2019 1:12 pm</dd>
 			
 			<dd><strong>In-game:</strong> Oil_boi</dd>
 		</dl>
@@ -117,7 +116,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22478.htm#p347975">Re: Weird .mts schematic transcoder</nobr></a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Sokomine</strong> &raquo; Wed Apr 03, 2019 16:14 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Sokomine</strong> &raquo; Wed Apr 03, 2019 4:14 pm </p>
 
 			<div class="content">If you want to change materials in MT schematics, you  might as well take a look at my hanle_schematics mod. Once you select a schematic, it offers you a list of nodes found in that schematic. If you click on one, you can replace it with another material.</div>
 		</div>
@@ -130,7 +129,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 3746</dd><dd><strong>Joined:</strong> Sun Sep 09, 2012 17:31</dd>
+		<dd><strong>Posts:</strong> 3746</dd><dd><strong>Joined:</strong> Sun Sep 09, 2012 5:31 pm</dd>
 			<dd><strong>GitHub:</strong> Sokomine</dd>
 			
 		</dl>
@@ -189,3 +188,4 @@
 
 </body>
 </html></div>
+

@@ -1,4 +1,3 @@
-
 <!--
   Mintest Forum Recovery Project (by sorcerykid)
 
@@ -87,8 +86,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p345803">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>StarNinjas</strong> &raquo; Mon Mar 11, 2019 19:59 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p345803">Re: Post your mapgen questions here (modding or engine)</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>StarNinjas</strong> &raquo; Mon Mar 11, 2019 7:59 pm </p>
 
 			<div class="content">thanks Shad!</div>
 		</div>
@@ -101,7 +100,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 268</dd><dd><strong>Joined:</strong> Wed Mar 14, 2018 00:32</dd>
+		<dd><strong>Posts:</strong> 268</dd><dd><strong>Joined:</strong> Wed Mar 14, 2018 12:32 am</dd>
 			<dd><strong>GitHub:</strong> starninjas</dd>
 			<dd><strong>In-game:</strong> J1</dd>
 		</dl>
@@ -117,7 +116,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p346306">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Sun Mar 17, 2019 03:32 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Sun Mar 17, 2019 3:32 am </p>
 
 			<div class="content">Sokomine's depression-filling method is faster than mine in highlandpools mod. Any method used in core mapgen has to be very fast, mine would be too slow to use.</div>
 		</div>
@@ -130,7 +129,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 3361</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
+		<dd><strong>Posts:</strong> 3361</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 12:05 am</dd>
 			<dd><strong>GitHub:</strong> paramat</dd>
 			
 		</dl>
@@ -145,8 +144,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p346582">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Tue Mar 19, 2019 18:00 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p346582">Re: Post your mapgen questions here (modding or engine)</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Tue Mar 19, 2019 6:00 pm </p>
 
 			<div class="content">Paramat,<br /><br />I am trying to use the following code section:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.register_on_mapgen_init(function(mgparams)<br /><br />&nbsp; &nbsp;--######################################################################################################################################################################<br />&nbsp; &nbsp;--##&nbsp; world_type options:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;##<br />&nbsp; &nbsp;--##&nbsp; Default = 0, Valleys = 1, Continental = 2, Continental_v2 = 3, Islands = 4, Islands_x2 = 5, Islands_x25 = 6, Islands_x3 = 7, Archipelago = 8, Floatworld = 9&nbsp; &nbsp; ##<br />&nbsp; &nbsp;--######################################################################################################################################################################<br /><br />&nbsp; &nbsp;if lib_mg_params.world_type == 0 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;mountains,ridges,nofloatlands,caverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 25, spread = {600,600,600}, seed = 5934, octaves = 5, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -8, scale = 16, spread = {500,500,500}, seed = 4213, octaves = 6, persistence = 0.7, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 70, spread = {600,600,600}, seed = 82341, octaves = 5, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 1 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgvalleys&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_terrain_height&quot;, {lacunarity = 2, offset = -10, scale = 50, spread = {1024,1024,1024}, seed = 5202, octaves = 6, persistence = 0.4, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_valley_depth&quot;, {lacunarity = 2, offset = 5, scale = 4, spread = {512,512,512}, seed = -1914, octaves = 1, persistence = 1, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_valley_profile&quot;, {lacunarity = 2, offset = 0.6, scale = 0.5, spread = {512,512,512}, seed = 777, octaves = 1, persistence = 1, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_inter_valley_fill&quot;, {lacunarity = 2, offset = 0, scale = 1, spread = {256,512,256}, seed = 1993, octaves = 6, persistence = 0.8, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_inter_valley_slope&quot;, {lacunarity = 2, offset = 0.5, scale = 0.5, spread = {128,128,128}, seed = 746, octaves = 1, persistence = 1, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 2 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;nomountains,noridges,nofloatlands,nocaverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 100, spread = {2400,2400,2400}, seed = 5934, octaves = 6, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -0.5, scale = 1, spread = {500,500,500}, seed = 4213, octaves = 4, persistence = 0.4, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 400, spread = {2400,2400,2400}, seed = 5934, octaves = 8, persistence = 0.3, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 3 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;nomountains,noridges,nofloatlands,nocaverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 100, spread = {2400,2400,2400}, seed = 5934, octaves = 6, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -0.5, scale = 1, spread = {500,500,500}, seed = 4213, octaves = 4, persistence = 0.4, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 400, spread = {2400,2400,2400}, seed = 82341, octaves = 8, persistence = 0.3, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 4 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;nomountains,noridges,nofloatlands,nocaverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 100, spread = {600,600,600}, seed = 5934, octaves = 6, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -0.5, scale = 1, spread = {500,500,500}, seed = 4213, octaves = 4, persistence = 0.4, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 400, spread = {600,600,600}, seed = 5934, octaves = 8, persistence = 0.3, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 5 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;nomountains,noridges,nofloatlands,nocaverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 100, spread = {1200,1200,1200}, seed = 5934, octaves = 6, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -0.5, scale = 1, spread = {500,500,500}, seed = 4213, octaves = 4, persistence = 0.4, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 400, spread = {1200,1200,1200}, seed = 5934, octaves = 8, persistence = 0.3, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 6 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;nomountains,noridges,nofloatlands,nocaverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 100, spread = {1536,1536,1536}, seed = 5934, octaves = 6, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -0.5, scale = 1, spread = {500,500,500}, seed = 4213, octaves = 4, persistence = 0.4, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 400, spread = {1536,1536,1536}, seed = 5934, octaves = 8, persistence = 0.3, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 7 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;nomountains,noridges,nofloatlands,nocaverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 100, spread = {1800,1800,1800}, seed = 5934, octaves = 6, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -0.5, scale = 1, spread = {500,500,500}, seed = 4213, octaves = 4, persistence = 0.4, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 400, spread = {1800,1800,1800}, seed = 5934, octaves = 8, persistence = 0.3, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 8 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;mountains,ridges,floatlands,caverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 25, spread = {600,600,600}, seed = 5934, octaves = 5, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -8, scale = 16, spread = {500,500,500}, seed = 4213, octaves = 6, persistence = 0.7, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 70, spread = {600,600,600}, seed = 82341, octaves = 5, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 9 then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgvalleys&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_terrain_height&quot;, {lacunarity = 2, offset = -5, scale = 25, spread = {1024,1024,1024}, seed = 5202, octaves = 6, persistence = 0.4, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_valley_depth&quot;, {lacunarity = 2, offset = 5, scale = 4, spread = {512,512,512}, seed = -1914, octaves = 1, persistence = 1, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_valley_profile&quot;, {lacunarity = 2, offset = 0.6, scale = 0.5, spread = {512,512,512}, seed = 777, octaves = 1, persistence = 1, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_inter_valley_fill&quot;, {lacunarity = 2, offset = 0, scale = 1, spread = {256,512,256}, seed = 1993, octaves = 6, persistence = 0.8, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgvalleys_np_inter_valley_slope&quot;, {lacunarity = 2, offset = 0.5, scale = 0.5, spread = {128,128,128}, seed = 746, octaves = 1, persistence = 1, flags = &quot;eased&quot;}, true)<br />&nbsp; &nbsp;elseif lib_mg_params.world_type == 10 then<br /><br />&nbsp; &nbsp;else<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting(&quot;mgv7_spflags&quot;, &quot;nomountains,noridges,nofloatlands,nocaverns&quot;, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_alt&quot;, {lacunarity = 2, offset = 4, scale = 100, spread = {2400,2400,2400}, seed = 5934, octaves = 6, persistence = 0.6, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_height_select&quot;, {lacunarity = 2, offset = -0.5, scale = 1, spread = {500,500,500}, seed = 4213, octaves = 4, persistence = 0.4, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 400, spread = {2400,2400,2400}, seed = 5934, octaves = 8, persistence = 0.3, flags = &quot;defaults&quot;}, true)<br />&nbsp; &nbsp;end<br />end)<br /></code></dd></dl><br /><br />What keeps happening is this:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-19 10:18:50: ACTION&#91;Main&#93;: Server: Shutting down<br />2019-03-19 10:18:50: ERROR&#91;Main&#93;: In thread 7efdd0359900:<br />2019-03-19 10:18:50: ERROR&#91;Main&#93;: /home/mgs/GIT/minetest/src/serverenvironment.cpp:e6: std::__cxx11::string LBMManager::createIntroductionTimesString(): A fatal error occurred: attempted to query on non fully set up LBMManager<br /><br /></code></dd></dl><br /><br />In a nutshell, I'm simply trying to configure mapgen params in a mod, laying groundwork for pregenerated world types.  I'm sure I've done something incorrectly.  Please, can you help?<br /><br />Shad</div>
 		</div>
@@ -159,7 +158,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 264</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 08:07</dd>
+		<dd><strong>Posts:</strong> 264</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 8:07 am</dd>
 			<dd><strong>GitHub:</strong> ShadMOrdre</dd>
 			<dd><strong>In-game:</strong> shadmordre</dd>
 		</dl>
@@ -175,7 +174,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p346593">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Tue Mar 19, 2019 23:32 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Tue Mar 19, 2019 11:32 pm </p>
 
 			<div class="content">Not sure if it will help but 'minetest.register_on_mapgen_init()' is deprecated and not needed , even in 0.4.16/0.4.17.1 (i think). Your code can just directly set mapgen settings.<br />Also, 'minetest.set_mapgen_setting(&quot;mgname&quot;, &quot;mgv7&quot;, true)' 'mgname' -&gt; 'mg_name'.<br />'mgname' was only ever used by the old 'mgparams' API.<br />The error bemuses me because i can't see what your code has to do with LBMs.</div>
 		</div>
@@ -188,7 +187,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 3361</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
+		<dd><strong>Posts:</strong> 3361</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 12:05 am</dd>
 			<dd><strong>GitHub:</strong> paramat</dd>
 			
 		</dl>
@@ -203,8 +202,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p346870">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Fri Mar 22, 2019 18:50 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p346870">Re: Post your mapgen questions here (modding or engine)</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Fri Mar 22, 2019 6:50 pm </p>
 
 			<div class="content">Paramat,<br /><br />Thank you for the clarification.<br /><br />After making your recommended changes to my code, I still get the same error.  If I leave out any calls to<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.set_mapgen_setting_noiseparams(&quot;mgv7_np_terrain_base&quot;, {lacunarity = 2, offset = 4, scale = 70, spread = {600,600,600}, seed = 82341, octaves = 5, persistence = 0.6, flags = &quot;defaults&quot;}, true)</code></dd></dl><br />and only set the mapgen name, it works.  (NOTE: Not this specific example, but calls to set_mapgen_setting_noiseparams in general).  Am I writing the above statement correctly?  Unfortunately, I could not find a decent example for the new stuff in either lua_api.txt or on the wiki.  The deprecated statements still dominate the documentation, as opposed to better info on the new api functions.<br /><br />Also, I can only set the mapgen name outside of the if statement, which is really weird.  Maybe I've got incorrect syntax somewhere.<br /><br />Again, thanks very much for your assistance.<br /><br />Shad</div>
 		</div>
@@ -217,7 +216,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 264</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 08:07</dd>
+		<dd><strong>Posts:</strong> 264</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 8:07 am</dd>
 			<dd><strong>GitHub:</strong> ShadMOrdre</dd>
 			<dd><strong>In-game:</strong> shadmordre</dd>
 		</dl>
@@ -233,7 +232,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p346917">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>AiTechEye</strong> &raquo; Sat Mar 23, 2019 09:41 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>AiTechEye</strong> &raquo; Sat Mar 23, 2019 9:41 am </p>
 
 			<div class="content">can i detect or make smaller lakes? to make difference between lakes and oceans.<br /><br />eg smaller water on mainland as lakes (fresh water), and all other as ocean (salt water)<br /><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=18548&amp;sid=abda9390eb8196b209e9d47220326895" alt="Image" /><br /><br />and what causing this?<br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=18550&amp;sid=de74cc57f19f4c5c17f485bf96efdf9" alt="Image" />2</div>
 		</div>
@@ -246,7 +245,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 647</dd><dd><strong>Joined:</strong> Fri May 29, 2015 21:14</dd>
+		<dd><strong>Posts:</strong> 647</dd><dd><strong>Joined:</strong> Fri May 29, 2015 9:14 pm</dd>
 			<dd><strong>GitHub:</strong> AiTechEye</dd>
 			
 		</dl>
@@ -261,8 +260,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347028">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Sokomine</strong> &raquo; Sun Mar 24, 2019 18:29 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347028">Re: Post your mapgen questions here (modding or engine)</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Sokomine</strong> &raquo; Sun Mar 24, 2019 6:29 pm </p>
 
 			<div class="content"><blockquote><div><cite>AiTechEye wrote:</cite>can i detect or make smaller lakes? to make difference between lakes and oceans.<br /></div></blockquote><br />The local variable &quot;hole&quot; inside the loop that places the water via set_node has hole.size (in square meters) and hole.volume (in cubic meters) properties. You can decide there what to do with the hole and i.e. ignore it if it seems too small or shallow to your taste.<br /><br /><blockquote><div><cite>AiTechEye wrote:</cite>eg smaller water on mainland as lakes (fresh water), and all other as ocean (salt water)<br /></div></blockquote><br />Lakes are already filled with river water in my lakes mod. Oceans as such can't come to life as the largest possible theoretical lake size would be something slightly less than 80x80 m.</div>
 		</div>
@@ -275,7 +274,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 3746</dd><dd><strong>Joined:</strong> Sun Sep 09, 2012 17:31</dd>
+		<dd><strong>Posts:</strong> 3746</dd><dd><strong>Joined:</strong> Sun Sep 09, 2012 5:31 pm</dd>
 			<dd><strong>GitHub:</strong> Sokomine</dd>
 			
 		</dl>
@@ -291,7 +290,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347087">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Mon Mar 25, 2019 08:51 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Mon Mar 25, 2019 8:51 am </p>
 
 			<div class="content">Is it at all possible to restrict the number of &quot;flow&quot; nodes that emit from a source liquid node.<br /><br />When a liquid source is placed, it always emits flow in each of the 8 surrounding horizontal directions.  Can I, either in lua, or in the engine, possibly limit this to a single flow node? It would be nice to have liquid that only flowed in a single direction from the source.  Further, maybe also limit the available directions to remove the diagonals, leaving only the +/- x and z axes.  IMHO, this single option would greatly reduce the number of cascading walls of waterfalls that ultimately flood everything along the path to flat enough terrain to make them stop.  Hopefully, this would allow more natural looking rivers to form, where the water follows and erodes a channel along the contours of the terrain to the lowest possible altitude, whether that be the ocean, a lake, or another river channel.<br /><br />I would like this to be liquid specific, thus not applying to all liquids, just those that use it.<br /><br />Does anyone have any ideas or suggestions of where I can look in the code?</div>
 		</div>
@@ -304,7 +303,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 264</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 08:07</dd>
+		<dd><strong>Posts:</strong> 264</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 8:07 am</dd>
 			<dd><strong>GitHub:</strong> ShadMOrdre</dd>
 			<dd><strong>In-game:</strong> shadmordre</dd>
 		</dl>
@@ -319,8 +318,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347096">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Termos</strong> &raquo; Mon Mar 25, 2019 10:23 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347096">Re: Post your mapgen questions here (modding or engine)</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Termos</strong> &raquo; Mon Mar 25, 2019 10:23 am </p>
 
 			<div class="content"><blockquote><div><cite>ShadMOrdre wrote:</cite>Is it at all possible to restrict the number of &quot;flow&quot; nodes that emit from a source liquid node.<br />When a liquid source is placed, it always emits flow in each of the 8 surrounding horizontal directions</div></blockquote><br /><br />Actually it's 4. Diagonal neighbors are filled by first gen flowing nodes.<br />Good question, but how is the engine going to decide which of them to choose? <br /><br />There has been a proposal, quite reasonable at the first glance, that if there's a height drop in any of the four directions, water shouldn't spread to neighbors that are at the same height as the node under the source, but it has been rejected afaik.<br /><br />For a quick workaround you might look at <a href="https://forum.minetest.net/viewtopic.php?f=11&amp;t=21916" class="postlink">this</a><br />It greatly reduces water horizontal spread at the cost of destroying some surface nodes</div>
 		</div>
@@ -333,7 +332,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 64</dd><dd><strong>Joined:</strong> Sun Dec 16, 2018 12:50</dd>
+		<dd><strong>Posts:</strong> 64</dd><dd><strong>Joined:</strong> Sun Dec 16, 2018 12:50 pm</dd>
 			
 			
 		</dl>
@@ -349,7 +348,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347103">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>AiTechEye</strong> &raquo; Mon Mar 25, 2019 11:27 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>AiTechEye</strong> &raquo; Mon Mar 25, 2019 11:27 am </p>
 
 			<div class="content"><blockquote><div><cite>ShadMOrdre wrote:</cite>Is it at all possible to restrict the number of &quot;flow&quot; nodes that emit from a source liquid node</div></blockquote><br /><br />i guess you mean <span style="font-weight: bold">liquid_range</span><br /><br />set it in the water/flowing or overwrite it<br /><br /><blockquote><div><cite>Sokomine wrote:</cite><blockquote><div><cite>AiTechEye wrote:</cite>can i detect or make smaller lakes? to make difference between lakes and oceans.<br /></div></blockquote><br />The local variable &quot;hole&quot; inside the loop that places the water via set_node has hole.size (in square meters) and hole.volume (in cubic meters) properties. You can decide there what to do with the hole and i.e. ignore it if it seems too small or shallow to your taste.<br /><br /><blockquote><div><cite>AiTechEye wrote:</cite>eg smaller water on mainland as lakes (fresh water), and all other as ocean (salt water)<br /></div></blockquote><br />Lakes are already filled with river water in my lakes mod. Oceans as such can't come to life as the largest possible theoretical lake size would be something slightly less than 80x80 m.</div></blockquote><br /><br />it wasn't about the mod i was asking for, but thanks anyway :)</div>
 		</div>
@@ -362,7 +361,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 647</dd><dd><strong>Joined:</strong> Fri May 29, 2015 21:14</dd>
+		<dd><strong>Posts:</strong> 647</dd><dd><strong>Joined:</strong> Fri May 29, 2015 9:14 pm</dd>
 			<dd><strong>GitHub:</strong> AiTechEye</dd>
 			
 		</dl>
@@ -377,8 +376,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347131">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>StarNinjas</strong> &raquo; Mon Mar 25, 2019 17:17 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347131">Re: Post your mapgen questions here (modding or engine)</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>StarNinjas</strong> &raquo; Mon Mar 25, 2019 5:17 pm </p>
 
 			<div class="content">Is it it possible to make certain biomes rare?<br /><br />-J1</div>
 		</div>
@@ -391,7 +390,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 268</dd><dd><strong>Joined:</strong> Wed Mar 14, 2018 00:32</dd>
+		<dd><strong>Posts:</strong> 268</dd><dd><strong>Joined:</strong> Wed Mar 14, 2018 12:32 am</dd>
 			<dd><strong>GitHub:</strong> starninjas</dd>
 			<dd><strong>In-game:</strong> J1</dd>
 		</dl>
@@ -407,7 +406,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347187">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Mon Mar 25, 2019 23:06 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Mon Mar 25, 2019 11:06 pm </p>
 
 			<div class="content">ShadMOrdre, use 'liquid_range' in the node definition to restrict flow distance, MTG river water does this.<br /><br />&gt; There has been a proposal, quite reasonable at the first glance, that if there's a height drop in any of the four directions, water shouldn't spread to neighbors that are at the same height as the node under the source, but it has been rejected afaik.<br /><br />Yes there's an engine issue at Github for reducing liquid flooding in some way, not rejected, just not coded as liquid mechanics are quite difficult.<br /><br />&gt; smaller water on mainland as lakes (fresh water), and all other as ocean (salt water)<br /><br />Use a mod using the lua voxel manipulator and running in 'register_on_generated()'. if water detected, search the complete extent of the surface nodes, if the water doesn't touch the mapchunk edges it is a small lake and the nodes can be exchangd with river water.<br /><br />However this will only work for the few small lakes contained within a mapchunk. Otherwise, it is impossible to decide if water is a lake or part of a large sea.<br /><br />&gt; Is it it possible to make certain biomes rare?<br /><br />Yes, by changing all the heat/humidity points such that the biome occupies a small area on the voronoi diagram, see the diagram here <a href="https://forum.minetest.net/viewtopic.php?f=18&amp;t=15939" class="postlink">https://forum.<a href="https://forum.minetest.net/viewtopic.php?f=18&amp;t=15939" class="postlink">minetest.net/viewtopic.php?f=18&amp;t=15939</a><br />You'll need to run 'minetest.clear_registered_biomes()' then re-register them with new heat/humidity points.</div>
 		</div>
@@ -420,7 +419,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 3361</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
+		<dd><strong>Posts:</strong> 3361</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 12:05 am</dd>
 			<dd><strong>GitHub:</strong> paramat</dd>
 			
 		</dl>
@@ -435,8 +434,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347197">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Tue Mar 26, 2019 01:08 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347197">Re: Post your mapgen questions here (modding or engine)</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ShadMOrdre</strong> &raquo; Tue Mar 26, 2019 1:08 am </p>
 
 			<div class="content">I actually do not want to change the distance that liquids flow, after all, that is just a setting to change for the node in question.<br /><br />What I actually want, is to limit the &quot;flowing&quot; nodes that spawn around source nodes.  Closer to what you may have referenced in the second quote.  I do think this might require an engine based solution.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&nbsp; &nbsp; ---- ---- ---- ---- ----&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---- ---- ---- ---- ----<br />&nbsp; &nbsp;| wf | WF | WF | WF | wf |&nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; |&nbsp; &nbsp; | WS |&nbsp; &nbsp; |&nbsp; &nbsp; |<br />&nbsp; &nbsp; ---- ---- ---- ---- ----&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---- ---- ---- ---- ----<br />&nbsp; &nbsp;| WF | wf | WF | wf | WF |&nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; |&nbsp; &nbsp; | WF |&nbsp; &nbsp; |&nbsp; &nbsp; |<br />&nbsp; &nbsp; ---- ---- ---- ---- ----&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---- ---- ---- ---- ----<br />&nbsp; &nbsp;| WF | WF | WS | WF | WF |&nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; | wf | WF |&nbsp; &nbsp; |&nbsp; &nbsp; |<br />&nbsp; &nbsp; ---- ---- ---- ---- ----&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---- ---- ---- ---- ----<br />&nbsp; &nbsp;| WF | wf | WF | wf | WF |&nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; | WF | WF |&nbsp; &nbsp; |&nbsp; &nbsp; |<br />&nbsp; &nbsp; ---- ---- ---- ---- ----&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---- ---- ---- ---- ----<br />&nbsp; &nbsp;| wf | WF | WF | WF | wf |&nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; | WF | wf |&nbsp; &nbsp; |&nbsp; &nbsp; |<br />&nbsp; &nbsp; ---- ---- ---- ---- ----&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---- ---- ---- ---- ----<br /><br />&nbsp; &nbsp; WS = water source<br />&nbsp; &nbsp; WF = water flowing<br />&nbsp; &nbsp; wf = water flowing _diagonal_<br /></code></dd></dl><br /><br />Perhaps, so as not to alter existing water mechanics, simply defining a new special water node combo, default:rushing_river_water_source / default:rushing_river_water_flowing, whose mechanics are explicitly different, much like the new plant_rooted versus plantlike node type.<br /><br />Any hints where I can look in the code?<br /><br />PS.  Paramat, I am still getting the same error regarding  minetest.set_mapgen_setting_noiseparams  function call.<br /><br /><br /><blockquote class="uncited"><div>@StarNinjas   You can also spawn an ore dirt type within a given biome, and spawn your &quot;biome/ecosystem&quot; only in the dirt ore.  Using an ore definition, you can further refine rarity within the biome using the noise params or rarity properties.</div></blockquote></div>
 		</div>
@@ -449,7 +448,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 264</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 08:07</dd>
+		<dd><strong>Posts:</strong> 264</dd><dd><strong>Joined:</strong> Mon Dec 29, 2014 8:07 am</dd>
 			<dd><strong>GitHub:</strong> ShadMOrdre</dd>
 			<dd><strong>In-game:</strong> shadmordre</dd>
 		</dl>
@@ -465,7 +464,7 @@
 
 		<div class="postbody">
 			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347263">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>StarNinjas</strong> &raquo; Tue Mar 26, 2019 20:11 </p>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>StarNinjas</strong> &raquo; Tue Mar 26, 2019 8:11 pm </p>
 
 			<div class="content">Thanks</div>
 		</div>
@@ -478,7 +477,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 268</dd><dd><strong>Joined:</strong> Wed Mar 14, 2018 00:32</dd>
+		<dd><strong>Posts:</strong> 268</dd><dd><strong>Joined:</strong> Wed Mar 14, 2018 12:32 am</dd>
 			<dd><strong>GitHub:</strong> starninjas</dd>
 			<dd><strong>In-game:</strong> J1</dd>
 		</dl>
@@ -493,8 +492,8 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347305">Re: Post your mapgen questions here (modding or engine)</a></h3>
-			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Wed Mar 27, 2019 06:29 </p>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_15272_-25.htm#p347305">Re: Post your mapgen questions here (modding or engine)</a></h3>
+			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Wed Mar 27, 2019 6:29 am </p>
 
 			<div class="content">Liquid behaviour is determined here <a href="https://github.com/minetest/minetest/blob/7454deb1bf04ab3478b4e2dc6b2821ae86f4514f/src/map.cpp#L541" class="postlink">https://github.com/<a href="https://github.com/minetest/minetest/blob/7454deb1bf04ab3478b4e2dc6b2821ae86f4514f/src/map.cpp#L541" class="postlink">minetest/minetest/blob/7454deb1bf04ab3478b4e2dc6b2821ae86f4514f/src/map.cpp#L541</a><br />Have fun =)</div>
 		</div>
@@ -507,7 +506,7 @@
 
 		<dd>&nbsp;</dd>
 
-		<dd><strong>Posts:</strong> 3361</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
+		<dd><strong>Posts:</strong> 3361</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 12:05 am</dd>
 			<dd><strong>GitHub:</strong> paramat</dd>
 			
 		</dl>
@@ -566,3 +565,4 @@
 
 </body>
 </html></div>
+
