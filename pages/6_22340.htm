@@ -20,9 +20,9 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 
-<title>Minetest Forums &bull; View topic - non-stop</title>
+<title>Minetest Forums &bull; View topic - v5 dungeon_loot crashing non-stop</title>
 
-<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - non-stop" href="https://forum.minetest.net/feed.php?f=6&amp;t=22340" />
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - v5 dungeon_loot crashing non-stop" href="https://forum.minetest.net/feed.php?f=6&amp;t=22340" />
 
 <!--
 	phpBB style name: prosilver
@@ -72,7 +72,7 @@
 	<a name="start_here"></a>
 	<div id="page-body">
 		
-<h2><a href="./viewtopic.php?f=46&amp;t=22340">non-stop</a></h2>
+<h2><a href="./viewtopic.php?f=46&amp;t=22340">v5 dungeon_loot crashing non-stop</a></h2>
 <!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
 
 <div class="topic-actions">
@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22340.htm#p345960">v5 dungeon_loot crashing non-stop</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22340.htm#p345960">v5 dungeon_loot crashing non-stop</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Wed Mar 13, 2019 07:19 </p>
 
 			<div class="content">Hi,<br /><br />Since upgrading two of my three servers to v5, my servers crash randomly during the day with this error:<br /><br /><blockquote class="uncited"><div>2019-03-13 02:24:53: ERROR[Main]: ServerError: AsyncErr: Lua: finishGenRuntime error from mod 'default' in callback environment_OnGenerated(): .../bin/../games/minetest_game/mods/dungeon_loot/mapgen.lua:91: attempt to index local 'itemdef' (a nil value)<br />2019-03-13 02:24:53: ERROR[Main]: stack traceback:<br />2019-03-13 02:24:53: ERROR[Main]:       .../bin/../games/minetest_game/mods/dungeon_loot/mapgen.lua:91: in function 'populate_chest'<br />2019-03-13 02:24:53: ERROR[Main]:       .../bin/../games/minetest_game/mods/dungeon_loot/mapgen.lua:165: in function &lt;.../bin/../games/minetest_game/mods/dungeon_loot/mapgen.lua:122&gt;<br />2019-03-13 02:24:53: ERROR[Main]:      (REMOVED)/bin/../builtin/game/register.lua:419: in function &lt;(REMOVED)/bin/../builtin/game/register.lua:399&gt;</div></blockquote></div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>redblade7</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 230</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 07:14</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> redblade7 redblade7_owner</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22340.htm#p345965">Re: v5 dungeon_loot crashing non-stop</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22340.htm#p345965">Re: v5 dungeon_loot crashing non-stop</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>redblade7</strong> &raquo; Wed Mar 13, 2019 09:22 </p>
 
 			<div class="content">Apparently it was connected to this closed &quot;non-bug&quot;<br /><br /><!-- m --><a class="postlink" href="https://github.com/minetest/minetest_game/issues/2228">https://github.com/<a class="postlink" href="https://github.com/minetest/minetest_game/issues/2228">minetest/<a class="postlink" href="https://github.com/minetest/minetest_game/issues/2228">minetest_game/issues/2228</a><!-- m --><br /><br />In this case it was caused by me moving the carts folder out of the mods directory as I use boost_cart. However it looks like leaving them both in has no side effect, other than a message that boost_cart overrides some of it (and a nicer looking brown cart in place of the gray one).<br /><br />Those servers also use Farming Redo. I hope the replacement of the farming folder doesn't cause any weird problems...</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>redblade7</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 230</dd><dd><strong>Joined:</strong> Sun Feb 15, 2015 07:14</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> redblade7 redblade7_owner</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22340.htm#p346313">Re: v5 dungeon_loot crashing non-stop</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22340.htm#p346313">Re: v5 dungeon_loot crashing non-stop</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Sun Mar 17, 2019 04:10 </p>
 
 			<div class="content">Sorry that was closed, it certainly is a bug.</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>paramat</strong>
 			</dt>
-			<dd></dd>
+			<dd>Developer</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3344</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> paramat</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

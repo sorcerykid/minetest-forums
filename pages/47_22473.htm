@@ -20,9 +20,9 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 
-<title>Minetest Forums &bull; View topic - Yet another try)</title>
+<title>Minetest Forums &bull; View topic - LuaSocket and Mod debugging (Yet another try)</title>
 
-<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - Yet another try)" href="https://forum.minetest.net/feed.php?f=47&amp;t=22473" />
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - LuaSocket and Mod debugging (Yet another try)" href="https://forum.minetest.net/feed.php?f=47&amp;t=22473" />
 
 <!--
 	phpBB style name: prosilver
@@ -72,7 +72,7 @@
 	<a name="start_here"></a>
 	<div id="page-body">
 		
-<h2><a href="./viewtopic.php?f=46&amp;t=22473">Yet another try)</a></h2>
+<h2><a href="./viewtopic.php?f=46&amp;t=22473">LuaSocket and Mod debugging (Yet another try)</a></h2>
 <!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
 
 <div class="topic-actions">
@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22473.htm#p347869">LuaSocket and Mod debugging (Yet another try)</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22473.htm#p347869">LuaSocket and Mod debugging (Yet another try)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Eightball</strong> &raquo; Tue Apr 02, 2019 16:31 </p>
 
 			<div class="content">Hi there,<br /><br />I'm trying really hard to get debugging of a Mod working. There were attemps to do this in several ways, but I always come to the point: compile LuaSocket by yourself. <br />Checking the Minetest sources I found the Socket and thought about reusing this instead of LuaSocket, but the existing Sockets are UDP sockets and LuaSockets are TCP. <br /><br />So I need some advice from you, which approach might be the most successful:<br />- compile LuaSocket into Minetest like Lua interpreter is done<br />- change Minetest to use dynamically link Lua interpreter so precompiled LuaSocket binaries can reuse this library<br />- extend existing Socket implementation so e.g. mobdebug debugger can use those instead of LuaSocket<br /><br />I'm not yet ready to accept that debugging Lua code with Minetest should not be possible. Also I saw that LuaSocket might be useful for other mods. So integrated version will make things easier.<br /><br />Please do not give advise that I can do debugging by printing to debug.txt, I know about that possibilities ;-) <br /><br />Thanks in advance</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>Eightball</strong>
 			</dt>
-			<dd></dd>
+			<dd>New member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 7</dd><dd><strong>Joined:</strong> Sun Mar 24, 2019 11:12</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22473.htm#p347880">Re: LuaSocket and Mod debugging (Yet another try)</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22473.htm#p347880">Re: LuaSocket and Mod debugging (Yet another try)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Tue Apr 02, 2019 17:35 </p>
 
 			<div class="content">Interested as well!</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>texmex</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1284</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 21:08</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> tacotexmex</dd>
+			<dd><strong>In-game:</strong> texmex</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22473.htm#p347932">Re: LuaSocket and Mod debugging (Yet another try)</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22473.htm#p347932">Re: LuaSocket and Mod debugging (Yet another try)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>ThorfinnS</strong> &raquo; Wed Apr 03, 2019 04:27 </p>
 
 			<div class="content">Me, too!<br /><br />Really want to see what you are working on that would use LuaSocket.</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>ThorfinnS</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 61</dd><dd><strong>Joined:</strong> Mon Feb 25, 2019 22:05</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22473.htm#p347935">Re: LuaSocket and Mod debugging (Yet another try)</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22473.htm#p347935">Re: LuaSocket and Mod debugging (Yet another try)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Wed Apr 03, 2019 04:59 </p>
 
 			<div class="content">According to their website, LuaSocket supports UDP and TCP. And since it's C code, changing it wouldn't be too difficult. The MT core uses UDP for the minetest protocol (server-client), but it uses TCP for the native HTTP methods that are exposed to Lua (although it may use libcurl for that). So all the support for sockets should be there.<br /><br />I don't see why luaSocket/mobDebug don't work though? did you build the right dynamic modules using luarocks?</div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>sofar</strong>
 			</dt>
-			<dd></dd>
+			<dd>Developer</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 2034</dd><dd><strong>Joined:</strong> Fri Jan 16, 2015 07:31</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> sofar</dd>
+			<dd><strong>In-game:</strong> sofar</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22473.htm#p347982">Re: LuaSocket and Mod debugging (Yet another try)</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22473.htm#p347982">Re: LuaSocket and Mod debugging (Yet another try)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Eightball</strong> &raquo; Wed Apr 03, 2019 16:50 </p>
 
 			<div class="content">The current MT version I use (5.1.0), has the HTTP methods implemented with libcurl. <br /><br />My first approach would to be have something that does not require to compile MT locally to have the libs to link against. Which would be needed by separate luasocket compilation. Thats what I understand from the code, it needs access to the Lua interpreter which is compiled into MT. Please correct me when I'm wrong here.<br /><br />I also think that basically everything should be available to get sockets working. But I'm not sure about the best solution that will also help others that do not want to compile MT and luasockets</nobr> themselfs. (Which is not the easiest, especially both connected)</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>Eightball</strong>
 			</dt>
-			<dd></dd>
+			<dd>New member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 7</dd><dd><strong>Joined:</strong> Sun Mar 24, 2019 11:12</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

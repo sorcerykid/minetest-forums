@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22561.htm#p349106">Advanced MT Server performance settings: Hardware</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22561.htm#p349106">Advanced MT Server performance settings: Hardware</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 01:13 </p>
 
 			<div class="content"><span style="font-weight: bold">Hardware</span><br /><br />* main maybe is <span style="font-weight: bold">CPU, not much cores/threads but fast (frq)</span><br /><br />when the CPU is not doing anything, but still one gamer lag, then go next step,<br />as there may by a bottleneck get data to cpu from HDD, or as too less RAM ...<br /><br />* RAM, motherboard build in RAM<br />** more is better, 8 min I think, 16 good, 32 have advantage (see then OS System cache)<br />AND<br />** using all slots on motherboard, as 1 slot 100% RAM speed, but 4 slots near 200% then !!!<br /><br />OR/AND<br />* fast HDD access<br />** normal HDD has about 200 read/write / s - <br />** SSD can have up to near 500 read / write<br />** M.2 SSD onboard or via adapter get up to 2.200 read/write at me - even can 3600 / s<br />* or use RAID that spread access over 2 or more HDD, mean 2 with 200 get near 400 read/write i think, 4 in a raid for speed can reach 800 then (here you are better than normal SSD)<br />--- <a href="https://blog.storagecraft.com/raid-performance/" class="postlink">Important what raid is used</a> ---<br /><br />BUT<br />if have a lot of RAM can be used as cache, RAM is better/faster --&gt; OS Settings</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 961</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22561.htm#p349107">Advanced MT Server performance settings: OS</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22561.htm#p349107">Advanced MT Server performance settings: OS</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 01:13 </p>
 
 			<div class="content"><span style="font-weight: bold">OS System</span><br /><br /><span style="font-weight: bold">Linux</span><br /><br /><br /><span style="font-weight: bold">Ubuntu</span> (what I use and found some, less but helpful)<br />* /etc/sysctl.conf<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>vm.swappiness = 1<br />vm.dirty_ratio = 95</code></dd></dl><br />* using swap at last option, keep on fast memory (instead on very slow HDD swap)<br />* use up to 95% of ram to cache (and this keep map in cache + fast available) example at me dump is 16.6 GB, and up to 12 GB RAM are used as cache after 2 days<br /><br /><br /><br /><br /><span style="font-weight: bold">further I use:</span><br />* sudo htop<br />as can set Priority (F7=-1 F8=+1), <br />and here 2 main mtserver get (-2)18, all other mts (-1)19, and htop (+1)21 -- try to ensure after os mts is first to do !<br /><br /><br />even I use GUI Ubuntu (with own GPU card), the empty run is near 0% - and with mtserver just near 5% - so that isnt that big deal.</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 961</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22561.htm#p349108">Advanced MT Server performance settings: MTServer</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22561.htm#p349108">Advanced MT Server performance settings: MTServer</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 01:14 </p>
 
 			<div class="content">do not forget to check this: <a href="https://forum.minetest.net/viewtopic.php?f=10&amp;t=1825" class="postlink">Server performance settings</a><br /><br /><span style="font-weight: bold">MT Server</span><br /><br /><span style="font-weight: bold">minetest.conf</span><br /><br /># for [Mod] free_lj_mem 1.5 <br />timeloop = 1800<br />maxluamem = 350000<br /># keep lua mem low (avoid OOM)<br /><br /># Maximum number of players connected simultaneously<br />max_users = 32<br /># keep maybe just 10% higher than max you know server can handle<br /># (do not forget lost points if higher than 32)<br /><br /># allow profiler for some time, use with /profiler save and see cpu using mods<br />profiler.load = true<br /><br /><br /># *** FOLLOWING I explain later ***<br /># but this are most my settings <br /># <span style="font-weight: bold">check my server lag, before listen to complain posts</span> I have proofed it<br /><br /><br /># how many blocks are flying in the wire simultaneously per client<br />#max_simultaneous_block_sends_per_client = 40<br />max_simultaneous_block_sends_per_client = 400<br /><br /># how many blocks are flying in the wire simultaneously per server<br />#max_simultaneous_block_sends_server_total = 200<br />max_simultaneous_block_sends_server_total = 12000<br /><br /># Number of extra blocks that can be loaded by /clearobjects at once<br /># This is a trade-off between sqlite transaction overhead and<br /># memory consumption (4096=100MB, as a rule of thumb)<br />#max_clearobjects_extra_loaded_blocks = 4096<br />max_clearobjects_extra_loaded_blocks = 512000<br /># when you have a lot of RAM, use it !<br /><br />#    From how far clients know about objects, stated in mapblocks (16 nodes).<br />#    type: int<br /># active_object_send_range_blocks = 3<br />active_object_send_range_blocks = 3<br /><br />#    How large area of blocks are subject to the active block stuff, stated in mapblocks (16 nodes).<br />#    In active blocks objects are loaded and ABMs run.<br />#    type: int<br /># active_block_range = 3<br />active_block_range = 2<br /># this one mostly is resulting in lag !!!<br /><br />#    From how far blocks are sent to clients, stated in mapblocks (16 nodes).<br />#    type: int<br /># max_block_send_distance = 10<br />max_block_send_distance = 10<br /><br /># Maximum number of forceloaded blocks<br />#max_forceloaded_blocks = 16<br />max_forceloaded_blocks = 5120<br /><br />#server_unload_unused_data_timeout = 600 # 86400 24 h, 1 Tag<br />server_unload_unused_data_timeout = 86400<br /># when you have a lot of RAM and set cache, then USE it !<br /><br />#    Maximum number of statically stored objects in a block.<br />#    type: int<br /># max_objects_per_block = 64<br />max_objects_per_block = 1024<br /># this maybe an issues when using pipeworks, works like this<br /><br />#    See <!-- m --><a class="postlink" href="http://www.sqlite.org/pragma.html#pragma_synchronous">http://www.sqlite.org/pragma.html#pragma_synchronous</a><!-- m --><br />#    type: enum values: 0, 1, 2<br /># sqlite_synchronous = 2<br />sqlite_synchronous = 1<br /><br /># Level of logging to be written to debug.txt.<br /># 0 = none, 1 = errors and debug, 2 = action, 3 = info, 4 = verbose<br />#debug_log_level = error,debug,warning<br />debug_log_level = warning<br /><br /># Maximum number of blocks that can be queued for loading.<br />#emergequeue_limit_total = 256<br />emergequeue_limit_total = 5120<br /># never proofed, but works also<br /><br /># Maximum number of blocks to be queued that are to be loaded from file.<br /># Set to blank for an appropriate amount to be chosen automatically.<br />#emergequeue_limit_diskonly = 32<br />emergequeue_limit_diskonly = 4096<br /># never proofed, but works also<br /><br /># Maximum number of blocks to be queued that are to be generated.<br /># Set to blank for an appropriate amount to be chosen automatically.<br />#emergequeue_limit_generate = 32<br />emergequeue_limit_generate = 2048<br /># never proofed, but works also<br /><br /># Number of emerge threads to use.  Make this field blank, or increase this number, to use multiple threads.<br /># On multiprocessor systems, this will improve mapgen speed greatly, at the cost of slightly buggy caves.<br />#num_emerge_threads = 1<br />num_emerge_threads = 5<br /># I have 8 threads on 4 cores, so as 2 main mts are allways at me, and keep one for system i set (8 - 2 - 1 =) 5<br /><br /># maximum number of packets sent per send step, if you have a slow connection<br /># try reducing it, but don't reduce it to a number below double of targeted<br /># client number<br />#max_packets_per_iteration = 1024<br />max_packets_per_iteration = 8192<br /># the higher the more (fast) date your clients get update - but if low INTERNET, mhhh<br /><br />#    Length of a server tick and the interval at which objects are generally updated over network.<br />#    type: float<br /># dedicated_server_step = 0.09<br />dedicated_server_step = 0.033<br />server_step = 0.05<br /># whatever coders complain about this - I get my advantage with this !<br /><br />#    Time in between active block management cycles<br />#    type: float<br /># active_block_mgmt_interval = 2.0<br />active_block_mgmt_interval = 1.5<br /><br />#    Length of time between ABM execution cycles<br />#    type: float<br /># abm_interval = 1.0<br />abm_interval = 1.0<br /><br />#    Length of time between NodeTimer execution cycles<br />#    type: float<br /># nodetimer_interval = 0.2<br />nodetimer_interval = 0.2<br /><br />#    At this distance the server will aggressively optimize which blocks are sent to clients.<br />#    Small values potentially improve performance a lot, at the expense of visible rendering glitches.<br />#    (some blocks will not be rendered under water and in caves, as well as sometimes on land)<br />#    Setting this to a value greater than max_block_send_distance disables this optimization.<br />#    Stated in mapblocks (16 nodes)<br />#    type: int min: 2<br /># block_send_optimize_distance = 4<br />block_send_optimize_distance = 2<br /><br />#    type: bool<br /># server_side_occlusion_culling = true<br />server_side_occlusion_culling = true<br /><br /><br /><span style="font-weight: bold">world.mt</span><br />use faster database backend<br />* worldmap<br />* player<br />* ...<br /><br /><br /><span style="font-weight: bold">But</span> maybe all optimizations are nothing worth when high ping / rtt gamer join in<br />I remember, when I got into ctf they all realized higher lag, even not know I was the reason with 250 ping.</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 961</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22561.htm#p349109">Advanced MT Server performance settings: [Mod]s</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22561.htm#p349109">Advanced MT Server performance settings: [Mod]s</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 01:14 </p>
 
 			<div class="content">you need to use &quot;/profiler save&quot; some time and check the summary of mod cpu time (given at last row in % of 100% counted)<br /><br /><span style="font-weight: bold">[Mod]s</span><br /><br />* <span style="font-weight: bold">moretrees</span><br />cut down near all more-trees around spawn - where this mod will be activated all time<br /># it works, I proofed it - before most cpu time, now near nothing<br /><br />* <span style="font-weight: bold">technic</span><br />false the radiation check and hit, saving near 30% of cpu time<br />config.lug<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&nbsp; &nbsp;enable_radiation_protection = &quot;true&quot;,<br />&nbsp; &nbsp;enable_entity_radiation_damage = &quot;false&quot;,<br />&nbsp; &nbsp;enable_longterm_radiation_damage = &quot;false&quot;,<br /></code></dd></dl><br />* <span style="font-weight: bold">pipeworks</span><br />luaentity.lua - sdomewhere line 365 (here my version) - but cut down 50% of cpu using<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local handle_active_blocks_timer = 0.01<br /><br />minetest.register_globalstep(function(dtime)<br />&nbsp; &nbsp;handle_active_blocks_timer = handle_active_blocks_timer + dtime<br />&nbsp; &nbsp;if dtime &lt; 0.03 or handle_active_blocks_timer &gt;= (dtime * 9) then<br />&nbsp; &nbsp;&nbsp; &nbsp;handle_active_blocks_timer = 0.01<br />&nbsp; &nbsp;&nbsp; &nbsp;move_entities_globalstep_part1(dtime)<br />&nbsp; &nbsp;&nbsp; &nbsp;move_entities_globalstep_part2(dtime)<br />&nbsp; &nbsp;end<br />end)</code></dd></dl></div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 961</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22561.htm#p349110">Advanced MT Server performance settings: MT Client</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22561.htm#p349110">Advanced MT Server performance settings: MT Client</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 02:27 </p>
 
 			<div class="content">connect via cable (10 MB is still MUCH enough !) - before use WiFi (most have sure 100 MB)<br /><br /><span style="font-weight: bold">MT Client</span><br />(never forget, picture is calculated by CPU and shown by GPU - so your hardware limits it also)<br /><br />* settings<br /><span style="font-weight: bold">off</span>: if you feel to less fps, or you don't need (to see) this<br />* Smooth Lighting<br />* Particles<br />* 3D Cloud<br />...<br />* Shaders<br />use<br />* Simple Leaves<br /><br />* client_mapblock_limit: I set high, I have RAM (4096)<br />keep in own memory, not need to ask for new so often, reduce a bit transfer - but advantage when revisit last area, is still there<br /><br />* viewrange: the lower the better fps, as GPU has less work - for what long view when in house, mining<br /><br />* enable mash-cache, I use 200 size<br /><br />* client_unload_unused_data_timeout (in sec) I use most up to +4 to 12 hours 7200 or more, but<br />change here to bigger as testing, more mean go back last area may still be there, not loading all again,<br />too much I found fps slow down fast, if visit to much areas = better restart client<br /><br /><br /><span style="font-weight: bold">special for mobile gamer using WiFi !</span><br /><span style="font-weight: bold">just your internal home network will most be faster than what the provider can deliver you !</span><br /># setting a lower rate wifi setting, get more stable and at the end more transfer !<br />let me guess you have 1 MB, 2 MB 4 MB up to 10 MB INTERNET connection ?<br /><br />but WiFi offers (read here <a href="https://en.wikipedia.org/wiki/IEEE_802.11" class="postlink">Wiki</a>) so<br />802.11b - can deliver - 1, 2, 5.5, 11 Mbit/s <br />802.11a (j, p y) - can deliver - 6, 9, 12, 18, 24, 36, 48, 54 Mbit/s <br />802.11n - can deliver - 20 = Up to 288.8 / 40 up to 600 Mbit/s <br />802.11ac - can deliver, depend on bandwith 346.8 to 3466.8 Mbit/s<br /><span style="font-weight: bold">what is that fast transfer rate helping you inside the house if it is never delivered from outside ???</span><br /><br /><span style="font-style: italic">yes, if you have an internal media-server, may check the rate used to look a movie, and adjust for this also</span><br /><br /><span style="font-weight: bold">the disadvantage is, the higher the possible transfer-rate, the lower the quality or stability of connection</span><br />mean, using lower rate, connection will not fail so often when you just torn around in your bed with your phone/tab in the hand... hehe<br /><br />: so if your &quot;delivered&quot; transfer rate from provider (check with download tests)<br />: is lower then the protocol WiFi using (802.11...), <br />==&gt; maybe lower the internal WiFi internet (normally called intranet !) protocol and get even more stable connection in house between router and device !!!<br />AND also check a bit for optimal position of <a href="https://www.digitaltrends.com/computing/router-antenna-position-improve-wi-fi-coverage-signal/" class="postlink">router (wall reduce signal), and antennas</a> straight UP ! - they are round sender/receiver ! if taken for one floor living area<br /><br /><br /><span style="font-weight: bold">practical example at my home</span>:<br />* true fiber deliver me 50 MB/s<br />* so 802.11a with 54 MB/s WIFI is just perfect,<br />but<br />* I use cable as possible <br />* I use mesh, mean 5 WIFI router around the house, as of restaurant, spread usage also, and everywhere full signal strenght<br /><br /><span style="font-weight: bold">example from last stay hotel 6 day</span><br />I forced my WIFI to connect only 11 MB, as before so often timed out as normal 54 BM. With 11 worked fine and steady.<br /><br /><br /><span style="font-weight: bold">But</span> maybe all optimizations are nothing worth when you join far away server with high ping / rtt <br />I remember, when I got into ctf they all realized higher lag, even not know I was the reason with 250 ping.</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 961</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -232,7 +232,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22561.htm#p349114">a view proof compare</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22561.htm#p349114">a view proof compare</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 03:47 </p>
 
 			<div class="content">about reduced cpu time usage:<br /><br />lagcheck: <span style="font-weight: bold">05.03.2019</span> before all the optimizations:<br />Modname                   |   Average |       Min |       Max<br />technic (7)               |       643 |         0 |    587903<br />moretrees (15)            |       577 |         0 |    182051<br />technic (1)               |       313 |         0 |     66937<br />technic (6)               |       136 |         0 |      1611<br />moretrees (3)             |       133 |         0 |      4057<br />bushes_classic (1)        |        43 |         0 |       406<br />moretrees (22)            |        42 |         0 |    123291<br />3d_armor_stand (1)        |        41 |         0 |       224<br />pipeworks (2)             |        40 |         0 |       232<br />technic (15)              |        35 |         0 |        53<br />moretrees (14)            |        34 |         0 |       186<br /><br /><span style="font-weight: bold">07.03.2019</span> - cut off trees (jungle tree of more-trees !) around spawn<br />* pipeworks: 41% (main globalstep[1])<br />* technic 18% (main from Switching Station 75%, globalstep[2] 15%)<br />* mesecon: 8% (main globalstep[1])<br />* mobs_animal: 6.8% (half of this by on_step[23])<br />* default: 6.3%<br />* mobs_monster: 5.6%<br />* areas: 4.2%<br />* player_api 2.5%<br />* time: 2%<br />...<br />* moretrees: 0.0 % ???<br /><br /><br />last profiler after 6 days server run <span style="font-weight: bold">17.04.2019</span>:<br />* 19.7 % - mobs_monster<br />* 16.2 % - mesecons<br />* 15.2 % - technic<br />* 12.8 % - pipeworks<br />* 7.8 % - mobs_animal ...<br /><br />? So some off you may ask why <br />* mobs_monster from 5.6 to 16.2 %, and<br />* mesecons from 8 to 16% raised up.<br />Clear, when you are able to cut out 50% of former cpu usage, all other users have then double of used time, as there share of the now less using time sum &quot;grows&quot;. So that's an reverse proof of saving cpu time also.</div>
@@ -242,13 +242,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 961</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -261,7 +261,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22561.htm#p349134">Re: Advanced MT Server performance settings: Hardware</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22561.htm#p349134">Re: Advanced MT Server performance settings: Hardware</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>twoelk</strong> &raquo; Thu Apr 18, 2019 11:13 </p>
 
 			<div class="content">the lag around spawn by moretrees might be due to the amount of leaves regardless of tree type. I would guess a bunch of jungletrees around spawn would produce similar lag. <br />Might be worth investigating. <br />Moretrees is too beautifull to be so bad for a server<br />yay - save the trees!</div>
@@ -271,13 +271,13 @@
 			<dt>
 				<strong>twoelk</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1308</dd><dd><strong>Joined:</strong> Fri Apr 19, 2013 16:19</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> twoelk</dd>
+			<dd><strong>In-game:</strong> twoelk</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -290,7 +290,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22561.htm#p349135">Re: Advanced MT Server performance settings: Hardware</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22561.htm#p349135">Re: Advanced MT Server performance settings: Hardware</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Apr 18, 2019 11:20 </p>
 
 			<div class="content"><blockquote><div><cite>twoelk wrote:</cite> a bunch of jungletrees around spawn would produce similar lag. <br />Might be worth investigating. ...</div></blockquote> this is what I have proofed ! just took down all more-trees (in my case, yes ! the 98% jungle trees - needed about 4 days with saw) around areas where most gamer are and might activate it. So a lot of work, but sure worth !</div>
@@ -300,13 +300,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 961</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

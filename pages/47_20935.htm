@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332806">[Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332806">[Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Tue Oct 09, 2018 10:53 am </p>
 
 			<div class="content">This is a topic, where anyone can publish a mod, that was either <span style="font-weight: bold">made compatible</span> or <span style="font-weight: bold">ported</span> to support <a href="https://forum.minetest.net/viewtopic.php?f=50&amp;t=16407" class="postlink">Mineclone 2</a>.<br /><br /><br /><span style="font-size: 150%; line-height: 116%;">Posting rules</span><br />1. provide screenshot, link to thread to <span style="font-style: italic">original</span> (base) mod and description.<br /><br />2. provide:<br />- download link<br />- instructions to install your modification<br />- provide a screenshot<br />- provide license<br /><br />3. specify if your work is &quot;compatible&quot; or &quot;ported&quot; mod:<br />&quot;compatible&quot; means: original mod internal structure was enhanced with ability to run with MineClone 2 (MCL2), <span style="font-style: italic">in addition</span> to original game (typically MineTest Game, MTG). <br /><span style="font-style: italic">At the bottom of this post, you will find instructions how to make mod capable.</span><br /><br />&quot;ported&quot; means: original mod was modified to run with MineClone 2. <span style="font-weight: bold">It will not work</span> with original game (typically MineTest Game). This is usually achieved by replacing the item strings directly, its faster, but its a worse solution than &quot;compatible&quot;.<br /><br />- &quot;capable&quot; mods are preferred to &quot;ported&quot; mods.<br />- in case mod was &quot;made compatible&quot; with MCL2, its recommended that you post a message in original mod thread<br />- mod should be preferably hosted on a version control hoster, like github or similar; so that your changes can be merged to upstream.<br /><br />4. you might want to modify mod readme with version bump (like &quot;P&quot;: 1.0 -&gt; 1.0P) to:<br />-  distinguish between your version and original<br />- specify which version your actual port/compatibility enhancement is based on: &quot;1.0P&quot; would imply that its based on &quot;1.0&quot; of base mod. <br /><br /><br /><span style="font-size: 150%; line-height: 116%;">How to make mod compatible</span><br /><br />1) depends.txt<br /><span style="font-weight: bold">both</span> mcl_ and default should be an optional dependency (?) in depends.txt. If both mcl_ and default are absent, then it means user is running notMCL and notMineTestGame, so game will fail on loading during variable calls (either-either) anyway and return to menu with error (safe).<br /><br />typical depends.txt:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>default?<br />mcl_core?<br />mcl_sounds?<br /></code></dd></dl><br /><br />2) switcher in init.lua and other mod code. <br />Important - place the block after &quot;local S, NS = dofile(MP..&quot;/intllib.lua&quot;)&quot; call!:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>...<br />local moditems = {}&nbsp; -- declare a var, somewhere at beginning but below intlib.lua call.<br />...<br />if core.get_modpath(&quot;mcl_core&quot;) and mcl_core then -- means MineClone 2 is loaded, this is its core mod<br />&nbsp; &nbsp;moditems.IRON_ITEM = &quot;mcl_core:iron_ingot&quot;&nbsp; &nbsp;-- example, MCL version of iron ingot<br />&nbsp; &nbsp;moditems.STRING_ITEM = S(&quot;MineClone 2 string&quot;)&nbsp; &nbsp;-- item description if mod is loaded in MPL<br />&nbsp; &nbsp;moditems.WOOD_SOUNDS = mcl_sounds.node_sound_wood_defaults()<br /><br />else&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-- fallback, assume default (MineTest Game) is loaded, otherwise it will error anyway here.<br />&nbsp; &nbsp;moditems.IRON_ITEM = &quot;default:steel_ingot&quot;&nbsp; &nbsp; -- iron ingot in stock MT<br />&nbsp; &nbsp;moditems.STRING_ITEM = S(&quot;MineTest Game string&quot;)&nbsp; &nbsp;-- item description if mod is loaded in MT<br />&nbsp; &nbsp;moditems.WOOD_SOUNDS = default.node_sound_wood_defaults()<br />end<br /><br />...<br />-- actual use in the code down somewhere.<br />material = moditems.IRON_ITEM <br />sounds = moditems.WOOD_SOUNDS<br /><br />_doc_items_longdesc = moditems.STRING_ITEM<br /></code></dd></dl><br /><br />3. expanding sound check in some mods:<br />if similar block already exists (as it should be), and equivalent of &quot;sounds&quot; var exist - use that and change &quot;sounds&quot; in this block to however the var is called!<br />If similar block does not exist or game plays no sounds, you don't need this.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local sounds<br /><br />if mcl_sounds then<br />&nbsp; &nbsp;sounds = mcl_sounds.node_sound_metal_defaults()<br />else<br />&nbsp; &nbsp;if default.node_sound_metal_defaults then<br />&nbsp; &nbsp;&nbsp; &nbsp;sounds = default.node_sound_metal_defaults()<br />&nbsp; &nbsp;else<br />&nbsp; &nbsp;&nbsp; &nbsp;sounds = default.node_sound_stone_defaults()<br />&nbsp; &nbsp;end<br />end<br /></code></dd></dl><br /><br />May the code be with you!</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332808">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332808">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Tue Oct 09, 2018 10:57 am </p>
 
 			<div class="content"><span style="font-size: 150%; line-height: 116%;">List of MineClone2 Enabled mods</span><br /><br /><span style="font-weight: bold">Made Compatible with MCL2 in this thread</span><br /><a href="https://forum.minetest.net/viewtopic.php?p=332814#p332814" class="postlink">Trash Can</a><br /><a href="https://forum.minetest.net/viewtopic.php?p=332849#p332849" class="postlink">Teleporter Improved Improved</a><br /><a href="https://forum.minetest.net/viewtopic.php?p=332863#p332863" class="postlink">Pontoons</a><br /><a href="https://forum.minetest.net/viewtopic.php?p=332898#p332898" class="postlink">Hallelujah Mountains (req Minetest 5+)</a><br /><a href="https://forum.minetest.net/viewtopic.php?p=332898#p332898" class="postlink">Amidst (tool, mapedit)</a><br /><a href="https://forum.minetest.net/viewtopic.php?p=332910#p332910" class="postlink">Thirsty</a><br /><br /><span style="font-weight: bold">Ported to MCL2 in this thread</span><br />todo<br /><br /><span style="font-weight: bold">Some minor problems known</span><br /><a href="https://forum.minetest.net/viewtopic.php?p=332809#p332809" class="postlink">Orbs of Time</a><br /><br /><span style="font-weight: bold">Compatible with MCL2 already without changes</span><br /><a href="https://forum.minetest.net/viewtopic.php?f=11&amp;t=12845" class="postlink">Beware the dark</a></div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332809">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332809">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Tue Oct 09, 2018 11:03 am </p>
 
 			<div class="content">Compatible: <a href="https://github.com/minetest-mods/orbs_of_time" class="postlink">Orbs of Time</a>.</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>texmex</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1291</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> tacotexmex</dd>
+			<dd><strong>In-game:</strong> texmex</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332814">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332814">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Tue Oct 09, 2018 11:24 am </p>
 
 			<div class="content"><span style="font-weight: bold">Trash Can (MCL2)</span><br /><br /><a href="https://forum.minetest.net/viewtopic.php?id=6315" class="postlink">Link</a> to original thread, not compatible until my changes merged.<br /><br /><img src="https://i.imgur.com/3v6xSDY.png" alt="Image" /><br /><br />Original description (open original link for details): &quot;This mod adds a trash can to the game. Right click it, put in your trash, and click the empty trash button. You can also throw things in the wooden trash can by pressing &quot;q&quot; or throwing them out of your inventory.&quot;<br /><br />Modifications:<br />- made compatible with MCL2 through switcher: recipes, sound calls<br />- made UI imitate MCL2 when executed under MCL2<br /><br /><a href="https://github.com/minertestdude/trash_can/releases" class="postlink">download the mod here</a><br />I've pushed my changes to master, until the commit hits you can use my fork.<br /><br />Installation: save zip, paste to &quot;mods&quot; folder, change folder name to &quot;trash_can&quot;, run Minetest game and enable this mod from menu. Tested under 4.17.1</div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332815">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332815">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Tue Oct 09, 2018 11:30 am </p>
 
 			<div class="content"><blockquote><div><cite>texmex wrote:</cite>Compatible: <a href="https://github.com/minetest-mods/orbs_of_time" class="postlink">Orbs of Time</a>.</div></blockquote><br />I posted on github issue tracker, found a recipe issue in init.lua. Thanks for your work!</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -232,7 +232,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332849">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332849">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Tue Oct 09, 2018 8:00 pm </p>
 
 			<div class="content"><span style="font-weight: bold">Teleport Improved (MCL2)</span><br /><br />Based upon &quot;Teleport Improved&quot; by  <a href="https://github.com/r4nd0m6uy/teleporter" class="postlink">r4nd0m6uy</a>.<br />Update: my pull requests were upstreamed, so upstream is compatible to MCL2! Get your files from upstream! ^^^<br /><br /><img src="https://i.imgur.com/IWnTYSD.png" alt="Image" /><br /><br />Description:<br />This mod allows to create teleportation pads.<br />Travel is limited only between existing and linked pads.<br />Creation resource costs are pretty expensive and require actual presence on the spot.<br />Coordinates are not required, you can choose the pad location from the list.<br />It actually works.<br /><br />Changelog:<br />Based upon &quot;Teleporters improved&quot;, plus:<br />- made compatible with MCL, keeping compatibility to Minetest Game<br />- balanced the resource cost against rail cost, Mese Crystal -&gt; Mese Block<br />- created new texture from scratch and replaced it<br />- created pictogram and added it (removed pictogram, minetest autogenerates better thumbnail)<br />- added &quot;pos&quot; checks to prevent run-time errors<br />- teleport sound fixed<br />- when run via MCL2 - UI is white and all infoboxes are hidden; vice versa when run via MTG<br /><br />License: LGPL 2.1<br /><br />Installation: save zip, paste to &quot;mods&quot; folder, change folder name to &quot;teleporter&quot;, run Minetest game and enable this mod from menu. <br />Tested under 4.17.1+0.42 MCL</div>
@@ -242,13 +242,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -261,7 +261,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332863">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332863">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Tue Oct 09, 2018 10:09 pm </p>
 
 			<div class="content"><span style="font-weight: bold">Pontoons (MCL2)</span><br /><br />Compatibility for Pontoons mod, <a href="https://forum.minetest.net/viewtopic.php?t=16652" class="postlink">source</a> (not compatible with MCL2 until my pull requests accepted).<br /><br /><img src="https://i.imgur.com/BvOGtX6.png" alt="Image" /><br /><br />Pontoons allow to start building on water surface, useful for creating boats or buildings above water.<br /><br />Changes:<br />- MCL2 compatibility<br />- Airtank mod compatibility by switching the recipe slightly on mod autodetection<br /><br /><a href="https://github.com/minertestdude/pontoons/releases/" class="postlink">Download</a><br /><br /> I've pushed my changes to master, until the commit hits you can use my fork.<br /><br />Installation: download archive, extract into &quot;Mods&quot; directory, make sure the directory name is &quot;pontoons&quot;, play.<br /><br />License: MIT</div>
@@ -271,13 +271,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -290,7 +290,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332897">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332897">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Wed Oct 10, 2018 1:47 pm </p>
 
 			<div class="content">Beware the Dark<br /><br />The <a href="https://forum.minetest.net/viewtopic.php?f=11&amp;t=12845" class="postlink">original thread</a>. Compatible with MCL2 from ground up, however my version includes few small improvements.<br /><br /><img src="https://i.imgur.com/nIoiWpG.png" alt="Image" /><br /><br />Being in the dark for too long can have effect on your health, think &quot;Don't Starve&quot;. <br />You can actually configure the reverse and create a vampire-like game.<br /><br />Changes:<br />- mod is compatible with MCL2, but:<br />- I have found unused ability to display a closed eye symbol for depleted &quot;fear indicator&quot; and added it<br />- I have added ability to autohide the sanity bar if its full (same as bubbles for underwater breathing in MCL2),<br /><br />Commits have been pushed, but until it is accepted, <a href="https://github.com/minertestdude/minetest-bewarethedark/releases" class="postlink">you can use my releases</a>.</div>
@@ -300,13 +300,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -319,7 +319,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332898">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332898">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Wed Oct 10, 2018 1:56 pm </p>
 
 			<div class="content">Already compatible: <a href="https://forum.minetest.net/viewtopic.php?t=20257" class="postlink">Hallelujah Mountains</a>, though it requires Minetest 5.<br /><br />(I run it with MineClone2 in Minetest 5, and some of its best screenshots have come from MineClone2, but I don't know whether Minetest 5 is supported by MC2 officially yet)<br /><br />LGPL 2.1+<br />----<br /><br />And while not a mod, <a href="https://forum.minetest.net/viewtopic.php?t=19869" class="postlink">Amidst</a> also comes with MineClone2 biome support built in.<br /><br />Also the <a href="https://forum.minetest.net/viewtopic.php?t=22362" class="postlink">Less Dirt</a> texture pack supports MineClone 2 in MT 5.0</div>
@@ -329,13 +329,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 5:36 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -348,7 +348,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332902">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332902">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Wed Oct 10, 2018 3:22 pm </p>
 
 			<div class="content"><blockquote><div><cite>DrFrankenstone wrote:</cite>...<br /></div></blockquote><br /><br />Hello, very nice! I see that you are a dev, so I will just add it to the list. Projects look great! :)</div>
@@ -358,13 +358,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -377,7 +377,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332910">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332910">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Wed Oct 10, 2018 6:04 pm </p>
 
 			<div class="content"><span style="font-weight: bold">Thirsty - IMPROVED</span><br /><br />The <a href="https://forum.minetest.net/viewtopic.php?f=9&amp;t=11820" class="postlink">original thread</a> (not compatible with MCL2 until my pull requests accepted).<br /><br />Running inside Mineclone 2:<br /><img src="https://i.imgur.com/u4N4q6y.jpg" alt="Image" /><br /><img src="https://i.imgur.com/ltJPiEE.jpg" alt="Image" /><br /><br />When same mod runs under Minetest Game instead:<br /><img src="https://i.imgur.com/wYCCmQr.png" alt="Image" /><br /><img src="https://i.imgur.com/dd4rlqT.png" alt="Image" /><br /><br />Mod adds mechanic for hydration and need to drink as well as several ways to do it.<br /><a href="https://github.com/minertestdude/minetest-thirsty/releases/" class="postlink">Download</a>.<br /><br />Changes:<br />- add drinking sound with free license<br />- add Mineclone2 compatibility<br />- rename the &quot;extender&quot; / &quot;fountain&quot; captions as &quot;Water pipe&quot; and &quot;Water pump&quot;<br />- modify textures and add: two types of straight pipes, one cross pipe<br />- reduce price to building Water pipes and pump<br />- add custom textures for above when running Mineclone 2<br />- add custom texture to water fountain when running Mineclone 2<br />- add item and add ability to collect some water into bowl, if in water and not thirsty. Contents will be drunk at once and empty bowl returned<br />- Mineclone2 uses own native version of bowl instead and its also possible to collect water with it (as well as help drink)<br />- include two water bottles from Mineclone2 to at-once list (river and usual bottles)<br /><br />My version is compatible with MCL2 until the changes from pull request and merged.<br /><br />I have not assigned different version in order for changes to be actually mainlined.</div>
@@ -387,13 +387,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -406,7 +406,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p332969">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p332969">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Thu Oct 11, 2018 3:44 pm </p>
 
 			<div class="content">Some upcoming changes to Thirsty, fixes for Teleport, minor edits to Pontoons, Trash Can incoming today. I will update original posts.<br /><br />Edit: Massive update on &quot;Thirsty&quot;, please redownload. Its compatible with all previous.<br /><br />Edit2: Current errata: <br />- a problem, where bowls cant be filled/refilled, if hydration value is at maximum. Once there is thirst, bowls work as usual.<br />- inconsistency, where drinking from bowl and refilling it is done by one click.<br />- inconsistency, where bowls are trunk using LMB, but bottles using RMB.<br />this will be addressed soon</div>
@@ -416,13 +416,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -435,7 +435,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p333236">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p333236">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Wuzzy</strong> &raquo; Sun Oct 14, 2018 5:57 pm </p>
 
 			<div class="content">Nice. :-)</div>
@@ -445,13 +445,13 @@
 			<dt>
 				<strong>Wuzzy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3429</dd><dd><strong>Joined:</strong> Mon Sep 24, 2012 3:01 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Wuzzy2</dd>
+			<dd><strong>In-game:</strong> Wuzzy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -464,7 +464,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p333264">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p333264">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Sun Oct 14, 2018 10:45 pm </p>
 
 			<div class="content"><blockquote><div><cite>Wuzzy wrote:</cite>Nice. :-)</div></blockquote><br />Thank you very much! I am not yet expanding MCL2 with Minecraft functionality, but I have already &quot;mobs_mc&quot; changes incoming, that allows to flexibly control their amount. I guess this will be very useful for servers if admins want to control exact amount of each mob, as well as for debug.<br /><br />Code will be pushed soon.<br /><br />The &quot;Thristy&quot; was much better than I expected. I spent two days on it and I hope my contributions will be of joy for some people.</div>
@@ -474,13 +474,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -493,7 +493,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p333326">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p333326">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>minerdudetest</strong> &raquo; Mon Oct 15, 2018 9:15 pm </p>
 
 			<div class="content">Still working on minor issue with Thirsty.<br />Teleport Improved accepted all changes, linking to it instead now. Also author of teleport wished to transfer it to me, where I will transfer it into &quot;minetest-mods&quot; in turn, thus the mod is preserved in global catalog. No changes planned to the mod from my side.</div>
@@ -503,13 +503,13 @@
 			<dt>
 				<strong>minerdudetest</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 35</dd><dd><strong>Joined:</strong> Mon Jul 02, 2018 5:16 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -522,7 +522,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p333797">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p333797">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Wuzzy</strong> &raquo; Tue Oct 23, 2018 3:58 pm </p>
 
 			<div class="content"><blockquote class="uncited"><div>((…) I don't know whether Minetest 5 is supported by MC2 officially yet)</div></blockquote><br />Minetest 5.0.0 does not exist (yet), thus making it bleeding edge. Please say “5.0.0<span style="font-weight: bold">-dev</span>” to refer to the unfinished version.<br />My official MineClone 2 policy regarding bleeding edge is: I do not support it. I will only aim to support latest stable, which is 0.4.17.1 at the moment. I believe MCL2 still kinda works in 5.0.0-dev, but please don't cry when bad things happen.<br /><br /><span style="font-weight: bold">Thirsty</span><br />I hope you did consider river water in your experiments. All water nodes are in the “water” group, just like in basically any other game.<br />Also note that MCL2 comes with a water bottle and river water bottle included. They are not doing much in stock MCL2, but you probably want to override them. MCL2 has its own drinking sound, make sure to use that one.<br />There is also a cauldron which you can fill with water / river water.<br />All this should be taken into account when making thirsty for MCL2. I have not tried your mod yet, but I strongly suggest to release the finished MCL2-adaption should released separately under a new name because I think there will be quite a few changes required. It would probably be easier to just fork anyway, esp. when it comes to balancing.<br /><br />I also recommend you try to understand the hunger mechanic of MCL2 (see in-game help), you might want to take this into consideration as well.<br /><br />If you need any API changes in MCL2 so you can implement your stuff, please suggest it.<br /><br />Also, finally, the icon for thirst should match MCL2-style and have a size of 8×8 pixels. To figure out how all those items work in MCL2, just use the in-game help.<br /><br />If you have more problems, feel free to join in IRC. I am often hanging around in #mineclone2 in irc.freenode.net.</div>
@@ -532,13 +532,13 @@
 			<dt>
 				<strong>Wuzzy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3429</dd><dd><strong>Joined:</strong> Mon Sep 24, 2012 3:01 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Wuzzy2</dd>
+			<dd><strong>In-game:</strong> Wuzzy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -551,7 +551,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p333803">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p333803">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Wuzzy</strong> &raquo; Tue Oct 23, 2018 4:38 pm </p>
 
 			<div class="content">My general notes and recommendations about MCL2 mods:<br /><br /><ul><li>Remember that MCL2 is very different from MTG architecture-wise, so don't make to many assumptions</li><li>Remember the groups in MCL2 are different, too</li><li>You can try to be compatible with both MCL2 and MTG at the same time, but you don't have to. Keep in mind that both games are different, so expect to add lots of boilerplate code. Sometimes it might be easier to for an MTG mod for MCL2, esp. when many gameplay tweaks are required. Use good judgement</li><li>Add help support for all your items and gameplay mechanics. MCL2 is using the Help modpack: <br /><!-- l --><a class="postlink-local" href="https://forum.minetest.net/viewtopic.php?t=15912">viewtopic.php?t=15912</a><!-- l -->. Besides, it is generally a good idea to write documentation for all your items. The help modpack is only as useful as how many mods support it. :)</li><li>Read README.md, API.md, GROUPS.md and CONTRIBUTING.md</li><li>Play MCL2 and read the in-game help and make sure you understand all the mechanics well. Take your knowledge into consideration of the gameplay design</li><li>Keep writing style consistent</li><li>As I said before, ask me in IRC if you have questions</li><li>If your mod re-implements a Minecraft feature very well, please contact me so I can include it in MCL2</li></ul></div>
@@ -561,13 +561,13 @@
 			<dt>
 				<strong>Wuzzy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3429</dd><dd><strong>Joined:</strong> Mon Sep 24, 2012 3:01 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Wuzzy2</dd>
+			<dd><strong>In-game:</strong> Wuzzy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -580,7 +580,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p337494">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p337494">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Hamlet</strong> &raquo; Fri Dec 07, 2018 5:34 pm </p>
 
 			<div class="content"><span style="font-weight: bold">Thirsty - IMPROVED</span><br /><br />Minor issue *[1] *[2]:<br /><blockquote class="uncited"><div>WARNING[Server]: WARNING: minetest.setting_* functions are deprecated.  Use methods on the minetest.settings object. (at ...minetesti/bin/../mods/thirsty/functions.lua:224)<br /></div></blockquote><br /><br />Issue fix:<br /><br />replace ../thirsty/functions.lua at line 224<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.setting_getbool</code></dd></dl><br /><br />with<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.settings:get_bool</code></dd></dl><br /><br />*[1] seen on:<br />Minetest v0.4.17.1<br />Minetest Game v0.4.17.1<br />Thirsty v0.10.2 (bendeutsch's OR minertestdude's versions)<br /><br />*[2] raised every second by the Thirsty's main loop, thus cluttering the console window and most likely the debug.txt log.</div>
@@ -590,13 +590,13 @@
 			<dt>
 				<strong>Hamlet</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 465</dd><dd><strong>Joined:</strong> Sat Jul 29, 2017 9:09 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> MicroSoft is not OpenSource</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -609,7 +609,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p348002">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p348002">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Wuzzy</strong> &raquo; Wed Apr 03, 2019 8:43 pm </p>
 
 			<div class="content">Flying Carpet: Quickly explore the vast terrain with the magical flying carpet. Fly safely and preserve your energy to make the most of it.<br /><!-- l --><a class="postlink-local" href="https://forum.minetest.net/viewtopic.php?t=12263">viewtopic.php?t=12263</a><!-- l --><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=2740&amp;sid=7e1f2e4f012d8a20436bfafc34e604bb" alt="Image" /><br /><br />Type: Compatible</div>
@@ -619,13 +619,13 @@
 			<dt>
 				<strong>Wuzzy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3429</dd><dd><strong>Joined:</strong> Mon Sep 24, 2012 3:01 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Wuzzy2</dd>
+			<dd><strong>In-game:</strong> Wuzzy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -638,7 +638,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_20935.htm#p349101">Re: [Mods] MineClone2-enabled mods</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_20935.htm#p349101">Re: [Mods] MineClone2-enabled mods</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>GamingAssociation39</strong> &raquo; Wed Apr 17, 2019 11:38 pm </p>
 
 			<div class="content"><blockquote><div><cite>minerdudetest wrote:</cite>This is a topic, where anyone can publish a mod, that was either <span style="font-weight: bold">made compatible</span> or <span style="font-weight: bold">ported</span> to support <a href="https://forum.minetest.net/viewtopic.php?f=50&amp;t=16407" class="postlink">Mineclone 2</a>.<br /><br /><br /><span style="font-size: 150%; line-height: 116%;">Posting rules</span><br />1. provide screenshot, link to thread to <span style="font-style: italic">original</span> (base) mod and description.<br /><br />2. provide:<br />- download link<br />- instructions to install your modification<br />- provide a screenshot<br />- provide license<br /><br />3. specify if your work is &quot;compatible&quot; or &quot;ported&quot; mod:<br />&quot;compatible&quot; means: original mod internal structure was enhanced with ability to run with MineClone 2 (MCL2), <span style="font-style: italic">in addition</span> to original game (typically MineTest Game, MTG). <br /><span style="font-style: italic">At the bottom of this post, you will find instructions how to make mod capable.</span><br /><br />&quot;ported&quot; means: original mod was modified to run with MineClone 2. <span style="font-weight: bold">It will not work</span> with original game (typically MineTest Game). This is usually achieved by replacing the item strings directly, its faster, but its a worse solution than &quot;compatible&quot;.<br /><br />- &quot;capable&quot; mods are preferred to &quot;ported&quot; mods.<br />- in case mod was &quot;made compatible&quot; with MCL2, its recommended that you post a message in original mod thread<br />- mod should be preferably hosted on a version control hoster, like github or similar; so that your changes can be merged to upstream.<br /><br />4. you might want to modify mod readme with version bump (like &quot;P&quot;: 1.0 -&gt; 1.0P) to:<br />-  distinguish between your version and original<br />- specify which version your actual port/compatibility enhancement is based on: &quot;1.0P&quot; would imply that its based on &quot;1.0&quot; of base mod. <br /><br /><br /><span style="font-size: 150%; line-height: 116%;">How to make mod compatible</span><br /><br />1) depends.txt<br /><span style="font-weight: bold">both</span> mcl_ and default should be an optional dependency (?) in depends.txt. If both mcl_ and default are absent, then it means user is running notMCL and notMineTestGame, so game will fail on loading during variable calls (either-either) anyway and return to menu with error (safe).<br /><br />typical depends.txt:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>default?<br />mcl_core?<br />mcl_sounds?<br /></code></dd></dl><br /><br />2) switcher in init.lua and other mod code. <br />Important - place the block after &quot;local S, NS = dofile(MP..&quot;/intllib.lua&quot;)&quot; call!:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>...<br />local moditems = {}&nbsp; -- declare a var, somewhere at beginning but below intlib.lua call.<br />...<br />if core.get_modpath(&quot;mcl_core&quot;) and mcl_core then -- means MineClone 2 is loaded, this is its core mod<br />&nbsp; &nbsp;moditems.IRON_ITEM = &quot;mcl_core:iron_ingot&quot;&nbsp; &nbsp;-- example, MCL version of iron ingot<br />&nbsp; &nbsp;moditems.STRING_ITEM = S(&quot;MineClone 2 string&quot;)&nbsp; &nbsp;-- item description if mod is loaded in MPL<br />&nbsp; &nbsp;moditems.WOOD_SOUNDS = mcl_sounds.node_sound_wood_defaults()<br /><br />else&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-- fallback, assume default (MineTest Game) is loaded, otherwise it will error anyway here.<br />&nbsp; &nbsp;moditems.IRON_ITEM = &quot;default:steel_ingot&quot;&nbsp; &nbsp; -- iron ingot in stock MT<br />&nbsp; &nbsp;moditems.STRING_ITEM = S(&quot;MineTest Game string&quot;)&nbsp; &nbsp;-- item description if mod is loaded in MT<br />&nbsp; &nbsp;moditems.WOOD_SOUNDS = default.node_sound_wood_defaults()<br />end<br /><br />...<br />-- actual use in the code down somewhere.<br />material = moditems.IRON_ITEM <br />sounds = moditems.WOOD_SOUNDS<br /><br />_doc_items_longdesc = moditems.STRING_ITEM<br /></code></dd></dl><br /><br />3. expanding sound check in some mods:<br />if similar block already exists (as it should be), and equivalent of &quot;sounds&quot; var exist - use that and change &quot;sounds&quot; in this block to however the var is called!<br />If similar block does not exist or game plays no sounds, you don't need this.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local sounds<br /><br />if mcl_sounds then<br />&nbsp; &nbsp;sounds = mcl_sounds.node_sound_metal_defaults()<br />else<br />&nbsp; &nbsp;if default.node_sound_metal_defaults then<br />&nbsp; &nbsp;&nbsp; &nbsp;sounds = default.node_sound_metal_defaults()<br />&nbsp; &nbsp;else<br />&nbsp; &nbsp;&nbsp; &nbsp;sounds = default.node_sound_stone_defaults()<br />&nbsp; &nbsp;end<br />end<br /></code></dd></dl><br /><br />May the code be with you!</div></blockquote><br /><br />I'm having a really hard time getting my mods to be compatible with MCL2... I was wondering if I could either get help or get better instructions on how to do so.</div>
@@ -648,13 +648,13 @@
 			<dt>
 				<strong>GamingAssociation39</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 807</dd><dd><strong>Joined:</strong> Mon Apr 25, 2016 4:09 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Gerold55</dd>
+			<dd><strong>In-game:</strong> Gerold55</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

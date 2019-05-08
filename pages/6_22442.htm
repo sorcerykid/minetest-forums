@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22442.htm#p347347">override.txt issue</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22442.htm#p347347">override.txt issue</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>kestral</strong> &raquo; Wed Mar 27, 2019 18:50 </p>
 
 			<div class="content">I was having problems using the LessDirt texture pack with MineClone2.<br /><br />It turns out that the Linux version of Minetest (tag: 5.0.0) seems to have problems with the dos-format override.txt file LessDirt uses. It has CR+LF (\r\n) line termination.<br /><br /><span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">ERROR[Main]: generateImage&#40;&#41;: Could not load image &quot;mcldefault_grass_side.png<br />ERROR[Main]: &quot; while building texture; Creating a dummy image</span><br /><br />When I run dos2unix on this override.txt file, it works just fine.<br /><br />I also tried running on Windows, and the override.txt file seems to work equally well with either dos- or unix-format line termination.<br /><br /><br />Is this a bug in how Minetest reads override.txt files in Linux, or is there an undocumented requirement that they need to be formatted as unix-style files?</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>kestral</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 51</dd><dd><strong>Joined:</strong> Mon Mar 27, 2017 21:56</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> kestral246</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22442.htm#p347357">Re: override.txt issue</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22442.htm#p347357">Re: override.txt issue</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Wed Mar 27, 2019 21:44 </p>
 
 			<div class="content">There's a similar bug in the parsing of settingstypes.txt when running under Linux (<a href="https://github.com/minetest/minetest/issues/7912" class="postlink">#7912</a>).<br /><br />I'll upload the LF workaround to LessDirt.</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 05:36</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

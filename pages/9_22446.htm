@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_22446.htm#p347446">[Mod] free_lj_mem 1.4 (31.03.2019)</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22446.htm#p347446">[Mod] free_lj_mem 1.4 (31.03.2019)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 29, 2019 02:13 </p>
 
 			<div class="content">[Mod] <span style="font-weight: bold">free_lj_mem</span><br /><br /><span style="font-weight: bold">Version: 1.4</span><br />new: 2nd status with settings at start, 2 more var to remember highest/lowest lua memory / setting for loop-time<br /><br />last update: <span style="font-weight: bold">31.03.2019</span><br /><br />no dependencies<br /><br />tested on mts 5.0.0, but there is nothing used, should also run under 0.4.x<br /><br />Licence: LGPL v3.0 <br /><br />Download / Source at: <a href="https://github.com/Minetest-One/free_lj_mem" class="postlink">https://github.com/Minetest-One/free_lj_mem</a><br /><br />What does it:<br />* automatic collectgarbage() every x time (default set to 3600 = 1 hours)<br /><br />* depend on minetest.conf debug_log_level (warning, action, info) reports on reduce memory usage, until warning message to admin as of name, or minetest.log<br /><br />* depend on minetest.conf debug_log_level (warning, action, info) print to log / terminal / player when a lua maximal memory (value to set) is reached even after a collectgarbage().<br />- report that actual memory usage is higher than set max memory<br />- setting of maximum lua memory depends on lua 2 GB or luajit 1 GB and also on other unknown facts<br />- set maxluamem can start with max of lua 2048000 or 1024000 , and after got an OOM should be set about 10% lower, so admin might get aware, OOM getting close<br /><br />* detect kind and version of used lua / luajit, and post report at loading<br /><br />* give status at loading depend on minetest.conf debug_log_level that loaded (+ amount of memory is used after this have been loaded)<br /><br />start on test-server (5.0.0)<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&#91;Mod&#93; free_lj_mem detected: LuaJIT 2.1.0-beta3<br />&#91;Mod&#93; free_lj_mem settings: 60 sec / warn: 2000 KB<br />&#91;Mod&#93; free_lj_mem (1.40 31.03.2019) - loaded - end mem : 1016 KB</code></dd></dl><br />start on main server (5.0.0)<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>free_lj_mem detected LuaJIT 2.0.5<br />&#91;Mod&#93; free_lj_mem settings: 1800 sec / warn: 150000 KB<br />&#91;Mod&#93; free_lj_mem (1.4 - 31.03.2019) - loaded - end mem : 56413 KB</code></dd></dl><br />and test when running, depends on destination<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&#91;MOD&#93; free_lj_mem: cleaned 2157 to 2088 (max: 2590 / min: 2088) KB</code></dd></dl> or the warning in minetest.log<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-29 06:31:50: ACTION&#91;Server&#93;: &#91;MOD&#93; free_lj_mem detected luamem warning: 10490 &gt; 10000 !! - near OOM</code></dd></dl> or at terminal / chat to player<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&#91;MOD&#93; free_lj_mem warning: 2088 actual more memory used then set max: 2000 KB ! possible OOM</code></dd></dl><br /><br /><br />... this is my first mod, report issues <a href="https://github.com/Minetest-One/free_lj_mem/issues" class="postlink">here</a><br /><br />* as this should sole the problems we faced yet with [urlhttps://forum.minetest.net/viewtopic.php?f=6&amp;t=21934]OOM[/url]<br />* the advantage to [Mod] stop_lj_oom is less lag, even report and/or warnings on several channels (I think I will fork that mod also, just make is less time check memory, as it does now)</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 882</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_22446.htm#p347447">[Mod] free_lj_mem 1.3</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22446.htm#p347447">[Mod] free_lj_mem 1.3</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 29, 2019 02:14 </p>
 
 			<div class="content">further explanations how to set or calculate<br /><br />1.4 - 2nd status with settings at start, 2 more var to remember highest/lowest lua memory / setting for loop-time<br />1.3 - including minetest.after and debug_log_level used<br />1.2 - including minetest.setting_get(&quot;name&quot;), and fix missing file, fix wrong name<br />1.1 - after I was sure<br /><br />the version is running on my server <a href="https://forum.minetest.net/viewtopic.php?f=10&amp;t=22041&amp;p=347429#p347429" class="postlink">&quot;Asia Thailand Minetest.one&quot;</a> since 12 hours, tested on 2nd server, and I am reporting there about its work yet.</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 882</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_22446.htm#p347449">Re: [Mod] free_lj_mem 1.1</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22446.htm#p347449">Re: [Mod] free_lj_mem 1.1</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Fri Mar 29, 2019 02:37 </p>
 
 			<div class="content">the file `lua.ini` should be named `init.lua` instead. <br /><br />LGPL-3.0 is just fine!<br /><br />Make a mod.conf file as well...<br /><br />Don't use a globalstep for something that runs once every hour. Instead, use minetest.after() instead with a timeout value of 1 hour.<br /><br />Don't hardcode `Admin` name in code. Instead, just use minetest.log() or scan online players that have the `server` priv.<br /><br />Maybe it's interesting to run the code that looks at memory usage more often so an admin can get an idea about memory usage more often.<br /><br />Try and use minetest settings instead of hardcoded values, this way everyone can change them.<br /><br />(Not bad for a first mod!)</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>sofar</strong>
 			</dt>
-			<dd></dd>
+			<dd>Developer</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 2034</dd><dd><strong>Joined:</strong> Fri Jan 16, 2015 07:31</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> sofar</dd>
+			<dd><strong>In-game:</strong> sofar</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_22446.htm#p347450">Re: [Mod] free_lj_mem 1.1</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22446.htm#p347450">Re: [Mod] free_lj_mem 1.1</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Fri Mar 29, 2019 02:37 </p>
 
 			<div class="content">Why do you need to depend on `default`? If you don't need it, just write `no dependencies` instead and remove depends.txt.</div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>sofar</strong>
 			</dt>
-			<dd></dd>
+			<dd>Developer</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 2034</dd><dd><strong>Joined:</strong> Fri Jan 16, 2015 07:31</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> sofar</dd>
+			<dd><strong>In-game:</strong> sofar</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_22446.htm#p347456">prepare: [Mod] free_lj_mem 1.3</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22446.htm#p347456">prepare: [Mod] free_lj_mem 1.3</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 29, 2019 04:33 </p>
 
 			<div class="content"><blockquote><div><cite>sofar wrote:</cite>Why do you need to depend on `default`? If you don't need it, just write `no dependencies` instead and remove depends.txt.</div></blockquote><br /><br />oh, I see - not good coding with too less sleep, but cant get rid of this problem with lua mem<br />* init.lua fixed - shame on me about THIS<br />* <a href="https://dev.minetest.net/Modding_Intro" class="postlink">mod.conf</a> created, have to look what was to put in now 5.x<br />* hardcore might be more safe first, but will look the scan option and learn further<br />* timestep 1 hour, just testing now 30 minutes on my server, it seams to be good, and can be changed - will depend on first experiences - as I never read about how long servers needed to OOM, jsut I know at me was 8-10 hours<br />* <a href="https://dev.minetest.net/Settings" class="postlink">minetest.settings</a>, ok, get some automatic like name and log, but new in 5.x<br />* dependencies fixed<br />* globalstep, better <a href="https://dev.minetest.net/minetest.after" class="postlink">minetest.after</a> reading the wiki = got it, need call itself inside<br /><br />would so be interesting how much servers use luajit ?<br />and I hope for replay when tried it out, maybe more can go luajit as so far I see that is most problem<br /><br />add:<br />this <a href="https://dev.minetest.net/minetest.after" class="postlink">minetest.after</a> seams to be often, when I remember checking just start code when was editing for the report of lua memory usage ... most I see &quot;minetest.register_globalstep(function(dtime) ... )&quot; with its shown in &quot;profiler save&quot; then<br /><br />add: got it, Version 1.3 is running</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 882</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -232,7 +232,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_22446.htm#p347459">Re: [Mod] free_lj_mem 1.1</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22446.htm#p347459">Re: [Mod] free_lj_mem 1.1</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>sofar</strong> &raquo; Fri Mar 29, 2019 06:07 </p>
 
 			<div class="content"><blockquote><div><cite>Festus1965 wrote:</cite>would so be interesting how much servers use luajit ?</div></blockquote><br /><br />since most of the builds we do use luajit, I expect a lot of them.<br /><br /><blockquote><div><cite>Festus1965 wrote:</cite>this <a href="https://dev.minetest.net/minetest.after" class="postlink">minetest.after</a> seams to be often, when I remember checking just start code when was editing for the report of lua memory usage ... most I see &quot;minetest.register_globalstep(function(dtime) ... )&quot; with its shown in &quot;profiler save&quot; then</div></blockquote><br /><br />It's used by many mods and therefore shows up a lot, even though it's not the `after` code itself that is the cause.</div>
@@ -242,13 +242,13 @@
 			<dt>
 				<strong>sofar</strong>
 			</dt>
-			<dd></dd>
+			<dd>Developer</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 2034</dd><dd><strong>Joined:</strong> Fri Jan 16, 2015 07:31</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> sofar</dd>
+			<dd><strong>In-game:</strong> sofar</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -261,7 +261,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_22446.htm#p347465">Re: [Mod] free_lj_mem 1.3</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22446.htm#p347465">Re: [Mod] free_lj_mem 1.3</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 29, 2019 07:45 </p>
 
 			<div class="content"><blockquote><div><cite>sofar wrote:</cite>since most of the builds we do use luajit, I expect a lot of them.</div></blockquote><br /><br />hmm, for that there are 230 servers listed, I see no new posts about OOM.<br /><br />Also I think it depends on the version of lua, luajit also a bit ... ok we will see, I did my work, and until now on my server with fast luajit it never exceeded 120.000, and I expect OOM again at 500.000 to 850.000 as logged. <br /><br />But this is so far strange then, as what [Mod]s I took of, be responsible for so much more ... even moreblocks it back true.</div>
@@ -271,13 +271,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 882</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -290,7 +290,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/9_22446.htm#p347626">in work: [Mod] free_lj_mem 1.5 (01.04.2019)</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/9_22446.htm#p347626">in work: [Mod] free_lj_mem 1.5 (01.04.2019)</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 31, 2019 05:57 </p>
 
 			<div class="content"><span style="font-weight: bold">in work: [Mod] free_lj_mem 1.5 (01.04.2019)</span><br />as aware during testing on my main server Asia Thailand Minetest.one after a view hours working I thought about restart to make longer/shorter setting as situation forces an admin and change warning memory size,<br />so mean, this [Mod] needed to be able to change some settings during run server.<br /><br />It works on test<br /><br />* two parameter are also set global (as needed)<br />-- and read there value out of minetest.conf (if set) also<br />-- or keep default set value before in [Mod] init.lua<br />-- but can be changed with /privs server via commend /set name value<br /><br />* parameters used<br />-- looptime (how often should be checked - default 1800)<br />-- maxluamem (limit above warning message start) <br /><br />test on 3rd server worked fine<br />will test on main server first also</div>
@@ -300,13 +300,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 882</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

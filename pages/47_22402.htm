@@ -20,9 +20,9 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 
-<title>Minetest Forums &bull; View topic - mapgen.</title>
+<title>Minetest Forums &bull; View topic - Adding Diamond Blocks to mapgen.</title>
 
-<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - mapgen." href="https://forum.minetest.net/feed.php?f=47&amp;t=22402" />
+<link rel="alternate" type="application/atom+xml" title="Feed - Minetest Forums" href="https://forum.minetest.net/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://forum.minetest.net/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Mods" href="https://forum.minetest.net/feed.php?f=46" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - Adding Diamond Blocks to mapgen." href="https://forum.minetest.net/feed.php?f=47&amp;t=22402" />
 
 <!--
 	phpBB style name: prosilver
@@ -72,7 +72,7 @@
 	<a name="start_here"></a>
 	<div id="page-body">
 		
-<h2><a href="./viewtopic.php?f=46&amp;t=22402">mapgen.</a></h2>
+<h2><a href="./viewtopic.php?f=46&amp;t=22402">Adding Diamond Blocks to mapgen.</a></h2>
 <!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
 
 <div class="topic-actions">
@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p346946">Adding Diamond Blocks to mapgen.</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22402.htm#p346946">Adding Diamond Blocks to mapgen.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DoyleChris</strong> &raquo; Sat Mar 23, 2019 18:55 </p>
 
 			<div class="content">I am trying to make a mod for my server to add Diamond Blocks to the mapgen like the MESE blocks.  But when i go to run it on singleplayer and go to a spot on the map that need to generate, they dont show up.  Here is the code any information would be helpful.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest directory\mods\diamond\init.lua</code></dd></dl><br /><br />enabled in the config.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>function minetest.register_ores()<br />&nbsp; &nbsp;minetest.register_ore({<br />&nbsp; &nbsp;&nbsp; &nbsp;ore_type&nbsp; &nbsp; &nbsp; &nbsp;= &quot;scatter&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;ore&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &quot;default:diamondblock&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;wherein&nbsp; &nbsp; &nbsp; &nbsp; = &quot;default:stone&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;clust_scarcity = 15 * 15 * 15,<br />&nbsp; &nbsp;&nbsp; &nbsp;clust_num_ores = 7,<br />&nbsp; &nbsp;&nbsp; &nbsp;clust_size&nbsp; &nbsp; &nbsp;= 5,<br />&nbsp; &nbsp;&nbsp; &nbsp;y_max&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = -5000,<br />&nbsp; &nbsp;&nbsp; &nbsp;y_min&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = -31000,<br />&nbsp; &nbsp;})<br />&nbsp; &nbsp;end</code></dd></dl></div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>DoyleChris</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 222</dd><dd><strong>Joined:</strong> Sat Jul 25, 2015 19:54</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> DoyleChris</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p346974">Re: Adding Diamond Blocks to mapgen.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22402.htm#p346974">Re: Adding Diamond Blocks to mapgen.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Nathan.S</strong> &raquo; Sun Mar 24, 2019 03:16 </p>
 
 			<div class="content">Is there some reason you put your 'minetest.register_ore' code within a function? As far as I know you don't need to do that. Just remove the first and last line in your example code and it will probably work.</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>Nathan.S</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 871</dd><dd><strong>Joined:</strong> Wed Sep 24, 2014 17:47</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> NathanSalapat</dd>
+			<dd><strong>In-game:</strong> NathanS21</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p346989">Re: Adding Diamond Blocks to mapgen.</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22402.htm#p346989">Re: Adding Diamond Blocks to mapgen.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Sun Mar 24, 2019 05:03 </p>
 
 			<div class="content">What Nathan.S said, as well as ores won't generate in a part of a map that has already been loaded before, if you are doing that.</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>v-rob</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 613</dd><dd><strong>Joined:</strong> Thu Mar 24, 2016 03:19</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> v-rob</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p347003">Re: Adding Diamond Blocks to mapgen.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22402.htm#p347003">Re: Adding Diamond Blocks to mapgen.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DoyleChris</strong> &raquo; Sun Mar 24, 2019 11:16 </p>
 
 			<div class="content">Ill try that Nathan.</div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>DoyleChris</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 222</dd><dd><strong>Joined:</strong> Sat Jul 25, 2015 19:54</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> DoyleChris</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p347007">Re: Adding Diamond Blocks to mapgen.</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22402.htm#p347007">Re: Adding Diamond Blocks to mapgen.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DoyleChris</strong> &raquo; Sun Mar 24, 2019 12:18 </p>
 
 			<div class="content">Well i got rid of the <br />function minetest.register_ores() and end<br />but teleporting to a new section of my world it still didnt show up.<br />I have no idea how to adjust the <br /><br />clust_scarcity = 15 * 15 * 15,<br />clust_num_ores = 7,<br />clust_size     = 5,<br /><br />I have tried making like the iron ore in stone settings but still dosent show up.</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>DoyleChris</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 222</dd><dd><strong>Joined:</strong> Sat Jul 25, 2015 19:54</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> DoyleChris</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -232,7 +232,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22402.htm#p347184">Re: Adding Diamond Blocks to mapgen</nobr>.</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22402.htm#p347184">Re: Adding Diamond Blocks to mapgen</nobr>.</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Mon Mar 25, 2019 22:47 </p>
 
 			<div class="content">Make sure your mod 'depends' on the MTG default mod, to run after it.</div>
@@ -242,13 +242,13 @@
 			<dt>
 				<strong>paramat</strong>
 			</dt>
-			<dd></dd>
+			<dd>Developer</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3350</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> paramat</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

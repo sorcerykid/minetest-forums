@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346795">[open] swap_node = ...</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346795">[open] swap_node = ...</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 12:16 am </p>
 
 			<div class="content">[Solved] so far,<br />but have to check the starting with this issues, where in moretrees/cocos_palm.lua<br />what made me set this var wrong - and solved the crash there ...<br /><br />edit: <a href="https://github.com/minetest/minetest/issues/3015" class="postlink">see issue 3015</a><br />got problems last night on<br />Minetest 5.1.0-dev-77cfc4f-dirty (Linux)<br />edit same then under 5.0.0-stable<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-22 06:34:25: ERROR&#91;Main&#93;: ServerError: AsyncErr: environment_Step: Runtime error from mod 'mesecons' in callback environment_Step(): .../.minetest/mods/mesecons/mesecons_luacontroller/init.lua:155: attempt to call field 'swap_node' (a table value)<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;.../.minetest/mods/mesecons/mesecons_luacontroller/init.lua:155: in function 'set_port_states'<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;.../.minetest/mods/mesecons/mesecons_luacontroller/init.lua:616: in function 'run_inner'<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;.../.minetest/mods/mesecons/mesecons_luacontroller/init.lua:655: in function 'run'<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;.../.minetest/mods/mesecons/mesecons_luacontroller/init.lua:684: in function &lt;.../.minetest/mods/mesecons/mesecons_luacontroller/init.lua:680&gt;<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;.../thomas/.minetest/mods/mesecons/mesecons/actionqueue.lua:93: in function 'execute'<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;.../thomas/.minetest/mods/mesecons/mesecons/actionqueue.lua:84: in function 'func'<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;...ocal/share/minetest/builtin/profiler/instrumentation.lua:106: in function &lt;...ocal/share/minetest/builtin/profiler/instrumentation.lua:100&gt;<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;/usr/local/share/minetest/builtin/game/register.lua:419: in function &lt;/usr/local/share/minetest/builtin/game/register.lua:399&gt;<br />2019-03-22 06:34:25: ERROR&#91;Main&#93;: stack traceback:</code></dd></dl><br />what goes back via mesecons, profiler to buildin/gamer ... where I am not changing things - only maybe via &quot;git pull&quot;<br /><br />and after I gave there a<br />swap_node = {}<br />(later taken out of code again, as seam deeper reason) -&gt; /usr/local/share/minetest/builtin/game/register.lua<br />then next one complain<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-22 06:35:08: ERROR&#91;Server&#93;: LuaEntity name &quot;mobs_animal:pumba&quot; not defined<br />2019-03-22 06:35:08: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moremesecons_adjustable_blinkyplant' in callback node_on_timer(): /home/thomas/.minetest/mods/mesecons/mesecons/util.lua:250: attempt to call field 'swap_node' (a table value)<br />2019-03-22 06:35:08: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-22 06:35:08: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/mesecons/mesecons/util.lua:250: in function 'flipstate'<br />2019-03-22 06:35:08: ERROR&#91;Main&#93;: &nbsp; &nbsp;...oremesecons/moremesecons_adjustable_blinkyplant/init.lua:16: in function &lt;...oremesecons/moremesecons_adjustable_blinkyplant/init.lua:15&gt;</code></dd></dl><br /><br />meant at end <br />* moremesecons_adjustable_blinkyplant<br />* adjustable_blinkyplant<br />= false, to get server running</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346797">Re: swap_node - something changed?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346797">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 12:32 am </p>
 
 			<div class="content">hmm with new build<br />Minetest 5.1.0-dev-38ea089-dirty (Linux)<br />and both blinkys = true it runs yet ... <br />* for start server, before it crashed just with start<br /><br />but later crashed again (someone new joined)<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-22 08:31:02: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moremesecons_adjustable_blinkyplant' in callback node_on_timer(): /home/thomas/.minetest/mods/mesecons/mesecons/util.lua:254: attempt to call field 'swap_node' (a table value)<br />2019-03-22 08:31:02: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-22 08:31:02: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/mesecons/mesecons/util.lua:254: in function 'flipstate'<br />2019-03-22 08:31:02: ERROR&#91;Main&#93;: &nbsp; &nbsp;...oremesecons/moremesecons_adjustable_blinkyplant/init.lua:21: in function &lt;...oremesecons/moremesecons_adjustable_blinkyplant/init.lua:20&gt;<br />2019-03-22 08:31:32: &#91;Main&#93;: Using game specified by --gameid on the command line<br /></code></dd></dl><br /><br />at last again<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-22 09:15:32: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moremesecons_adjustable_blinkyplant' in callback node_on_timer(): /home/thomas/.minetest/mods/mesecons/mesecons/util.lua:254: attempt to call field 'swap_node' (a table value)<br />2019-03-22 09:15:32: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-22 09:15:32: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/mesecons/mesecons/util.lua:254: in function 'flipstate'<br />2019-03-22 09:15:32: ERROR&#91;Main&#93;: &nbsp; &nbsp;...oremesecons/moremesecons_adjustable_blinkyplant/init.lua:21: in function &lt;...oremesecons/moremesecons_adjustable_blinkyplant/init.lua:20&gt;<br /></code></dd></dl><br /><br />so both blinkys off now</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346803">Re: swap_node - something changed?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346803">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 2:44 am </p>
 
 			<div class="content">even with replace mesesons and moremesecons new non touched code folders<br />same<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-22 09:42:56: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'mesecons_blinkyplant' in callback node_on_timer(): /home/thomas/.minetest/mods/mesecons/mesecons/util.lua:250: attempt to call field 'swap_node' (a table value)<br />2019-03-22 09:42:56: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-22 09:42:56: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/mesecons/mesecons/util.lua:250: in function 'flipstate'<br />2019-03-22 09:42:56: ERROR&#91;Main&#93;: &nbsp; &nbsp;...as/.minetest/mods/mesecons/mesecons_blinkyplant/init.lua:14: in function &lt;...as/.minetest/mods/mesecons/mesecons_blinkyplant/init.lua:12&gt;<br /></code></dd></dl></div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346804">Re: swap_node - something changed?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346804">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 2:55 am </p>
 
 			<div class="content">and now here:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-22 09:53:26: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod '' in callback item_OnPlace(): ...l/share/minetest/games/minetest_game/mods/doors/init.lua:179: attempt to call field 'swap_node' (a table value)<br />2019-03-22 09:53:26: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-22 09:53:26: ERROR&#91;Main&#93;: &nbsp; &nbsp;...l/share/minetest/games/minetest_game/mods/doors/init.lua:179: in function 'door_toggle'<br />2019-03-22 09:53:26: ERROR&#91;Main&#93;: &nbsp; &nbsp;...l/share/minetest/games/minetest_game/mods/doors/init.lua:376: in function 'on_rightclick'<br />2019-03-22 09:53:26: ERROR&#91;Main&#93;: &nbsp; &nbsp;/usr/local/share/minetest/builtin/game/item.lua:423: in function &lt;/usr/local/share/minetest/builtin/game/item.lua:416&gt;<br /></code></dd></dl></div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346814">Re: swap_node - something changed?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346814">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 5:07 am </p>
 
 			<div class="content">also happen under 5.0.0-stable<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-22 12:00:28: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod '' in callback item_OnPlace(): ...l/share/minetest/games/minetest_game/mods/doors/init.lua:179: attempt to call field 'swap_node' (a table value)<br />2019-03-22 12:00:28: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-22 12:00:28: ERROR&#91;Main&#93;: &nbsp; &nbsp;...l/share/minetest/games/minetest_game/mods/doors/init.lua:179: in function 'door_toggle'<br />2019-03-22 12:00:28: ERROR&#91;Main&#93;: &nbsp; &nbsp;...l/share/minetest/games/minetest_game/mods/doors/init.lua:376: in function 'on_rightclick'<br />2019-03-22 12:00:28: ERROR&#91;Main&#93;: &nbsp; &nbsp;/usr/local/share/minetest/builtin/game/item.lua:423: in function &lt;/usr/local/share/minetest/builtin/game/item.lua:416&gt;</code></dd></dl><br /><br />what mod, or location is &quot;Runtime error from mod '' in callback item_OnPlace()&quot;</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -232,7 +232,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346827">Re: swap_node - something changed?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346827">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 8:34 am </p>
 
 			<div class="content">* changed all mods, in mods to 2 day older saved version, as I have made a mistake as of include print luamem, <br />* remove and purge minetest-server, install, purge again ...<br />* recompile stable, with cmake, make install again ...<br />= same problem<br /><br />now looking who or what would delete that /usr/local/share/minetest/* and reinstall all that ...<br />ah<br />* git clone --depth 1 <!-- m --><a class="postlink" href="https://github.com/minetest/minetest_game.git">https://github.com/minetest/minetest_game.git</a><!-- m --> games/minetest_game<br />* cmake ...<br />* sudo make -j8 install<br />got<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>...<br />-- Up-to-date: /usr/local/share/minetest/games//minetest_game/mods/doors<br />-- Installing: /usr/local/share/minetest/games//minetest_game/mods/doors/license.txt<br />-- Installing: /usr/local/share/minetest/games//minetest_game/mods/doors/README.txt<br />-- Installing: /usr/local/share/minetest/games//minetest_game/mods/doors/init.lua<br />-- Up-to-date: /usr/local/share/minetest/games//minetest_game/mods/doors/sounds<br />...</code></dd></dl>but = same, right click door = crash</div>
@@ -242,13 +242,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -261,7 +261,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346887">Re: swap_node - something changed?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346887">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Sat Mar 23, 2019 1:07 am </p>
 
 			<div class="content">There's a mod problem here. Also, the line number in the first post doesn't match mesecons which implies that it's out of date, so I suggest updating the mod pack<br /><br />Search for &quot;swap_node&quot; in all your mods and make sure none are assigning it<br />Maybe paste the output here.<br /><br />You can do this by running this command:    grep -rn &quot;swap_node&quot; ~/.minetest/mods/</div>
@@ -271,13 +271,13 @@
 			<dt>
 				<strong>rubenwardy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Moderator</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 5695</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 6:11 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> rubenwardy</dd>
+			<dd><strong>In-game:</strong> rubenwardy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -290,7 +290,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346888">Re: swap_node - something changed?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346888">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 1:09 am </p>
 
 			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>... make sure none are assigning it ...</div></blockquote> have to check the meaning of this part ...<br /><br />taking from <br />* <a href="https://github.com/minetest-mods/mesecons" class="postlink">https://github.com/minetest-mods/mesecons</a> &quot;073c92d 6 days ago&quot;<br />and<br />replaced inside .minetest/mods/ with this new one /mesecons<br />and took it, same with no complain<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&#91;Mod&#93; mesecons / mesecons (073c92d 20.03.2019) 0.4.x - loaded - end with 3503 KB </code></dd></dl><br />so ... check<br /><br />and as soon i set a nearby adjustable_blinkyplant new time get<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-23 08:17:50: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moremesecons_adjustable_blinkyplant' in callback node_on_timer(): /home/thomas/.minetest/mods/mesecons/mesecons/util.lua:250: attempt to call field 'swap_node' (a table value)<br />2019-03-23 08:17:50: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-23 08:17:50: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/mesecons/mesecons/util.lua:250: in function 'flipstate'<br />2019-03-23 08:17:50: ERROR&#91;Main&#93;: &nbsp; &nbsp;...oremesecons/moremesecons_adjustable_blinkyplant/init.lua:16: in function &lt;...oremesecons/moremesecons_adjustable_blinkyplant/init.lua:15&gt;<br /></code></dd></dl></div>
@@ -300,13 +300,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -319,7 +319,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346889">Re: swap_node - something changed?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346889">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Sat Mar 23, 2019 1:12 am </p>
 
 			<div class="content">I meant that it's weird that swap_node is a table, it should be a function. So I suspect that something is setting to it, like:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.swap_node = something<br /></code></dd></dl><br /><br />Seeing the results of grep could confirm it</div>
@@ -329,13 +329,13 @@
 			<dt>
 				<strong>rubenwardy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Moderator</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 5695</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 6:11 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> rubenwardy</dd>
+			<dd><strong>In-game:</strong> rubenwardy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -348,7 +348,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346890">Re: swap_node - something changed?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346890">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 1:23 am </p>
 
 			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>I meant that it's weird that swap_node is a table, it should be a function. </div></blockquote><br />ah, ok - <br /><br />but funny also,<br />that day before this happened I was only on 2nd machine, and <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934&amp;p=346738#p346738" class="postlink">measuring lua memory consumption</a>, and only set 3 more mods false at this server before went sleep ... so there was no code change explaining that this failure started in that night,<br /><br />so if my mistake, but even that I did AFTER first crash, need to search for wrong &quot;swap_node = {}&quot; ?</div>
@@ -358,13 +358,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -377,7 +377,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346891">Re: swap_node - something changed?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346891">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 1:27 am </p>
 
 			<div class="content">don't need to send grep result,<br />could read it myself, and also remember now what I had to search for<br />found<br />in ./mods/moretrees/cocos_palm<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.swap_node = {} -- until now, attempt to index a nil value, line 99 to 118 </code></dd></dl><br />but this code I did IN after the failure with &quot;swap_node&quot; happened first time, as referring to unknown global ,...<br /><br />ah, moment ...</div>
@@ -387,13 +387,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -406,7 +406,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346893">Re: swap_node - something changed?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346893">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 1:30 am </p>
 
 			<div class="content">running so far<br />tested<br />* adjustable_blinkyplant = no crash<br />* can use doors right_click = no crash<br />need to find cocos tree, as here it started all<br /><br />thanks for the hint ! with grep, via search monkey i didn't find it<br /><br />this was the reason, as crashed before<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>elseif not moretrees.coconuts_regrow then<br />&nbsp; &nbsp;&nbsp; &nbsp;-- Regrowing has been turned off. Make coconust grow instantly<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.swap_node(pos, {name=&quot;moretrees:coconut_3&quot;})<br />&nbsp; &nbsp;&nbsp; &nbsp;return</code></dd></dl><br />and MADE me using the code above to get around here as crashed before.</div>
@@ -416,13 +416,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -435,7 +435,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346912">[NEW other] swap_node = index a nil value</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346912">[NEW other] swap_node = index a nil value</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 8:18 am </p>
 
 			<div class="content">one more, but I override it with new original untouched<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-23 15:08:10: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moretrees' in callback LuaABM::trigger(): attempt to index a nil value<br />2019-03-23 15:08:10: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-23 15:08:10: ERROR&#91;Main&#93;: &nbsp; &nbsp;&#91;C&#93;: in function 'swap_node'<br />2019-03-23 15:08:10: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/moretrees/init.lua:251: in function 'grow_jungletree'<br />2019-03-23 15:08:10: ERROR&#91;Main&#93;: &nbsp; &nbsp;(load):1: in main chunk<br />2019-03-23 15:08:10: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/biome_lib/init.lua:642: in function 'replace_object'<br />2019-03-23 15:08:10: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/biome_lib/init.lua:616: in function &lt;/home/thomas/.minetest/mods/biome_lib/init.lua:590&gt;<br /></code></dd></dl><br />no crash at start, but when &quot;used&quot;</div>
@@ -445,13 +445,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -464,7 +464,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346918">Re: swap_node - something changed?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346918">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Sat Mar 23, 2019 10:25 am </p>
 
 			<div class="content"><blockquote><div><cite>Festus1965 wrote:</cite>in ./mods/moretrees/cocos_palm<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.swap_node = {} -- until now, attempt to index a nil value, line 99 to 118 </code></dd></dl><br />but this code I did IN after the failure with &quot;swap_node&quot; happened first time, as referring to unknown global ,...</div></blockquote><br /><br /><br />Remove that line completely, it's not correct at all.<br /><br />The error about being unable to index nil is due to the position or node being nil, more likely the former</div>
@@ -474,13 +474,13 @@
 			<dt>
 				<strong>rubenwardy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Moderator</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 5695</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 6:11 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> rubenwardy</dd>
+			<dd><strong>In-game:</strong> rubenwardy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -493,7 +493,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p346919">Re: swap_node - something changed?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p346919">Re: swap_node - something changed?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 10:30 am </p>
 
 			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>in ./mods/moretrees/cocos_palm</div></blockquote><br />That was the one I deleted in the morning, after I remember one missing, but you gave better search tool, and it should not have been in the grep result.<br />After this removing the crash happened with the last post about in <a href="https://forum.minetest.net/posting.php?mode=quote&amp;f=6&amp;p=346918#pr346912" class="postlink">moretrees/grow_jungletree</a> when gamer Bron came in, didn't happen jet again, but sure I didn't change anything until now as no glue.</div>
@@ -503,13 +503,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -522,7 +522,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p347009">[open] swap_node = a function</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p347009">[open] swap_node = a function</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 24, 2019 1:00 pm </p>
 
 			<div class="content">again!<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-24 19:48:39: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moretrees' in callback node_on_timer(): attempt to index a nil value<br />2019-03-24 19:48:39: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-24 19:48:39: ERROR&#91;Main&#93;: &nbsp; &nbsp;&#91;C&#93;: in function 'swap_node'<br />2019-03-24 19:48:39: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/moretrees/cocos_palm.lua:118: in function &lt;/home/thomas/.minetest/mods/moretrees/cocos_palm.lua:99&gt;</code></dd></dl><br />sofar I search,cant find any wrong declaration from me like before &quot;swap_node = nil&quot;, but will search again<br /><br />from line 99 - 120<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local coconut_growfn = function(pos, elapsed)<br />&nbsp; &nbsp;local node = minetest.get_node(pos)<br />&nbsp; &nbsp;local delay = moretrees.coconut_grow_interval<br />&nbsp; &nbsp;if not node then<br />&nbsp; &nbsp;&nbsp; &nbsp;return<br />&nbsp; &nbsp;elseif not moretrees.coconuts_regrow then<br />&nbsp; &nbsp;&nbsp; &nbsp;-- Regrowing has been turned off. Make coconust grow instantly<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.swap_node(pos, {name=&quot;moretrees:coconut_3&quot;})<br />&nbsp; &nbsp;&nbsp; &nbsp;return<br />&nbsp; &nbsp;elseif node.name == &quot;moretrees:coconut_3&quot; then<br />&nbsp; &nbsp;&nbsp; &nbsp;-- Drop coconuts (i.e. remove them), so that new coconuts can grow.<br />&nbsp; &nbsp;&nbsp; &nbsp;-- Coconuts will drop as items with a small chance<br />&nbsp; &nbsp;&nbsp; &nbsp;if math.random(coconut_drop_ichance) == 1 then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if moretrees.coconut_item_drop_ichance &gt; 0 and math.random(moretrees.coconut_item_drop_ichance) == 1 then<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;local items = minetest.get_node_drops(minetest.get_node(pos).name)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;for _, itemname in pairs(items) do<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;minetest.add_item(pos, itemname)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;end<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;end<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;minetest.swap_node(pos, biome_lib.air)<br />&nbsp; &nbsp;&nbsp; &nbsp;end<br />&nbsp; &nbsp;else</code></dd></dl><br /><br />oh found some with &quot;grep -rn &quot;swap_node&quot; ~/.minetest/mods/&quot;<br />* /mods/homedecor_modpack/homedecor/handlers/furnaces.lua:5:<span style="font-weight: bold">local</span> function swap_node(pos, name)<br />as in the original <a href="https://gitlab.com/VanessaE/homedecor_modpack/blob/master/homedecor/handlers/furnaces.lua#L5" class="postlink">https://gitlab.com/VanessaE/homedecor_modpack/blob/master/homedecor/handlers/furnaces.lua#L5</a><br /><br />* /mods/pipeworks/compat-furnaces.lua:120:<span style="font-weight: bold">local</span> function swap_node(pos, name)<br />as in the original <a href="https://gitlab.com/VanessaE/pipeworks/blob/master/compat-furnaces.lua#L120" class="postlink">https://gitlab.com/VanessaE/pipeworks/blob/master/compat-furnaces.lua#L120</a><br /><br />I took local out and test until tomorrow, also reactivate then cocos ...</div>
@@ -532,13 +532,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -551,7 +551,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p347011">Re: [open] swap_node = ...</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p347011">Re: [open] swap_node = ...</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 24, 2019 2:00 pm </p>
 
 			<div class="content">but<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-24 20:59:25: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moretrees' in callback LuaABM::trigger(): attempt to index a nil value<br />2019-03-24 20:59:25: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-24 20:59:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;&#91;C&#93;: in function 'swap_node'<br />2019-03-24 20:59:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/moretrees/init.lua:186: in function 'grow_birch'<br />2019-03-24 20:59:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;(load):1: in main chunk<br />2019-03-24 20:59:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/biome_lib/init.lua:642: in function 'replace_object'<br />2019-03-24 20:59:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/biome_lib/init.lua:616: in function 'func'<br />2019-03-24 20:59:25: ERROR&#91;Main&#93;: &nbsp; &nbsp;...ocal/share/minetest/builtin/profiler/instrumentation.lua:106: in function &lt;...ocal/share/minetest/builtin/profiler/instrumentation.lua:100&gt;<br /></code></dd></dl><br /><br />but &quot;attempt to index a nil value&quot; indicates for me some like &quot;swap_node = nil&quot; still somewhere there<br /><br />grep -rn &quot;function swap_node&quot; ~/.minetest/mods/ :<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>grep -rn &quot;function swap_node&quot; ~/.minetest/mods/<br />/home/thomas/.minetest/mods/pipeworks/compat-furnaces.lua:120:function swap_node(pos, name)<br />/home/thomas/.minetest/mods/homedecor_modpack/homedecor/handlers/furnaces.lua:5:function swap_node(pos, name)</code></dd></dl> thoses which had local in front, i took off<br /><br />grep -rn &quot;swap_node = nil&quot; ~/.minetest/mods/ - nothing<br />grep -rn &quot;swap_node = {}&quot; ~/.minetest/mods/ - nothing<br />grep -rn &quot;swap_node = &quot; ~/.minetest/mods/<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>/home/thomas/.minetest/mods/locks/shared_locked_furnace.lua:320:locks.hacky_swap_node = function(pos,name)<br />/home/thomas/.minetest/mods/WorldEdit/worldedit/visualization.lua:22:&nbsp; &nbsp;local get_node, get_meta, swap_node = minetest.get_node,<br />/home/thomas/.minetest/mods/WorldEdit/worldedit/visualization.lua:60:&nbsp; &nbsp;local get_node, get_meta, swap_node = minetest.get_node,<br />/home/thomas/.minetest/mods/WorldEdit/worldedit/visualization.lua:82:&nbsp; &nbsp;local get_node, get_meta, swap_node = minetest.get_node,<br />/home/thomas/.minetest/mods/WorldEdit/worldedit/visualization.lua:118:&nbsp; &nbsp;local get_node, get_meta, swap_node = minetest.get_node,<br />/home/thomas/.minetest/mods/WorldEdit/worldedit/manipulations.lua:561:&nbsp; &nbsp;local set_node, get_node, get_meta, swap_node = minetest.set_node,<br /></code></dd></dl></div>
@@ -561,13 +561,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -580,7 +580,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p347054">Re: [open] swap_node = ...</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p347054">Re: [open] swap_node = ...</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 24, 2019 11:58 pm </p>
 
 			<div class="content">mhh no idea where it is set nil<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-25 06:55:07: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moretrees' in callback node_on_timer(): attempt to index a nil value<br />2019-03-25 06:55:07: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-25 06:55:07: ERROR&#91;Main&#93;: &nbsp; &nbsp;&#91;C&#93;: in function 'swap_node'<br />2019-03-25 06:55:07: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/moretrees/cocos_palm.lua:118: in function &lt;/home/thomas/.minetest/mods/moretrees/cocos_palm.lua:99&gt;<br /></code></dd></dl><br /><br />extend the search to <br />* /usr/local/share/minetest/games/minimal/mods/default/init.lua:1423:function swap_node(pos,name)<br />* /usr/local/share/minetest/games/minetest_game/mods/default/furnace.lua:90:local function swap_node(pos, name)<br /><br />grep -rn &quot;swap_node&quot; ~/.minetest/worlds/CelinesWildesThailand/worldmods/ - nothing</div>
@@ -590,13 +590,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -609,7 +609,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p347055">Re: [open] swap_node = ...</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p347055">Re: [open] swap_node = ...</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Mon Mar 25, 2019 12:02 am </p>
 
 			<div class="content">It's not set to nil, it's given nil as one of the parameters</div>
@@ -619,13 +619,13 @@
 			<dt>
 				<strong>rubenwardy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Moderator</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 5695</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 6:11 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> rubenwardy</dd>
+			<dd><strong>In-game:</strong> rubenwardy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -638,7 +638,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p347064">Re: [open] swap_node = ...</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p347064">Re: [open] swap_node = ...</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Mon Mar 25, 2019 3:23 am </p>
 
 			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>It's not set to nil, it's given nil as one of the parameters</div></blockquote><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>attempt to index a nil value</code></dd></dl><br />gibe me a hint where to search next ... otherwise I fear have to set all new ...</div>
@@ -648,13 +648,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -667,7 +667,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22397.htm#p347073">Re: [open] swap_node = ...</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22397.htm#p347073">Re: [open] swap_node = ...</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Mon Mar 25, 2019 6:37 am </p>
 
 			<div class="content"><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-25 13:37:02: ERROR&#91;Main&#93;: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'moretrees' in callback LuaABM::trigger(): attempt to index a nil value<br />2019-03-25 13:37:02: ERROR&#91;Main&#93;: stack traceback:<br />2019-03-25 13:37:02: ERROR&#91;Main&#93;: &nbsp; &nbsp;&#91;C&#93;: in function 'swap_node'<br />2019-03-25 13:37:02: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/moretrees/init.lua:186: in function 'grow_birch'<br />2019-03-25 13:37:02: ERROR&#91;Main&#93;: &nbsp; &nbsp;(load):1: in main chunk<br />2019-03-25 13:37:02: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/biome_lib/init.lua:642: in function 'replace_object'<br />2019-03-25 13:37:02: ERROR&#91;Main&#93;: &nbsp; &nbsp;/home/thomas/.minetest/mods/biome_lib/init.lua:616: in function &lt;/home/thomas/.minetest/mods/biome_lib/init.lua:590&gt;<br /></code></dd></dl></div>
@@ -677,13 +677,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 804</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

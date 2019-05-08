@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22519.htm#p348562">Animated sprites</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22519.htm#p348562">Animated sprites</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Casimir</strong> &raquo; Wed Apr 10, 2019 20:41 </p>
 
 			<div class="content">Is is possible to make animated sprites (for mobs)? The lua_api is confusing and I don't get it to work.<br />Also what are &quot;LuaEntitySAO&quot;? Can set_sprite/spritesheets still be used or are they broken?</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>Casimir</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1165</dd><dd><strong>Joined:</strong> Fri Aug 03, 2012 16:59</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> CasimirKaPazi</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22519.htm#p348633">Re: Animated sprites</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22519.htm#p348633">Re: Animated sprites</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>v-rob</strong> &raquo; Thu Apr 11, 2019 23:41 </p>
 
 			<div class="content">This is possible.  I experimented around with it quite a while ago.<br /><br />So, if you have an entity definition table called &quot;my_entity&quot;, you would have to use self.object:set_sprite in one of the functions, like on_activate.  In lua_api.txt, it is described as <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">set_sprite&#40;p, num_frames, framelength, select_horiz_by_yawpitch&#41;</span><br /><br /><span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">p</span> is the coordinate of the first animation tile of the entity.  Probably {x=0, y=0} in most cases, as this is the top left corner of the image file.<br /><span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">num_frames</span> is the number of animation tiles there are.  Obviously more than 1 if you want any animation at all.<br /><span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">framelength</span> is how long each tile is shown.<br /><span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">select_horiz_by_yawpitch</span> is an interesting option.  If true, it allows you to make things like the dungeon master in the early games.  So, if the player is facing the side of the dungeon master, you will see the vertical tiles a few rows over on the image.<br /><br />Next, in the object properties, you have to have <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">spritediv = {x=[width of spritesheet], y=[height of spritesheet]}</span>.  If you also have <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">initial_sprite_basepos = {x=[number], y = [number]}</span>, this will define the first sprite to be used in the sprite sheet, in case you want them to be animated starting with a different tile.<br /><br />So, if you want to make an exact clone of the original dungeon master, your code would look something like this (only relevant parts included):<br /><br /><img src="https://forum.minetest.net/download/file.php?id=18750" alt="Image" /><br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local my_entity = {<br />&nbsp; &nbsp; initial_properties = {<br />&nbsp; &nbsp; &nbsp; &nbsp; ...<br />&nbsp; &nbsp; &nbsp; &nbsp; visual = &quot;sprite&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; textures = {&quot;dungeon_master.png&quot;},<br />&nbsp; &nbsp; &nbsp; &nbsp; spritediv = {x=6, y=5}, -- size of sheet<br />&nbsp; &nbsp; &nbsp; &nbsp; initial_sprite_basepos = {x=0, y=0},<br />&nbsp; &nbsp; &nbsp; &nbsp; ...<br />&nbsp; &nbsp; },<br />&nbsp; &nbsp; ...<br />}<br /><br />function my_entity:on_activate(staticdata, dtime_s)<br />&nbsp; &nbsp; self.object:set_sprite({x=0, y=0}, 3, 0.5, true)<br />end<br /><br />minetest</nobr>.register_entity(&quot;my_mod:my_entity&quot;, my_entity)</code></dd></dl><br /><br />BTW, the background of the sprite has to be transparent, so don't include the red and yellow stuff in the image.<br /><br />As a last note, this only works with sprites.  Things like cubes or upright_sprites will not work with this.  I don't know if it's possible to make those have animations.</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>v-rob</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 617</dd><dd><strong>Joined:</strong> Thu Mar 24, 2016 03:19</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> v-rob</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

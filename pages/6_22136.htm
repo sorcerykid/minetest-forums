@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p343643">Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343643">Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Thu Feb 14, 2019 8:50 pm </p>
 
 			<div class="content"><!-- m --><a class="postlink" href="https://github.com/minetest/minetest/issues/8232">https://github.com/minetest/minetest/issues/8232</a><!-- m --><br /><br />This is an old problem that's affected my <a href="https://github.com/MirceaKitsune/minetest_mods_structures" class="postlink">Structures mod</a> for years. Now that its city generator is nearing completion and I'm in the process of designing a new city with large buildings, this bug is the last thing standing in the way and posing a huge blocker to my project.<br /><br />Minetest doesn't seem to properly handle spawning large schematics as part of newly generated chunks. I tried using both minetest.place_schematic and minetest.place_schematic_on_vmanip from the minetest.register_on_generated function but both come with a huge problem: The schematics are always incomplete with large cubic chunks ripped out of them. This results in every city being completely mangled to the point of structures making no sense. The bug doesn't seem to affect smaller structures at all (roughly 20 x 20 x 20 and under) even when they're being spawned rapidly, it's primarily just big schematics.<br /><br />Here are a few screenshots showing this issue with the new apartment blocks I'm working on. You can see the interiors of apartments as they're randomly sliced open. Instead of the weirdly cut out cubes, we should only be seeing solid walls with windows from the outside.<br /><br /><img src="https://i.imgur.com/HOm6Afx.jpg" alt="Image" /><br /><img src="https://i.imgur.com/3lNC6AH.jpg" alt="Image" /><br /><img src="https://i.imgur.com/vgO8iGe.jpg" alt="Image" /><br /><img src="https://i.imgur.com/IGYoYN5.jpg" alt="Image" /></div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>MirceaKitsune</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 851</dd><dd><strong>Joined:</strong> Sat May 21, 2011 10:31 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> MirceaKitsune</dd>
+			<dd><strong>In-game:</strong> MirceaKitsune</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p343730">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343730">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sat Feb 16, 2019 9:11 am </p>
 
 			<div class="content">Is this caused by the structure being partly in chunks that hadn't been emerged when the schematic was placed? And were then generated afterwards.<br /><br />You might already know if that's the cause, but if not you might be able to determine it if you create a testing world with <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">backend = dummy</span> in the world.mt file - that way the world is recreated every time you start and you can see how approaching the same schematic from different directions causes it to be missing from different chunks.<br /><br />- If that turns out to be the problem, then workarounds should be possible.<br /><br />Also, if you need a mod that shows the chunk boundaries...<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local data&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = {} -- reuse the massive VoxelManip memory buffers instead of creating on every on_generate()<br /><br />local function on_generated(minp, maxp, blockseed)<br /><br />&nbsp; local vm, emerge_min, emerge_max = minetest.get_mapgen_object(&quot;voxelmanip&quot;)<br />&nbsp; vm:get_data(data)&nbsp; &nbsp; &nbsp; &nbsp; -- put all nodes except the ground surface in this array<br />&nbsp; local area = VoxelArea:new{MinEdge=emerge_min, MaxEdge=emerge_max}<br /><br />&nbsp; local nodeId_debug1 = minetest.get_content_id(&quot;default:clay&quot;)<br /><br />&nbsp; -- v7 rivers appear to be cutting off the top and bottom of the view area<br />&nbsp; for x = minp.x, maxp.x do <br />&nbsp; &nbsp; data&#91;area:index(x, minp.y, minp.z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(x, maxp.y, minp.z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(x, minp.y, maxp.z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(x, maxp.y, maxp.z)&#93; = nodeId_debug1<br />&nbsp; end<br />&nbsp; for y = minp.y, maxp.y do <br />&nbsp; &nbsp; data&#91;area:index(minp.x, y, minp.z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(maxp.x, y, minp.z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(minp.x, y, maxp.z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(maxp.x, y, maxp.z)&#93; = nodeId_debug1<br />&nbsp; end<br />&nbsp; for z = minp.z, maxp.z do <br />&nbsp; &nbsp; data&#91;area:index(minp.x, minp.y, z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(maxp.x, minp.y, z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(minp.x, maxp.y, z)&#93; = nodeId_debug1<br />&nbsp; &nbsp; data&#91;area:index(maxp.x, maxp.y, z)&#93; = nodeId_debug1<br />&nbsp; end<br /><br />&nbsp; vm:set_data(data)&nbsp; &nbsp; <br />&nbsp; vm:set_lighting({day=0, night=0})<br />&nbsp; vm:calc_lighting()<br />&nbsp; vm:write_to_map()<br />end<br /><br />minetest.register_on_generated(on_generated)<br /></code></dd></dl></div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 5:36 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p343736">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343736">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sat Feb 16, 2019 11:51 am </p>
 
 			<div class="content">I should clarify that I'm already using the vmanip to spawn structures with on_generate. I understand this function should now only attempt to spawn a piece of schematic that intersects the chunk in cause. So this shouldn't be a case of chunk overflow normally, since I use the vm provided by the generator which should know what to do.<br /><br />That is an interesting test, I didn't know about this parameter. I will keep in mind.</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>MirceaKitsune</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 851</dd><dd><strong>Joined:</strong> Sat May 21, 2011 10:31 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> MirceaKitsune</dd>
+			<dd><strong>In-game:</strong> MirceaKitsune</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p343738">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343738">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sat Feb 16, 2019 12:07 pm </p>
 
 			<div class="content">FWIW, I didn't mean that drawing beyond the bounds of the chunk might cause it, I meant that being limited to within the bounds of the on_generate chunk may cause it if you don't also successfully spawn the structure in every other chunk that the structure touches.<br /><br />Are the missing parts aligned with chunk boundaries?</div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 5:36 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p343739">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343739">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sat Feb 16, 2019 12:14 pm </p>
 
 			<div class="content"><blockquote><div><cite>DrFrankenstone wrote:</cite>FWIW, I didn't mean that drawing beyond the bounds of the chunk might cause it, I meant that being limited to within the bounds of the on_generate chunk may cause it if you don't also successfully spawn the structure in every other chunk that the structure touches.<br /><br />Are the missing parts aligned with chunk boundaries?</div></blockquote><br /><br />Oh: I am calling minetest.place_schematic_on_vmanip for the same structure multiple times, in case it intersects multiple chunks. Each minetest.on_generated call should be addressing every remaining piece of a schematic.<br /><br />It doesn't seem like they're aligned. The large cubic chunks ripped out of buildings appear to be random and their size seems to vary. I still suspect it has something to do with chunks but we need to dig deeper.</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>MirceaKitsune</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 851</dd><dd><strong>Joined:</strong> Sat May 21, 2011 10:31 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> MirceaKitsune</dd>
+			<dd><strong>In-game:</strong> MirceaKitsune</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -232,7 +232,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p343789">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343789">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sun Feb 17, 2019 3:57 am </p>
 
 			<div class="content">Yeah, I've seen it a couple of times now too, and it doesn't seem to be aligned with chunk boundaries. It also appears to be deterministic - reappearing every time the map is generated, even with the backend set to dummy.<br /><br />Edit: the position of the player when the map is being generated can sometimes affect where holes appear. <br />(player position changes the order chunks are generated in)</div>
@@ -242,13 +242,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 5:36 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -261,7 +261,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p343814">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343814">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sun Feb 17, 2019 1:26 pm </p>
 
 			<div class="content">Very interesting. Thank you for testing and mentioning those details, it may help in finding a solution.</div>
@@ -271,13 +271,13 @@
 			<dt>
 				<strong>MirceaKitsune</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 851</dd><dd><strong>Joined:</strong> Sat May 21, 2011 10:31 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> MirceaKitsune</dd>
+			<dd><strong>In-game:</strong> MirceaKitsune</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -290,7 +290,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p343993">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p343993">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Sokomine</strong> &raquo; Wed Feb 20, 2019 12:48 pm </p>
 
 			<div class="content">I had some strange behaviour with my skyplatform mod as well. Apart from the roads and the dirt with grass in the middle, there ought to be only sand as ground. Each platform is 100x100 nodes wide and placed using minetest.place_schematic(..):<br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=18265" alt="Image" /></div>
@@ -300,13 +300,13 @@
 			<dt>
 				<strong>Sokomine</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3750</dd><dd><strong>Joined:</strong> Sun Sep 09, 2012 5:31 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Sokomine</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -319,7 +319,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344305">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344305">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sun Feb 24, 2019 1:47 pm </p>
 
 			<div class="content">I suspect a concurrency bug.<br /><br />I've been using large schematics to <a href="https://forum.minetest.net/viewtopic.php?p=344304#p344304" class="postlink">create giant trees</a>. The replacement table passed to <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">place_schematic&#40;&#41;</span> is different for each type of tree, and I've noticed that if two trees are near each other (like in the cherry blossom screenshot), the first replacement table ends up being applied to both schematics, even though a very different table was passed to the second place_schematic() call.<br /><br /><span style="text-decoration: line-through;">My thinkings is that the replacement table might not be the only thing inadvertently being shared by invocations of place_schematic&#40;&#41; &#40;which might be running in parallel&#41;.</span></div>
@@ -329,13 +329,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 5:36 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -348,7 +348,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344306">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344306">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Sokomine</strong> &raquo; Sun Feb 24, 2019 2:02 pm </p>
 
 			<div class="content"><blockquote><div><cite>DrFrankenstone wrote:</cite>I've been using large schematics to create giant trees. The replacement table passed to place_schematic() is different for each type of tree, and I've noticed that if two trees are near each other (like in the cherry blossom screenshot), the first replacement table ends up being applied to both schematics, even though a very different table was passed to the second place_schematic() call.<br /></div></blockquote><br />The replacement table is definitely cached. When I noticed that some time ago, I made sure lua_api.txt was adjusted to mention that behaviour.<br /><br /><blockquote><div><cite>DrFrankenstone wrote:</cite>My thinkings is that the replacement table might not be the only thing inadvertently being shared by invocations of place_schematic() (which might be running in parallel).<br /></div></blockquote><br />Possibly. Borders between mapchunks seem to cause some problems. Perhaps it's really mapgen running in parallel that causes it. Except that in the example above the sourrounding mapchunks ought to have long been created.</div>
@@ -358,13 +358,13 @@
 			<dt>
 				<strong>Sokomine</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3750</dd><dd><strong>Joined:</strong> Sun Sep 09, 2012 5:31 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Sokomine</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -377,7 +377,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344308">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344308">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sun Feb 24, 2019 2:25 pm </p>
 
 			<div class="content">damn, I saw that in the lua_api.txt (thank you) and forgot. Working around this is going to be interesting.</div>
@@ -387,13 +387,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 5:36 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -406,7 +406,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344336">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344336">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>texmex</strong> &raquo; Sun Feb 24, 2019 7:01 pm </p>
 
 			<div class="content">Does <a href="https://github.com/bell07/minetest-schemlib" class="postlink">schemlib</a> solve the issue at mapchunk borders? IIRC it dealt with such problems.</div>
@@ -416,13 +416,13 @@
 			<dt>
 				<strong>texmex</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1290</dd><dd><strong>Joined:</strong> Mon Jul 11, 2016 9:08 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> tacotexmex</dd>
+			<dd><strong>In-game:</strong> texmex</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -435,7 +435,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344774">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344774">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Sat Mar 02, 2019 1:31 am </p>
 
 			<div class="content">What value are you using for 'num_emerge_threads'? The default is automatic behaviour which is 'number of processors' - 2. Also note that a sqlite world database is not 'thread safe' so 'num_emerge_threads' should be set to '1'.<br />Try '1' to see if this improves anything.</div>
@@ -445,13 +445,13 @@
 			<dt>
 				<strong>paramat</strong>
 			</dt>
-			<dd></dd>
+			<dd>Developer</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3364</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 12:05 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> paramat</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -464,7 +464,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344777">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344777">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sat Mar 02, 2019 1:53 am </p>
 
 			<div class="content"><blockquote><div><cite>paramat wrote:</cite>What value are you using for 'num_emerge_threads'? The default is automatic behaviour which is 'number of processors' - 2. Also note that a sqlite world database is not 'thread safe' so 'num_emerge_threads' should be set to '1'.<br />Try '1' to see if this improves anything.</div></blockquote><br /><br />I just tried setting to to 1 (it was 0), and that hasn't fixed it. <br /><br />The pieces that go missing seem to be 16x16, though usually they are bunched together as bigger missing pieces.</div>
@@ -474,13 +474,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 5:36 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -493,7 +493,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344802">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344802">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Sat Mar 02, 2019 12:54 pm </p>
 
 			<div class="content">I had this bug in CTF, and found that you need to emerge the area first using <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.emerge_area</span></div>
@@ -503,13 +503,13 @@
 			<dt>
 				<strong>rubenwardy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Moderator</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 5725</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 6:11 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> rubenwardy</dd>
+			<dd><strong>In-game:</strong> rubenwardy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -522,7 +522,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344846">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344846">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>MirceaKitsune</strong> &raquo; Sat Mar 02, 2019 10:43 pm </p>
 
 			<div class="content">Confirming that <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">num_emerge_threads = 1</span> in minetest.conf does not seem to affect the problem, it still occurs the same way.</div>
@@ -532,13 +532,13 @@
 			<dt>
 				<strong>MirceaKitsune</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 851</dd><dd><strong>Joined:</strong> Sat May 21, 2011 10:31 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> MirceaKitsune</dd>
+			<dd><strong>In-game:</strong> MirceaKitsune</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -551,7 +551,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p344849">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p344849">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>DrFrankenstone</strong> &raquo; Sat Mar 02, 2019 11:32 pm </p>
 
 			<div class="content"><blockquote><div><cite>rubenwardy wrote:</cite>I had this bug in CTF, and found that you need to emerge the area first using <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.emerge_area</span></div></blockquote><br /><br />My lua code's in the on_generate, so partly is the emerge code, but it does improve if I move the <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">place_schematic&#40;&#41;</span> call inside a <span style="color: #000000; background-color: #ffffff; font: 0.9em Monaco, 'Andale Mono','Courier New', Courier, mono; border: 1px solid #d8d8d8;">minetest.after&#40;0.1, ...&#41;</span> call to help it happen after the emerge.</div>
@@ -561,13 +561,13 @@
 			<dt>
 				<strong>DrFrankenstone</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 103</dd><dd><strong>Joined:</strong> Tue May 24, 2016 5:36 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> treer</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -580,7 +580,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/6_22136.htm#p347940">Re: Large schematics are spawned incompletely</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/6_22136.htm#p347940">Re: Large schematics are spawned incompletely</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>bell07</strong> &raquo; Wed Apr 03, 2019 5:41 am </p>
 
 			<div class="content">You can try to use the emerge_area hook like schemlib does, but in combination with minetest.place_schematic:<br />(untested code based on schemlib code:)<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local function emergeblocks_callback(pos, action, num_calls_remaining, ctx)<br />&nbsp; &nbsp;if not ctx.total_blocks then<br />&nbsp; &nbsp;&nbsp; &nbsp;ctx.total_blocks&nbsp; &nbsp;= num_calls_remaining + 1<br />&nbsp; &nbsp;&nbsp; &nbsp;ctx.current_blocks = 0<br />&nbsp; &nbsp;end<br />&nbsp; &nbsp;ctx.current_blocks = ctx.current_blocks + 1<br /><br />&nbsp; &nbsp;if ctx.current_blocks == ctx.total_blocks then<br />&nbsp; &nbsp;&nbsp; &nbsp;minetest.place_schematic(ctx.pos, ctx.schematic, ctx.rotation, ctx.replacements, ctx.force_placement)<br />&nbsp; &nbsp;end<br />end<br /><br /><br />local function my_place_schematic((pos, schematic, rotation, replacements, force_placement))<br />&nbsp; &nbsp;minetest.emerge_area(pos, pos, emergeblocks_callback, {<br />&nbsp; &nbsp;&nbsp; &nbsp;pos = pos,<br />&nbsp; &nbsp;&nbsp; &nbsp;schematic = schematic,<br />&nbsp; &nbsp;&nbsp; &nbsp;rotation = rotation,<br />&nbsp; &nbsp;&nbsp; &nbsp;replacements = replacements,<br />&nbsp; &nbsp;&nbsp; &nbsp;force_placement = force_placement<br />&nbsp; &nbsp;})<br />end</code></dd></dl></div>
@@ -590,13 +590,13 @@
 			<dt>
 				<strong>bell07</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 561</dd><dd><strong>Joined:</strong> Sun Sep 04, 2016 3:15 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> bell07</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

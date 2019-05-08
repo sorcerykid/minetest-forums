@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22541.htm#p348947">Restrict where a node can be placed</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22541.htm#p348947">Restrict where a node can be placed</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>jarel</strong> &raquo; Mon Apr 15, 2019 19:59 </p>
 
 			<div class="content">Hi, I have two questions. <br /><br />1. How to restrict a node to be placed only below another nodes, in general.<br />And in the other hand...<br /><br />2. How to restrict a node to be placed only below a kind of node in particular.<br /><br />I'm trying to attach a lamp only to hanger nodes (the hanger node changes to hanger_with_chains to connect the two nodes visually). Hangers can be placed on the floor, on the ceiling or wherever, but I only want the lamps be able to be placed below those on the ceiling.<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.register_node(&quot;qnn:lamp&quot;, {<br />&nbsp; &nbsp;description = &quot;Lamp&quot;,<br />&nbsp; &nbsp;drawtype = &quot;nodebox&quot;,<br />&nbsp; &nbsp;tiles = {&quot;qnn_lamp.png&quot;},<br />&nbsp; &nbsp;paramtype = &quot;light&quot;,<br />&nbsp; &nbsp;--paramtype2 = &quot;wallmounted&quot;,<br />&nbsp; &nbsp;on_rotate = screwdriver.disallow,<br />&nbsp; &nbsp;sunlight_propagates = true,<br />&nbsp; &nbsp;walkable = false,<br />&nbsp; &nbsp;--liquids_pointable = false,&nbsp; &nbsp;<br />&nbsp; &nbsp;groups = {choppy=1},<br />&nbsp; &nbsp;node_box = {<br />&nbsp; &nbsp;&nbsp; &nbsp;type = &quot;fixed&quot;,<br />&nbsp; &nbsp;&nbsp; &nbsp;fixed = {<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{-0.25, -0.5, -0.25, 0.25,0.5, 0.25},&nbsp; &nbsp;&nbsp; &nbsp;<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;},<br />&nbsp; &nbsp;},&nbsp; &nbsp;<br />&nbsp; &nbsp;on_place = function(itemstack, user, pointed_thing)<br />&nbsp; &nbsp;&nbsp; &nbsp;local user_name = user:get_player_name()<br />&nbsp; &nbsp;&nbsp; &nbsp;local pos = pointed_thing.under<br />&nbsp; &nbsp;&nbsp; &nbsp;local name =minetest.get_node(pos).name<br />&nbsp; &nbsp;&nbsp; &nbsp;local i=0<br />&nbsp; &nbsp;&nbsp; &nbsp;if name==&quot;qnn:hanger&quot; then&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_node(pos, {name=&quot;qnn:hanger_with_chain&quot;, param2=minetest.get_node(pos).param2 }) --&nbsp; &lt;--swap_node doesnt keep the rotation of the node here<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;pos.y=pos.y-1<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;minetest.set_node</nobr>(pos, {name=&quot;qnn:lamp&quot;}) <br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;itemstack:take_item(1) --remove 1 lamp from inv.<br />&nbsp; &nbsp;&nbsp; &nbsp;end<br />&nbsp; &nbsp;&nbsp; &nbsp;return itemstack <br />&nbsp; &nbsp;end,&nbsp; &nbsp;<br />})<br /></code></dd></dl><br />I used on_place, and it works... save for the fact that it got glitchy when placing from certain angles and I got fake duplicates of the node around the original. Those duplicates, when I check them with node inspector are &quot;air&quot; although the image and the selection box are from the lamp node.<br />If I close the game and enter again, those nodes are gone, are air again.<br /><br />Thanks in advance</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>jarel</strong>
 			</dt>
-			<dd></dd>
+			<dd>New member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Sat Apr 13, 2019 08:14</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/49_22356.htm#p346363">[solved] register biome problem</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/49_22356.htm#p346363">[solved] register biome problem</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>AiTechEye</strong> &raquo; Sun Mar 17, 2019 12:10 </p>
 
 			<div class="content"><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=18470&amp;sid=07d7da56bc1832fa34339fd5fb4fe6e4" alt="Image" /><br /><br />after months of thinking I made the decision to try to create a game from scratch, but now when I adds the first biome, stone covers all grass, why?<br />using mt 5, newest build<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>minetest.register_biome({<br />&nbsp; &nbsp;name = &quot;grassland&quot;,<br />&nbsp; &nbsp;node_top = &quot;default:dirt_with_grass&quot;,<br />&nbsp; &nbsp;depth_top = 1,<br />&nbsp; &nbsp;node_filler = &quot;default:dirt&quot;,<br />&nbsp; &nbsp;depth_filler = 5,<br />&nbsp; &nbsp;node_stone = &quot;default:stone&quot;,<br />--&nbsp; &nbsp;node_water_top = &quot;&quot;,<br />--&nbsp; &nbsp;depth_water_top =0 ,<br />--&nbsp; &nbsp;node_water = &quot;&quot;,<br />--&nbsp; &nbsp;node_river_water = &quot;&quot;,<br />&nbsp; &nbsp;y_min = -31000,<br />&nbsp; &nbsp;y_max = 31000,<br />&nbsp; &nbsp;heat_point = 50,<br />&nbsp; &nbsp;humidity_point = 50,<br />})</code></dd></dl><br /><br /><span style="font-weight: bold">EDIT:</span><br />i solved it, by adding minetest.register_alias to each of the nodes, but still why is this required?<br /><blockquote class="uncited"><div>minetest.register_alias(&quot;mapgen_stone&quot;,&quot;default:stone&quot;)<br />minetest.register_alias(&quot;mapgen_dirt&quot;,&quot;default:dirt&quot;)<br />minetest.register_alias(&quot;mapgen_dirt_with_grass&quot;,&quot;default:dirt_with_grass&quot;)</div></blockquote></div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>AiTechEye</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 647</dd><dd><strong>Joined:</strong> Fri May 29, 2015 21:14</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> AiTechEye</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/49_22356.htm#p346446">Re: [solved] register biome problem</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/49_22356.htm#p346446">Re: [solved] register biome problem</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>paramat</strong> &raquo; Mon Mar 18, 2019 06:32 </p>
 
 			<div class="content">I don't think this is solved.<br /><br />&gt; minetest.register_alias(&quot;mapgen_dirt&quot;,&quot;default:dirt&quot;)<br />&gt; minetest.register_alias(&quot;mapgen_dirt_with_grass&quot;,&quot;default:dirt_with_grass&quot;)<br /><br />Those 2 aliases shouldn't be necessary, biome surface nodes like grass and dirt only need to be added to a biome registration (unless you use mapgen v6, which i recommend you don't as it doesn't use the Biome API).<br /><br />When you make a game you need to add a certain number of mapgen aliases, as explained here <a href="https://github.com/minetest/minetest/blob/77cfc4fcd1d10d088e8a56e38bc195a5d6fe5e57/doc/lua_api.txt#L282" class="postlink">https://github.com/<a href="https://github.com/minetest/minetest/blob/77cfc4fcd1d10d088e8a56e38bc195a5d6fe5e57/doc/lua_api.txt#L282" class="postlink">minetest/<a href="https://github.com/minetest/minetest/blob/77cfc4fcd1d10d088e8a56e38bc195a5d6fe5e57/doc/lua_api.txt#L282" class="postlink">minetest</nobr>/blob/77cfc4fcd1d10d088e8a56e38bc195a5d6fe5e57/doc/lua_api.txt#L282</a></div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>paramat</strong>
 			</dt>
-			<dd></dd>
+			<dd>Developer</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 3358</dd><dd><strong>Joined:</strong> Sun Oct 28, 2012 00:05</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> paramat</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/49_22356.htm#p346459">Re: [solved] register biome problem</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/49_22356.htm#p346459">Re: [solved] register biome problem</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>AiTechEye</strong> &raquo; Mon Mar 18, 2019 11:10 </p>
 
 			<div class="content">got it, thanks<br /><br />as you told, only mapgen_stone is needed in this case, without it, it wont work<br /><br /><img src="https://forum.minetest.net/download/file.php?mode=view&amp;id=18483&amp;sid=a1d8a8d46b52e59cee929413b401cc35" alt="Image" /></div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>AiTechEye</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 647</dd><dd><strong>Joined:</strong> Fri May 29, 2015 21:14</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> AiTechEye</dd>
+			
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

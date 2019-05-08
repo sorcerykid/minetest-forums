@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346226">[Server] Minetest Thailand 5.1.0-e22a69d :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346226">[Server] Minetest Thailand 5.1.0-e22a69d :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 16, 2019 3:30 am </p>
 
 			<div class="content">from [Server] Just Test Tribute<br /><blockquote><div><cite>talamh wrote:</cite>https://github.com/ac-minetest/anticheat</div></blockquote><br /><br />how can it be, that after so much gamer protest and complain about cheaters this can hide ?: <br /><a href="https://github.com/ac-minetest/anticheat" class="postlink">[Mod] anticheat (6b101b1 on Sep 8, 2017)</a> <br />It is downloaded, edited (moderators) and ready to activate next server start.<br /><br />add:<br /><span style="font-weight: bold">no_guests: add new rule</span><br />added rule &quot;[A-Z][a-z]{3,}[1-9][0-9]{2,3}&quot; to no_guests, as this rule counts gamer as guest and only 1/8 points instead of 1 point, and this indicates what THEY think is a guest, I think meant also as clone users hihi<br /><br /><span style="font-weight: bold">update myself about rules of get points on server-list</span><br />and may set a change at max_gamer ...<br />and reading more in the server list code there is just now a border at 200+, not before at steps of 17, 33 or more max_gamer. And as then also minus with 90% of max_gamer, at me 32 max mean if server reach 80% of 32 = 25 or 26 already penalty -  6.4 points.<br />So reverse to keep a good lag status 32 gamer in, I need to set max_gamer to 32/80*100 = 40, hmm to optimize ranking also - might be or not important, but I know, when I reached place one, most other servers allow guests lost them also, like they get one mismatch client warning and do not try again, what is perfect to<br />* block clones<br />* make real minetest gamer to upgrade, but just the announce &quot;wrong protocol or what ever&quot; is not helping them at all to understand the coders language about protocol tsts<br /><br /><span style="font-weight: bold">serverpackethandler.cpp</span> for new compling<br />I just did too changes in core src serverpackethandler.cpp showing me also what rule raised log a &quot;mismatched client tried ...&quot;, as there are two ...<br />* <dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>if (depl_serial_v == SER_FMT_VER_INVALID) ...</code></dd></dl><br />* <dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>if ((g_settings-&gt;getBool(&quot;strict_protocol_version_checking&quot;) &amp;&amp;<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;net_proto_version != LATEST_PROTOCOL_VERSION) ||<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;net_proto_version &lt; SERVER_PROTOCOL_VERSION_MIN ||<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;net_proto_version &gt; SERVER_PROTOCOL_VERSION_MAX) {</code></dd></dl><br />so i will see which of them occurred ...<br /><br /><span style="font-weight: bold">.../src/network/networkprotocol.h line 931</span><br />also searching now for more clear text at old clients when want to connect to mts 5.0.0 as this<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Access denied. Your clients version is not supported.<br />Please contact server administrator.</code></dd></dl><br />is definitely to less info for normal users. AT least there could announced to use new version 5.0.0 Minetest client/app from minetest.net or like that. Or is that client side message ?<br />found at: .../src/network/networkprotocol.h line 931<br />I will take a trial ... changed to (but need to wait for next crash, then new compiling of server 5.1.0-dev)<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Access denied. Your clients version is not supported or outdated.<br />Please use original new Minetest 5.0.0 client version from Minetest.net.</code></dd></dl><br /><br />add:<br />* deleted 4500 HV-cable<br />* rebuilding, empty until now 130 gold chests, and near 1000 pipework tubes in Store AiA-ChiangMai as not longer needed<br /><br />wow: 24 hours now running, so much better than with LuaJit, as 2-3 times longer active now.<br />profiler<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 38.8% - pipeworks<br />* 16.9% - mobs_monster<br />* 15% - technic<br />* 7.2% - mesecons<br />* 4.9% - mobs_animal<br />* 4.7% - default<br />* 3.8% - aeras<br /></code></dd></dl><br /><br />final this day, server still active, I see much more easy with the server list, just when look how the list is shown in 5.0-client or 0.4 client.<br /> * so as an 0.4.x-client you/they see 0.4 first ... and far below the 5.0 ... so wonder why then still there where so much logins from old version, when they cant see me, place 50 or more down, seams they all saved favorite and are automatic joining !!!<br />* so as an 5.0-client user the 5.0 servers shown first, so with even 10 people in, your first places also</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346292">[Server].Minetest.one Thailand 5.1.0-e22a69d :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346292">[Server].Minetest.one Thailand 5.1.0-e22a69d :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 16, 2019 11:40 pm </p>
 
 			<div class="content">still now crash with OOM and running since 38 hours,<br />so all changes above have not taken action yet ... and I don't want to disturb this run ...<br /><br />During the night I hope to remember to close [Mod] border for new player. I wanna see them first, during I am online.<br /><br />unfortunately lag is higher than before, and not always a reason for it, <br />sure the gamer from Serbia with 330 ms is changing it up also,<br />builds are getting with waiting for node set so far then ... hmmm<br /><br />so check the last profiler, if something strange, as now more and more gamer got 5.0.0 client, and getting in and play.<dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 38.6% pipeworks<br />* 17.3% mobs_monster<br />* 15.9% technic<br />* 7.1% mesecons<br />* 4.6% mobs_animal<br />* 4.0% areas<br />* 3.8% default<br />* 2.4% player_api<br /></code></dd></dl> shows a constant spread of cpu time using Mod, quite difficult now to see how to reduce that quit high ranked pipeworks ...<br /><br />I try something out as gamer really have no idea about distance, server location and ping RTT<br /><a href="https://www.zeemaps.com/map?group=3361084&amp;location=Europa#" class="postlink">World Map with Server locations</a><br />comments about this please here: <a href="https://forum.minetest.net/viewtopic.php?f=14&amp;t=22354" class="postlink">World Map with Serverlocations</a><br /><br />I did the same kind of map for the main gamer, but this is too private ...<br /><br />So far I sat the hole day here, maps, helping 3 new gamer to start and waited for a crash, but server now since 48 hours stable.</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346419">[Server].Minetest.one Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346419">[Server].Minetest.one Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 17, 2019 11:07 pm </p>
 
 			<div class="content">server now 62 hours on the run - maybe slower than with LuaJit, but this is better<br /><br /><a href="http://minetest.gotdns.ch/minetest.one/jpg/Screenshot-htop-server_2019-03-18_05-27-07.png" class="postlink">htop screen with 21 GB cache mts, and using cpu even as 2 mtc-5.x-win64 are open there also</a><br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 43% pipeworks<br />* 16% mobs_monster<br />* 14.8% technic<br />* 6.7% mesecons<br />* 4.2% mobs_animal<br />* 3.7% areas<br /></code></dd></dl><br /><br />add:<br />8am local time, shutdown<br />* backup folder .minetest/* (done)<br />* backup dump postgresql map and player (done 11.9 GB file)<br />* update and upgrade ubuntu system (done)<br />* minetest: git pull, cmake make (done, accepted my changes in code)<br />* restart (done)<br />* restart postgresql (done)<br />* restart mts, with check run of new settings (in progress)<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Minetest 5.1.0-dev-77cfc4f-dirty (Linux)<br />BUILD_TYPE=Release<br />RUN_IN_PLACE=0<br />USE_GETTEXT=1<br />USE_SOUND=0<br />USE_CURL=1<br />USE_FREETYPE=1<br />USE_LUAJIT=0<br />STATIC_SHAREDIR=&quot;/usr/local/share/minetest&quot;<br /></code></dd></dl><br /><br />Server running, but still looking for some changes, may restart then<br /><br />so far this<br />* &quot;.../src/network/networkprotocol.h line 931&quot; change belongs into the clients, I still get same answer on open 0.4.x-client<br /><br />also build in some print(collectgarbage(&quot;count&quot;)) before and after some [Mod] load, so after loading new count<br />before time = 597 (first mod guess after usr/local/... Mods)<br />+ time = 602<br />+ sightview = 770 (=+ 170)<br />+ no-guests = 792 (=+ 22)<br />+ minetest-remover = 848 (=+ 56)<br />+ lamps, lagcheck, killme, euban = 953 (all taken 105)<br />+ bows, area, markers, adv_spawning, plantlife/junglegrass, homedecor_i18 = 1898 (all taken 945)<br />+ deathmessages, craftguide, wiki = 2646 (all taken 748)<br />+ trash-can, towercrane, torches, srvstuff, spawn_command, smartshop = 2907 (all taken 251)<br />+ signs_lib, morechests, exchange = 3413 (all taken 506)<br />+ digilines = 3901 (=+ 488)<br />+ nixie_tubes, digiline_remote, crafting, border, Biome_lib = 5783 (all taken 1882)<br />+ plantlife/Poison + molehills = 5587 (no, not a mistake, some mem has been given free between, hmm)<br />+ Ferns = 4164 (again less, or they not load and print in real follow loading ?)<br />+ basic_robots, ballon, anticheat = 5208 (all used 140)<br />+ alphabeth, cave stuff, mp-xtraores = 6061 (all used 850)<br />+ mesecons = 6314 (=+ 250)<br />+ travelnet = 7629 (=+ 1580)<br />+ protector = 7784 (=+ 150)<br />+ moremesecons = 9026 (=+ 1250)<br />+ animalmaterials / animalmat.+cooking = 9097 (=+ 70)<br />+ spectator, hec_vicount, hec_nether = 10640 (all taken 650)<br />+ farming 1.40 = 12494 (=+ 1750)<br />+ moreores = 12607 (=+ 120)<br />+ Basic_materials = 12727 (=+ 120)<br />+ Pipeworks = 16090 (=+ 3350)<br />+ locks, arrow_signs, moreblocks, nether = 28320 (all used 12200)<br />+ moretrees = 37911 (=+ 9600)<br />+ technic_chests = 44677 (=+ 6350)<br />+ concrete = 45027 (=+ 350)<br />+ plantlife dryplans grssses, flowerpot = 45778 (all took 750)<br />+ plantlife flowers, etherreal = 52813 (both took 7050)<br />+ 3d_armor, xtraores = 53313<br />+ hud_hunger hud, 3d_armor wirld, shield, hec_obsidian, stand, sfinv = 53592<br />+ technic + worldgen = 54959 (=+ 1500)<br />+ technic / extranodes = 57505 (=+ 2500)<br />+ ed_armor technic, unified_inv, u_skins, servercleaner, mail, armor ui, xdecor, enchanting = 60014 (all took 2500)<br />+ Mobs Redo 1.40 = 60631 (=+ 615)<br />+ Mobs Redo monsters = 60939 (=+ 300)<br />+ Mobs_sky + bat,, inventorybags = 62196 (=+ 1250)<br />+ technic / technic = 70411 (=+ 8200)<br />+ digtron = 71432 (=+ 1020)<br />+ aluminuim, wrench = 71767 (took 330)<br />+ bitchange, mining_plus, special, 3d_armor / hazmat = 72191 (all took 420)<br /><br />so biggest user yet sure:<br />* 9600 - moretrees 13% - <a href="https://github.com/minetest-mods/moretrees/issues/47" class="postlink">issue #47</a><br />* 8200 - technic / technic all 25% - <a href="https://github.com/minetest-mods/technic/issues/463" class="postlink">issue #463</a><br />* 6350 - technic / chests (same)<br />* 3350 - pipeworks 5% <a href="https://github.com/minetest-mods/pipeworks/issues/226" class="postlink">issue #226</a><br />* 2500 - technic / extranodes (same)<br />* 1750 - farming<br />* 1580 - travelnet<br />* 1500 - technic / worldgen (same)<br />* 1250 - moremesecons<br />* 1020 - digtron<br />...<br />Or after last [Mod] load was 72191, then moretrees has</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346440">[Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346440">[Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Mon Mar 18, 2019 4:46 am </p>
 
 			<div class="content">so how I had to do for automatic calculation used mem ?<br /><br />most every [Mod] includes now<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>print(collectgarbage(&quot;count&quot;))</code></dd></dl><br />at the end of the init.lua<br /><br />that gives me the count at this time, and if I store it in a global var int, I should be able to recall, calculate diff, and set new ...<br /><br />as in first loaded [Mod] diff as need to set<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>print(collectgarbage(&quot;count&quot;))<br />global luamemold = nil<br />global luamemnew = nil<br />luamemold = collectgarbage(&quot;count&quot;)</code></dd></dl><br /><br />and then at every [Mod] end like this<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>luamemnew = collectgarbage(&quot;count&quot;)<br />print(&quot;&#91;Mod&#93; x *(version/date) - loaded - with &quot;.(luamemnew - luamemold).&quot; more Lua Mem used&quot;)<br />luamemold = luamemnew<br /></code></dd></dl><br /><br />want to short it to no commata<br />???</div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346535">[Server]Thailand Minetest.one 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346535">[Server]Thailand Minetest.one 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Tue Mar 19, 2019 2:53 am </p>
 
 			<div class="content">server again already 22 hours without a case like OOM<br /><br />and Visitors<br />* talamh, ping 375,<br />* Master_CJ, ping 305<br />caused just a lot of lag ... waiting 5 sec for confirm saw ... <br />I need to apply another ban reason, to high ping, laggy ... (done)<br /><br />During now 6 hours cutting jungle trees, i had to explain 3 times about incompatible old 0.4.x and new 5.0.x version ... so the got back to there servers ... but with just 110 gamer very less today.</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -232,7 +232,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346560">[Server]Thailand Minetest.one 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346560">[Server]Thailand Minetest.one 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Tue Mar 19, 2019 12:53 pm </p>
 
 			<div class="content">it works with<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>luamemnew = collectgarbage(&quot;count&quot;)<br />print(&quot;&#91;Mod&#93; time *(version/date) - loaded - with &quot;..math.floor(luamemnew - luamemold)..&quot; more Lua Mem used&quot;)<br />luamemold = luamemnew</code></dd></dl><br />so first check the code that sure waht I was measure there ...<br /><br />and that is what i get print out at server start (screen):<dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Mem Start with: 599<br />&#91;Mod&#93; time - loaded - Mem: 604.818359375<br />&#91;Mod&#93; time *(version/date) - loaded - with 6 more Lua Mem used<br />&#91;Mod&#93; sightview *(version/date) - loaded - with 169 more Lua Mem used<br />&#91;Mod&#93; no-guests *(version/date) - loaded - with 22 more Lua Mem used<br />&#91;Mod&#93; minetest-remover *(version/date) - loaded - with 56 more Lua Mem used<br />&#91;Mod&#93; lamps *(version/date) - loaded - with 36 more Lua Mem used<br />&#91;Mod&#93; lagcheck *(version/date) - loaded - with 29 more Lua Mem used<br />&#91;Mod&#93; killme *(version/date) - loaded - with 4 more Lua Mem used<br />&#91;Mod&#93; euban *(version/date) - loaded - with 50 more Lua Mem used<br />&#91;Mod&#93; bows () - loaded - with 234<br />&#91;Mod&#93; areas (11.05.2018) - loaded - with 406<br />&#91;Mod&#93; markers () - loaded - with 145<br />&#91;Mod&#93; adv_spawning v0.0.13 (28.12.2015) 0.4.x - loaded - with 200<br />&#91;Mod&#93; plantlife / junglegrass () - loaded - with 9<br />&#91;Mod&#93; homedecor_i18 () - loaded - with 19<br />&#91;Mod&#93; death_messages *(version/date) - loaded - with 14 more Lua Mem used<br />&#91;Mod&#93; craftguide (2019-03-04) 5.0.x - loaded - with 188<br />&#91;Mod&#93; wiki () - loaded - with 495<br />&#91;Mod&#93; trash-can (5fd3df7 on 15.01.2016) 0.4.x - loaded - with 45<br />&#91;Mod&#93; towercrane () - loaded - with 94<br />&#91;Mod&#93; torches - loaded<br />&#91;Mod&#93; srvstuff () - loaded - with 28<br />&#91;Mod&#93; spwan_command () - loaded - with 10<br />&#91;Mod&#93; smartshop () - loaded - with 83<br />&#91;Mod&#93; signs_lib *(version/date) - loaded - with 304 more Lua Mem used<br />&#91;Mod&#93; morechests *(version/date) - loaded - with 131 more Lua Mem used<br />&#91;Mod&#93; exchange () - loaded - with 135<br />&#91;Mod&#93; digilines *(version/date) - loaded - with 423 more Lua Mem used<br />&#91;Mod&#93; nixie-tubes *(version/date) - loaded - with 464 more Lua Mem used<br />&#91;Mod&#93; digiline_remote *(version/date) - loaded - with 63 more Lua Mem used<br />&#91;Mod&#93; crafting - loaded!<br />&#91;Mod&#93; border (14.02.2019) - loaded - with 597<br />&#91;Mod&#93; biome_lib (11.05.2018) - loaded - with -1022<br />&#91;Mod&#93; plantlife / youngtrees *(version/date) - loaded - with 31 more Lua Mem used<br />&#91;Mod&#93; plantlife / Poison Ivy *(version/date) - loaded - with 23 more Lua Mem used<br />&#91;Mod&#93; plantlife / molehills () - loaded - with 18<br />&#91;Mod&#93; Ferns Checking horsetail item strings<br />&#91;Mod&#93; Ferns Checking lady fern item strings<br />&#91;Mod&#93; Ferns Checking tree fern item strings<br />&#91;Mod&#93; plantlife / ferns 0.2.1 (13.06.2018) - loaded - with 162<br />&#91;Mod&#93; basic_robot (13.06.2018) - loaded - with 914<br />&#91;Mod&#93; balloon (13.06.2018) - loaded - with 35<br />&#91;Mod&#93; alphabeth (12.05.2018) - loaded - with 361<br />&#91;Mod&#93; Cave Stuff &#91;0.0.3&#93; &#91;cavestuff&#93; Loaded...<br />&#91;Mod&#93; mp-xtraores / xtraores () - loaded - with 492<br />&#91;Mod&#93; mesecons / mesecons (30.12.2018) 0.4.x - loaded - with 252<br />&#91;Mod&#93; travelnet (27.02.2019) - loaded - with 1315 more Lua Mem used<br />&#91;Mod&#93; &#91;Protector&#93; / pvp_protect is disabled<br />&#91;Mod&#93; Protector Redo v2.6 (201801) 0.4.x - loaded - with 163<br />&#91;Mod&#93; MoreMesecons / playerkiller (2b2faec on 20.08.2018) 0.4.x - loaded - with 302 more Lua Mem used<br />&#91;Mod&#93; animalmaterials / animalmaterials (11.09.2014) - loaded - with 975<br />&#91;Mod&#93; animalmaterials / cooking (13.06.2018) - loaded - with 37<br />&#91;Mod&#93; spectator *(version/date) - loaded - with 16 more Lua Mem used<br />&#91;Mod&#93; hec_vicount *(version/date) - loaded - with 8 more Lua Mem used<br />&#91;Mod&#93; hec_nether *(version/date) - loaded - with 86<br />&#91;Mod&#93; farming 1.40 (13.02.2019) - loaded - with 3287<br />&#91;Mod&#93; moreores (19e060c 06.03.2019) 0.4.x - loaded - with 113<br />&#91;Mod&#93; Basic materials (a5fdb721 02.01.2019) 0.4.x - loaded - with 120<br />&#91;Mod&#93; Pipeworks (2018-11-15) 0.4.x - loaded - with 3362 more Lua Mem used<br />&#91;Mod&#93; locks (version/date) - loaded - with 196 more Lua Mem used<br />&#91;Mod&#93; arrow_signs (4.3/date) - loaded - with 61 more Lua Mem used<br />&#91;Mod&#93; moreblocks (9363068 09.03.2019) - loaded - with 11936 more Lua Mem used<br />&#91;Mod&#93; nether () - loaded - with 452 more Lua Mem used<br />&#91;Mod&#93; Moretrees (11.05.2018) - loaded - with 9591 more Lua Mem used<br />&#91;Mod&#93; Trunks &#91;0.1.4&#93; &#91;trunks&#93; - loaded - with 237<br />&#91;Mod&#93; Wood Soils &#91;0.0.9&#93; &#91;woodsoils&#93; - loaded - with 38<br />&#91;Mod&#93; plantlife / nature classic () - loaded - with 43<br />&#91;Mod&#93; BakedClay (67d0f2a8d6 02.07.2018) - loaded - with 6189 more Lua Mem used<br />&#91;Mod&#93; technic / _chests (700faca 10.04.2019) 0.4.x - loaded - with 257 more Lua Mem used<br />&#91;Mod&#93; technic / concrete&nbsp; () - loaded - with 350 more Lua Mem used<br />&#91;Mod&#93; plantlive / dryplants / grasses () - loaded - with 275<br />&#91;Mod&#93; flowerpot (6bce72a on 03.10.2017) 0.4.x - loaded - with 475<br />&#91;Mod&#93; plantlife / Flowers+ (18.03.2018) - loaded - with 106 more Lua Mem used<br />&#91;Mod&#93; Ethereal (9bbd90e0b4 01.03.2019) 0.4.x - loaded - with 6928 more Lua Mem used<br />&#91;Mod&#93; 3d_armor / 3d_armor (2019-05-04) 5.0.x - loaded - with 373<br />&#91;Mod&#93; mp-xtraores / armor () - loaded - with 126<br />&#91;Mod&#93; hud_hunger / hud () - loaded - with 77<br />&#91;Mod&#93; 3d_armor / wieldview (2019-05-04) 5.0.x - loaded - with 19<br />&#91;Mod&#93; 3d_armor / shields (2019-05-04) - loaded - with 72<br />&#91;Mod&#93; hec_obsidian_stuff *(version/date) - loaded - with 43 more Lua Mem used<br />&#91;Mod&#93; 3d_armor / 3d_armor_stand (2019-05-04) - loaded - with 67<br />&#91;Mod&#93; 3d_armor / 3d_armor_sfinv (2019-05-04) - loaded - with 5<br />&#91;Mod&#93; technic / _worldgen () - loaded - with 1362 more Lua Mem used<br />&#91;Mod&#93; technic / _extranodes (700faca 10.04.2019) 0.4.x - loaded - with 2546 more Lua Mem used<br />&#91;Mod&#93; 3d_armor / technic (2018-01) 0.4.x - loaded - with 127<br />&#91;Mod&#93; unified_inventory (17.02.2019) - loaded - with 369<br />&#91;Mod&#93; u_skins () - loaded - with 654<br />&#91;Mod&#93; servercleaner (26.12.2018) - loaded - with 148<br />&#91;Mod&#93; mail (04.03.2019) - loaded - with 76<br />&#91;Mod&#93; 3d_armor / 3d_armor_ui (2019-05-04) - loaded - with 10<br />&#91;Mod&#93; xdecor (ee7a281 10.03.2019) 0.4.x - loaded - with 1174<br />&#91;Mod&#93; enchanting () - loaded - with 209<br />&#91;Mod&#93; Mobs Redo 'Monsters' (07.03.2019) - loaded - with 926<br />&#91;Mod&#93; Mobs_Sky / bat&nbsp; () - loaded - with 694<br />&#91;Mod&#93; inventorybags (12.06.2017) - loaded - with 562<br />&#91;Technic&#93; Loaded in 6.013248 seconds<br />&#91;Mod&#93; technic / technic (700faca 10.04.2019) 0.4.x - loaded - with 8215 more Lua Mem used<br />&#91;Mod&#93; digtron (14.01.2019) - loaded - with 1021 more Lua Mem used<br />&#91;Mod&#93; technic aluminium / bauxite ) - loaded - with 11<br />&#91;Mod&#93; technic aluminium / aluminium () - loaded - with 22<br />&#91;Mod&#93; technic / wrench - loaded<br />72495.708007812<br />&#91;Mod&#93; bitchange (16.06.2018) - loaded - with 482<br />&#91;Mod&#93; mining plus () - loaded - with 146<br />&#91;Mod&#93; special () - loaded - with 68<br />&#91;Mod&#93; 3d_armor / hazmat_suit (2018-01) 0.4.x - loaded - with 28<br /></code></dd></dl><br />sure still some not even edited, technic_wrench miss the calculate ... but so far a much better rank of Lua mem using at loading:<br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* moreblocks - 11936<br />* Moretrees - 9591<br />* technic / technic - 8215<br />* Ethereal - 6928<br />* BakedClay - 6189<br />* Pipeworks - 3362<br />* farming 1.40 - 3287<br />* technic / _worldgen - 1362<br />* travelnet - 1315<br />* xdecor - 1174<br />* biome_lib - 1022<br />* animalmaterials / animalmaterials - 975<br />* Mobs Redo 'Monsters' - 926<br />* basic_robot - 914<br />* Mobs_Sky / bat - 694<br />* u_skins - 654<br />* border - 597<br />* inventorybags - 562<br />* wiki - 495<br />* mp-xtraores / xtraores - 492<br />* bitchange - 482<br />* flowerpot - 475<br />* nixie-tubes - 464<br />* nether - 452<br />* digilines - 423<br />* areas - 406</code></dd></dl></div>
@@ -242,13 +242,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -261,7 +261,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346604">[Server]Thailand Minetest.one 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346604">[Server]Thailand Minetest.one 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 1:48 am </p>
 
 			<div class="content">I am doomed, ha - as I still took moretrees and pipeworks from github, but <br /><blockquote class="uncited"><div>All of my mods have been moved to Gitlab</div></blockquote> so I need to doenload and test them on the server new ... Links in [Mod]s 5.0.0 running are changed for the new location<br />(But why then the old git is not closed, I cant see an text telling me that is old versions ... whatever)<br /><br />some changes had much impact in mods cpu using<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 75.5% - pipeworks<br />* 6.6% - mesecons<br />* 5.4% - technic<br />* 2.7% - mobs_animal<br />* 2.4% - mobs_monster<br />* 1.9% -default<br />* 1.2% - areas<br /></code></dd></dl> but also some thoughts about this. Some [Mod]s are<br />* just dead Items like nodes, they are just there present themself, but have no work to do<br />* near dead nodes/items, they are there and show themself like a sign, can be changed (have options)<br />* very less used nodes/items just i saw enchanting, is standing there but if not used to enchant = silent, even gamer nearby activation doesn't &quot;harm&quot; it<br />* nodes doing something when activated<br />* active objects like monsters<br />so depending on this thought's, have to focus why a mod consumes cpu and what way to reduce it, if needed and possible <br /><br />and so, I have to remember what I changed yesterday and how I can use that knowledge as see pipeworks much more high. But less lag, still nack to under 0.3 and no crashes = happy.</div>
@@ -271,13 +271,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -290,7 +290,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346616">[Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346616">[Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 4:28 am </p>
 
 			<div class="content">today's servercleaner<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>2019-03-20 11:27:11: &#91;Server&#93;: Delete player Maddox (365 days expired)<br />2019-03-20 11:27:11: &#91;Server&#93;: Delete player jezlany (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player Pudding (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player anaq (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player Mohamed (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player valeria (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player star (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player Castor (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player Daff_Marthyn (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player BuyildCraft (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player Boby (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player guava (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player Elderking (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player PanzerBandit (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player Jipok (365 days expired)<br />2019-03-20 11:27:12: &#91;Server&#93;: Delete player MoaTilde (365 days expired)<br />2019-03-20 11:27:13: &#91;Server&#93;: Delete player Williamtwelve (365 days expired)<br />2019-03-20 11:27:13: &#91;Server&#93;: Delete player realtechnerd (365 days expired)<br />2019-03-20 11:27:13: &#91;Server&#93;: Delete player jojolue (365 days expired)<br /></code></dd></dl><br /><br />just download,edit and install new? [Mod]s moretrees and pipeworks from GitLab, = running<br />also as server restart get new list of lua memory using,<br />so <dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 11960 - 16.3% - moreblocks (9363068 09.03.2019) - (+24)<br />*&nbsp; 9592 - 13.1% - Moretrees (d521e347 01.2019) - (+1)<br />*&nbsp; 8215 - 11.2% - technic / technic (700faca 10.04.2019)<br />*&nbsp; 6928 - 9.5% - Ethereal (9bbd90e0b4 01.03.2019)<br />*&nbsp; 6189 - 8.5% - BakedClay (67d0f2a8d6 02.07.2018)<br />*&nbsp; 3363 - 5.6% - Pipeworks (27eb2ca9 01.2019) (+1)<br />*&nbsp; 3287 - 4.5% - farming redo 1.40 (13.02.2019)<br />*&nbsp; 2546 - 3.5% - technic / _extranodes (700faca 10.04.2019)<br />*&nbsp; 1362 - technic / _worldgen (700faca 10.04.2019)<br />*&nbsp; 1318 - travelnet (+3)<br />*&nbsp; 1151 - xdecor (ee7a281 10.03.2019) - (-23)<br />*&nbsp; 1043 - biome_lib - (+21)<br />*&nbsp; 1021 - digtron (14.01.2019)<br />*&nbsp; &nbsp;948 - crafting<br />*&nbsp; &nbsp;975 - animalmaterials / animalmaterials<br />*&nbsp; &nbsp;914 - basic_robot</code></dd></dl></div>
@@ -300,13 +300,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -319,7 +319,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346640">[Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346640">[Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 12:04 pm </p>
 
 			<div class="content">So guys, <br />I like to have a good running, fast server in minetest,<br />what mean I would like to use LuaJIT !!!<br /><br />This time, LuaJit is off as I had a server crash all 8-12 hours, and that is no fun.<br /><br />As our problem was not to know what mods consume so much, and we jsut had a very often OOM crash from technic, we / I was guessing,<br />but now I found out what mods are taking so much memory. <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934&amp;p=346618#p346562" class="postlink">Solution Thread here</a><br /><br />with a short list here repeat:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 11960 - 16.3% - moreblocks (9363068 09.03.2019) - (+24)<br />*&nbsp; 9592 - 13.1% - Moretrees (d521e347 01.2019) - (+1)<br />*&nbsp; 8215 - 11.2% - technic / technic (700faca 10.04.2019)<br />*&nbsp; 6928 - 9.5% - Ethereal (9bbd90e0b4 01.03.2019)<br />*&nbsp; 6189 - 8.5% - BakedClay (67d0f2a8d6 02.07.2018)<br />*&nbsp; 3363 - 5.6% - Pipeworks (27eb2ca9 01.2019) (+1)<br />*&nbsp; 3287 - 4.5% - farming redo 1.40 (13.02.2019) </code></dd></dl><br /><br />so as I got now an <a href="https://forum.minetest.net/viewtopic.php?f=47&amp;t=22374" class="postlink">answer</a>, the the programmer from the mod refused any responsibility either will then change the code, or maybe understood the issues,<br /><br />following [Mod]s will be taken off:<br />* Moreblocks<br />* Etherreal<br />soon, and further think about to ban<br />* moretrees<br />* BackedClay<br />until this memory consumption is solved.<br /><br />I wanna use JuaJIT and good, slim programmed code ([Mod]), and not crash my server.</div>
@@ -329,13 +329,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -348,7 +348,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346646">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346646">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 12:39 pm </p>
 
 			<div class="content">new compiled with LuaJIT<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Minetest 5.1.0-dev-38ea089-dirty (Linux)<br />RUN_IN_PLACE=0<br />USE_GETTEXT=1<br />USE_SOUND=0<br />USE_CURL=1<br />USE_FREETYPE=1<br />USE_LUAJIT=1<br />STATIC_SHAREDIR=&quot;/usr/local/share/minetest&quot;<br /></code></dd></dl><br /><br />* moretrees (for short test also false, but true now again)<br />* moreblocks<br />* etherreal<br />deactivated ... server restart, <br /><br />newer version fails then on plantlife / ferns / init.lua line 57-59<br /><br />started<br /><br />so some results as also still counting lua-memory:<br />* when started even without more-trees (also moreblocks and etherreal = false) following results:<br />** start before loading mod, used 599 KB,<br />** used memory before garbagecollect: 37274 KB (! remember before it was 72930 KB with all loaded)<br />** after garbagecollect no saving: 37274 KB<br /><br />* when started only without moreblocks, without etherreal:<br />** start memory used: 599 (same)<br />** used memory after all mod loaded: 41091 KB (all mods was 72930 KB - so saved 31.839 KB or 43% mem)<br />** after garbagecollect no futher saving: 41091 KB<br /><br />* and, even I thought no difference same again but LuaJIT server ON:<br />** start memory used: 569 KB (so 30 KB less, why ?)<br />** used memory after load all mod: 23855 KB (???)<br />** after garbagecollect, also no change<br /><br />WOW,<br />* why is there a difference in memory between Lua and LuaJIT ?<br />* garbagecollect only frees memory with loaded moretrees, but why ?<br />--&gt; need to do new list of memory usage under LuaJIT ... that is driving me now, how ...<br /><br />* how to check max memory ? - ok, wait for OOM crash haha<br /><br />AND solved<br />* a written and used mod IS consuming memory, as from the code, otherwise the used memory might have been same, even not loading moretrees, moreblocks and/or etherreal<br />code run in memory, and code also used var, mean more memory ... ! bah !</div>
@@ -358,13 +358,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -377,7 +377,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346649">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346649">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 1:35 pm </p>
 
 			<div class="content">so, loading lua memory in KB consumption at LUA (not LuaJIT) server:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 20240 - xdecor (what ???)<br />*&nbsp; 6775 - technic / technic<br />*&nbsp; 6642 - Mobs Redo 1.49<br />*&nbsp; 3633 - plantlife / dryplants<br />*&nbsp; 3366 - Pipeworks<br />*&nbsp; 1794 - farming<br />*&nbsp; 1596 - moretrees<br />*&nbsp; 1317 - travelnet<br />*&nbsp; 1157 - biome_lib<br />*&nbsp; 1098 - crafting<br />*&nbsp; 1020 - digtron<br />*&nbsp; &nbsp;975 - animalmaterials / animalmaterials<br />*&nbsp; &nbsp;903 - technic / _worldgen<br />*&nbsp; &nbsp;668 - technic / concrete<br />*&nbsp; &nbsp;600 - BakedClay<br />*&nbsp; &nbsp;586 - Mobs Redo 'Animals'<br />*&nbsp; &nbsp;557 - inventorybags<br />*&nbsp; &nbsp;493 - Mobs Redo 'Monsters'<br />*&nbsp; &nbsp;494 - wiki<br />*&nbsp; &nbsp;464 - nixie-tubes<br />*&nbsp; &nbsp;423 - digilines<br />*&nbsp; &nbsp;301 - technic / wrench<br />*&nbsp; &nbsp;394 - areas<br /></code></dd></dl> hope I didn't miss some, but<br />* xdecor ?<br />* some mod seam so change there behavior when another mod is or is not also there . mhhh<br /><br />not the loading witt LuaJIT, shocking me as before<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 12489 - xdecor<br />*&nbsp; 2163 - Pipeworks<br />*&nbsp; 1978 - technic / technic<br />*&nbsp; 1797 - Protector Redo v2.6<br />*&nbsp; 1545 - unified_inventory<br />*&nbsp; 1498 - animalmaterials / animalmaterials1<br />*&nbsp; 1194 - farming<br />*&nbsp; 1159 - wiki<br />*&nbsp; 1069 - Moretrees<br />*&nbsp; &nbsp;978 - travelnet<br />*&nbsp; &nbsp;972 - 3d_armor / technic<br />*&nbsp; &nbsp;964 - nether<br />*&nbsp; &nbsp;958 - alphabeth<br />*&nbsp; &nbsp;741 - crafting<br />*&nbsp; &nbsp;723 - smartshop<br />*&nbsp; &nbsp;695 - technic / _extranodes<br />*&nbsp; &nbsp;582 - areas<br />*&nbsp; &nbsp;520 - basic_robot<br />*&nbsp; &nbsp;430 - Mobs Redo 'Animals'<br />*&nbsp; &nbsp;404 - Mobs Redo 1.49<br />*&nbsp; &nbsp;379 - inventorybags<br />*&nbsp; &nbsp;293 - BakedClay<br />*&nbsp; &nbsp;216 - plantlife / dryplants<br />*&nbsp; &nbsp; 71 - biome_lib (???)<br /></code></dd></dl><br />SO, <br />* LuaJit uses less, but why ?<br /><br />and I may have a mistake in the luamem count code, and better should put the var luamemold at beginning of SAME mod, instead of believing that it would be given over to next ...<br /><br />will check that first, as some results are so misleading, disrupting ...</div>
@@ -387,13 +387,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -406,7 +406,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346658">[Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346658">[Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 2:34 pm </p>
 
 			<div class="content">I updated all the mods, with also the code to catch luamem to begin of the loading, to make sure, THAT was the stand before and after, not hoping they load sequential and could take the var from last loading.<br /><br />so just changed the ones, most showed much mem (LuaJIT on):<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 12393 - xdecor<br />*&nbsp; 2146 - Pipeworks<br />*&nbsp; 1942 - technic / technic<br />*&nbsp; 1863 - unified_inventory<br />*&nbsp; 1154 - farming 1.40<br />*&nbsp; 1045 - Moretrees<br />*&nbsp; &nbsp;903 - travelnet<br />*&nbsp; &nbsp;739 - crafting<br />*&nbsp; &nbsp;700 - digtron<br />*&nbsp; &nbsp;538 - areas<br />*&nbsp; &nbsp;362 - basic_robot<br />*&nbsp; &nbsp;293 - Mobs Redo 1.49<br />*&nbsp; &nbsp;271 - BakedClay<br />*&nbsp; &nbsp;260 - digilines<br />*&nbsp; &nbsp;201 - plantlive / dryplants<br />*&nbsp; &nbsp;171 - animalmaterials / animalmaterials<br />*&nbsp; &nbsp;157 - technic / _worldgen<br />*&nbsp; &nbsp;153 - alphabeth<br />*&nbsp; &nbsp;149 - Protector Redo<br />*&nbsp; &nbsp; 91 - Basic materials<br />*&nbsp; &nbsp; 52 - wiki<br />*&nbsp; &nbsp; &nbsp;7 - biome_lib<br /></code></dd></dl> with still near 23.841 KB sum.<br /><br />During the short time server was on, 3 gamer was there and so happy about the new speed of server, but one of them lost his house - as build only of moreblocks nodes, ... sorry<br /><br />So, I prepared more mods with start store mem count, and calculate the diff to the end. But whatever, parallel happen, maybe even loading another mod same time, would crash that ... and there are issues:<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>*12392 - xdecor<br />* 2144 - Pipeworks<br />* 1372 - towercrane (unsafe, missing store count at beginn)<br />* 1156 - farming 1.40<br />* 1044 - Moretrees<br />*&nbsp; 888 - mesecons / wires (1st time with counter)<br />*&nbsp; 961 - adv_spawning (unsafe ...)<br />*&nbsp; 903 - travelnet<br />*&nbsp; 740 - crafting<br />*&nbsp; 700 - digtron<br />*&nbsp; 538 - areas<br />*&nbsp; 428 - Mobs Redo 'Animals'<br />*&nbsp; 377 - inventorybags<br />*&nbsp; 368 - u_skins<br />*&nbsp; 324 - basic_robot<br />*&nbsp; 293 - Mobs Redo 1.49<br />*&nbsp; 271 - BakedClay<br />*&nbsp; 200 - Mobs Redo 'Monsters'<br />*&nbsp; 153 - alphabeth<br />*&nbsp; &nbsp;52 - wiki<br />*&nbsp; &nbsp;12 - craftguide<br />*&nbsp; &nbsp; 4 - balloon<br /></code></dd></dl><br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>*- 2348 - mail<br />*- 1969 - technic / technic<br />*- 1114 - unified_inventory<br />* - 813 - morechests (unsafe)<br />* - 155 - smatshop<br />*&nbsp; &nbsp;- 3 - srvstuff <br />*&nbsp; &nbsp;- 2 - spawn_command<br />*&nbsp; &nbsp;- 1 - no-guests<br /></code></dd></dl> with all 23.867 KB at end of loading part<br /><br />BREAK, that is total not to understand, how mods can reduce mem .. what is wrong with the counting ?</div>
@@ -416,13 +416,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -435,7 +435,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346667">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346667">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 3:37 pm </p>
 
 			<div class="content">code at start / head of mod<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>local luamemold = nil<br />local luamemnew = nil<br />luamemold = collectgarbage(&quot;count&quot;)<br />print(&quot;Mem Start with: &quot;..math.floor(collectgarbage(&quot;count&quot;)))</code></dd></dl> as last line only at mod time as starting first,to see mem count to start of mod loading<br /><br />End<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>luamemnew = collectgarbage(&quot;count&quot;)<br />print(&quot;&#91;Mod&#93; time *(version/date) - loaded - with &quot;..math.floor(luamemnew - luamemold)..&quot; KB&quot;)<br />luamemold = luamemnew</code></dd></dl> even the last line is obsolete as set at begin of mod now</div>
@@ -445,13 +445,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -464,7 +464,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346676">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346676">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 4:08 pm </p>
 
 			<div class="content">during edit init.lua's, [Mod]s ...<br />* towercrafe  gone<br />* crafting guide gone<br />* lagcheck gone<br />* Mobs_animal gone<br /><br />last test, started the server just without xdecor, still LuaJIT<br />used mem at finish 17.383 KB - instead of 23.259KB, mean sure xdecor used/uses about 5.876 KB<br /><br />so seam to be better to just false an [Mod], restart server and check mem,<br />then this confusing even - might be gone<br /><br />etherreal on, 19.418 mem used<br />moreblocks on,  37.290 mem used<br /><br />so more safe results under LuaJit ?<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 9.531 KB - moreblocks<br />* 5.876 KB - xdecor<br />* 2.035 KB - etherreal<br /></code></dd></dl></div>
@@ -474,13 +474,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -493,7 +493,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346750">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346750">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Thu Mar 21, 2019 1:50 pm </p>
 
 			<div class="content">I have done a long research on <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934&amp;p=346738#p346738" class="postlink">memory using mods under LuaJIT</a>, and think now about some more mod to delete, false at this my, our server as some are really double, and so far using more memory then useful:<br /><br />stopped already:<br />* moreblocks, biggest memory using mod seen ! - 10.500 KB<br />* etherreal, just short true, and gone also - 2.550 KB<br /><br />so the mods I like to false are:<br />* economy, as not used ? - 125 KB<br />* soccer, less not used - 610 KB<br />* enchanting, not used anymore - 640 KB<br />* trash_can, we can use trash from technic - 650 KB<br />* localisation, who is using language, even no idea how it works - 650 KB<br />* exchange, who uses it ? - 680 KB<br />* mining-plus, only the bridge_builder I use - 700 KB<br />* bitchange, not used ? - 710 KB<br />* treecapitator, need update or off, as not every tree working - 990 KB<br />* crafting, just help that items doesn't need in correct position to craft - save 1100 KB<br />* inventorybags, as only explorers might need some, but with /spawn, and two /home should work - save 1.950 KB<br />near 6.000 KB memory saving possible, for keep LuaJit and speed !<br /><br />also some mods have been temporary false as need just to start when needed:<br />* lagcheck - 14 KB<br />* servercleaner - 655 KB<br />* minetest_remover - 40 KB<br /><br />I am not ready with testing every single mod, but those coming are more basic and much used also that I think will find some to delete / false ...</div>
@@ -503,13 +503,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -522,7 +522,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346796">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346796">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 12:27 am </p>
 
 			<div class="content">server was crashing rest of the night with <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=22397" class="postlink">'swap_node' (a table value)</a><br /><br />so just compile new also<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Minetest 5.1.0-dev-38ea089-dirty (Linux)<br />BUILD_TYPE=Release<br />RUN_IN_PLACE=0<br />USE_GETTEXT=1<br />USE_SOUND=0<br />USE_CURL=1<br />USE_FREETYPE=1<br />USE_LUAJIT=1<br />STATIC_SHAREDIR=&quot;/usr/local/share/minetest&quot;</code></dd></dl><br />server restartet,<br />and 23.714 KB LuaJIT memory to start used<br />and with new version <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=22397" class="postlink">last crashes solved</a> as both blinkyplants are set true again, and no crash like before ?<br />crached again,... blinkys set false for next restart now, as cant find reason<br /><br />beside some check, profiler after restart<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>* 72.7% - pipeworks<br />* 11.5% - technic (most there in from switching_station 64%)<br />* 8.5% - mobs_monster<br />* 1.5% - areas<br />* 1.5% - player_api<br />* 1.0 % - unified_inventory<br />* 0.9% - adv_spawning<br />* 0.3% - mesecons<br /></code></dd></dl><br /><br />for next start set<br />* economy = false<br />* soccer, = false<br />* enchanting = false<br />* trash_can = false<br />* localisation = false<br />* exchange = false<br />* mining-plus = true, but reduced from items don't work<br /><br />crash again,when near blinky at spawn<br />blinky off<br />23.825 KB Luamem at start used</div>
@@ -532,13 +532,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -551,7 +551,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346806">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346806">Re: [Server] Minetest Thailand 5.1.0-77cfc4f :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 3:19 am </p>
 
 			<div class="content">still fighting with <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=22397" class="postlink">swap_node</a><br />but compile new with also <br />*  Using GMP provided by system.<br />* SpatialIndex AreaStore backend enabled.<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Minetest 5.1.0-dev-38ea089-dirty (Linux)<br />BUILD_TYPE=Release<br />RUN_IN_PLACE=0<br />USE_GETTEXT=1<br />USE_SOUND=0<br />USE_CURL=1<br />USE_FREETYPE=1<br />USE_LUAJIT=1<br />STATIC_SHAREDIR=&quot;/usr/local/share/minetest&quot;</code></dd></dl></div>
@@ -561,13 +561,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -580,7 +580,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346811">[Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346811">[Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 4:49 am </p>
 
 			<div class="content">crash, crash ... back to stable<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Minetest 5.0.0 (Linux)<br />BUILD_TYPE=Release<br />RUN_IN_PLACE=0<br />USE_GETTEXT=1<br />USE_SOUND=0<br />USE_CURL=1<br />USE_FREETYPE=1<br />USE_LUAJIT=1<br />STATIC_SHAREDIR=&quot;/usr/local/share/minetest&quot;</code></dd></dl><br /><br />server started, 35.575 KB lua memory used, <br />still look for that <br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Inventory size 2022</code></dd></dl> if I should act there as it might use memory<br />and yet, run new just 5.0.0 stable<br /><br />and crashed gain as soon I am touching a door with right click, f...</div>
@@ -590,13 +590,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -609,7 +609,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346817">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346817">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 5:20 am </p>
 
 			<div class="content">aha,<br />got after edit some<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Unified Inventory: inventory size: 2202 luamem: 42111</code></dd></dl><br />after it used 24.148 this time only after last mod load, and I added there also print the mem, <br /><br />so that made me check again the sum lua memory since change back to 5.0.0-stable<br />* 23.581<br />* 23.465<br />* 23.605<br />* 23.575<br />* 23.564<br />* 23.513<br />* 24.148<br />the result with the end of last loaded mod is similar, but<br />mean ? that after unified inventory loaded read, another ~18.000 KB gone ... for store all possible items ?</div>
@@ -619,13 +619,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -638,7 +638,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346828">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346828">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>twoelk</strong> &raquo; Fri Mar 22, 2019 8:55 am </p>
 
 			<div class="content">doesn't UI rebuild all the icons at first start?</div>
@@ -648,13 +648,13 @@
 			<dt>
 				<strong>twoelk</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1302</dd><dd><strong>Joined:</strong> Fri Apr 19, 2013 4:19 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> twoelk</dd>
+			<dd><strong>In-game:</strong> twoelk</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -667,7 +667,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346833">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346833">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Fri Mar 22, 2019 9:34 am </p>
 
 			<div class="content"><span style="font-size: 200%; line-height: 116%;">Server is shutdown</span><br />it doesnt make sense to see all 10 minutes, or when some join to see crash ...</div>
@@ -677,13 +677,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -696,7 +696,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346886">[Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346886">[Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 1:02 am </p>
 
 			<div class="content"><span style="font-size: 200%; line-height: 116%;">Server is back</span><br /><br />thanks to rubenwardy<br /><br />so failure came after I tried to solve a frist crash in /mods/moretrees/cocos_palm.lua<br />as crash for failed to ... global node_swap<br />but this change made cocos run,<br />but crashed all other call of this function as got a table<br />so<br />* adjustable_blinkyplant is ok, not srashing<br />* rightclick on door not crashing<br />now<br /><br />but need to see cocos ... as soon as possible, but now will just set local hehe</div>
@@ -706,13 +706,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -725,7 +725,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346895">[Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346895">[Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 2:02 am </p>
 
 			<div class="content">I really get sick ... the hole time yesterday when I had to restart, and restart I am sure, I saw the neighbors building (from Mexico) not full, as removed moreblocks, but still functional - and just now I am in, build and also this area protections around has gone<br /><br />Just changed renew mod mesecons, and took the codeline out from cocos ... <br /><br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>&#91;Mod&#93; areas (11.05.2018) - loaded - end with 1332 KB</code></dd></dl><br />is loaded, yes - as other areas are there<br />but two near spawn are gone, even at last, and the before backup ...<br /><br />see it like this:<br />* no crashes yet<br />* server running under fast LuaJit<br />* big lua memory using [Mod]s without a basic need for the are out, so should run some days<br />* server lag is 0.06 just now with 3 active gamers<br />* and when your (you gamer I mean) press F5 and get RTT more than 100, your wrong here and if I get you blaming about lag, mean kick, and later when again ban, did I make myself clear ?<br /><br />but, I don't want to spent any-more time for searching, testing ... bye</div>
@@ -735,13 +735,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -754,7 +754,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p346910">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p346910">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sat Mar 23, 2019 7:57 am </p>
 
 			<div class="content">mmmpf ... crash my lua memory counting code, solved<br />but then got next crash with <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=22397&amp;p=346912#p346912" class="postlink">swap_node</a><br />restarted<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Unified Inventory. inventory size: 2207 / luamem: 50150 KB<br />50107 KB after collectgarbage</code></dd></dl><br /><br />just changed to <br />* new <a href="https://github.com/stujones11/minetest-3d_armor" class="postlink">3d_armor</a> (1d22612 05.03.2019) as one sentence got into my Eye !<br />* also added new WorldEdit as need to repair a lot of area<br />server restarted, no complain<br />= 46140 KB after collectgarbage = 4.000 KB less then before, hmm check<br /><br />here the full mod loading at startup, with show after mod lua memory usage<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Mem time Start with: 387<br />&#91;Mod&#93; time *(version/date) - loaded - end with: 391 KB<br />&#91;Mod&#93; sightview *(version/date) - loaded - end with 521 KB<br />&#91;Mod&#93; no-guests (version / 23.03.2019) - loaded - end with 536 KB<br />&#91;Mod&#93; lamps *(version/date) - loaded - end with 571 KB<br />&#91;Mod&#93; euban *(version/date) - loaded - end with 706 KB<br />&#91;Mod&#93; bows () - loaded - end with 561 KB<br />&#91;Mod&#93; areas (11.05.2018) - loaded - end with 1334 KB<br />&#91;Mod&#93; markers () - loaded - end with 1183 KB<br />&#91;Mod&#93; adv_spawning v0.0.13 (28.12.2015) 0.4.x - loaded - with 1299 KB<br />&#91;Mod&#93; adblock (31.05.20185) - loaded - end with 1308 KB<br />&#91;Mod&#93; plantlife / plantlife_i18n *(version/date) - loaded - with 1314 KB<br />&#91;Mod&#93; plantlife / junglegrass () - loaded - with 1315 KB<br />&#91;Mod&#93; MoreMesecons / utils (2b2faec on 20.08.2018) 0.4.x - loaded - end with 1323 KB<br />&#91;Mod&#93; homedecor_i18 () - loaded - with 1328 KB<br />&#91;Mod&#93; WorldEdit / worldedit (f242f2f 09.12.2018) - loaded - end with: 1445 KB<br />&#91;Mod&#93; WorldEdit / commands (f242f2f 09.12.2018) - loaded - end with: 1648 KB<br />&#91;Mod&#93; WorldEdit / shortcommands (f242f2f 09.12.2018) - loaded - end with: 1658 KB<br />&#91;Mod&#93; death_messages *(version/date) - loaded - end with 1668 KB<br />&#91;Mod&#93; craftguide (2019-03-04) 5.0.x - loaded - end with 1785 KB<br />&#91;Mod&#93; wiki () - loaded - end with 2003 KB<br />&#91;Mod&#93; torches () - loaded - end with 1723 KB<br />&#91;Mod&#93; srvstuff () - loaded - end with 1725 KB<br />&#91;Mod&#93; spwan_command () - loaded - with 1731 KB<br />&#91;Mod&#93; smartshop () - loaded - end with 1753 KB<br />&#91;Mod&#93; signs_lib *(version/date) - loaded - end with 1956 KB<br />&#91;Mod&#93; morechests *(version/date) - loaded - end with 2043 KB<br />&#91;Mod&#93; digilines *(version/date) - loaded - with 2310 KB<br />&#91;Mod&#93; nixie-tubes *(version/date) - loaded - end with 2651 KB<br />&#91;Mod&#93; digiline_remote *(version/date) - loaded - end with 2689 KB<br />&#91;Mod&#93; crafting () - loaded - end with 3422 KB<br />&#91;Mod&#93; border (14.02.2019) - loaded - end with 3432 KB<br />&#91;Mod&#93; biome_lib (11.05.2018) - loaded - end with: 3502 KB<br />&#91;Mod&#93; plantlife / youngtrees *(version/date) - loaded - end with 3535 KB<br />&#91;Mod&#93; plantlife / Poison Ivy *(version/date) - loaded - end with 3550 KB<br />&#91;Mod&#93; plantlife / molehills () - loaded - with 3563 KB<br />&#91;Mod&#93; Ferns Checking horsetail item strings<br />&#91;Mod&#93; Ferns Checking lady fern item strings<br />&#91;Mod&#93; Ferns Checking tree fern item strings<br />&#91;Mod&#93; Plantlife / ferns (0.2.1/18.03.2018) - loaded - end with 3681 KB<br />&#91;Mod&#93; basic_robot (13.06.2018) - loaded - end with 4228 KB<br />&#91;Mod&#93; balloon (13.06.2018) - loaded - end with 4210 KB<br />&#91;Mod&#93; alphabeth (12.05.2018) - loaded - end with 3230 KB<br />&#91;Mod&#93; Plantlife / cavestuff (0.0.3/18.03.2018) - loaded - end with 3258 KB<br />&#91;Mod&#93; mp-xtraores / xtraores () - loaded - end with 3597 KB<br />&#91;Mod&#93; mesecons / mesecons (073c92d 20.03.2019) 0.4.x - loaded - end with 3766 KB<br />&#91;Mod&#93; travelnet (27.02.2019) - loaded - end with 4759 KB<br />&#91;Mod&#93; MoreMesecons / wireless (2b2faec on 20.08.2018) 0.4.x - loaded - end with 4884 KB<br />&#91;Mod&#93; MoreMesecons / timegate (2b2faec on 20.08.2018) 0.4.x - loaded - end with 4909 KB<br />&#91;Mod&#93; MoreMesecons / teleporter (2b2faec on 20.08.2018) 0.4.x - loaded - end with 4953 KB<br />&#91;Mod&#93; MoreMesecons / switchtorch (2b2faec on 20.08.2018) 0.4.x - loaded - end with 4970 KB<br />&#91;Mod&#93; MoreMesecons / signalchanger (2b2faec on 20.08.2018) 0.4.x - loaded - with 4988 KB<br />&#91;Mod&#93; MoreMesecons / mesechest (2b2faec on 20.08.2018) 0.4.x - loaded - with 5092 KB<br />&#91;Mod&#93; MoreMesecons / lua_controller_tools (2b2faec on 20.08.2018) 0.4.x - loaded - with 5114 KB<br />&#91;Mod&#93; MoreMesecons / luablock (2b2faec on 20.08.2018) 0.4.x - loaded - with 5161 KB<br />&#91;Mod&#93; MoreMesecons / injector controller (2b2faec on 20.08.2018) 0.4.x - loaded - with 5178 KB<br />&#91;Mod&#93; MoreMesecons / entity_detector (2b2faec on 20.08.2018) 0.4.x - loaded - with 5197 KB<br />&#91;Mod&#93; MoreMesecons / dual_delayer (2b2faec on 20.08.2018) 0.4.x - loaded - with 5215 KB<br />&#91;Mod&#93; MoreMesecons / signal_changer (2b2faec on 20.08.2018) 0.4.x - loaded - with 5232 KB<br />&#91;Mod&#93; MoreMesecons / player_detector (2b2faec on 20.08.2018) 0.4.x - loaded - with 5250 KB<br />&#91;Mod&#93; MoreMesecons / adjusable_blinkyplant (2b2faec on 20.08.2018) 0.4.x - loaded - with 5266 KB<br />&#91;Mod&#93; MoreMesecons / induction_transmitter (2b2faec on 20.08.2018) 0.4.x - loaded - with 6208 KB<br />&#91;Mod&#93; MoreMesecons / sayer (2b2faec on 20.08.2018) 0.4.x - loaded - with 6407 KB<br />&#91;Mod&#93; &#91;Protector&#93; / pvp_protect is disabled<br />&#91;Mod&#93; Protector Redo v2.6 (201801) 0.4.x - loaded - end with 6613 KB<br />&#91;Mod&#93; MoreMesecons / playerkiller (2b2faec on 20.08.2018) 0.4.x - loaded - with 6802 KB<br />&#91;Mod&#93; animalmaterials / animalmaterials (11.09.2014) - loaded - with 3 KB<br />&#91;Mod&#93; animalmaterials / cooking (13.06.2018) - loaded - with 16KB<br />&#91;Mod&#93; spectator *(version/date) - loaded - with 5270 KB<br />&#91;Mod&#93; hec_vicount *(version/date) - loaded - with 5274 KB<br />&#91;Mod&#93; hec_nether *(version/date) - loaded - with 5221 KB<br />&#91;Mod&#93; nether () - loaded - end with 6183 KB<br />&#91;Mod&#93; BakedClay (67d0f2a8d6 02.07.2018) - loaded - end with 6477 KB<br />&#91;Mod&#93; farming 1.40 (13.02.2019) - loaded - end with 7670 KB<br />&#91;Mod&#93; Moretrees (d521e347 01.2019) - loaded - with 8713 more Lua Mem used<br />&#91;Mod&#93; PlantLife / Trunks (0.1.4)&nbsp; - loaded - end with 8899 KB<br />&#91;Mod&#93; plantlife / Wood Soils &#91;0.0.9&#93; &#91;woodsoils&#93; - loaded - end with 8930 KB<br />&#91;Mod&#93; plantlife / nature classic () - loaded - end with 8957 KB<br />&#91;Mod&#93; moreores (19e060c 06.03.2019) 0.4.x - loaded - with 9034<br />&#91;Mod&#93; Basic materials (a5fdb721 02.01.2019) 0.4.x - loaded - end with 9127 KB<br />&#91;Mod&#93; Pipeworks (27eb2ca9 01.2019) - loaded - with 11276 KB<br />&#91;Mod&#93; locks (version/date) - loaded - end with 11407 KB<br />&#91;Mod&#93; arrow_signs (4.3/date) - loaded - end with 11448 KB<br />&#91;Mod&#93; technic / _chests (700faca 10.04.2019) 0.4.x - loaded - end with 11619 KB<br />&#91;Mod&#93; technic / concrete (700faca 10.04.2019) - loaded - with 11647 KB<br />&#91;Mod&#93; plantlife / dryplants / grasses () - loaded - with 198 KB<br />&#91;Mod&#93; flowerpot (6bce72a on 03.10.2017) 0.4.x - loaded - end with 12156 KB<br />&#91;Mod&#93; plantlife / Flowers+ (18.03.2018) - loaded - end with 12233 KB<br />&#91;Mod&#93; MoreMesecons / igniter (2b2faec on 20.08.2018) 0.4.x - loaded - with 12290 KB<br />&#91;Mod&#93; 3d_armor / 3d_armor (1d22612 05.03.2019) 5.0.x - loaded - end with 12565 KB<br />&#91;Mod&#93; mp-xtraores / armor () - loaded - end with 12650 KB<br />&#91;Mod&#93; hud_hunger / hud () - loaded - end with 12701 KB<br />&#91;Mod&#93; 3d_armor / wieldview (1d22612 05.03.2019) 5.0.x - loaded - end with 12712 KB<br />&#91;Mod&#93; 3d_armor / shields (1d22612 05.03.2019) 5.0.x - loaded - end with 12759 KB<br />&#91;Mod&#93; hec_obsidian_stuff *(version/date) - loaded - with 12794 KB<br />&#91;Mod&#93; 3d_armor / 3d_armor_stand (1d22612 05.03.2019) 5.0.x - loaded - end with 12840 KB<br />&#91;Mod&#93; 3d_armor / 3d_armor_sfinv (1d22612 05.03.2019) 5.0.x - loaded - end with 12843 KB<br />&#91;Mod&#93; technic / _worldgen (700faca 10.04.2019) - loaded - end with 13384 KB<br />&#91;Mod&#93; technic / _extranodes (700faca 10.04.2019) 0.4.x - loaded - end with 13348 KB<br />&#91;Mod&#93; 3d_armor / technic (2018-01) 0.4.x - loaded - with 13306 KB<br />&#91;Mod&#93; unified_inventory (17.02.2019) - loaded - end with 10567 KB<br />&#91;Mod&#93; u_skins () - loaded - end with 10258 KB<br />&#91;Mod&#93; mail (04.03.2019) - loaded - end with 10305 KB<br />&#91;Mod&#93; 3d_armor / 3d_armor_ui (1d22612 05.03.2019) 5.0.x - loaded - end with 10312 KB<br />&#91;Mod&#93; xdecor (ee7a281 10.03.2019) 0.4.x - loaded - end with 22796 KB<br />&#91;Mod&#93; Mobs Redo 1.49 (07.03.2019)- loaded - end with 23197 KB<br />&#91;Mod&#93; Mobs Redo 'Monsters' (07.03.2019) - loaded - end with 23371 KB<br />&#91;Mod&#93; Mobs Redo 'Animals'&nbsp; (01.11.2018) - loaded - end with 23746 KB<br />&#91;Mod&#93; inventorybags (12.06.2017) - loaded - end with 24120 KB<br />&#91;Mod&#93; technic / technic (700faca 10.04.2019) 0.4.x - loaded - end with 22363 KB<br />&#91;Mod&#93; digtron (14.01.2019) - loaded - end with 23065 KB<br />&#91;Mod&#93; technic aluminium / bauxite () - loaded - with 3 KB<br />&#91;Mod&#93; technic aluminium / aluminium () - loaded - with 7 KB<br />&#91;Mod&#93; technic / wrench () - loaded - end with 23291 KB<br />&#91;Mod&#93; bitchange (16.06.2018) - loaded - end with 23406 KB<br />&#91;Mod&#93; mining plus () - loaded - end with 23501 KB<br />&#91;Mod&#93; special () - loaded - with 23544 KB<br />&#91;Mod&#93; technic / technic_cnc (700faca 10.04.2019) 0.4.x - loaded - end with 23949 KB<br />&#91;Mod&#93; 3d_armor / hazmat_suit (2018-01) 0.4.x - loaded - end Mem 23970 KB<br />&nbsp; &nbsp; &nbsp; &nbsp; .__&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;__&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;__&nbsp; &nbsp;<br />&nbsp; _____ |__| ____&nbsp; &nbsp;_____/&nbsp; |_&nbsp; ____&nbsp; &nbsp;_______/&nbsp; |_ <br />&nbsp;/&nbsp; &nbsp; &nbsp;\|&nbsp; |/&nbsp; &nbsp; \_/ __ \%POST_CONTENT%nbsp; &nbsp;__\/ __ \ /&nbsp; ___/\%POST_CONTENT%nbsp; &nbsp;__\<br />|&nbsp; Y Y&nbsp; \%POST_CONTENT%nbsp; |&nbsp; &nbsp;|&nbsp; \%POST_CONTENT%nbsp; ___/|&nbsp; | \%POST_CONTENT%nbsp; ___/ \___ \%POST_CONTENT%nbsp; |&nbsp; |&nbsp; <br />|__|_|&nbsp; /__|___|&nbsp; /\___&nbsp; &gt;__|&nbsp; \___&nbsp; &gt;____&nbsp; &gt; |__|&nbsp; <br />&nbsp; &nbsp; &nbsp; \/&nbsp; &nbsp; &nbsp; &nbsp; \/&nbsp; &nbsp; &nbsp;\/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \/&nbsp; &nbsp; &nbsp;\/&nbsp; &nbsp; &nbsp; &nbsp; <br />2019-03-23 17:50:19: ACTION&#91;Main&#93;: World at &#91;/home/thomas/.minetest/worlds/CelinesWildesThailand&#93;<br />2019-03-23 17:50:19: ACTION&#91;Main&#93;: Server for gameid=&quot;minetest&quot; listening on 192.168.65.213:30001.<br />&#91;Biome Lib&#93; Registered a total of 40 surface types to be evaluated, spread<br />&#91;Biome Lib&#93; across 46 actions with air-checking and 4 actions without.<br />2019-03-23 17:50:19: ACTION&#91;Server&#93;: Announcing to servers.minetest.net<br />Unified Inventory. inventory size: 2208 / luamem: 46184 KB<br />46140 KB after collectgarbage</code></dd></dl></div>
@@ -764,13 +764,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -783,7 +783,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/10_22041_50.htm#p347010">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/10_22041_50.htm#p347010">Re: [Server] Minetest Thailand 5.0.0 :30001 aktive</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Sun Mar 24, 2019 1:03 pm </p>
 
 			<div class="content">just <a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=22397&amp;p=347009#p347009" class="postlink">crash</a> again,<br />and<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Unified Inventory. inventory size: 2206 / luamem: 31112 KB<br />31112 KB after collectgarbage</code></dd></dl> again less memory used, but where ... hihi<br /><br />again, deactivated cocos - as cant find<br /><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Unified Inventory. inventory size: 2200 / luamem: 32279 KB<br />32279 KB after collectgarbage<br /></code></dd></dl><br />let me guess, 6 items missing = coconut family ?</div>
@@ -793,13 +793,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 897</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> Minetest-One</dd>
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>

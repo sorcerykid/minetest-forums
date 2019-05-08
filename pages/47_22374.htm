@@ -87,7 +87,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22374.htm#p346637">low lua memory issue and a missunderstanding ?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346637">low lua memory issue and a missunderstanding ?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 11:48 am </p>
 
 			<div class="content">hello coders, programmers ... I learned some basic of this with the Commodore64 and sold first program to make inventory at years and faster at neighbour bakery somewhere in 1980 I think, during I was also visiting the first plusclass in programming on my middle school.<br />But after trainied in C++, Oracle, network and html + learn php in 200-2005, I quit my job and moved in another country ... whatever, and some basics of this old knowledge not changed yet.<br /><br />* No computer run without memory<br />* every code, whatever it does uses/consumes memory<br /><br />so depending on my research in low Lua memory, there is another fact I read<br />* 64 systems only give Lua/JIT 2 GB of ram, <br />* what is, depending on the system and code and version of lua and also not started at beginning, so that the we had the issue that OOM errors available memory are from just 14 MB up to my reported 1300 MB.<br /><br />So for clear, a [Mod] uses memory as it is loaded via its init.lua by set true in world.mt file, and the problem yet was, we had no Idea which mod uses how much (? solved ?), or further which one gains more (unsolved).<br /><br />So depending on my tick to ask after every loaded [Mod] the used lua mem with collectgarbage() (<a href="https://forum.minetest.net/viewtopic.php?f=6&amp;t=21934#p346562" class="postlink">see thread</a>)<br />and found out some very hungry mods listed there.<br /><br />So with this evidence in consumption I made an issues at the 3 main programmers and got an answer.<br /><blockquote class="uncited"><div>As I said before, moretrees does not use a significant amount of memory.  It's up to the engine to decide what to use and what not to.  Hell, the whole Dreambuilder modpack (which includes moretrees) is only 60 MB.<br />If you're running short on memory, get more.</div></blockquote><br /><br />So take a few facts:<br />* if I false this mod, mod will not load, mod will not consume memory !<br />mean, it is the code of the mod, the decision of the programmer, wanted to load data = use memory and responsible for that<br />-- sure it is my decision if i use this mods, but when it keeps like this, and I wanna use Luajit, then some mods will be out, and after I can proof that it runs then without OOM, sure I will issue an warning for this mods together with LuaJIT using ...<br /><br />* the engine is just doing what is coded in the mod, the engine does nothing load with out the code, belong to the code, as this is why after loading init.lua more memory of the available lua mem is used.<br />* yes getting more memory, by jump back to 32bit lua might help = 4 GB, if I am right,<br />-- sure the other solution is find out optimising Lua memory, getting more mem, or using better start position (waiting for LUA code upgrade)<br /><br />So your meaning, better facts ... about this story here ...</div>
@@ -97,13 +97,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 747</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -116,7 +116,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22374.htm#p346644">Re: low lua memory issue and a missunderstanding ?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346644">Re: low lua memory issue and a missunderstanding ?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Linuxdirk</strong> &raquo; Wed Mar 20, 2019 12:36 pm </p>
 
 			<div class="content"><blockquote><div><cite>Festus1965 wrote:</cite>So with this evidence in consumption I made an issues at the 3 main programmers and got an answer.<br /><blockquote class="uncited"><div> [...]If you're running short on memory, get more.</div></blockquote></div></blockquote><br />The problem with this is, that it does not work like this. It is easily possible to get OOM on all types of machines. I can get OOM on my 4 GB private hosted mini server, on my 8 GB office laptop, or on my 16 GB regular PC. Available system memory is simply irrelevant when using LuaJIT.</div>
@@ -126,13 +126,13 @@
 			<dt>
 				<strong>Linuxdirk</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1871</dd><dd><strong>Joined:</strong> Wed Sep 17, 2014 11:21 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Linuxdirk</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -145,7 +145,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22374.htm#p346647">Re: low lua memory issue and a missunderstanding ?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346647">Re: low lua memory issue and a missunderstanding ?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Festus1965</strong> &raquo; Wed Mar 20, 2019 1:20 pm </p>
 
 			<div class="content"><blockquote><div><cite>Linuxdirk wrote:</cite>The problem with this is, that it does not work like this. It is easily possible to get OOM on all types of machines. I can get OOM on my 4 GB private hosted mini server, on my 8 GB office laptop, or on my 16 GB regular PC. Available system memory is simply irrelevant when using LuaJIT.</div></blockquote><br /><br />I know that, using a 32 GB server, also 32 GB work PC, but one coder of mod doesn't know that ...<br />Lua mem is limited, sure - depending on 32 or 64 and so ..., so I have a border with 2 GB and less, depending on other problems I read.<br /><br />But anyway, as there IS a fixed border IN lua until now, coding mods MUST take care about this, and save as much as possible.<br /><br />I just banned<br />* moreblocks (used 11936 KB) ans<br />* etherreal (used 6928 KB) of my server<br />and instead of used 72930 KB before, now just 41091 KB are used, so much more time to OOM crash at also 2 mods gone that might consume more during work.<br />* even think about to ban moretrees (using 9592 KB), it there is no soon rebuild of the code or we get 4 GB lua mem.<br /><br />As technic with all parts together also is Top ranked (using near ~12000 KB) also nice to get low down it, as used to much on server now, just to cut it out.</div>
@@ -155,13 +155,13 @@
 			<dt>
 				<strong>Festus1965</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 747</dd><dd><strong>Joined:</strong> Sun Jan 03, 2016 11:58 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Thomas Explorer</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -174,7 +174,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22374.htm#p346653">Re: low lua memory issue and a missunderstanding ?</a></h3>
+			<h3 class=""><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346653">Re: low lua memory issue and a missunderstanding ?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>Linuxdirk</strong> &raquo; Wed Mar 20, 2019 1:59 pm </p>
 
 			<div class="content">Moretrees feels quite heavy, yes. The technic trinity (Mesecons, Pipeworks, Technic) likely is the heaviest combination of mods possible.</div>
@@ -184,13 +184,13 @@
 			<dt>
 				<strong>Linuxdirk</strong>
 			</dt>
-			<dd></dd>
+			<dd>Member</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 1871</dd><dd><strong>Joined:</strong> Wed Sep 17, 2014 11:21 am</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			
+			<dd><strong>In-game:</strong> Linuxdirk</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
@@ -203,7 +203,7 @@
 		<div class="inner"><span class="corners-top"><span></span></span>
 
 		<div class="postbody">
-			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/pages/47_22374.htm#p346655">Re: low lua memory issue and a missunderstanding ?</a></h3>
+			<h3 class="first"><a href="https://sorcerykid.github.io/minetest-forums/pages/47_22374.htm#p346655">Re: low lua memory issue and a missunderstanding ?</a></h3>
 			<p class="author"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />by <strong>rubenwardy</strong> &raquo; Wed Mar 20, 2019 2:02 pm </p>
 
 			<div class="content">To fix LuaJIT ooms:<br /><br /><ul><li>Use a GC64 build of LuaJIT</li><li>Use puc Lua</li><li>Find and fix/remove mods which use a lot of memory</li></ul><br /><blockquote><div><cite>Linuxdirk wrote:</cite>Moretrees feels quite heavy, yes. The technic trinity (Mesecons, Pipeworks, Technic) likely is the heaviest combination of mods possible.</div></blockquote><br /><br />Exactly this - every time I see OOM I think biomelibs or moretrees.</div>
@@ -213,13 +213,13 @@
 			<dt>
 				<strong>rubenwardy</strong>
 			</dt>
-			<dd></dd>
+			<dd>Moderator</dd>
 
 		<dd>&nbsp;</dd>
 
 		<dd><strong>Posts:</strong> 5685</dd><dd><strong>Joined:</strong> Tue Jun 12, 2012 6:11 pm</dd>
-		<!--	<dd><strong>GitHub:</strong> %MEMBER_GITHUB_HANDLE%</dd>
-			<dd><strong>IRC:</strong> %MEMBER_IRC_HANDLE%</dd> -->
+			<dd><strong>GitHub:</strong> rubenwardy</dd>
+			<dd><strong>In-game:</strong> rubenwardy</dd>
 		</dl>
 	
 		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
