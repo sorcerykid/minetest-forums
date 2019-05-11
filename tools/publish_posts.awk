@@ -10,7 +10,7 @@
 # Generates a formatted HTML listing of posts from a tab-delimited digest
 #
 # Example usage:
-#   % sort digest.txt | ./publish_posts.awk > /var/www/html/forums/digest.html
+#   % sort digest.txt | tools/publish_posts.awk > docs/digest.html
 
 BEGIN {
 	FS ="\t";	
@@ -18,7 +18,7 @@ BEGIN {
 	print( "<HTML>" );
 	print( "<HEAD>" );
 	print( "<TITLE>Minetest Forum Recovery Project</TITLE>" );
-	print( "<STYLE>TH, TD, P, H1 { font-family: arial, helvetica; } TD, P { font-size: 14px; } TH { font-size: 16px; } H1 { font-size: 32px; }</STYLE>" );
+	print( "<STYLE>TH, TD, P, H1 { font-family: arial, helvetica; } TD, P { font-size: 14px; } TH { font-size: 16px; } H1 { font-size: 32px; } BIG { font-size: 24px; }</STYLE>" );
 	print( "</HEAD>" );
 
 	print( "<BODY><CENTER><DIV STYLE=\"width: 850px;\">" );

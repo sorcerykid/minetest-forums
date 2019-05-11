@@ -7,21 +7,24 @@
 #                                     #
 #######################################
 
-# Reformat a cached page using templates for the header, body, and footer.
+# Reformat a cached page using custom templates for the header, body, and footer.
 #
 # Other modes can be specified with the 'mode' parameter:
-#   - parse - reformat the cached page and save the version to the 'pages' directory
+#   - parse - reformat the cached using templates and save to the 'pages' directory
 #   - compile - compile a tab-delimited digest of posts for importing to a spreadsheet
 #   - extract - extract posts from the cached page and save to the 'posts' directory
 #   - debug - print the values of all variables obtained from parsing the cached page
 #   - check - validate the cached page and print an error message on parsing failure
 #
+# Note: These examples assume that cached pages are stored in the 'cache' directory.
+#
 # Example usage with single cached page:
-#   % ./parse.awk -v mode=debug cache/3_1568.htm
+#   % tools/parse.awk -v mode=debug cache/3_1568.htm
 #
 # Example usage with directory of cached pages:
-#   % find cache -name "*.htm" -exec ./parse.awk {} \;
-#   % find cache -name "*.htm" -exec ./parse.awk -v mode=compile {} > digest.txt \;
+#   % find cache/*.htm -exec tools/parse.awk {} \;
+#   % find cache/*.htm -exec tools/parse.awk -v mode=compile {} > digest.txt \;
+#   % find cache/*.htm -exec tools/parse.awk -v mode=check {} \;
 
 function abort( msg ) {
 	status = 1;

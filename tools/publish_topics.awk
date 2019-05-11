@@ -10,7 +10,7 @@
 # Generates a formatted HTML listing of topics from a tab-delimited digest
 #
 # Example usage:
-#   % ./publish_topics.awk -v forum_id=3 digest.txt > /var/www/html/forums/general_discussion.html
+#   % tools/publish_topics.awk -v forum_id=3 digest.txt > /docs/general_discussion.html
 
 function abort( msg ) {
 	status = 1;
@@ -39,19 +39,6 @@ BEGIN {
 	if( !forums[ forum_id ] ) {
 		abort( "Unknown forum id" );
 	}
-
-        print( "<HTML>" );
-        print( "<HEAD>" );
-        print( "<TITLE>Minetest Forum Recovery Project</TITLE>" );
-        print( "<STYLE>TH, TD, P, H1 { font-family: arial, helvetica; } TD, P { font-size: 14px; } TH { font-size: 16px; } H1 { font-size: 32px; } BIG { font-size: 24px; }</STYLE>" );
-        print( "</HEAD>" );
-
-        print( "<BODY><CENTER><DIV STYLE=\"width: 800px;\">" );
-        print( "<H1 STYLE=\"margin-top: 0px;\"><IMG SRC=\"minetest-logo.png\" VSPACE=\"8\"><BR>Minetest Forum Recovery Project</H1>" );
-        print( "<P>The following pages were compiled and collated from a variety of search engine caches.</P><P>The <IMG SRC=\"new_icon.png\"> icon identifies topics that were started between March 13 and April 28.</P><P>All links will remain permanent and can be safely referenced within new forum discussions.</P>" );
-        print( "<TABLE STYLE=\"border-style: solid; border-color: lightgrey; border-width: 2px;\" WIDTH=\"800\" CELLPADDING=\"6\" CELLSPACING=\"0\">" );
-	print( "<TR><TH COLSPAN=\"3\"><BIG>" forums[ forum_id ] "</BIG></TH></TR>" );
-        print( "<TR BGCOLOR=\"lightgrey\"><TH WIDTH=\"70%\" ALIGN=\"left\">Topic Title</TH><TH WIDTH=\"20%\" ALIGN=\"left\">Pages</A></TH><TH WIDTH=\"10%\" ALIGN=\"left\">Posts</A></TH>" );
 }
 
 {
@@ -78,6 +65,19 @@ BEGIN {
 
 END {
 	if( status ) exit;
+
+        print( "<HTML>" );
+        print( "<HEAD>" );
+        print( "<TITLE>Minetest Forum Recovery Project</TITLE>" );
+        print( "<STYLE>TH, TD, P, H1 { font-family: arial, helvetica; } TD, P { font-size: 14px; } TH { font-size: 16px; } H1 { font-size: 32px; } BIG { font-size: 24px; }</STYLE>" );
+        print( "</HEAD>" );
+
+        print( "<BODY><CENTER><DIV STYLE=\"width: 800px;\">" );
+        print( "<H1 STYLE=\"margin-top: 0px;\"><IMG SRC=\"minetest-logo.png\" VSPACE=\"8\"><BR>Minetest Forum Recovery Project</H1>" );
+        print( "<P>The following pages were compiled and collated from a variety of search engine caches.</P><P>The <IMG SRC=\"new_icon.png\"> icon identifies topics that were started between March 13 and April 28.</P><P>All links will remain permanent and can be safely referenced within new forum discussions.</P>" );
+        print( "<TABLE STYLE=\"border-style: solid; border-color: lightgrey; border-width: 2px;\" WIDTH=\"800\" CELLPADDING=\"6\" CELLSPACING=\"0\">" );
+	print( "<TR><TH COLSPAN=\"3\"><BIG>" forums[ forum_id ] "</BIG></TH></TR>" );
+        print( "<TR BGCOLOR=\"lightgrey\"><TH WIDTH=\"70%\" ALIGN=\"left\">Topic Title</TH><TH WIDTH=\"20%\" ALIGN=\"left\">Pages</A></TH><TH WIDTH=\"10%\" ALIGN=\"left\">Posts</A></TH>" );
 
 	for( topic_id in post_totals ) {
 		topic_title = topics[ topic_id, "title" ];

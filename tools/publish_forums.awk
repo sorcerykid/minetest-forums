@@ -10,7 +10,7 @@
 # Generates a formatted HTML listing of forums from a tab-delimited digest
 #
 # Example usage:
-#   % ./publish_forums.awk digest.txt > /var/www/html/forums/index.html
+#   % tools/publish_forums.awk digest.txt > docs/index.html
 
 function print_header( ) {
         print( "<HTML>" );
